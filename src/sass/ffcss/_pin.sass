@@ -1,0 +1,33 @@
+.pin-container
+    -webkit-column-width: 100%/$pin
+    -webkit-column-gap: $margin
+    -moz-column-width: 100%/$pin
+    -moz-column-gap: $margin
+    column-gap: $margin
+    column-width: 100%/$pin
+    margin-left: $margin
+    margin-right: $margin
+    margin-top: $margin
+    @media screen and (min-device-width: $phone) 
+        -webkit-column-count: $pin/$pin
+        -moz-column-count: $pin/$pin
+        column-count: $pin/$pin
+    @media screen and (min-device-width: $tablet) 
+        -webkit-column-count: $pin/2
+        -moz-column-count: $pin/2
+        column-count: $pin/2
+    @media screen and (min-device-width: $MDPI)
+        -webkit-column-count: $pin
+        -moz-column-count: $pin
+        column-count: $pin
+    @media screen and (min-device-width: $HD)
+        -webkit-column-count: $pin * 2
+        -moz-column-count: $pin * 2
+        column-count: $pin * 2
+
+.pin
+    margin-bottom: $margin
+    display: inline-block
+    -webkit-column-break-inside: avoid
+    -moz-column-break-inside: avoid
+    column-break-inside: avoid

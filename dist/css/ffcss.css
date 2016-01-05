@@ -1,0 +1,39 @@
+.pin-container {
+  -webkit-column-width: 25%;
+  -webkit-column-gap: 40px;
+  -moz-column-width: 25%;
+  -moz-column-gap: 40px;
+  column-gap: 40px;
+  column-width: 25%;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 40px; }
+  @media screen and (min-device-width: 320px) {
+    .pin-container {
+      -webkit-column-count: 1;
+      -moz-column-count: 1;
+      column-count: 1; } }
+  @media screen and (min-device-width: 768px) {
+    .pin-container {
+      -webkit-column-count: 2;
+      -moz-column-count: 2;
+      column-count: 2; } }
+  @media screen and (min-device-width: 1280px) {
+    .pin-container {
+      -webkit-column-count: 4;
+      -moz-column-count: 4;
+      column-count: 4; } }
+  @media screen and (min-device-width: 1920px) {
+    .pin-container {
+      -webkit-column-count: 8;
+      -moz-column-count: 8;
+      column-count: 8; } }
+
+.pin {
+  margin-bottom: 40px;
+  display: inline-block;
+  -webkit-column-break-inside: avoid;
+  -moz-column-break-inside: avoid;
+  column-break-inside: avoid; }
+
+/*# sourceMappingURL=ffcss.css.map */
