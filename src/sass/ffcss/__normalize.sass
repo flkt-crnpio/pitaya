@@ -7,7 +7,7 @@ html
     -ms-text-size-adjust: 100%
     -webkit-text-size-adjust: 100%
     font-family: $font-text
-    font-size: 16px
+    font-size: $font-size
 
 body
     margin: 0
@@ -255,8 +255,11 @@ table
 
 
 
-
-
+::-webkit-selection
+    background-color: $select-background
+    color: $select-color
+    text-shadow: none
+    
 ::-moz-selection
     background-color: $select-background
     color: $select-color

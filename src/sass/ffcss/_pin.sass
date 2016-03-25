@@ -1,34 +1,37 @@
 .pin-container
-    -webkit-column-width: 100%/$pin
+    -webkit-column-width: 100%
+    -moz-column-width: 100%
+    column-width: 100%
     -webkit-column-gap: $margin
-    -moz-column-width: 100%/$pin
     -moz-column-gap: $margin
     column-gap: $margin
-    column-width: 100%/$pin
-    margin-left: $margin
-    margin-right: $margin
-    margin-top: $margin
-    @media screen and (min-device-width: $phone) 
-        -webkit-column-count: $pin/$pin
-        -moz-column-count: $pin/$pin
-        column-count: $pin/$pin
-    @media screen and (min-device-width: $tablet) 
-        -webkit-column-count: $pin/2
-        -moz-column-count: $pin/2
-        column-count: $pin/2
-    @media screen and (min-device-width: $MDPI)
-        -webkit-column-count: $pin
-        -moz-column-count: $pin
-        column-count: $pin
-    @media screen and (min-device-width: $HD)
-        -webkit-column-count: $pin * 2
-        -moz-column-count: $pin * 2
-        column-count: $pin * 2
+    -webkit-column-count: 1
+    -moz-column-count: 1
+    column-count: 1
+    margin: $margin
+    padding: 0
+    @media screen and (min-width: $phone-l) 
+        -webkit-column-count: 2
+        -moz-column-count: 2
+        column-count: 2
+    @media screen and (min-width: $laptop)
+        -webkit-column-count: 3
+        -moz-column-count: 3
+        column-count: 3
+    @media screen and (min-width: $MDPI)
+        -webkit-column-count: 4
+        -moz-column-count: 4
+        column-count: 4
+    @media screen and (min-width: $HD)
+        -webkit-column-count: 5
+        -moz-column-count: 5
+        column-count: 5
 
 .pin
-    margin-bottom: $margin
     display: inline-block
+    margin: 0 0 $margin
+    padding: 0
     -webkit-column-break-inside: avoid
     -moz-column-break-inside: avoid
     column-break-inside: avoid
-    background: #eee
+    

@@ -1,3 +1,5 @@
+/* MediaQueries *
+ */
 /* Custom normalize configurations for ffcss v0.0.1
  * Based on normalize.css v4.0.0 and sanitize.css v3.3.0
  */
@@ -27,7 +29,7 @@ summary {
   display: block; }
 
 figure {
-  margin: 40px; }
+  margin: 4rem; }
 
 nav ol,
 nav ul {
@@ -218,6 +220,11 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+::-webkit-selection {
+  background-color: #00f;
+  color: #fff;
+  text-shadow: none; }
+
 ::-moz-selection {
   background-color: #00f;
   color: #fff;
@@ -229,43 +236,45 @@ table {
   text-shadow: none; }
 
 .pin-container {
-  -webkit-column-width: 25%;
-  -webkit-column-gap: 40px;
-  -moz-column-width: 25%;
-  -moz-column-gap: 40px;
-  column-gap: 40px;
-  column-width: 25%;
-  margin-left: 40px;
-  margin-right: 40px;
-  margin-top: 40px; }
-  @media screen and (min-device-width: 320px) {
-    .pin-container {
-      -webkit-column-count: 1;
-      -moz-column-count: 1;
-      column-count: 1; } }
-  @media screen and (min-device-width: 768px) {
+  -webkit-column-width: 100%;
+  -moz-column-width: 100%;
+  column-width: 100%;
+  -webkit-column-gap: 4rem;
+  -moz-column-gap: 4rem;
+  column-gap: 4rem;
+  -webkit-column-count: 1;
+  -moz-column-count: 1;
+  column-count: 1;
+  margin: 4rem;
+  padding: 0; }
+  @media screen and (min-width: 30rem) {
     .pin-container {
       -webkit-column-count: 2;
       -moz-column-count: 2;
       column-count: 2; } }
-  @media screen and (min-device-width: 1280px) {
+  @media screen and (min-width: 64rem) {
+    .pin-container {
+      -webkit-column-count: 3;
+      -moz-column-count: 3;
+      column-count: 3; } }
+  @media screen and (min-width: 75rem) {
     .pin-container {
       -webkit-column-count: 4;
       -moz-column-count: 4;
       column-count: 4; } }
-  @media screen and (min-device-width: 1920px) {
+  @media screen and (min-width: 120rem) {
     .pin-container {
-      -webkit-column-count: 8;
-      -moz-column-count: 8;
-      column-count: 8; } }
+      -webkit-column-count: 5;
+      -moz-column-count: 5;
+      column-count: 5; } }
 
 .pin {
-  margin-bottom: 40px;
   display: inline-block;
+  margin: 0 0 4rem;
+  padding: 0;
   -webkit-column-break-inside: avoid;
   -moz-column-break-inside: avoid;
-  column-break-inside: avoid;
-  background: #eee; }
+  column-break-inside: avoid; }
 
 .gallery {
   display: block;
