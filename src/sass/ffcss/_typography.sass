@@ -1,0 +1,162 @@
+/*
+ * _typography *
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+    font-weight: 100
+    line-height: 1.2em
+    margin: $margin 0 $margin/2
+    padding: 0
+h1 
+    font-size: 3em
+    &.lead
+        font-size: 4em
+h2
+    font-size: 2.4em
+h3
+    font-size: 2em
+h4
+    font-size: 1.6em
+    font-weight: 300
+h5
+    font-size: 1.4em
+    font-weight: 400
+h6
+    font-size: 1.2em
+    font-weight: 600
+
+h1 + h2,
+h1 + h3,
+h2 + h3,
+h2 + h4,
+h3 + h4,
+h3 + h5,
+h4 + h5,
+h4 + h6,
+h5 + h6
+    margin-top: -$margin/2
+
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small
+    display: block
+    font-size: .6em
+    line-height: 1em
+    margin-bottom: $margin
+
+
+
+
+p 
+    margin: $margin/2 0
+    padding: 0
+    &.lead
+        font-size: 1.3em
+        line-height: 1.4em
+
+
+
+
+code,
+kbd,
+mark,
+samp
+    border-radius: 2px
+    padding: .2em .4em
+    margin: 0 .4em
+code
+    background: $code-background
+    border: 1px solid $code-border-color
+    color: $code-color
+kbd
+    background: $kbd-background
+    color: $kbd-color
+mark
+    background: $mark-background
+    color: $mark-color
+samp
+    background: $samp-background
+    color: $samp-color
+
+
+
+
+blockquote
+    margin: $margin 0
+    padding: $padding/4 0 $padding/4 $padding
+    p
+        color: $quote-color
+        display: block
+        margin: 0
+        padding: 0
+    cite
+        display: block
+        margin: 0
+        padding: 0
+        position: relative
+        color: $cite-color
+        &::before
+            content: "—"
+            display: inline-block
+            width: 2em
+            height: 2em
+.quote-line
+    border-left: 7px solid $quote-border-color
+    p 
+        font-size: 1.3em
+        font-weight: 300
+        line-height: 1.6em
+.quote-marks
+    position: relative
+    p 
+        font-size: 2em
+        font-weight: 100
+        line-height: 1.2em
+    &::before
+        color: $quote-border-color
+        content: "\201C"
+        font-size: 6em
+        font-family: Georgia, serif
+        position: absolute
+        left: 0
+        top: $padding
+
+
+
+
+/*
+ * text align *
+ */
+.text-center
+    text-align: center
+.text-left 
+    text-align: left
+.text-right 
+    text-align: right
+.text-justify
+    text-align: justify
+.text-ellipsis
+    overflow: hidden
+    white-space: nowrap
+    text-overflow: ellipsis
+
+
+
+
+/*
+ * text transform *
+ */
+.text-uppercase
+    text-transform: uppercase
+.text-capitalize
+    text-transform: capitalize
+.text-lowercase
+    text-transform: lowercase

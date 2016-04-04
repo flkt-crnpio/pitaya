@@ -2,13 +2,13 @@
     -webkit-column-width: 100%
     -moz-column-width: 100%
     column-width: 100%
-    -webkit-column-gap: $margin
-    -moz-column-gap: $margin
-    column-gap: $margin
+    -webkit-column-gap: $pin-space
+    -moz-column-gap: $pin-space
+    column-gap: $pin-space
     -webkit-column-count: 1
     -moz-column-count: 1
     column-count: 1
-    margin: $margin
+    margin: $pin-container-margin
     padding: 0
     @media screen and (min-width: $phone-l) 
         -webkit-column-count: 2
@@ -29,7 +29,7 @@
 
 .pin
     display: inline-block
-    margin: 0 0 $margin
+    margin: 0 0 $pin-space
     padding: 0
     -webkit-column-break-inside: avoid
     -moz-column-break-inside: avoid

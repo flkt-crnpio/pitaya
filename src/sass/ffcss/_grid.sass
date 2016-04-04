@@ -1,4 +1,4 @@
-.gallery 
+.box-container 
     display: block 
     display: -webkit-flex 
     display: -moz-flex 
@@ -18,14 +18,26 @@
     -webkit-flex-flow: row wrap 
     -moz-flex-flow: row wrap 
     flex-flow: row wrap 
-    -webkit-align-content: flex-end 
+    -webkit-align-content: flex-end
     -moz-align-content: flex-end 
     align-content: flex-end 
 
-.gallery-element 
+.box 
     display: inline-block 
     display: box 
-    width: 21%
-    margin: 2% 
-    background: #eee
-    transition: all .2s ease 
+    width: 50%
+    margin: 5%
+    @media screen and (min-width: $phone-l) 
+        width: 50%
+        margin: 5%
+    @media screen and (min-width: $laptop)
+        width: 50%
+        margin: 5%
+    @media screen and (min-width: $MDPI)
+        width: 50%
+        margin: 5%
+    @media screen and (min-width: $HD)
+        width: 50%
+        margin: 5%
+
+   

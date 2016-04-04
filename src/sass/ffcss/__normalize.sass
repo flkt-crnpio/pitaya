@@ -12,7 +12,7 @@ html
 body
     margin: 0
     padding: 0    
-    line-height: 1.5em
+    line-height: 1.6em
 
 
 
@@ -36,10 +36,6 @@ summary
 
 figure
     margin: $margin
-
-nav ol,
-nav ul
-    list-style: none
 
 audio,
 canvas,
@@ -70,21 +66,22 @@ template,
 
 
 
-abbr[title]
-    border-bottom: none
-    text-decoration: underline
-    text-decoration-style: wavy
+abbr,
+ins
+    text-decoration: none
+abbr
+    border-bottom: 1px dotted #111
+    cursor: help
+ins
+    border-bottom: 3px double #777
+
 b,
 strong
     font-weight: bolder
 dfn
     font-style: italic
-mark
-    background-color: $mark-background
-    color: $mark-color
-
 small
-    font-size: .7em
+    font-size: .8em
 sub,
 sup
     font-size: .7em
@@ -103,6 +100,9 @@ samp
     font-size: 1em
 pre
     overflow: auto
+    display: block
+    white-space: pre
+    margin: 1em 0
 
 
 
@@ -114,6 +114,8 @@ a
     background-color: transparent
     -ms-touch-action: manipulation
     touch-action: manipulation
+    cursor: pointer
+    +transition-ease(.3s)
     &:active,
     &:hover
         outline-width: 0
@@ -197,6 +199,7 @@ button,
 [type="submit"]
     cursor: pointer
     -webkit-appearance: button
+    +transition-ease(.3s)
 
 [disabled]
     cursor: default
