@@ -1,0 +1,39 @@
+/*
+ * _table *
+ */
+
+table
+    width: 100%
+    font-size: 14px
+
+table
+    th,
+    td 
+        text-align: left
+    th,
+    td 
+        display: block
+        padding: 0
+        &:first-child
+            padding-top: $padding/2
+        &:last-child
+            padding-bottom: $padding/2
+    tr 
+        border-bottom: 1px solid #eee
+
+    @media only screen and (min-width: $tablet)     
+        th,
+        td 
+            display: table-cell
+            padding: $padding/2
+
+.table-bordered
+    border: 1px solid #eee  
+    th,
+    td 
+        padding-left: $padding/2 
+        padding-right: $padding/2 
+    @media only screen and (min-width: $tablet)  
+        th,
+        td 
+            border: 1px solid #eee  

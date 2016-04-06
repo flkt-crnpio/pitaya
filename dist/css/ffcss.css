@@ -590,4 +590,42 @@ dl {
   -moz-column-break-inside: avoid;
   column-break-inside: avoid; }
 
+/* _table *
+ */
+table {
+  width: 100%;
+  font-size: 14px; }
+
+table th,
+table td {
+  text-align: left; }
+table th,
+table td {
+  display: block;
+  padding: 0; }
+  table th:first-child,
+  table td:first-child {
+    padding-top: 1rem; }
+  table th:last-child,
+  table td:last-child {
+    padding-bottom: 1rem; }
+table tr {
+  border-bottom: 1px solid #eee; }
+@media only screen and (min-width: 48rem) {
+  table th,
+  table td {
+    display: table-cell;
+    padding: 1rem; } }
+
+.table-bordered {
+  border: 1px solid #eee; }
+  .table-bordered th,
+  .table-bordered td {
+    padding-left: 1rem;
+    padding-right: 1rem; }
+  @media only screen and (min-width: 48rem) {
+    .table-bordered th,
+    .table-bordered td {
+      border: 1px solid #eee; } }
+
 /*# sourceMappingURL=ffcss.css.map */
