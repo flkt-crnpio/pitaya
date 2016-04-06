@@ -127,7 +127,8 @@ hr {
   overflow: visible; }
 
 img {
-  border-style: none; }
+  border-style: none;
+  max-width: 100%; }
 
 svg {
   fill: currentColor; }
@@ -406,17 +407,6 @@ blockquote {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis; }
-
-/* text transform *
- */
-.text-uppercase {
-  text-transform: uppercase; }
-
-.text-capitalize {
-  text-transform: capitalize; }
-
-.text-lowercase {
-  text-transform: lowercase; }
 
 /* _list *
  */
