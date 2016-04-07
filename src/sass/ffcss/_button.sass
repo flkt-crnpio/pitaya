@@ -1,0 +1,28 @@
+/*
+ * _button *
+ */
+
+button 
+    background: $button-background
+    background-size: 250% 100%
+    background-image: linear-gradient(135deg, $button-hover-background 50%, $button-background 50%)
+    background-position: 100% 0
+    border: 2px solid $button-border-color
+    border-radius: 100px
+    color: $button-color
+    font-size: 1em
+    font-weight: 500
+    letter-spacing: .2em
+    padding: $padding/2 $padding*2
+    position: relative
+    +transition-ease(.7s)
+    &:hover
+        background-position: 0 0
+        color: $button-hover-color
+
+    &[disabled],
+    &[disabled]:hover
+        background: $button-background
+        color: $button-color
+        opacity: .4
+       

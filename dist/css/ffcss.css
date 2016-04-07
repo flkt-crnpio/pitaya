@@ -194,12 +194,19 @@ button,
   cursor: default; }
 
 button::-moz-focus-inner,
-input::-moz-focus-inner {
+input::-moz-focus-inner,
+textarea::-moz-focus-inner {
   border: 0;
   padding: 0; }
 
 button:-moz-focusring,
-input:-moz-focusring {
+input:-moz-focusring,
+textarea:-moz-focusring {
+  outline: none; }
+
+button:focus,
+input:focus,
+textarea:focus {
   outline: none; }
 
 fieldset {
@@ -562,5 +569,32 @@ table {
       padding: 1rem; }
     table .th-mobile {
       display: none; } }
+
+/* _button *
+ */
+button {
+  background: transparent;
+  background-size: 250% 100%;
+  background-image: linear-gradient(135deg, #333 50%, transparent 50%);
+  background-position: 100% 0;
+  border: 2px solid #333;
+  border-radius: 100px;
+  color: #333;
+  font-size: 1em;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  padding: 1rem 4rem;
+  position: relative;
+  -webkit-transition: all 0.7s ease-in-out;
+  -moz-transition: all 0.7s ease-in-out;
+  -o-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out; }
+  button:hover {
+    background-position: 0 0;
+    color: #fff; }
+  button[disabled], button[disabled]:hover {
+    background: transparent;
+    color: #333;
+    opacity: 0.4; }
 
 /*# sourceMappingURL=ffcss.css.map */
