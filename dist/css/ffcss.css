@@ -113,11 +113,7 @@ a {
   background-color: transparent;
   -ms-touch-action: manipulation;
   touch-action: manipulation;
-  cursor: pointer;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out; }
+  cursor: pointer; }
   a:active, a:hover {
     outline-width: 0; }
 
@@ -596,5 +592,36 @@ button {
     background: transparent;
     color: #333;
     opacity: 0.4; }
+
+/* _link *
+ */
+a {
+  color: #333;
+  display: inline-block;
+  position: relative;
+  margin: 0 0.5rem;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+  a::after {
+    background: #333;
+    content: "";
+    position: absolute;
+    bottom: 2px;
+    right: 0;
+    width: 1em;
+    height: 1px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+  a:hover {
+    color: #000; }
+    a:hover::after {
+      right: 0;
+      width: 100%;
+      background: #000; }
 
 /*# sourceMappingURL=ffcss.css.map */

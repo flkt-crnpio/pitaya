@@ -1,0 +1,26 @@
+/*
+ * _link *
+ */
+
+a 
+    color: $link-color
+    display: inline-block
+    position: relative
+    margin: 0 $margin/8
+    text-decoration: none
+    +transition-ease(.3s)
+    &::after
+        background: $link-color
+        content: ""
+        position: absolute
+        bottom: 2px
+        right: 0
+        width: 1em
+        height: 1px
+        +transition-ease(.3s)
+    &:hover
+        color: $link-hover-color
+        &::after
+            right: 0
+            width: 100%
+            background: $link-hover-color
