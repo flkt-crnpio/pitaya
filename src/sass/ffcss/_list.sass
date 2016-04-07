@@ -22,58 +22,9 @@ ul
     ul
         list-style: circle
 
-.list-clean
-    list-style: none
-    padding: 0
-    ul,
-    ol
-        list-style: none
-
-.list-unestyle
-    list-style: none
-    padding: 0
-
-.list-unestyle > li > ol,
-.list-unestyle > li > ul
-    padding-left: $padding*2
-
-li > .list-unestyle
-    padding-left: $padding/2
-
-.list-line,
-.list-stripe
-    list-style: none
-    padding: 0
-
-.list-line > li,
-.list-stripe > li
-    padding: $padding/4
-
-.list-line > li:not(:last-child)
-    border-bottom: 1px solid $list-border-bottom-color
-
-.list-stripe > li:nth-child(even)
-    background: $list-background-color
-
-
-.list-inline
-    display: block 
-    display: -webkit-flex 
-    display: -moz-flex 
-    display: flex 
-    margin: 0
-    padding: 0
-
-.list-inline > li
-    display: inline-block
-    margin-right: $margin/2
 
 
 
-
-/*
- * description list *
- */
 dl 
     margin: $margin/2 0 
     dt 

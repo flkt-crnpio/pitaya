@@ -58,9 +58,6 @@ h6 small
 p 
     margin: $margin/2 0
     padding: 0
-    &.lead
-        font-size: 1.3em
-        line-height: 1.4em
 
 
 
@@ -91,49 +88,47 @@ samp
 
 blockquote
     margin: $margin 0
-    padding: $padding/4 0 $padding/4 $padding
+    padding: $padding
+    position: relative
     p
         color: $quote-color
+        font-size: 1.6em
+        font-weight: 100
+        line-height: 1.2em
         display: block
         margin: 0
         padding: 0
+        z-index: 2
+        position: relative
     cite
         display: block
         margin: 0
         padding: 0
         position: relative
         color: $cite-color
+        z-index: 2
+        position: relative
         &::before
             content: "—"
             display: inline-block
             width: 2em
             height: 2em
-.quote-line
-    border-left: 7px solid $quote-border-color
-    p 
-        font-size: 1.3em
-        font-weight: 300
-        line-height: 1.6em
-.quote-marks
-    position: relative
-    p 
-        font-size: 2em
-        font-weight: 100
-        line-height: 1.2em
     &::before
         color: $quote-border-color
         content: "\201C"
-        font-size: 6em
+        font-size: 10em
         font-family: Georgia, serif
         position: absolute
-        left: 0
-        top: $padding
+        left: $padding
+        top: $margin 
+        z-index: 0
 
-
-
+        
+    
 
 /*
  * text align *
+ * de estas clases tampoco estoy muy segura *
  */
 .text-center
     text-align: center

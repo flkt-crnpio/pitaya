@@ -4,36 +4,42 @@
 
 table
     width: 100%
-    font-size: 14px
-
-table
-    th,
-    td 
-        text-align: left
-    th,
+    thead
+        display: none
+    tfoot
+        tr 
+            background: #fafafa
+            color: #555
+    tbody
+        tr 
+            border-bottom: 1px solid #eee
     td 
         display: block
-        padding: 0
+        padding: 0 $padding/2
         &:first-child
             padding-top: $padding/2
         &:last-child
             padding-bottom: $padding/2
-    tr 
-        border-bottom: 1px solid #eee
+        
+    .th-mobile
+        font-weight: bold
+        font-size: .7em
+        display: block
+        line-height: 1em
+        margin: 0
+        padding: $padding/2 0 0
 
-    @media only screen and (min-width: $tablet)     
+    @media only screen and (min-width: $tablet)  
+        thead
+            display: table-header-group
+            th 
+                text-align: left
+
         th,
         td 
             display: table-cell
             padding: $padding/2
 
-.table-bordered
-    border: 1px solid #eee  
-    th,
-    td 
-        padding-left: $padding/2 
-        padding-right: $padding/2 
-    @media only screen and (min-width: $tablet)  
-        th,
-        td 
-            border: 1px solid #eee  
+        .th-mobile
+            display: none
+
