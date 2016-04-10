@@ -6,6 +6,8 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,700,100);
 /* Margin/Padding *
  */
+/* Border Radius *
+ */
 /* Colors *
  */
 /* Custom normalize configurations for ffcss v0.0.1
@@ -180,11 +182,7 @@ button,
 [type="reset"],
 [type="submit"] {
   cursor: pointer;
-  -webkit-appearance: button;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out; }
+  -webkit-appearance: button; }
 
 [disabled] {
   cursor: default; }
@@ -243,18 +241,18 @@ table {
   border-spacing: 0; }
 
 ::-webkit-selection {
-  background-color: #000;
-  color: #eee;
+  background-color: #d6f3f0;
+  color: #22756d;
   text-shadow: none; }
 
 ::-moz-selection {
-  background-color: #000;
-  color: #eee;
+  background-color: #d6f3f0;
+  color: #22756d;
   text-shadow: none; }
 
 ::selection {
-  background-color: #000;
-  color: #eee;
+  background-color: #d6f3f0;
+  color: #22756d;
   text-shadow: none; }
 
 .margin {
@@ -332,19 +330,18 @@ samp {
 
 code {
   background: #eee;
-  border: 1px solid #ccc;
-  color: #333; }
+  color: #555; }
 
 kbd {
-  background: #333;
+  background: #222;
   color: #eee; }
 
 mark {
-  background: #ff0;
-  color: #000; }
+  background: #9ff7ee;
+  color: #24a699; }
 
 samp {
-  background: #0ce;
+  background: #15d;
   color: #fff; }
 
 blockquote {
@@ -568,35 +565,41 @@ table {
 
 /* _button *
  */
-button {
-  background: transparent;
-  background-size: 250% 100%;
-  background-image: linear-gradient(135deg, #333 50%, transparent 50%);
-  background-position: 100% 0;
-  border: 2px solid #333;
-  border-radius: 100px;
-  color: #333;
-  font-size: 1em;
-  font-weight: 500;
-  letter-spacing: 0.2em;
-  padding: 1rem 4rem;
-  position: relative;
-  -webkit-transition: all 0.7s ease-in-out;
-  -moz-transition: all 0.7s ease-in-out;
-  -o-transition: all 0.7s ease-in-out;
-  transition: all 0.7s ease-in-out; }
-  button:hover {
-    background-position: 0 0;
-    color: #fff; }
-  button[disabled], button[disabled]:hover {
-    background: transparent;
-    color: #333;
-    opacity: 0.4; }
+button,
+button:focus {
+  background: #41efde;
+  border: none;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out; }
+  button:hover,
+  button:focus:hover {
+    background: #29edda; }
+  button:active,
+  button:focus:active {
+    background: #14e9d4; }
+  button[disabled], button[disabled]:hover, button[disabled]:focus, button[disabled]:active,
+  button:focus[disabled],
+  button:focus[disabled]:hover,
+  button:focus[disabled]:focus,
+  button:focus[disabled]:active {
+    opacity: 0.2;
+    background: #10baaa; }
+
+.btn-danger {
+  background: red; }
 
 /* _link *
  */
-a {
-  color: #333;
+a,
+a:focus {
+  color: #41efde;
   display: inline-block;
   position: relative;
   margin: 0 0.5rem;
@@ -605,23 +608,37 @@ a {
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
-  a::after {
-    background: #333;
+  a::after,
+  a:focus::after {
+    background: #41efde;
     content: "";
     position: absolute;
     bottom: 2px;
     right: 0;
-    width: 1em;
-    height: 1px;
+    width: 10px;
+    height: 2px;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out; }
-  a:hover {
-    color: #000; }
-    a:hover::after {
+  a:hover,
+  a:focus:hover {
+    color: #29edda; }
+    a:hover::after,
+    a:focus:hover::after {
       right: 0;
       width: 100%;
-      background: #000; }
+      background: #29edda; }
+  a:active,
+  a:focus:active {
+    color: #14e9d4; }
+    a:active::after,
+    a:focus:active::after {
+      right: 0;
+      width: 100%;
+      background: #14e9d4; }
+
+/* _form *
+ */
 
 /*# sourceMappingURL=ffcss.css.map */

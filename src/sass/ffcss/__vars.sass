@@ -32,23 +32,35 @@ $pin-space:             4rem
 
 
 /*
+ * Border Radius *
+ */
+$border-radius: 2px
+
+/*
  * Colors *
  */
-$anchor-color: #00f
-$anchor-color-hover: #0ff
+$primary-color: #41efde
+// $primary-color: #00ff93
+// $primary-color: #fc4157
+// $primary-color: #00cc60
+// $primary-color: #0ea
 
-$code-color: #333
-$code-background: #eee
-$code-border-color: #ccc
+$select-color: darken(desaturate($primary-color, 30), 30)
+$select-background: lighten(desaturate($primary-color, 30), 30)
 
-$kbd-color: #eee
-$kbd-background: #333
+$mark-color: darken(desaturate($primary-color, 20), 20)
+$mark-background: lighten($primary-color, 20)
 
-$mark-background: #ff0
-$mark-color: #000
 
 $samp-color: #fff
-$samp-background: #0ce
+$samp-background: #15d
+
+$code-color: #555
+$code-background: #eee
+
+$kbd-color: #eee
+$kbd-background: #222
+
 
 $cite-color: #aaa
 $quote-color: #555
@@ -56,19 +68,11 @@ $quote-border-color: #eee
 
 $fieldset-border: #ddd
 
-$list-border-bottom-color: #ddd
-$list-background-color: #eee
+// _button.sass
+$button-color: #fff
+$button-background: $primary-color
 
-$select-background: #000
-$select-color: #eee
+$button-background-danger: $primary-color * #900
 
-$button-color: #333
-$button-hover-color: #fff
-$button-background: transparent
-$button-hover-background: #333
-$button-focus-background: #000
-$button-border-color: #333
-$button-hover-border-color: #333
-
-$link-color: #333
-$link-hover-color: #000
+// _link.sass
+$link-color: $primary-color
