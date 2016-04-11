@@ -640,5 +640,84 @@ a:focus {
 
 /* _form *
  */
+[type="date"],
+[type="datetime"],
+[type="datetime-local"],
+[type="email"],
+[type="month"],
+[type="number"],
+[type="password"],
+[type="reset"],
+[type="search"],
+[type="submit"],
+[type="tel"],
+[type="text"],
+[type="time"],
+[type="url"],
+[type="week"],
+select,
+textarea {
+  border: none;
+  border-bottom: 1px solid #ddd;
+  display: block;
+  width: 100%; }
+
+.form-input-block {
+  position: relative;
+  height: 60px;
+  margin: 5px 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+  .form-input-block label {
+    position: absolute;
+    color: #aaa;
+    z-index: 3;
+    top: 0;
+    font-size: 13px;
+    font-weight: 100;
+    width: 100%;
+    height: 55px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+    .form-input-block label::after {
+      background: #41efde;
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 0;
+      height: 2px;
+      z-index: 4;
+      -webkit-transition: all 0.5s ease-in-out;
+      -moz-transition: all 0.5s ease-in-out;
+      -o-transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out; }
+  .form-input-block input {
+    background: transparent;
+    position: absolute;
+    z-index: 2;
+    height: 40px;
+    padding: 0;
+    top: 15px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+    .form-input-block input:hover + label, .form-input-block input:focus + label {
+      color: #0cf;
+      font-weight: 700; }
+    .form-input-block input:hover + label::after, .form-input-block input:focus + label::after {
+      width: 100%;
+      background: #0cf; }
+    .form-input-block input:invalid + label {
+      color: #f00;
+      font-weight: 700; }
+    .form-input-block input:invalid + label::after {
+      width: 100%;
+      background: #f00; }
 
 /*# sourceMappingURL=ffcss.css.map */
