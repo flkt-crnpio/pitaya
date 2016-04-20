@@ -17,8 +17,8 @@
 [type="time"],
 [type="url"],
 [type="week"],
-select,
 textarea
+    background: transparent
     border: none
     border-bottom: 1px solid $input-border-color
     display: block
@@ -49,8 +49,7 @@ textarea
             +transition-ease(.5s)
 
     input,
-    select,
-    textarea 
+    textarea
         color: $input-color
         height: 30px
         padding: 0
@@ -76,6 +75,62 @@ textarea
         + label::after
             bottom: -100px
 
+
+.form-select-block
+    display: flex
+    flex-direction: column-reverse
+    margin-top: 10px
+    padding-bottom: 5px
+    border-bottom: 1px solid $input-border-color
+
+    label
+        position: relative
+        color: $label-color
+        font-size: 13px
+        font-weight: 400
+        width: 100%
+        +transition-ease(.3s)
+
+        &::after
+            background: $input-hover-border-color
+            content: ""
+            position: absolute
+            bottom: -30px
+            right: 0
+            width: 0
+            height: 2px
+            +transition-ease(.5s)
+
+        &::before
+            border-left: 6px solid transparent
+            border-right: 6px solid transparent
+            border-top: 8px solid $input-border-color
+            content: ""
+            position: absolute
+            bottom: -15px
+            right: 10px
+            width: 0
+            height: 0
+            +transition-ease(.5s)
+
+    select
+        background: transparent
+        border: none
+        padding: 0
+        -webkit-appearance: none
+        -moz-appearance: none
+        appearance: none
+
+        &:hover + label,
+        &:focus + label
+            color: $input-hover-border-color
+        &:hover + label::after,
+        &:focus + label::after
+            width: 100%
+            background: $input-hover-border-color
+        &:hover + label::before,
+        &:focus + label::before
+            border-top: 8px solid $input-hover-border-color
 
 .form-input-checkbox,
 .form-input-radio 
@@ -160,3 +215,4 @@ textarea
             position: absolute
             top: 6px
             left: 6px
+

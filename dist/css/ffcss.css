@@ -189,18 +189,21 @@ button,
 
 button::-moz-focus-inner,
 input::-moz-focus-inner,
-textarea::-moz-focus-inner {
+textarea::-moz-focus-inner,
+select::-moz-focus-inner {
   border: 0;
   padding: 0; }
 
 button:-moz-focusring,
 input:-moz-focusring,
-textarea:-moz-focusring {
+textarea:-moz-focusring,
+select:-moz-focusring {
   outline: none; }
 
 button:focus,
 input:focus,
-textarea:focus {
+textarea:focus,
+select:focus {
   outline: none; }
 
 fieldset {
@@ -642,8 +645,8 @@ a {
 [type="time"],
 [type="url"],
 [type="week"],
-select,
 textarea {
+  background: transparent;
   border: none;
   border-bottom: 1px solid #ddd;
   display: block;
@@ -676,7 +679,6 @@ textarea {
       -o-transition: all 0.5s ease-in-out;
       transition: all 0.5s ease-in-out; }
   .form-input-block input,
-  .form-input-block select,
   .form-input-block textarea {
     color: #555;
     height: 30px;
@@ -686,24 +688,18 @@ textarea {
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out; }
     .form-input-block input:hover + label, .form-input-block input:focus + label,
-    .form-input-block select:hover + label,
-    .form-input-block select:focus + label,
     .form-input-block textarea:hover + label,
     .form-input-block textarea:focus + label {
       color: #0dc; }
     .form-input-block input:hover + label::after, .form-input-block input:focus + label::after,
-    .form-input-block select:hover + label::after,
-    .form-input-block select:focus + label::after,
     .form-input-block textarea:hover + label::after,
     .form-input-block textarea:focus + label::after {
       width: 100%;
       background: #0dc; }
     .form-input-block input:invalid + label,
-    .form-input-block select:invalid + label,
     .form-input-block textarea:invalid + label {
       color: #f00; }
     .form-input-block input:invalid + label::after,
-    .form-input-block select:invalid + label::after,
     .form-input-block textarea:invalid + label::after {
       width: 100%;
       background: #f00; }
@@ -711,6 +707,63 @@ textarea {
     height: 100px; }
     .form-input-block textarea + label::after {
       bottom: -100px; }
+
+.form-select-block {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-top: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #ddd; }
+  .form-select-block label {
+    position: relative;
+    color: #aaa;
+    font-size: 13px;
+    font-weight: 400;
+    width: 100%;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+    .form-select-block label::after {
+      background: #0dc;
+      content: "";
+      position: absolute;
+      bottom: -30px;
+      right: 0;
+      width: 0;
+      height: 2px;
+      -webkit-transition: all 0.5s ease-in-out;
+      -moz-transition: all 0.5s ease-in-out;
+      -o-transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out; }
+    .form-select-block label::before {
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-top: 8px solid #ddd;
+      content: "";
+      position: absolute;
+      bottom: -15px;
+      right: 10px;
+      width: 0;
+      height: 0;
+      -webkit-transition: all 0.5s ease-in-out;
+      -moz-transition: all 0.5s ease-in-out;
+      -o-transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out; }
+  .form-select-block select {
+    background: transparent;
+    border: none;
+    padding: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; }
+    .form-select-block select:hover + label, .form-select-block select:focus + label {
+      color: #0dc; }
+    .form-select-block select:hover + label::after, .form-select-block select:focus + label::after {
+      width: 100%;
+      background: #0dc; }
+    .form-select-block select:hover + label::before, .form-select-block select:focus + label::before {
+      border-top: 8px solid #0dc; }
 
 .form-input-checkbox,
 .form-input-radio {
