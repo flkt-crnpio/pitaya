@@ -116,7 +116,7 @@ a {
   -ms-touch-action: manipulation;
   touch-action: manipulation;
   cursor: pointer; }
-  a:active, a:hover {
+  a:active, a:hover, a:focus {
     outline-width: 0; }
 
 hr {
@@ -241,18 +241,18 @@ table {
   border-spacing: 0; }
 
 ::-webkit-selection {
-  background-color: #d6f3f0;
-  color: #22756d;
+  background-color: #8bebe3;
+  color: #0a3a36;
   text-shadow: none; }
 
 ::-moz-selection {
-  background-color: #d6f3f0;
-  color: #22756d;
+  background-color: #8bebe3;
+  color: #0a3a36;
   text-shadow: none; }
 
 ::selection {
-  background-color: #d6f3f0;
-  color: #22756d;
+  background-color: #8bebe3;
+  color: #0a3a36;
   text-shadow: none; }
 
 .margin {
@@ -337,8 +337,8 @@ kbd {
   color: #eee; }
 
 mark {
-  background: #9ff7ee;
-  color: #24a699; }
+  background: #44fff1;
+  color: #0c6b64; }
 
 samp {
   background: #15d;
@@ -565,9 +565,8 @@ table {
 
 /* _button *
  */
-button,
-button:focus {
-  background: #41efde;
+button {
+  background: #0dc;
   border: none;
   border-radius: 2px;
   color: #fff;
@@ -578,28 +577,21 @@ button:focus {
   -moz-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out; }
-  button:hover,
-  button:focus:hover {
-    background: #29edda; }
-  button:active,
-  button:focus:active {
-    background: #14e9d4; }
-  button[disabled], button[disabled]:hover, button[disabled]:focus, button[disabled]:active,
-  button:focus[disabled],
-  button:focus[disabled]:hover,
-  button:focus[disabled]:focus,
-  button:focus[disabled]:active {
+  button:hover, button:focus {
+    background: #00beb0; }
+  button:active {
+    background: #00a094; }
+  button[disabled], button[disabled]:hover, button[disabled]:focus, button[disabled]:active {
     opacity: 0.2;
-    background: #10baaa; }
+    background: #00776e; }
 
 .btn-danger {
-  background: red; }
+  background: black; }
 
 /* _link *
  */
-a,
-a:focus {
-  color: #41efde;
+a {
+  color: #0dc;
   display: inline-block;
   position: relative;
   margin: 0 0.5rem;
@@ -608,9 +600,8 @@ a:focus {
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
-  a::after,
-  a:focus::after {
-    background: #41efde;
+  a::after {
+    background: #0dc;
     content: "";
     position: absolute;
     bottom: 2px;
@@ -621,22 +612,18 @@ a:focus {
     -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out; }
-  a:hover,
-  a:focus:hover {
-    color: #29edda; }
-    a:hover::after,
-    a:focus:hover::after {
+  a:hover, a:focus {
+    color: #00c4b4; }
+    a:hover::after, a:focus::after {
       right: 0;
       width: 100%;
-      background: #29edda; }
-  a:active,
-  a:focus:active {
-    color: #14e9d4; }
-    a:active::after,
-    a:focus:active::after {
+      background: #00c4b4; }
+  a:active {
+    color: #00aa9d; }
+    a:active::after {
       right: 0;
       width: 100%;
-      background: #14e9d4; }
+      background: #00aa9d; }
 
 /* _form *
  */
@@ -663,61 +650,155 @@ textarea {
   width: 100%; }
 
 .form-input-block {
-  position: relative;
-  height: 60px;
-  margin: 5px 0;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out; }
+  display: flex;
+  flex-direction: column-reverse;
+  margin-top: 10px; }
   .form-input-block label {
-    position: absolute;
+    position: relative;
     color: #aaa;
-    z-index: 3;
-    top: 0;
     font-size: 13px;
-    font-weight: 100;
+    font-weight: 400;
     width: 100%;
-    height: 55px;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out; }
     .form-input-block label::after {
-      background: #41efde;
+      background: #0dc;
       content: "";
       position: absolute;
-      bottom: 0;
+      bottom: -30px;
       right: 0;
       width: 0;
       height: 2px;
-      z-index: 4;
       -webkit-transition: all 0.5s ease-in-out;
       -moz-transition: all 0.5s ease-in-out;
       -o-transition: all 0.5s ease-in-out;
       transition: all 0.5s ease-in-out; }
-  .form-input-block input {
-    background: transparent;
-    position: absolute;
-    z-index: 2;
-    height: 40px;
+  .form-input-block input,
+  .form-input-block select,
+  .form-input-block textarea {
+    color: #555;
+    height: 30px;
     padding: 0;
-    top: 15px;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out; }
-    .form-input-block input:hover + label, .form-input-block input:focus + label {
-      color: #0cf;
-      font-weight: 700; }
-    .form-input-block input:hover + label::after, .form-input-block input:focus + label::after {
+    .form-input-block input:hover + label, .form-input-block input:focus + label,
+    .form-input-block select:hover + label,
+    .form-input-block select:focus + label,
+    .form-input-block textarea:hover + label,
+    .form-input-block textarea:focus + label {
+      color: #0dc; }
+    .form-input-block input:hover + label::after, .form-input-block input:focus + label::after,
+    .form-input-block select:hover + label::after,
+    .form-input-block select:focus + label::after,
+    .form-input-block textarea:hover + label::after,
+    .form-input-block textarea:focus + label::after {
       width: 100%;
-      background: #0cf; }
-    .form-input-block input:invalid + label {
-      color: #f00;
-      font-weight: 700; }
-    .form-input-block input:invalid + label::after {
+      background: #0dc; }
+    .form-input-block input:invalid + label,
+    .form-input-block select:invalid + label,
+    .form-input-block textarea:invalid + label {
+      color: #f00; }
+    .form-input-block input:invalid + label::after,
+    .form-input-block select:invalid + label::after,
+    .form-input-block textarea:invalid + label::after {
       width: 100%;
       background: #f00; }
+  .form-input-block textarea {
+    height: 100px; }
+    .form-input-block textarea + label::after {
+      bottom: -100px; }
+
+.form-input-checkbox,
+.form-input-radio {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  margin: 15px 0 10px; }
+  .form-input-checkbox input,
+  .form-input-radio input {
+    display: none; }
+    .form-input-checkbox input:hover + label::before,
+    .form-input-radio input:hover + label::before {
+      background: #fff;
+      border-color: #0dc; }
+    .form-input-checkbox input:hover + label::after,
+    .form-input-radio input:hover + label::after {
+      border-color: #0dc; }
+    .form-input-checkbox input:checked + label,
+    .form-input-radio input:checked + label {
+      color: #555; }
+    .form-input-checkbox input:checked + label::before,
+    .form-input-radio input:checked + label::before {
+      background: #0dc;
+      border-color: #0dc; }
+    .form-input-checkbox input:checked + label::after,
+    .form-input-radio input:checked + label::after {
+      border-color: #fff; }
+  .form-input-checkbox label,
+  .form-input-radio label {
+    color: #aaa;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 400;
+    position: relative;
+    padding: 0 30px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+    .form-input-checkbox label:hover,
+    .form-input-radio label:hover {
+      color: #0dc; }
+    .form-input-checkbox label::before,
+    .form-input-radio label::before {
+      content: "";
+      position: absolute;
+      height: 20px;
+      width: 20px;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 2px;
+      left: 0;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out; }
+    .form-input-checkbox label::after,
+    .form-input-radio label::after {
+      content: "";
+      width: 12px;
+      height: 6px;
+      border: 2px solid #ddd;
+      border-top: none;
+      border-right: none;
+      background: transparent;
+      transform: rotate(-45deg);
+      position: absolute;
+      top: 6px;
+      left: 4px;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out; }
+
+.form-input-radio input:hover + label::after {
+  background: #0dc; }
+.form-input-radio input:checked + label::after {
+  background: #fff; }
+.form-input-radio label::before {
+  border-radius: 50%; }
+.form-input-radio label::after {
+  width: 6px;
+  height: 6px;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+  background: #ddd;
+  position: absolute;
+  top: 6px;
+  left: 6px; }
 
 /*# sourceMappingURL=ffcss.css.map */

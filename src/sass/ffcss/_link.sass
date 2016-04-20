@@ -2,8 +2,7 @@
  * _link *
  */
 
-a,
-a:focus 
+a
     color: $link-color
     display: inline-block
     position: relative
@@ -19,7 +18,8 @@ a:focus
         width: 10px
         height: 2px
         +transition-ease(.3s)
-    &:hover
+    &:hover,
+    &:focus
         color: darken($link-color, 5)
         &::after
             right: 0

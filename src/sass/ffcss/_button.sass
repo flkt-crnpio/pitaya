@@ -2,8 +2,7 @@
  * _button *
  */
 
-button,
-button:focus
+button
     background: $button-background
     border: none
     border-radius: $border-radius
@@ -12,10 +11,11 @@ button:focus
     text-transform: uppercase
     padding: $padding/4 $padding/2
     +transition-ease(.5s)
-    &:hover
-        background: darken($button-background, 5)
+    &:hover,
+    &:focus
+        background: darken($button-background, 6)
     &:active
-        background: darken($button-background, 10)
+        background: darken($button-background, 12)
 
     &[disabled],
     &[disabled]:hover,
