@@ -670,7 +670,7 @@ textarea {
       background: #0dc;
       content: "";
       position: absolute;
-      bottom: -30px;
+      bottom: -32px;
       right: 0;
       width: 0;
       height: 2px;
@@ -706,7 +706,7 @@ textarea {
   .form-input-block textarea {
     height: 100px; }
     .form-input-block textarea + label::after {
-      bottom: -100px; }
+      bottom: -102px; }
 
 .form-select-block {
   display: flex;
@@ -728,7 +728,7 @@ textarea {
       background: #0dc;
       content: "";
       position: absolute;
-      bottom: -30px;
+      bottom: -32px;
       right: 0;
       width: 0;
       height: 2px;
@@ -764,6 +764,31 @@ textarea {
       background: #0dc; }
     .form-select-block select:hover + label::before, .form-select-block select:focus + label::before {
       border-top: 8px solid #0dc; }
+
+.form-input-file {
+  margin-top: 10px; }
+  .form-input-file label {
+    background: #0dc;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    padding: 0.5rem 1rem;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out; }
+    .form-input-file label .icon {
+      display: inline-block;
+      font-size: 2em;
+      float: left;
+      margin: 2px 10px 0 0;
+      padding: 0; }
+    .form-input-file label:hover, .form-input-file label:focus {
+      background: #00beb0; }
+    .form-input-file label:active {
+      background: #00a094; }
+  .form-input-file input {
+    display: none; }
 
 .form-input-checkbox,
 .form-input-radio {

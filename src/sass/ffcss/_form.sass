@@ -42,7 +42,7 @@ textarea
             background: $input-hover-border-color
             content: ""
             position: absolute
-            bottom: -30px
+            bottom: -32px
             right: 0
             width: 0
             height: 2px
@@ -73,7 +73,7 @@ textarea
         height: 100px
         
         + label::after
-            bottom: -100px
+            bottom: -102px
 
 
 .form-select-block
@@ -95,7 +95,7 @@ textarea
             background: $input-hover-border-color
             content: ""
             position: absolute
-            bottom: -30px
+            bottom: -32px
             right: 0
             width: 0
             height: 2px
@@ -131,6 +131,34 @@ textarea
         &:hover + label::before,
         &:focus + label::before
             border-top: 8px solid $input-hover-border-color
+
+
+.form-input-file
+    margin-top: 10px
+
+    label
+        background: $button-background
+        color: #fff
+        cursor: pointer
+        display: block
+        padding: $padding/4 $padding/2
+        +transition-ease(.5s)
+
+        .icon 
+            display: inline-block
+            font-size: 2em
+            float: left
+            margin: 2px 10px 0 0
+            padding: 0
+
+        &:hover,
+        &:focus
+            background: darken($button-background, 6)
+        &:active
+            background: darken($button-background, 12)
+
+    input
+        display: none
 
 .form-input-checkbox,
 .form-input-radio 
@@ -192,8 +220,6 @@ textarea
             top: 6px
             left: 4px
             +transition-ease(.3s)
-
-
 .form-input-radio 
     input
         &:hover + label::after
