@@ -34,14 +34,14 @@ $pin-space:             4rem
 /*
  * Border Radius *
  */
-$border-radius: 2px
+$border-radius: 1px
 
 /*
  * Colors *
  */
-$primary-color: #0dc
-
-$error-color: #f00
+$primary-color: #1DE9B6
+$accent-color: #FFD600
+$error-color: #f44336
 
 $select-color: darken(desaturate($primary-color, 30), 30)
 $select-background: lighten(desaturate($primary-color, 30), 30)
@@ -68,7 +68,16 @@ $fieldset-border: #ddd
 
 // _button.sass
 $button-color: #fff
-$button-background: $primary-color
+$button-background: #ccc
+
+$button-primary-color: #fff
+$button-primary-background: $primary-color
+
+$button-accent-color: #fff
+$button-accent-background: $accent-color
+
+$button-error-color: #fff
+$button-error-background: $error-color
 
 $button-background-danger: $primary-color * #900
 

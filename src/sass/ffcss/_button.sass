@@ -1,29 +1,37 @@
 /*
  * _button *
  */
-
-button
-    background: $button-background
-    border: none
-    border-radius: $border-radius
-    color: $button-color
-    font-size: .9em
-    text-transform: uppercase
-    padding: $padding/4 $padding/2
-    +transition-ease(.5s)
+=button-color-darken($color, $background)
+    background: $background
+    color: $color
     &:hover,
     &:focus
-        background: darken($button-background, 6)
+        background: darken($background, 6)
     &:active
-        background: darken($button-background, 12)
-
+        background: darken($background, 12)
     &[disabled],
     &[disabled]:hover,
     &[disabled]:focus,
     &[disabled]:active
         opacity: .2
-        background: darken($button-background, 20)
-.btn-danger
-    background: $button-background-danger
+        background: darken($background, 20)
 
+button
+    +button-color-darken($button-color, $button-background)
+    border: none
+    border-radius: $border-radius
+    font-size: .9em
+    text-transform: uppercase
+    padding: $padding/4 $padding/2
+    margin: $margin/20 $margin/20 $margin/20 0
+    +transition-ease(.5s)
+    
+.button-primary
+    +button-color-darken($button-primary-color, $button-primary-background)
+
+.button-accent
+    +button-color-darken($button-accent-color, $button-accent-background)
+
+.button-error
+    +button-color-darken($button-error-color, $button-error-background)
        
