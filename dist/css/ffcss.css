@@ -442,51 +442,159 @@ dl {
     margin: 0;
     padding: 0; }
 
-.box-container {
+.row,
+.col {
   display: block;
   display: -webkit-flex;
   display: -moz-flex;
   display: flex;
-  -webkit-align-items: left;
-  -webkit-moz-items: left;
-  align-items: left;
-  -webkit-justify-content: left;
-  -moz-justify-content: left;
-  justify-content: left;
+  -webkit-flex-wrap: nowrap;
+  -moz-flex-wrap: nowrap;
+  flex-wrap: nowrap; }
+  .row.wrap,
+  .col.wrap {
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    .row.wrap.reverse,
+    .col.wrap.reverse {
+      -webkit-flex-wrap: wrap-reverse;
+      -moz-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse; }
+  .row.v-start,
+  .col.v-start {
+    -webkit-align-items: flex-start;
+    -webkit-moz-items: flex-start;
+    align-items: flex-start; }
+  .row.v-end,
+  .col.v-end {
+    -webkit-align-items: flex-end;
+    -webkit-moz-items: flex-end;
+    align-items: flex-end; }
+  .row.v-center,
+  .col.v-center {
+    -webkit-align-items: center;
+    -webkit-moz-items: center;
+    align-items: center; }
+  .row.v-baseline,
+  .col.v-baseline {
+    -webkit-align-items: baseline;
+    -webkit-moz-items: baseline;
+    align-items: baseline; }
+  .row.v-stretch,
+  .col.v-stretch {
+    -webkit-align-items: stretch;
+    -webkit-moz-items: stretch;
+    align-items: stretch; }
+  .row.h-start,
+  .col.h-start {
+    -webkit-justify-content: flex-start;
+    -moz-justify-content: flex-start;
+    justify-content: flex-start; }
+  .row.h-end,
+  .col.h-end {
+    -webkit-justify-content: flex-end;
+    -moz-justify-content: flex-end;
+    justify-content: flex-end; }
+  .row.h-center,
+  .col.h-center {
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    justify-content: center; }
+  .row.h-between,
+  .col.h-between {
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    justify-content: space-between; }
+  .row.h-around,
+  .col.h-around {
+    -webkit-justify-content: space-around;
+    -moz-justify-content: space-around;
+    justify-content: space-around; }
+  .row.content-start,
+  .col.content-start {
+    -webkit-align-content: flex-start;
+    -moz-align-content: flex-start;
+    align-content: flex-start; }
+  .row.content-end,
+  .col.content-end {
+    -webkit-align-content: flex-end;
+    -moz-align-content: flex-end;
+    align-content: flex-end; }
+  .row.content-center,
+  .col.content-center {
+    -webkit-align-content: center;
+    -moz-align-content: center;
+    align-content: center; }
+  .row.content-between,
+  .col.content-between {
+    -webkit-align-content: space-between;
+    -moz-align-content: space-between;
+    align-content: space-between; }
+  .row.content-around,
+  .col.content-around {
+    -webkit-align-content: space-around;
+    -moz-align-content: space-around;
+    align-content: space-around; }
+  .row.content-stretch,
+  .col.content-stretch {
+    -webkit-align-content: stretch;
+    -moz-align-content: stretch;
+    align-content: stretch; }
+
+.row {
   -webkit-flex-direction: row;
   -moz-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -moz-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-flex-flow: row wrap;
-  -moz-flex-flow: row wrap;
-  flex-flow: row wrap;
-  -webkit-align-content: flex-end;
-  -moz-align-content: flex-end;
-  align-content: flex-end; }
+  flex-direction: row; }
+  .row.reverse {
+    -webkit-flex-direction: row-reverse;
+    -moz-flex-direction: row-reverse;
+    flex-direction: row-reverse; }
 
-.box {
-  display: inline-block;
-  display: box;
-  width: 50%;
-  margin: 5%; }
-  @media screen and (min-width: 30rem) {
-    .box {
-      width: 50%;
-      margin: 5%; } }
-  @media screen and (min-width: 64rem) {
-    .box {
-      width: 50%;
-      margin: 5%; } }
-  @media screen and (min-width: 75rem) {
-    .box {
-      width: 50%;
-      margin: 5%; } }
-  @media screen and (min-width: 120rem) {
-    .box {
-      width: 50%;
-      margin: 5%; } }
+.col {
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  flex-direction: column; }
+  .col.reverse {
+    -webkit-flex-direction: column-reverse;
+    -moz-flex-direction: column-reverse;
+    flex-direction: column-reverse; }
+
+.row .align-auto,
+.col .align-auto {
+  -webkit-align-self: auto;
+  -moz-align-self: auto;
+  align-self: auto; }
+.row .align-start,
+.col .align-start {
+  -webkit-align-self: flex-start;
+  -moz-align-self: flex-start;
+  align-self: flex-start; }
+.row .align-end,
+.col .align-end {
+  -webkit-align-self: flex-end;
+  -moz-align-self: flex-end;
+  align-self: flex-end; }
+.row .align-center,
+.col .align-center {
+  -webkit-align-self: center;
+  -moz-align-self: center;
+  align-self: center; }
+.row .align-baseline,
+.col .align-baseline {
+  -webkit-align-self: baseline;
+  -moz-align-self: baseline;
+  align-self: baseline; }
+.row .align-stretch,
+.col .align-stretch {
+  -webkit-align-self: stretch;
+  -moz-align-self: stretch;
+  align-self: stretch; }
+
+.flex {
+  flex: 1; }
+  .flex.full {
+    flex: 0 0 100%; }
 
 .pin-container {
   -webkit-column-width: 100%;
@@ -799,7 +907,7 @@ textarea {
 .form-input-file {
   margin-top: 10px; }
   .form-input-file label {
-    background: #ccc;
+    background: #1DE9B6;
     color: #fff;
     cursor: pointer;
     display: block;
@@ -808,16 +916,19 @@ textarea {
     -moz-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out; }
+    .form-input-file label:hover, .form-input-file label:focus {
+      background: #15d3a3; }
+    .form-input-file label:active {
+      background: #12b78e; }
+    .form-input-file label[disabled], .form-input-file label[disabled]:hover, .form-input-file label[disabled]:focus, .form-input-file label[disabled]:active {
+      opacity: 0.2;
+      background: #0e9271; }
     .form-input-file label .icon {
       display: inline-block;
       font-size: 2em;
       float: left;
       margin: 2px 10px 0 0;
       padding: 0; }
-    .form-input-file label:hover, .form-input-file label:focus {
-      background: #bdbdbd; }
-    .form-input-file label:active {
-      background: #adadad; }
   .form-input-file input {
     display: none; }
 

@@ -137,8 +137,7 @@ textarea
     margin-top: 10px
 
     label
-        background: $button-background
-        color: #fff
+        +button-color-darken(#fff, $input-hover-border-color)
         cursor: pointer
         display: block
         padding: $padding/4 $padding/2
@@ -150,12 +149,6 @@ textarea
             float: left
             margin: 2px 10px 0 0
             padding: 0
-
-        &:hover,
-        &:focus
-            background: darken($button-background, 6)
-        &:active
-            background: darken($button-background, 12)
 
     input
         display: none
