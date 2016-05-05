@@ -84,6 +84,13 @@
         -moz-align-content: stretch 
         align-content: stretch
 
+    margin-left: -$layout-space
+    margin-right: -$layout-space
+
+    > *
+        margin: $layout-space
+        padding: $layout-space
+
 .row
     -webkit-flex-direction: row 
     -moz-flex-direction: row 
@@ -134,3 +141,111 @@
 
     &.full 
         flex: 0 0 100%
+
+.f1,
+.phone-f1
+    flex: 0 0 calc(100% - #{$layout-space*4})
+.f2,
+.phone-f2
+    flex: 0 0 calc(50% - #{$layout-space*4})
+.f3,
+.phone-f3 
+    flex: 0 0 calc(33.33% - #{$layout-space*4})
+.f4,
+.phone-f4 
+    flex: 0 0 calc(25% - #{$layout-space*4})
+.f5,
+.phone-f5 
+    flex: 0 0 calc(20% - #{$layout-space*4})
+.f6,
+.phone-f6
+    flex: 0 0 calc(16.66% - #{$layout-space*4})
+.f7,
+.phone-f7
+    flex: 0 0 calc(14.28% - #{$layout-space*4})
+.f8,
+.phone-f8
+    flex: 0 0 calc(12.5% - #{$layout-space*4})
+.f9,
+.phone-f9
+    flex: 0 0 calc(11.11% - #{$layout-space*4})
+
+@media screen and (min-width: $phone-l)
+    .phone-l-f1
+        flex: 0 0 calc(100% - #{$layout-space*4})
+    .phone-l-f2
+        flex: 0 0 calc(50% - #{$layout-space*4})
+    .phone-l-f3 
+        flex: 0 0 calc(33.33% - #{$layout-space*4})
+    .phone-l-f4 
+        flex: 0 0 calc(25% - #{$layout-space*4})
+    .phone-l-f5 
+        flex: 0 0 calc(20% - #{$layout-space*4})
+    .phone-l-f6
+        flex: 0 0 calc(16.66% - #{$layout-space*4})
+    .phone-l-f7
+        flex: 0 0 calc(14.28% - #{$layout-space*4})
+    .phone-l-f8
+        flex: 0 0 calc(12.5% - #{$layout-space*4})
+    .phone-l-f9
+        flex: 0 0 calc(11.11% - #{$layout-space*4})
+
+@media screen and (min-width: $laptop)
+    .laptop-f1
+        flex: 0 0 calc(100% - #{$layout-space*4})
+    .laptop-f2
+        flex: 0 0 calc(50% - #{$layout-space*4})
+    .laptop-f3 
+        flex: 0 0 calc(33.33% - #{$layout-space*4})
+    .laptop-f4 
+        flex: 0 0 calc(25% - #{$layout-space*4})
+    .laptop-f5 
+        flex: 0 0 calc(20% - #{$layout-space*4})
+    .laptop-f6
+        flex: 0 0 calc(16.66% - #{$layout-space*4})
+    .laptop-f7
+        flex: 0 0 calc(14.28% - #{$layout-space*4})
+    .laptop-f8
+        flex: 0 0 calc(12.5% - #{$layout-space*4})
+    .laptop-f9
+        flex: 0 0 calc(11.11% - #{$layout-space*4})
+
+@media screen and (min-width: $MDPI)
+    .MDPI-f1
+        flex: 0 0 calc(100% - #{$layout-space*4})
+    .MDPI-f2
+        flex: 0 0 calc(50% - #{$layout-space*4})
+    .MDPI-f3 
+        flex: 0 0 calc(33.33% - #{$layout-space*4})
+    .MDPI-f4 
+        flex: 0 0 calc(25% - #{$layout-space*4})
+    .MDPI-f5 
+        flex: 0 0 calc(20% - #{$layout-space*4})
+    .MDPI-f6
+        flex: 0 0 calc(16.66% - #{$layout-space*4})
+    .MDPI-f7
+        flex: 0 0 calc(14.28% - #{$layout-space*4})
+    .MDPI-f8
+        flex: 0 0 calc(12.5% - #{$layout-space*4})
+    .MDPI-f9
+        flex: 0 0 calc(11.11% - #{$layout-space*4})
+
+@media screen and (min-width: $HD)
+    .HD-f1
+        flex: 0 0 calc(100% - #{$layout-space*4})
+    .HD-f2
+        flex: 0 0 calc(50% - #{$layout-space*4})
+    .HD-f3 
+        flex: 0 0 calc(33.33% - #{$layout-space*4})
+    .HD-f4 
+        flex: 0 0 calc(25% - #{$layout-space*4})
+    .HD-f5 
+        flex: 0 0 calc(20% - #{$layout-space*4})
+    .HD-f6
+        flex: 0 0 calc(16.66% - #{$layout-space*4})
+    .HD-f7
+        flex: 0 0 calc(14.28% - #{$layout-space*4})
+    .HD-f8
+        flex: 0 0 calc(12.5% - #{$layout-space*4})
+    .HD-f9
+        flex: 0 0 calc(11.11% - #{$layout-space*4})
