@@ -6,15 +6,15 @@
     color: $color
     &:hover,
     &:focus
-        background: darken($background, 6)
+        background: darken($background, 15)
     &:active
-        background: darken($background, 12)
+        background: darken($background, 20)
     &[disabled],
     &[disabled]:hover,
     &[disabled]:focus,
     &[disabled]:active
         opacity: .2
-        background: darken($background, 20)
+        background: darken($background, 25)
 
 button
     +button-color-darken($button-color, $button-background)
