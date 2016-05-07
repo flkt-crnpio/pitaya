@@ -1197,9 +1197,9 @@ blockquote {
   -webkit-column-width: 100%;
   -moz-column-width: 100%;
   column-width: 100%;
-  -webkit-column-gap: 2rem;
-  -moz-column-gap: 2rem;
-  column-gap: 2rem;
+  -webkit-column-gap: 2em;
+  -moz-column-gap: 2em;
+  column-gap: 2em;
   -webkit-column-count: 1;
   -moz-column-count: 1;
   column-count: 1;
@@ -1230,7 +1230,7 @@ blockquote {
 
 .pin {
   display: inline-block;
-  margin: 0 0 2rem;
+  margin: 0 0 2em;
   padding: 0;
   -webkit-column-break-inside: avoid;
   -moz-column-break-inside: avoid;
