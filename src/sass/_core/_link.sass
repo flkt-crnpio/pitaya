@@ -2,7 +2,7 @@
  * _link *
  */
 
-a:not(.navbar)
+a:not(.navbar):not(.breadcrumb)
     color: $link-color
     display: inline-block
     position: relative
@@ -31,3 +31,21 @@ a:not(.navbar)
             right: 0
             width: 100%
             background: darken($link-color, 10)
+
+a.breadcrumb
+    color: desaturate($link-color, 0)
+    font-weight: 300
+    text-decoration: none
+    +transition-ease(.3s)
+    &:not(.light-text)
+        &:hover,
+        &:focus
+            color: darken(desaturate($link-color, 100), 70)
+        &:active
+            color: darken(desaturate($link-color, 100), 90)
+    &.light-text
+        &:hover,
+        &:focus
+            color: lighten(desaturate($link-color, 100), 70)
+        &:active
+            color: lighten(desaturate($link-color, 100), 90)
