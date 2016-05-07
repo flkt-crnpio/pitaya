@@ -608,21 +608,24 @@ a:not(.navbar):not(.breadcrumb) {
       background: #13c095; }
 
 a.breadcrumb {
-  color: #1de9b6;
   font-weight: 300;
   text-decoration: none;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
-  a.breadcrumb:not(.light-text):hover, a.breadcrumb:not(.light-text):focus {
-    color: black; }
-  a.breadcrumb:not(.light-text):active {
-    color: black; }
-  a.breadcrumb.light-text:hover, a.breadcrumb.light-text:focus {
-    color: white; }
-  a.breadcrumb.light-text:active {
-    color: white; }
+  a.breadcrumb:not(.light-text) {
+    color: #15d8a7; }
+    a.breadcrumb:not(.light-text):hover, a.breadcrumb:not(.light-text):focus {
+      color: black; }
+    a.breadcrumb:not(.light-text):active {
+      color: black; }
+  a.breadcrumb.light-text {
+    color: #7af2d4; }
+    a.breadcrumb.light-text:hover, a.breadcrumb.light-text:focus {
+      color: white; }
+    a.breadcrumb.light-text:active {
+      color: white; }
 
 /* _list *
  */

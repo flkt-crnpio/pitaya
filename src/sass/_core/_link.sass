@@ -33,17 +33,18 @@ a:not(.navbar):not(.breadcrumb)
             background: darken($link-color, 10)
 
 a.breadcrumb
-    color: desaturate($link-color, 0)
     font-weight: 300
     text-decoration: none
     +transition-ease(.3s)
     &:not(.light-text)
+        color: darken(desaturate($link-color, 0), 5)
         &:hover,
         &:focus
             color: darken(desaturate($link-color, 100), 70)
         &:active
             color: darken(desaturate($link-color, 100), 90)
     &.light-text
+        color: lighten(desaturate($link-color, 0), 20)
         &:hover,
         &:focus
             color: lighten(desaturate($link-color, 100), 70)
