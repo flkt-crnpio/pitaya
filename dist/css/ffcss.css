@@ -120,6 +120,8 @@ a {
     outline-width: 0; }
 
 hr {
+  border: none;
+  border-top: 1px solid #ddd;
   box-sizing: content-box;
   height: 0;
   overflow: visible; }
@@ -823,6 +825,51 @@ blockquote {
   white-space: nowrap;
   text-overflow: ellipsis; }
 
+.divider-horizontal {
+  display: block;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-moz-items: center;
+  align-items: center; }
+  .divider-horizontal .divider-content {
+    padding: 2rem; }
+  .divider-horizontal::after {
+    background: #ddd;
+    content: "";
+    height: 1px;
+    flex: 1; }
+  .divider-horizontal::before {
+    background: #ddd;
+    content: "";
+    height: 1px;
+    flex: 1; }
+
+.divider-vertical {
+  display: block;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-moz-items: center;
+  align-items: center;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  flex-direction: column; }
+  .divider-vertical .divider-content {
+    padding: 1rem 2rem; }
+  .divider-vertical::after {
+    background: #ddd;
+    content: "";
+    width: 1px;
+    flex: 1; }
+  .divider-vertical::before {
+    background: #ddd;
+    content: "";
+    width: 1px;
+    flex: 1; }
+
 .row,
 .col {
   display: block;
@@ -1127,12 +1174,12 @@ blockquote {
 
   .HD-f9 {
     flex: 0 0 calc(11.11% - 4em); } }
-.flex-container {
+.container {
   margin: 0 auto;
   max-width: 1000px;
   padding: 1em;
   width: 90%; }
-  .flex-container::after {
+  .container::after {
     clear: both;
     content: "";
     display: block; }
@@ -1150,13 +1197,13 @@ blockquote {
   -webkit-column-width: 100%;
   -moz-column-width: 100%;
   column-width: 100%;
-  -webkit-column-gap: 4rem;
-  -moz-column-gap: 4rem;
-  column-gap: 4rem;
+  -webkit-column-gap: 2rem;
+  -moz-column-gap: 2rem;
+  column-gap: 2rem;
   -webkit-column-count: 1;
   -moz-column-count: 1;
   column-count: 1;
-  margin: 4rem;
+  margin: 0;
   padding: 0; }
   @media screen and (min-width: 30rem) {
     .pin-container {
@@ -1178,10 +1225,12 @@ blockquote {
       -webkit-column-count: 5;
       -moz-column-count: 5;
       column-count: 5; } }
+  .pin-container > * {
+    margin-top: 0; }
 
 .pin {
   display: inline-block;
-  margin: 0 0 4rem;
+  margin: 0 0 2rem;
   padding: 0;
   -webkit-column-break-inside: avoid;
   -moz-column-break-inside: avoid;

@@ -1,1 +1,44 @@
+.divider-horizontal
+    display: block 
+    display: -webkit-flex 
+    display: -moz-flex 
+    display: flex 
+    -webkit-align-items: center
+    -webkit-moz-items: center
+    align-items: center
+    .divider-content 
+        padding: $padding
+    &::after 
+        background: $hr-color
+        content: ""
+        height: 1px
+        flex: 1
+    &::before 
+        background: $hr-color
+        content: ""
+        height: 1px
+        flex: 1
 
+.divider-vertical
+    display: block 
+    display: -webkit-flex 
+    display: -moz-flex 
+    display: flex 
+    -webkit-align-items: center
+    -webkit-moz-items: center
+    align-items: center
+    -webkit-flex-direction: column 
+    -moz-flex-direction: column 
+    flex-direction: column
+    .divider-content 
+        padding: $padding/2 $padding
+    &::after 
+        background: $hr-color
+        content: ""
+        width: 1px
+        flex: 1
+    &::before 
+        background: $hr-color
+        content: ""
+        width: 1px
+        flex: 1
