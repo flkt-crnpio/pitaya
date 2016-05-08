@@ -572,7 +572,7 @@ textarea {
 
 /* _link *
  */
-a:not(.navbar):not(.breadcrumb) {
+a:not(.appbar):not(.navbar):not(.breadcrumb) {
   color: #1DE9B6;
   display: inline-block;
   position: relative;
@@ -582,7 +582,7 @@ a:not(.navbar):not(.breadcrumb) {
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
-  a:not(.navbar):not(.breadcrumb)::after {
+  a:not(.appbar):not(.navbar):not(.breadcrumb)::after {
     background: #1DE9B6;
     content: "";
     position: absolute;
@@ -594,18 +594,25 @@ a:not(.navbar):not(.breadcrumb) {
     -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out; }
-  a:not(.navbar):not(.breadcrumb):hover, a:not(.navbar):not(.breadcrumb):focus {
+  a:not(.appbar):not(.navbar):not(.breadcrumb):hover, a:not(.appbar):not(.navbar):not(.breadcrumb):focus {
     color: #15d8a7; }
-    a:not(.navbar):not(.breadcrumb):hover::after, a:not(.navbar):not(.breadcrumb):focus::after {
+    a:not(.appbar):not(.navbar):not(.breadcrumb):hover::after, a:not(.appbar):not(.navbar):not(.breadcrumb):focus::after {
       right: 0;
       width: 100%;
       background: #15d8a7; }
-  a:not(.navbar):not(.breadcrumb):active {
+  a:not(.appbar):not(.navbar):not(.breadcrumb):active {
     color: #13c095; }
-    a:not(.navbar):not(.breadcrumb):active::after {
+    a:not(.appbar):not(.navbar):not(.breadcrumb):active::after {
       right: 0;
       width: 100%;
       background: #13c095; }
+
+a.appbar {
+  display: inline-block;
+  font-size: 3em;
+  min-height: 40px;
+  min-width: 40px;
+  text-decoration: none; }
 
 a.breadcrumb {
   font-weight: 300;
@@ -1255,6 +1262,36 @@ blockquote {
   -webkit-column-break-inside: avoid;
   -moz-column-break-inside: avoid;
   column-break-inside: avoid; }
+
+.appnav {
+  background: #fff;
+  position: fixed;
+  width: 100%;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-moz-items: center;
+  align-items: center;
+  -webkit-justify-content: space-around;
+  -moz-justify-content: space-around;
+  justify-content: space-around;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  flex-direction: row; }
+  .appnav > * {
+    padding: 1rem; }
+  .appnav.appnav-top {
+    top: 0; }
+  .appnav.appnav-bottom {
+    bottom: 0; }
+  @media screen and (min-width: 64rem) {
+    .appnav {
+      -webkit-justify-content: center;
+      -moz-justify-content: center;
+      justify-content: center; }
+      .appnav > * {
+        padding: 1rem 2rem; } }
 
 .breadcrumb-container {
   margin-left: -1em;

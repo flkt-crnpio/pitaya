@@ -1,0 +1,30 @@
+.appnav
+    background: $appnav-background
+    position: fixed
+    width: 100%
+    display: -webkit-flex 
+    display: -moz-flex 
+    display: flex 
+    -webkit-align-items: center
+    -webkit-moz-items: center
+    align-items: center
+    -webkit-justify-content: space-around 
+    -moz-justify-content: space-around 
+    justify-content: space-around
+    -webkit-flex-direction: row 
+    -moz-flex-direction: row 
+    flex-direction: row
+    > *
+        padding: $padding/2
+    &.appnav-top
+        top: 0
+    &.appnav-bottom
+        bottom: 0
+
+    @media screen and (min-width: $laptop)
+        -webkit-justify-content: center
+        -moz-justify-content: center
+        justify-content: center
+
+        > *
+            padding: $padding/2 $padding

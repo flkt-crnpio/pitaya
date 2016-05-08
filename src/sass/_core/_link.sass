@@ -2,7 +2,7 @@
  * _link *
  */
 
-a:not(.navbar):not(.breadcrumb)
+a:not(.appbar):not(.navbar):not(.breadcrumb)
     color: $link-color
     display: inline-block
     position: relative
@@ -31,6 +31,13 @@ a:not(.navbar):not(.breadcrumb)
             right: 0
             width: 100%
             background: darken($link-color, 10)
+
+a.appbar
+    display: inline-block
+    font-size: 3em
+    min-height: 40px
+    min-width: 40px
+    text-decoration: none
 
 a.breadcrumb
     font-weight: 300
