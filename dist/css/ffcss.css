@@ -316,6 +316,22 @@ button {
     opacity: 0.2;
     background: #a21309; }
 
+.appnav-button {
+  background: rgba(255, 255, 255, 0.3);
+  color: #fff;
+  line-height: 40px;
+  margin: 0;
+  z-index: 12; }
+  .appnav-button:hover, .appnav-button:focus {
+    background: rgba(255, 255, 255, 0.8);
+    color: #1DE9B6; }
+  .appnav-button:active {
+    background: rgba(255, 255, 255, 0.9);
+    color: #1DE9B6; }
+  .appnav-button[disabled], .appnav-button[disabled]:hover, .appnav-button[disabled]:focus, .appnav-button[disabled]:active {
+    opacity: 0.2;
+    background: rgba(0, 0, 0, 0.2); }
+
 /* _form *
  */
 [type="date"],
@@ -572,7 +588,7 @@ textarea {
 
 /* _link *
  */
-a:not(.appbar):not(.navbar):not(.breadcrumb) {
+a:not(.appnav-link):not(.breadcrumb) {
   color: #1DE9B6;
   display: inline-block;
   position: relative;
@@ -582,7 +598,7 @@ a:not(.appbar):not(.navbar):not(.breadcrumb) {
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
-  a:not(.appbar):not(.navbar):not(.breadcrumb)::after {
+  a:not(.appnav-link):not(.breadcrumb)::after {
     background: #1DE9B6;
     content: "";
     position: absolute;
@@ -594,25 +610,39 @@ a:not(.appbar):not(.navbar):not(.breadcrumb) {
     -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out; }
-  a:not(.appbar):not(.navbar):not(.breadcrumb):hover, a:not(.appbar):not(.navbar):not(.breadcrumb):focus {
+  a:not(.appnav-link):not(.breadcrumb):hover, a:not(.appnav-link):not(.breadcrumb):focus {
     color: #15d8a7; }
-    a:not(.appbar):not(.navbar):not(.breadcrumb):hover::after, a:not(.appbar):not(.navbar):not(.breadcrumb):focus::after {
+    a:not(.appnav-link):not(.breadcrumb):hover::after, a:not(.appnav-link):not(.breadcrumb):focus::after {
       right: 0;
       width: 100%;
       background: #15d8a7; }
-  a:not(.appbar):not(.navbar):not(.breadcrumb):active {
+  a:not(.appnav-link):not(.breadcrumb):active {
     color: #13c095; }
-    a:not(.appbar):not(.navbar):not(.breadcrumb):active::after {
+    a:not(.appnav-link):not(.breadcrumb):active::after {
       right: 0;
       width: 100%;
       background: #13c095; }
 
-a.appbar {
+a.appnav-link {
+  background: #1DE9B6;
+  color: #fff;
   display: inline-block;
   font-size: 3em;
   min-height: 40px;
   min-width: 40px;
-  text-decoration: none; }
+  text-align: center;
+  text-decoration: none;
+  z-index: 12;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+  a.appnav-link:hover, a.appnav-link:focus {
+    background: rgba(255, 255, 255, 0.7);
+    color: #1DE9B6; }
+  a.appnav-link:active {
+    background: rgba(255, 255, 255, 0.7);
+    color: #1DE9B6; }
 
 a.breadcrumb {
   font-weight: 300;
@@ -851,6 +881,18 @@ blockquote {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis; }
+
+.appnav-title {
+  font-size: 24px;
+  line-height: 40px;
+  margin: 0;
+  padding: 0;
+  z-index: 11; }
+  .appnav-title.center {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center; }
 
 .divider-horizontal {
   display: block;
@@ -1264,7 +1306,7 @@ blockquote {
   column-break-inside: avoid; }
 
 .appnav {
-  background: #fff;
+  background: #1DE9B6;
   position: fixed;
   width: 100%;
   display: -webkit-flex;
@@ -1273,25 +1315,30 @@ blockquote {
   -webkit-align-items: center;
   -webkit-moz-items: center;
   align-items: center;
-  -webkit-justify-content: space-around;
-  -moz-justify-content: space-around;
-  justify-content: space-around;
+  -webkit-justify-content: space-between;
+    -webkit-justify-content--moz-justify-content: space-between;
+    -webkit-justify-content-justify-content: space-between;
   -webkit-flex-direction: row;
   -moz-flex-direction: row;
-  flex-direction: row; }
+  flex-direction: row;
+  z-index: 10; }
   .appnav > * {
     padding: 1rem; }
-  .appnav.appnav-top {
+  .appnav.top {
     top: 0; }
-  .appnav.appnav-bottom {
+  .appnav.bottom {
     bottom: 0; }
+  .appnav.menu {
+    -webkit-justify-content: space-around;
+    -moz-justify-content: space-around;
+    justify-content: space-around; }
   @media screen and (min-width: 64rem) {
-    .appnav {
+    .appnav.menu {
       -webkit-justify-content: center;
       -moz-justify-content: center;
       justify-content: center; }
-      .appnav > * {
-        padding: 1rem 2rem; } }
+    .appnav > * {
+      padding: 1rem 2rem; } }
 
 .breadcrumb-container {
   margin-left: -1em;

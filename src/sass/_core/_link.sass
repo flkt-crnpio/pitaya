@@ -2,7 +2,7 @@
  * _link *
  */
 
-a:not(.appbar):not(.navbar):not(.breadcrumb)
+a:not(.appnav-link):not(.breadcrumb)
     color: $link-color
     display: inline-block
     position: relative
@@ -32,12 +32,24 @@ a:not(.appbar):not(.navbar):not(.breadcrumb)
             width: 100%
             background: darken($link-color, 10)
 
-a.appbar
+a.appnav-link
+    background: $appnav-background
+    color: $appnav-link
     display: inline-block
     font-size: 3em
     min-height: 40px
     min-width: 40px
+    text-align: center
     text-decoration: none
+    z-index: 12
+    +transition-ease(.3s)
+    &:hover,
+    &:focus
+        background: rgba(255,255,255,.7)
+        color: $appnav-link-hover
+    &:active
+        background: rgba(255,255,255,.7)
+        color: $appnav-link-hover
 
 a.breadcrumb
     font-weight: 300
