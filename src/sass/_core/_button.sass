@@ -36,18 +36,16 @@ button
     +button-color-darken($button-error-color, $button-error-background)
 
 .appnav-button
-    background: rgba(255,255,255,.3)
-    color: #fff
+    background: $appnav-button-background
+    color: $appnav-button-color
     line-height: 40px
     margin: 0
     z-index: 12
     &:hover,
-    &:focus
-        background: rgba(255,255,255,.8)
-        color: $primary-color
+    &:focus,
     &:active
-        background: rgba(255,255,255,.9)
-        color: $primary-color
+        background: $appnav-button-background-hover
+        color: $appnav-button-color-hover
     &[disabled],
     &[disabled]:hover,
     &[disabled]:focus,

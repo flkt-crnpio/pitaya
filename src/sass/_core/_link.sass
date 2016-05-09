@@ -33,8 +33,8 @@ a:not(.appnav-link):not(.breadcrumb)
             background: darken($link-color, 10)
 
 a.appnav-link
-    background: $appnav-background
-    color: $appnav-link
+    background: $appnav-link-background
+    color: $appnav-link-color
     display: inline-block
     font-size: 3em
     min-height: 40px
@@ -44,12 +44,10 @@ a.appnav-link
     z-index: 12
     +transition-ease(.3s)
     &:hover,
-    &:focus
-        background: rgba(255,255,255,.7)
-        color: $appnav-link-hover
+    &:focus,
     &:active
-        background: rgba(255,255,255,.7)
-        color: $appnav-link-hover
+        background: $appnav-link-background-hover
+        color: $appnav-link-color-hover
 
 a.breadcrumb
     font-weight: 300
