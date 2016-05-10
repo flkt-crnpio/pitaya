@@ -1,14 +1,17 @@
 /*
  * _link *
  */
-
-a:not(.appnav-link):not(.breadcrumb)
-    color: $link-color
+a,
+a::after,
+a::before
     display: inline-block
-    position: relative
-    margin: 0 $margin/8
     text-decoration: none
     +transition-ease(.3s)
+
+a:not(.link-breadcrumb):not(.button-nav):not(.link-nav)
+    color: $link-color
+    position: relative
+    margin: 0 $margin/8
     &::after
         background: $link-color
         content: ""
@@ -17,7 +20,6 @@ a:not(.appnav-link):not(.breadcrumb)
         right: 0
         width: 10px
         height: 2px
-        +transition-ease(.3s)
     &:hover,
     &:focus
         color: darken($link-color, 5)
@@ -32,38 +34,42 @@ a:not(.appnav-link):not(.breadcrumb)
             width: 100%
             background: darken($link-color, 10)
 
-a.appnav-link
-    background: $appnav-link-background
-    color: $appnav-link-color
-    display: inline-block
-    font-size: 3em
-    min-height: 40px
-    min-width: 40px
-    text-align: center
-    text-decoration: none
+.link-nav
+    background: transparent
+    color: $nav-link-color
+    line-height: 40px
+    margin: 0 $margin/4
+    padding: $padding/4
+    position: relative
     z-index: 12
-    +transition-ease(.3s)
+    &::after
+        background: $nav-link-color
+        content: ""
+        position: absolute
+        bottom: 0
+        right: 0
+        width: 0
+        height: 4px
     &:hover,
-    &:focus,
+    &:focus
+        color: $nav-link-color-hover
+        &::after
+            background: $nav-link-color-hover
+            right: 0
+            width: 100%
     &:active
-        background: $appnav-link-background-hover
-        color: $appnav-link-color-hover
+        color: $nav-link-color-active
+        &::after
+            background: $nav-link-color-active
+            right: 0
+            width: 100%
 
-a.breadcrumb
+.link-breadcrumb
+    color: $breadcrumb-link-color
     font-weight: 300
-    text-decoration: none
-    +transition-ease(.3s)
-    &:not(.light-text)
-        color: darken(desaturate($link-color, 0), 5)
-        &:hover,
-        &:focus
-            color: darken(desaturate($link-color, 100), 70)
-        &:active
-            color: darken(desaturate($link-color, 100), 90)
-    &.light-text
-        color: lighten(desaturate($link-color, 0), 20)
-        &:hover,
-        &:focus
-            color: lighten(desaturate($link-color, 100), 70)
-        &:active
-            color: lighten(desaturate($link-color, 100), 90)
+    &:hover,
+    &:focus
+        color: $breadcrumb-link-color-hover
+    &:active
+        color: $breadcrumb-link-color-active
+    

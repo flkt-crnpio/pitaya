@@ -38,9 +38,15 @@ $border-radius: 1px
 /*
  * Colors *
  */
-$primary-color: #1DE9B6
-$accent-color: #FFD600
-$error-color: #f44336
+$primary-color: #1EB
+$secondary-color: #1F3
+$accent-color: #70A
+$success-color: #0cf
+$warning-color: #fd0
+$error-color: #f21
+$cancel-color: #ddd
+
+
 
 $select-color: darken(desaturate($primary-color, 30), 30)
 $select-background: lighten(desaturate($primary-color, 30), 30)
@@ -49,16 +55,27 @@ $mark-color: darken(desaturate($primary-color, 20), 20)
 $mark-background: lighten($primary-color, 20)
 
 
-$appnav-background: $primary-color
-$appnav-color: #fff
-$appnav-link-color: #fff
-$appnav-link-color-hover: #fff
-$appnav-link-background: $primary-color
-$appnav-link-background-hover: rgba(255,255,255,.4)
-$appnav-button-color: #fff
-$appnav-button-color-hover: #fff
-$appnav-button-background: rgba(255,255,255,.2)
-$appnav-button-background-hover: rgba(255,255,255,.4)
+
+$nav-background: $primary-color
+$nav-color: #fff
+
+$nav-link-color: #fff
+$nav-link-color-hover: darken($primary-color, 10)
+$nav-link-color-active: darken($primary-color, 20)
+
+$nav-button-color: #fff
+$nav-button-color-hover: #fff
+$nav-button-color-active: darken($primary-color, 10)
+
+$nav-button-background: $primary-color
+$nav-button-background-hover: lighten($primary-color, 20)
+$nav-button-background-active: lighten($primary-color, 30)
+
+$breadcrumb-color: lighten(desaturate($primary-color, 100), 30)
+$breadcrumb-link-color: $primary-color
+$breadcrumb-link-color-hover: darken($primary-color, 10)
+$breadcrumb-link-color-active: darken($primary-color, 20)
+
 
 $hr-color: #ddd
 
@@ -80,17 +97,20 @@ $quote-border-color: #eee
 $fieldset-border: #ddd
 
 // _button.sass
-$button-color: #fff
-$button-background: #ccc
-
 $button-primary-color: #fff
 $button-primary-background: $primary-color
-
+$button-secondary-color: #fff
+$button-secondary-background: $secondary-color
 $button-accent-color: #fff
 $button-accent-background: $accent-color
-
+$button-success-color: #fff
+$button-success-background: $success-color
+$button-warning-color: #fff
+$button-warning-background: $warning-color
 $button-error-color: #fff
 $button-error-background: $error-color
+$button-cancel-color: #fff
+$button-cancel-background: $cancel-color
 
 $button-background-danger: $primary-color * #900
 

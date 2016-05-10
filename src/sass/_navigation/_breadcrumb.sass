@@ -1,13 +1,14 @@
 .breadcrumb-container 
+    color: $breadcrumb-color
+    font-weight: 300
     margin-left: -$layout-space
     margin-right: -$layout-space
     padding: $layout-space/2 $layout-space
-
     *
         display: inline-block
-
         &:not(:last-child)::after
             content: "⟩"
             display: inline-block
             padding-left: $padding/4
             padding-right: $padding/4
+            

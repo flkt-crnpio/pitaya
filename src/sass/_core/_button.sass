@@ -1,6 +1,14 @@
 /*
  * _button *
  */
+ 
+button,
+button::after,
+button::before
+    border: none
+    border-radius: $border-radius
+    +transition-ease(.3s)
+
 =button-color-darken($color, $background)
     background: $background
     color: $color
@@ -9,47 +17,43 @@
         background: darken($background, 15)
     &:active
         background: darken($background, 20)
-    &[disabled],
-    &[disabled]:hover,
-    &[disabled]:focus,
-    &[disabled]:active
-        opacity: .2
-        background: darken($background, 25)
 
-button
-    +button-color-darken($button-color, $button-background)
-    border: none
-    border-radius: $border-radius
+button:not(.button-nav):not(.link-nav)
     font-size: .9em
     text-transform: uppercase
     padding: $padding/4 $padding/2
     margin: $margin/20 $margin/20 $margin/20 0
-    +transition-ease(.5s)
-    
+
 .button-primary
     +button-color-darken($button-primary-color, $button-primary-background)
-
+.button-secondary
+    +button-color-darken($button-secondary-color, $button-secondary-background)
 .button-accent
     +button-color-darken($button-accent-color, $button-accent-background)
-
+.button-success
+    +button-color-darken($button-success-color, $button-success-background)
+.button-warning
+    +button-color-darken($button-warning-color, $button-warning-background)
 .button-error
     +button-color-darken($button-error-color, $button-error-background)
+.button-cancel
+    +button-color-darken($button-cancel-color, $button-cancel-background)
 
-.appnav-button
-    background: $appnav-button-background
-    color: $appnav-button-color
+.button-nav
+    background: $nav-button-background
+    color: $nav-button-color
     line-height: 40px
     margin: 0
+    min-height: 40px
+    min-width: 40px
+    text-align: center
+    text-decoration: none
     z-index: 12
     &:hover,
-    &:focus,
+    &:focus
+        background: $nav-button-background-hover
+        color: $nav-button-color-hover
     &:active
-        background: $appnav-button-background-hover
-        color: $appnav-button-color-hover
-    &[disabled],
-    &[disabled]:hover,
-    &[disabled]:focus,
-    &[disabled]:active
-        opacity: .2
-        background: rgba(0,0,0,.2)
+        background: $nav-button-background-active
+        color: $nav-button-color-active
     
