@@ -8,10 +8,27 @@
     display: -webkit-flex 
     display: -moz-flex 
     display: flex 
-    -webkit-align-items: center
-    -webkit-moz-items: center
-    align-items: center
-    -webkit-flex-direction: row 
-    -moz-flex-direction: row 
-    flex-direction: row
+    -webkit-flex-direction: column 
+    -moz-flex-direction: column 
+    flex-direction: column
     
+    .navbar-logo
+        flex: 1
+        text-align: center
+
+    .navbar-menu
+        overflow-x: auto
+        * 
+            display: table-cell !important
+            white-space: nowrap
+
+
+    @media screen and (min-width: $laptop)
+        -webkit-flex-direction: row 
+        -moz-flex-direction: row 
+        flex-direction: row
+
+        .navbar-logo
+            text-align: left
+        .navbar-menu
+            

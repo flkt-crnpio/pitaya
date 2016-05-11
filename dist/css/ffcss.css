@@ -614,11 +614,11 @@ a::before {
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
 
-a:not(.link-breadcrumb):not(.button-nav):not(.link-nav) {
+a:not(.link-breadcrumb):not(.button-nav):not(.link-nav):not(.link-nav-logo) {
   color: #1EB;
   position: relative;
   margin: 0 0.5rem; }
-  a:not(.link-breadcrumb):not(.button-nav):not(.link-nav)::after {
+  a:not(.link-breadcrumb):not(.button-nav):not(.link-nav):not(.link-nav-logo)::after {
     background: #1EB;
     content: "";
     position: absolute;
@@ -626,15 +626,15 @@ a:not(.link-breadcrumb):not(.button-nav):not(.link-nav) {
     right: 0;
     width: 10px;
     height: 2px; }
-  a:not(.link-breadcrumb):not(.button-nav):not(.link-nav):hover, a:not(.link-breadcrumb):not(.button-nav):not(.link-nav):focus {
+  a:not(.link-breadcrumb):not(.button-nav):not(.link-nav):not(.link-nav-logo):hover, a:not(.link-breadcrumb):not(.button-nav):not(.link-nav):not(.link-nav-logo):focus {
     color: #0fd6a8; }
-    a:not(.link-breadcrumb):not(.button-nav):not(.link-nav):hover::after, a:not(.link-breadcrumb):not(.button-nav):not(.link-nav):focus::after {
+    a:not(.link-breadcrumb):not(.button-nav):not(.link-nav):not(.link-nav-logo):hover::after, a:not(.link-breadcrumb):not(.button-nav):not(.link-nav):not(.link-nav-logo):focus::after {
       right: 0;
       width: 100%;
       background: #0fd6a8; }
-  a:not(.link-breadcrumb):not(.button-nav):not(.link-nav):active {
+  a:not(.link-breadcrumb):not(.button-nav):not(.link-nav):not(.link-nav-logo):active {
     color: #0ebe96; }
-    a:not(.link-breadcrumb):not(.button-nav):not(.link-nav):active::after {
+    a:not(.link-breadcrumb):not(.button-nav):not(.link-nav):not(.link-nav-logo):active::after {
       right: 0;
       width: 100%;
       background: #0ebe96; }
@@ -643,8 +643,7 @@ a:not(.link-breadcrumb):not(.button-nav):not(.link-nav) {
   background: transparent;
   color: #fff;
   line-height: 40px;
-  margin: 0 1rem;
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   position: relative;
   z-index: 12; }
   .link-nav::after {
@@ -1108,8 +1107,9 @@ blockquote {
 
 .flex {
   flex: 1; }
-  .flex.full {
-    flex: 0 0 100%; }
+
+.full {
+  flex: 0 0 100%; }
 
 .f1,
 .phone-f1 {
@@ -1385,11 +1385,23 @@ blockquote {
   display: -webkit-flex;
   display: -moz-flex;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-moz-items: center;
-  align-items: center;
-  -webkit-flex-direction: row;
-  -moz-flex-direction: row;
-  flex-direction: row; }
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  flex-direction: column; }
+  .navbar .navbar-logo {
+    flex: 1;
+    text-align: center; }
+  .navbar .navbar-menu {
+    overflow-x: auto; }
+    .navbar .navbar-menu * {
+      display: table-cell !important;
+      white-space: nowrap; }
+  @media screen and (min-width: 64rem) {
+    .navbar {
+      -webkit-flex-direction: row;
+      -moz-flex-direction: row;
+      flex-direction: row; }
+      .navbar .navbar-logo {
+        text-align: left; } }
 
 /*# sourceMappingURL=ffcss.css.map */

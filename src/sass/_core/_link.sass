@@ -8,7 +8,7 @@ a::before
     text-decoration: none
     +transition-ease(.3s)
 
-a:not(.link-breadcrumb):not(.button-nav):not(.link-nav)
+a:not(.link-breadcrumb):not(.button-nav):not(.link-nav):not(.link-nav-logo)
     color: $link-color
     position: relative
     margin: 0 $margin/8
@@ -38,8 +38,7 @@ a:not(.link-breadcrumb):not(.button-nav):not(.link-nav)
     background: transparent
     color: $nav-link-color
     line-height: 40px
-    margin: 0 $margin/4
-    padding: $padding/4
+    padding: $padding/4 $padding/2
     position: relative
     z-index: 12
     &::after
