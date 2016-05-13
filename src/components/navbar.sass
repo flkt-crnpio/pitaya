@@ -3,18 +3,17 @@
  */
 
 .navbar
-    background: $nav-background
-    color: $nav-color
+    background: $color-primary
+    color: $color-white
     display: -webkit-flex 
     display: -moz-flex 
     display: flex 
     -webkit-flex-direction: column 
     -moz-flex-direction: column 
     flex-direction: column
-    
-    .navbar-logo
-        flex: 1
-        text-align: center
+    position: fixed
+    top: 0
+    width: 100%
 
     .navbar-menu
         overflow-x: auto
@@ -28,7 +27,32 @@
         -moz-flex-direction: row 
         flex-direction: row
 
-        .navbar-logo
-            text-align: left
-        .navbar-menu
-            
+
+
+
+
+
+
+.link-nav
+    background: transparent
+    color: $color-white
+    line-height: 40px
+    padding: $layout-space/4 $layout-space/2
+    position: relative
+    z-index: 12
+    &::after
+        background: $color-white
+        content: ""
+        position: absolute
+        bottom: 0
+        right: 0
+        width: 0
+        height: 4px
+        +transition-ease(.3s)
+
+    &.active,
+    &:active,
+    &:hover,
+    &:focus
+        &::after
+            width: 100%

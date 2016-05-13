@@ -1,74 +1,37 @@
-/*
- * _link *
- */
-a,
-a::after,
-a::before
-    display: inline-block
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+ * Link
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * Color functions * * */
+=link($color)
+    border-color: transparent
+    color: darken($color, 3)
+    &:hover,
+    &:focus
+        border-color: darken($color, 10)
+        color: darken($color, 10)
+    &:active
+        border-color: darken($color, 15)
+        color: darken($color, 15)
+
+
+
+/* * * Link default values * * */
+a
     text-decoration: none
     +transition-ease(.3s)
+    
+a:not(.link-nav)
+    border-bottom: $button-border solid transparent
+    display: inline-block
+    color: $color-primary
+    font-size: 1em
+    font-weight: 400
+    +link($color-primary)
 
-a:not(.link-breadcrumb):not(.button-nav):not(.link-nav):not(.link-nav-logo)
-    color: $link-color
-    position: relative
-    margin: 0 $margin/8
-    &::after
-        background: $link-color
-        content: ""
-        position: absolute
-        bottom: 2px
-        right: 0
-        width: 10px
-        height: 2px
-    &:hover,
-    &:focus
-        color: darken($link-color, 5)
-        &::after
-            right: 0
-            width: 100%
-            background: darken($link-color, 5)
-    &:active
-        color: darken($link-color, 10)
-        &::after
-            right: 0
-            width: 100%
-            background: darken($link-color, 10)
 
-.link-nav
-    background: transparent
-    color: $nav-link-color
-    line-height: 40px
-    padding: $padding/4 $padding/2
-    position: relative
-    z-index: 12
-    &::after
-        background: $nav-link-color
-        content: ""
-        position: absolute
-        bottom: 0
-        right: 0
-        width: 0
-        height: 4px
-    &:hover,
-    &:focus
-        color: $nav-link-color-hover
-        &::after
-            background: $nav-link-color-hover
-            right: 0
-            width: 100%
-    &:active
-        color: $nav-link-color-active
-        &::after
-            background: $nav-link-color-active
-            right: 0
-            width: 100%
 
-.link-breadcrumb
-    color: $breadcrumb-link-color
-    font-weight: 300
-    &:hover,
-    &:focus
-        color: $breadcrumb-link-color-hover
-    &:active
-        color: $breadcrumb-link-color-active
+/* * * Link colors * * */
+.link-accent
+    +link($color-accent)
+    color: $color-accent
     

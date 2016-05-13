@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>ffcss</title>
+    <link rel="stylesheet" type="text/css" href="../dist/ffcss.css">
+</head>
+<body>
+    <div class="main-container main-col">
+        <nav class="navbar">
+            <div class="container">
+                <div class="navbar-menu">
+                    <a href="index.html" class="link-nav">FFCSS</a>
+                    <a href="layout.html" class="link-nav">Layout</a>
+                    <a href="components.html" class="link-nav active">Components</a>
+                    <a href="appnav.html" class="link-nav">Appnav</a>
+                </div>
+            </div>
+        </nav>
+
+        <header>
+            <div class="container padding-top">
+                <br><br>
+                Componentes
+                <nav>
+                    <a href="components.html">Breadcrumbs</a>
+                    <a href="components.html#divider">Divisiones</a>
+                </nav>
+            </div>
+        </header>
+        
+        <main class="flex">
+            <section id="breadcrumb" class="container padding-top">
+                <div class="row">
+                    <div class="flex">
+                        <h1>
+                            Breadcrumbs
+                            <small>Migas de pan</small>
+                        </h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="flex-1">
+                        <div class="breadcrumb-container">
+                            <span>Aquí</span>
+                            <a href="#" class="link-breadcrumb">Acá</a>
+                            <a href="#" class="link-breadcrumb">Más Acá</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="divider" class="container padding-top">
+                <div class="row">
+                    <div class="flex">
+                        <h1>
+                            Divisiones
+                            <small>Líneas que separan el contenido</small>
+                        </h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="flex-1">
+                        <p>Agragar la etiqueda para separar el contenido < hr ></p>
+                        <hr>
+                    </div>
+                </div>
+
+                <div class="row padding-top">
+                    <div class="flex-1">
+                        <h4>Separador horizontal</h4>
+                        <p>El ancho del separador es el mismo al contenedor en donde se encuentre y el texto de separación puede ser el que sea </p>
+                        <div class="divider-horizontal">
+                            <div class="divider-content">EL QUE SEA</div>
+                        </div>
+<pre>
+< div .divider-horizontal >
+    < div .divider-content >
+        EL QUE SEA
+    < / div >
+< / div > 
+</pre>
+                        
+                    </div>
+                </div>
+
+                <div class="row padding-top">
+                    <div class="container">
+                        <div class="row">
+                            <div class="flex">
+                                <h4>Separador vertical</h4>
+                                Necesita que el contenido sea lo suficientemente alto para que puedan aparecer las líneas arriba y abajo del texto.<br>
+                                El texto es completamente editable.
+                            </div>
+                            <div class="divider-vertical">
+                                <div class="divider-content">ALGO</div>
+                            </div>
+                            <div class="flex">
+                                <h4>Ejemplo</h4>
+<pre>
+< div .divider-vertical >
+    < div .divider-content >
+        ALGO
+    < / div >
+< / div > 
+</pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        <footer>
+            <div class="container">
+                FFCSS
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

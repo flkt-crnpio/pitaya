@@ -137,6 +137,7 @@ hr
     border-top: 1px solid $color-gray
     box-sizing: content-box
     height: 0
+    margin: $layout-space 0
     overflow: visible
 
 
@@ -209,7 +210,10 @@ button,
     cursor: pointer
     -webkit-appearance: button
 
-[disabled]
+[disabled],
+[disabled]:active,
+[disabled]:focus,
+[disabled]:hover
     cursor: default
     opacity: .5
 

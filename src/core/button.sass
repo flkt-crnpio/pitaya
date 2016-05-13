@@ -1,59 +1,98 @@
-/*
- * _button *
- */
- 
-button,
-button::after,
-button::before
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+ * Button
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * Color functions * * */
+=button-line($color)
+    border-color: $color
+    color: darken($color, 3)
+    &:hover,
+    &:focus
+        border-color: darken($color, 10)
+        color: darken($color, 10)
+    &:active
+        border-color: darken($color, 15)
+        color: darken($color, 15)
+
+=button-line-disabled($color)
+    border-color: darken(desaturate($color, 10), 10)
+    color: darken(desaturate($color, 10), 13)
+
+=button-solid($color)
+    background: $color
+    border-color: $color
+    color: lighten($color, 80)
+    &:hover,
+    &:focus
+        background: darken($color, 10)
+        border-color: darken($color, 10)
+    &:active
+        background: darken($color, 15)
+        border-color: darken($color, 15)
+
+=button-solid-disabled($color)
+    background: darken(desaturate($color, 20), 20)
+    border-color: darken(desaturate($color, 20), 20)
+    color: lighten($color, 80)
+
+
+
+/* * * Button default values * * */
+button
+    background: transparent
     border: none
-    border-radius: $border-radius
     +transition-ease(.3s)
-
-=button-color-darken($color, $background)
-    background: $background
-    color: $color
-    &:hover,
-    &:focus
-        background: darken($background, 15)
-    &:active
-        background: darken($background, 20)
-
-button:not(.button-nav):not(.link-nav)
+    
+button:not(.button-nav)
+    border: $button-border solid transparent
+    border-radius: $button-radius
     font-size: .9em
-    text-transform: uppercase
-    padding: $padding/4 $padding/2
-    margin: $margin/20 $margin/20 $margin/20 0
+    font-weight: 300
+    height: $button-height
+    line-height: $button-height
+    margin: $layout-space/8 0
+    padding: 0 $layout-space
+    +button-line($color-gray)
 
+
+
+/* * * Button Colors * * */
 .button-primary
-    +button-color-darken($button-primary-color, $button-primary-background)
-.button-secondary
-    +button-color-darken($button-secondary-color, $button-secondary-background)
-.button-accent
-    +button-color-darken($button-accent-color, $button-accent-background)
-.button-success
-    +button-color-darken($button-success-color, $button-success-background)
-.button-warning
-    +button-color-darken($button-warning-color, $button-warning-background)
-.button-error
-    +button-color-darken($button-error-color, $button-error-background)
-.button-cancel
-    +button-color-darken($button-cancel-color, $button-cancel-background)
+    &:not(.button-solid)
+        +button-line($color-primary)
+        &[disabled]
+            +button-line-disabled($color-primary)
 
-.button-nav
-    background: $nav-button-background
-    color: $nav-button-color
-    line-height: 40px
-    margin: 0
-    min-height: 40px
-    min-width: 40px
-    text-align: center
-    text-decoration: none
-    z-index: 12
-    &:hover,
-    &:focus
-        background: $nav-button-background-hover
-        color: $nav-button-color-hover
-    &:active
-        background: $nav-button-background-active
-        color: $nav-button-color-active
+    &.button-solid
+        +button-solid($color-primary)
+        &[disabled]
+            +button-solid-disabled($color-primary)
+
+.button-accent
+    &:not(.button-solid)
+        +button-line($color-accent)
+        &[disabled]
+            +button-line-disabled($color-accent)
+
+    &.button-solid
+        +button-solid($color-accent)
+        &[disabled]
+            +button-solid-disabled($color-accent)
+
+
+
+/* * * Button Sizes * * */
+.button-small 
+    border-radius: calc(#{$button-radius/1.6})
+    height: calc(#{$button-height/1.6})
+    line-height: calc(#{$button-height/1.6})
+    padding: 0 calc(#{$layout-space/1.6})
+
+.button-big 
+    border-radius: calc(#{$button-radius*1.5})
+    height: calc(#{$button-height*1.5})
+    line-height: calc(#{$button-height*1.5})
+    padding: 0 calc(#{$layout-space*1.5})
+
+.button-block
+    width: 100%
     

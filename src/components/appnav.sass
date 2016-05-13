@@ -1,6 +1,10 @@
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+ * Appnav
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * App navigation block * * */
 .appnav
-    background: $nav-background
-    color: $nav-color
+    background: $color-primary
+    color: $color-white
     position: fixed
     width: 100%
     display: -webkit-flex 
@@ -16,12 +20,16 @@
     -moz-flex-direction: row 
     flex-direction: row
     z-index: 10
+    
     > *
-        padding: $padding/2
+        padding: $layout-space/2
+
     &.top
         top: 0
+
     &.bottom
         bottom: 0
+        
     &.menu
         -webkit-justify-content: space-around 
         -moz-justify-content: space-around 
@@ -33,4 +41,37 @@
             -moz-justify-content: center
             justify-content: center
         > *
-            padding: $padding/2 $padding
+            padding: $layout-space/2 $layout-space
+
+
+
+/* * * Title for top navigation * * */
+.nav-title
+    font-size: 1.8em
+    height: 72px
+    line-height: 72px
+    margin: 0
+    padding: 0
+    z-index: 11
+    &.center
+        position: absolute
+        left: 0
+        right: 0
+        text-align: center
+
+
+
+/* * * Buttons for navigation * * */
+.button-nav
+    background: $color-primary
+    color: $color-white
+    line-height: 40px
+    margin: 0
+    min-height: 40px
+    min-width: 40px
+    text-align: center
+    z-index: 12
+    +button-solid($color-primary)
+
+    &.nav-big-icon
+        font-size: 3em
