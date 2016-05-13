@@ -1,7 +1,7 @@
-/*
- * _form *
- */
-
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+ * Form
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * General inputs and Textarea * * */
 [type="date"],
 [type="datetime"],
 [type="datetime-local"],
@@ -20,26 +20,81 @@
 textarea
     background: transparent
     border: none
-    border-bottom: 1px solid $input-border-color
+    border-bottom: 1px solid $color-gray-dark
     display: block
+    height: 30px
+    width: 100%
+    margin-bottom: $layout-space/4
+    +transition-ease(.3s)
+
+    &:focus
+        border-bottom-color: $color-primary
+
+textarea
+    height: 100px
+
+
+
+/* * * Radio, Checkbox, Select and File * * */
+[type="radio"],
+[type="checkbox"],
+select
+    margin: .1em
+
+[type="file"],
+select
+    background: transparent
+    border: none
+    border-bottom: 1px solid $color-gray-dark
+    margin-bottom: $layout-space/2
     width: 100%
 
+[type="file"]
+    display: flex
+    -webkit-align-items: center
+    -webkit-moz-items: center
+    align-items: center
+    padding: $layout-space/8
+    color: $color-black
 
+
+
+/* * * Labels * * */
+label
+    color: $color-gray-dark
+    font-size: .9em
+    font-weight: 300
+    +transition-ease(.3s)
+
+    &:not(.label-inline)
+        display: block
+
+    &.label-inline
+        display: inline-block
+        padding: $layout-space/4
+        margin: 0 $layout-space 0 0
+
+[type="radio"],
+[type="checkbox"]
+    &:checked + label
+        color: $color-black
+
+
+
+/* * * Input and Textarea like material * * */   
 .form-input-block
     display: flex
     flex-direction: column-reverse
-    margin-top: 10px
+    margin-top: $layout-space/4
 
     label
         position: relative
-        color: $label-color
-        font-size: 13px
-        font-weight: 400
+        color: $color-gray-dark
         width: 100%
         +transition-ease(.3s)
 
         &::after
-            background: $input-hover-border-color
+            background: $color-gray-dark
             content: ""
             position: absolute
             bottom: -32px
@@ -50,24 +105,20 @@ textarea
 
     input,
     textarea
-        color: $input-color
-        height: 30px
+        color: $color-black
+        margin: 0
         padding: 0
         +transition-ease(.3s)
 
         &:hover + label,
         &:focus + label
-            color: $input-hover-border-color
+            color: $color-primary
         &:hover + label::after,
         &:focus + label::after
             width: 100%
-            background: $input-hover-border-color
-
-        &:invalid + label
-            color: $error-color
-        &:invalid + label::after
-            width: 100%
-            background: $error-color
+            background: $color-primary
+    input
+        height: 30px
 
     textarea
         height: 100px
@@ -76,26 +127,107 @@ textarea
             bottom: -102px
 
 
+
+/* * * Checkbox and Radio like material * * */
+.form-input-checkbox,
+.form-input-radio 
+    display: flex
+    align-items: center
+    height: 40px
+    margin: $layout-space/8 0
+
+    input
+        display: none
+
+        &:hover + label::before
+            background: #fff
+            border-color: $color-primary
+        &:hover + label::after
+            border-color: $color-primary
+
+        &:checked + label
+            color: $color-black
+        &:checked + label::before 
+            background: $color-primary
+            border-color: $color-primary
+        &:checked + label::after 
+            border-color: #fff
+
+    label
+        cursor: pointer
+        font-size: 1em
+        position: relative
+        padding: 0 30px
+        +transition-ease(.3s)
+
+        &:hover 
+            color: $color-primary
+
+        &::before 
+            content: ""
+            position: absolute
+            height: 20px
+            width: 20px
+            background: #fff
+            border: 1px solid $color-gray
+            border-radius: 2px
+            left: 0
+            +transition-ease(.3s)
+        
+        &::after 
+            content: ""
+            width: 12px
+            height: 6px
+            border: 2px solid $color-gray
+            border-top: none
+            border-right: none
+            background: transparent
+            transform: rotate(-45deg)
+            position: absolute
+            top: 6px
+            left: 4px
+            +transition-ease(.3s)
+
+.form-input-radio 
+    input
+        &:hover + label::after
+            background: $color-primary
+
+        &:checked + label::after 
+            background: $color-white
+
+    label
+        &::before 
+            border-radius: 50%
+        
+        &::after 
+            width: 8px
+            height: 8px
+            border-radius: 50%
+            background: $color-gray
+            position: absolute
+            top: 6px
+            left: 6px
+
+
+
+/* * * Select like material * * */
 .form-select-block
+    border-bottom: 1px solid $color-gray
     display: flex
     flex-direction: column-reverse
-    margin-top: 10px
-    padding-bottom: 5px
-    border-bottom: 1px solid $input-border-color
+    margin-top: $layout-space/4
+    padding-bottom: $layout-space/8
 
     label
         position: relative
-        color: $label-color
-        font-size: 13px
-        font-weight: 400
-        width: 100%
         +transition-ease(.3s)
 
         &::after
-            background: $input-hover-border-color
+            background: $color-primary
             content: ""
             position: absolute
-            bottom: -32px
+            bottom: -33px
             right: 0
             width: 0
             height: 2px
@@ -104,7 +236,7 @@ textarea
         &::before
             border-left: 6px solid transparent
             border-right: 6px solid transparent
-            border-top: 8px solid $input-border-color
+            border-top: 8px solid $color-gray
             content: ""
             position: absolute
             bottom: -15px
@@ -114,124 +246,70 @@ textarea
             +transition-ease(.5s)
 
     select
-        background: transparent
         border: none
-        padding: 0
+        margin-bottom: 0
         -webkit-appearance: none
         -moz-appearance: none
         appearance: none
 
         &:hover + label,
         &:focus + label
-            color: $input-hover-border-color
+            color: $color-primary
         &:hover + label::after,
         &:focus + label::after
             width: 100%
-            background: $input-hover-border-color
+            background: $color-primary
         &:hover + label::before,
         &:focus + label::before
-            border-top: 8px solid $input-hover-border-color
+            border-top: 8px solid $color-primary
 
 
+
+/* * * File like material * * */
 .form-input-file
-    margin-top: 10px
+    display: flex
+    flex-direction: column-reverse
+    margin-top: $layout-space/4
+    padding-bottom: $layout-space/8
 
     label
-        // +button-color-darken(#fff, $input-hover-border-color)
-        cursor: pointer
-        display: block
-        padding: $padding/4 $padding/2
+        margin-top: $layout-space/4
+        padding: $layout-space/4 0
+        position: relative
         +transition-ease(.5s)
 
-        .icon 
-            display: inline-block
-            font-size: 2em
-            float: left
-            margin: 2px 10px 0 0
-            padding: 0
-
-    input
-        display: none
-
-.form-input-checkbox,
-.form-input-radio 
-    display: flex
-    align-items: center
-    height: 30px
-    margin: 15px 0 10px
-
-    input
-        display: none
-
-        &:hover + label::before
-            background: #fff
-            border-color: $input-hover-border-color
-        &:hover + label::after
-            border-color: $input-hover-border-color
-
-        &:checked + label
-            color: $input-color
-        &:checked + label::before 
-            background: $input-hover-border-color
-            border-color: $input-hover-border-color
-        &:checked + label::after 
-            border-color: #fff
-
-    label
-        color: $label-color
-        cursor: pointer
-        font-size: 1em
-        font-weight: 400
-        position: relative
-        padding: 0 30px
-        +transition-ease(.3s)
-
-        &:hover 
-            color: $input-hover-border-color
-
-        &::before 
+        &::after
+            background: $color-primary
             content: ""
             position: absolute
-            height: 20px
-            width: 20px
-            background: #fff
-            border: 1px solid $input-border-color
-            border-radius: 2px
-            left: 0
-            +transition-ease(.3s)
-        
-        &::after 
+            bottom: -30px
+            right: 0
+            width: 0
+            height: 2px
+            +transition-ease(.5s)
+
+        &::before
+            border-left: 6px solid transparent
+            border-right: 6px solid transparent
+            border-bottom: 8px solid $color-gray
             content: ""
-            width: 12px
-            height: 6px
-            border: 2px solid $input-border-color
-            border-top: none
-            border-right: none
-            background: transparent
-            transform: rotate(-45deg)
             position: absolute
-            top: 6px
-            left: 4px
-            +transition-ease(.3s)
-.form-input-radio 
+            bottom: -15px
+            right: 10px
+            width: 0
+            height: 0
+            +transition-ease(.5s)
+
     input
-        &:hover + label::after
-            background: $input-hover-border-color
+        margin-bottom: 0
 
-        &:checked + label::after 
-            background: #fff
-
-    label
-        &::before 
-            border-radius: 50%
-        
-        &::after 
-            width: 6px
-            height: 6px
-            border: 2px solid $input-border-color
-            border-radius: 50%
-            background: $input-border-color
-            position: absolute
-            top: 6px
-            left: 6px
-
+        &:hover + label,
+        &:focus + label
+            color: $color-primary
+        &:hover + label::after,
+        &:focus + label::after
+            width: 100%
+            background: $color-primary
+        &:hover + label::before,
+        &:focus + label::before
+            border-bottom: 8px solid $color-primary

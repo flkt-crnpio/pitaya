@@ -342,8 +342,343 @@ table {
   color: #333; }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
- * List
+ * Form
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * General inputs and Textarea * */
+[type="date"],
+[type="datetime"],
+[type="datetime-local"],
+[type="email"],
+[type="month"],
+[type="number"],
+[type="password"],
+[type="reset"],
+[type="search"],
+[type="submit"],
+[type="tel"],
+[type="text"],
+[type="time"],
+[type="url"],
+[type="week"],
+textarea {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #CCC;
+  display: block;
+  height: 30px;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+  [type="date"]:focus,
+  [type="datetime"]:focus,
+  [type="datetime-local"]:focus,
+  [type="email"]:focus,
+  [type="month"]:focus,
+  [type="number"]:focus,
+  [type="password"]:focus,
+  [type="reset"]:focus,
+  [type="search"]:focus,
+  [type="submit"]:focus,
+  [type="tel"]:focus,
+  [type="text"]:focus,
+  [type="time"]:focus,
+  [type="url"]:focus,
+  [type="week"]:focus,
+  textarea:focus {
+    border-bottom-color: #1EB; }
+
+textarea {
+  height: 100px; }
+
+/* * * Radio, Checkbox, Select and File * */
+[type="radio"],
+[type="checkbox"],
+select {
+  margin: 0.1em; }
+
+[type="file"],
+select {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #CCC;
+  margin-bottom: 1rem;
+  width: 100%; }
+
+[type="file"] {
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-moz-items: center;
+  align-items: center;
+  padding: 0.25rem;
+  color: #333; }
+
+/* * * Labels * */
+label {
+  color: #CCC;
+  font-size: 0.9em;
+  font-weight: 300;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+  label:not(.label-inline) {
+    display: block; }
+  label.label-inline {
+    display: inline-block;
+    padding: 0.5rem;
+    margin: 0 2rem 0 0; }
+
+[type="radio"]:checked + label,
+[type="checkbox"]:checked + label {
+  color: #333; }
+
+/* * * Input and Textarea like material * */
+.form-input-block {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-top: 0.5rem; }
+  .form-input-block label {
+    position: relative;
+    color: #CCC;
+    width: 100%;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+    .form-input-block label::after {
+      background: #CCC;
+      content: "";
+      position: absolute;
+      bottom: -32px;
+      right: 0;
+      width: 0;
+      height: 2px;
+      -webkit-transition: all 0.5s ease-in-out;
+      -moz-transition: all 0.5s ease-in-out;
+      -o-transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out; }
+  .form-input-block input,
+  .form-input-block textarea {
+    color: #333;
+    margin: 0;
+    padding: 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+    .form-input-block input:hover + label, .form-input-block input:focus + label,
+    .form-input-block textarea:hover + label,
+    .form-input-block textarea:focus + label {
+      color: #1EB; }
+    .form-input-block input:hover + label::after, .form-input-block input:focus + label::after,
+    .form-input-block textarea:hover + label::after,
+    .form-input-block textarea:focus + label::after {
+      width: 100%;
+      background: #1EB; }
+  .form-input-block input {
+    height: 30px; }
+  .form-input-block textarea {
+    height: 100px; }
+    .form-input-block textarea + label::after {
+      bottom: -102px; }
+
+/* * * Checkbox and Radio like material * */
+.form-input-checkbox,
+.form-input-radio {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  margin: 0.25rem 0; }
+  .form-input-checkbox input,
+  .form-input-radio input {
+    display: none; }
+    .form-input-checkbox input:hover + label::before,
+    .form-input-radio input:hover + label::before {
+      background: #fff;
+      border-color: #1EB; }
+    .form-input-checkbox input:hover + label::after,
+    .form-input-radio input:hover + label::after {
+      border-color: #1EB; }
+    .form-input-checkbox input:checked + label,
+    .form-input-radio input:checked + label {
+      color: #333; }
+    .form-input-checkbox input:checked + label::before,
+    .form-input-radio input:checked + label::before {
+      background: #1EB;
+      border-color: #1EB; }
+    .form-input-checkbox input:checked + label::after,
+    .form-input-radio input:checked + label::after {
+      border-color: #fff; }
+  .form-input-checkbox label,
+  .form-input-radio label {
+    cursor: pointer;
+    font-size: 1em;
+    position: relative;
+    padding: 0 30px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+    .form-input-checkbox label:hover,
+    .form-input-radio label:hover {
+      color: #1EB; }
+    .form-input-checkbox label::before,
+    .form-input-radio label::before {
+      content: "";
+      position: absolute;
+      height: 20px;
+      width: 20px;
+      background: #fff;
+      border: 1px solid #DDD;
+      border-radius: 2px;
+      left: 0;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out; }
+    .form-input-checkbox label::after,
+    .form-input-radio label::after {
+      content: "";
+      width: 12px;
+      height: 6px;
+      border: 2px solid #DDD;
+      border-top: none;
+      border-right: none;
+      background: transparent;
+      transform: rotate(-45deg);
+      position: absolute;
+      top: 6px;
+      left: 4px;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out; }
+
+.form-input-radio input:hover + label::after {
+  background: #1EB; }
+.form-input-radio input:checked + label::after {
+  background: #FFF; }
+.form-input-radio label::before {
+  border-radius: 50%; }
+.form-input-radio label::after {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #DDD;
+  position: absolute;
+  top: 6px;
+  left: 6px; }
+
+/* * * Select like material * */
+.form-select-block {
+  border-bottom: 1px solid #DDD;
+  display: flex;
+  flex-direction: column-reverse;
+  margin-top: 0.5rem;
+  padding-bottom: 0.25rem; }
+  .form-select-block label {
+    position: relative;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+    .form-select-block label::after {
+      background: #1EB;
+      content: "";
+      position: absolute;
+      bottom: -33px;
+      right: 0;
+      width: 0;
+      height: 2px;
+      -webkit-transition: all 0.5s ease-in-out;
+      -moz-transition: all 0.5s ease-in-out;
+      -o-transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out; }
+    .form-select-block label::before {
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-top: 8px solid #DDD;
+      content: "";
+      position: absolute;
+      bottom: -15px;
+      right: 10px;
+      width: 0;
+      height: 0;
+      -webkit-transition: all 0.5s ease-in-out;
+      -moz-transition: all 0.5s ease-in-out;
+      -o-transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out; }
+  .form-select-block select {
+    border: none;
+    margin-bottom: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; }
+    .form-select-block select:hover + label, .form-select-block select:focus + label {
+      color: #1EB; }
+    .form-select-block select:hover + label::after, .form-select-block select:focus + label::after {
+      width: 100%;
+      background: #1EB; }
+    .form-select-block select:hover + label::before, .form-select-block select:focus + label::before {
+      border-top: 8px solid #1EB; }
+
+/* * * File like material * */
+.form-input-file {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-top: 0.5rem;
+  padding-bottom: 0.25rem; }
+  .form-input-file label {
+    margin-top: 0.5rem;
+    padding: 0.5rem 0;
+    position: relative;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out; }
+    .form-input-file label::after {
+      background: #1EB;
+      content: "";
+      position: absolute;
+      bottom: -30px;
+      right: 0;
+      width: 0;
+      height: 2px;
+      -webkit-transition: all 0.5s ease-in-out;
+      -moz-transition: all 0.5s ease-in-out;
+      -o-transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out; }
+    .form-input-file label::before {
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-bottom: 8px solid #DDD;
+      content: "";
+      position: absolute;
+      bottom: -15px;
+      right: 10px;
+      width: 0;
+      height: 0;
+      -webkit-transition: all 0.5s ease-in-out;
+      -moz-transition: all 0.5s ease-in-out;
+      -o-transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out; }
+  .form-input-file input {
+    margin-bottom: 0; }
+    .form-input-file input:hover + label, .form-input-file input:focus + label {
+      color: #1EB; }
+    .form-input-file input:hover + label::after, .form-input-file input:focus + label::after {
+      width: 100%;
+      background: #1EB; }
+    .form-input-file input:hover + label::before, .form-input-file input:focus + label::before {
+      border-bottom: 8px solid #1EB; }
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * List
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+ * /* * * Unordered and ordered list * */
 ol,
 ul {
   font-size: 1em;
@@ -368,6 +703,7 @@ ul {
   ul ul {
     list-style: circle; }
 
+/* * * Description list * */
 dl {
   margin: 0 0 2rem; }
   dl dt {
