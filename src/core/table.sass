@@ -1,6 +1,12 @@
-/*
- * _table *
- */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+ * Table
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+.table-container
+    overflow-x: scroll
+    overflow-y: hidden
+    width: 100%
+
+
 
 table
     width: 100%
@@ -8,18 +14,18 @@ table
         display: none
     tfoot
         tr 
-            background: #fafafa
-            color: #555
+            background: $color-gray-light
+            color: $color-gray-dark
     tbody
         tr 
-            border-bottom: 1px solid #eee
+            border-bottom: 1px solid $color-gray
     td 
         display: block
-        padding: 0 $padding/2
+        padding: 0 $layout-space/2
         &:first-child
-            padding-top: $padding/2
+            padding-top: $layout-space/2
         &:last-child
-            padding-bottom: $padding/2
+            padding-bottom: $layout-space/2
         
     .th-mobile
         font-weight: bold
@@ -27,19 +33,17 @@ table
         display: block
         line-height: 1em
         margin: 0
-        padding: $padding/2 0 0
+        padding: $layout-space/2 0 0
 
     @media only screen and (min-width: $tablet)  
         thead
             display: table-header-group
             th 
                 text-align: left
-
         th,
         td 
             display: table-cell
-            padding: $padding/2
+            padding: $layout-space/2
 
         .th-mobile
             display: none
-

@@ -1,26 +1,36 @@
-.container 
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+ * Layout
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * Main container * * */
+.main-container
+    display: block 
+    display: -webkit-flex 
+    display: -moz-flex 
+    display: flex 
+    -webkit-flex-wrap: nowrap 
+    -moz-flex-wrap: nowrap 
+    flex-wrap: nowrap
+    &.main-col
+        -webkit-flex-direction: column 
+        -moz-flex-direction: column 
+        flex-direction: column
+        min-height: 100vh
+    &.main-row
+        -webkit-flex-direction: row 
+        -moz-flex-direction: row 
+        flex-direction: row
+        min-width: 100vw
+
+
+
+/* * * General container * * */
+.container
     margin: 0 auto
-    max-width: $max-width
-    padding: $layout-space
+    max-width: $width-max
     width: $width
-    &::after
-        clear: both
-        content: ""
-        display: block
 
-.nav-space-fixed
-    padding-bottom: 80px
-    padding-top: 80px
 
-.nav-space-fixed-top
-    padding-top: 80px
 
-.nav-space-fixed-bottom
-    padding-bottom: 80px
-
-.bg 
-    background: rgba(0,50,100,.5)
-.bg1
-    background: rgba(0,255,150,.5)
-.bg2
-    background: rgba(150,150,150,.5)
+/* * * Paddings * * */
+.padding-top
+    padding-top: $layout-space

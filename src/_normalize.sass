@@ -1,20 +1,27 @@
-/*
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
  * Custom normalize configurations for ffcss v0.0.1
  * Based on normalize.css v4.0.0 and sanitize.css v3.3.0
- */
-
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 html
+    font-size: $font-size
+    box-sizing: border-box
     -ms-text-size-adjust: 100%
     -webkit-text-size-adjust: 100%
+    
+body
     font-family: $font-text
     font-size: $font-size
-
-body
+    font-weight: 300
+    color: $color-black
+    letter-spacing: .01em
+    line-height: $font-line
     margin: 0
     padding: 0    
-    line-height: 1.6em
-
-
+    
+*,
+*:after,
+*:before
+    box-sizing: inherit
 
 
 
@@ -35,7 +42,7 @@ summary
     display: block
 
 figure
-    margin: $margin
+    margin: $layout-space
 
 audio,
 canvas,
@@ -127,7 +134,7 @@ a
 
 hr
     border: none
-    border-top: 1px solid $hr-color
+    border-top: 1px solid $color-gray
     box-sizing: content-box
     height: 0
     overflow: visible
@@ -224,7 +231,7 @@ select:focus
     outline: none
 
 fieldset
-    border: 1px solid $fieldset-border
+    border: 1px solid $color-gray
     margin: 0
     padding: 0.35em 0.7em 0.7em
 
@@ -270,16 +277,16 @@ table
 
 
 ::-webkit-selection
-    background-color: $select-background
-    color: $select-color
+    background-color: $color-primary
+    color: $color-white
     text-shadow: none
     
 ::-moz-selection
-    background-color: $select-background
-    color: $select-color
+    background-color: $color-primary
+    color: $color-white
     text-shadow: none
 
 ::selection
-    background-color: $select-background
-    color: $select-color
+    background-color: $color-primary
+    color: $color-white
     text-shadow: none

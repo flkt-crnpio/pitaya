@@ -1,127 +1,57 @@
-/*
- * MediaQueries *
- */
-$phone:     20rem       // $phone:     320px
-$phone-l:   30rem       // $phone-l:   480px
-$tablet:    48rem       // $tablet:    768px
-$laptop:    64rem       // $laptop:    1024px
-$MDPI:      75rem       // $MDPI:      1200px
-$HiDPI:     90rem       // $HiDPI:     1440px
-$HD:        120rem      // $HD:        1920px
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+ * Media queries
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+$phone:     20rem
+$phone-l:   30rem
+$tablet:    48rem
+$laptop:    64rem
+$MDPI:      75rem
+$HiDPI:     90rem
+$HD:        120rem
 
 
-/*
- * Typography *
- */
-
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+ * Fonts
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,700,100)
 
-$font-size: 16px
-$font-text: 'Roboto', Arial, Helvetica, sans-serif
-$font-code: monospace, monospace
+$font-size:     16px
+$font-line:     1.6em
+
+$font-text:     'Roboto', Arial, Helvetica, sans-serif
+$font-titles:   'Roboto', Arial, Helvetica, sans-serif
+$font-code:     monospace, monospace
 
 
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+ * Colors
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+$color-primary:     #1EB
+$color-accent:      #70A
 
-$max-width: 1000px
-$width:     90%
-/*
- * Margin/Padding *
- */
-$layout-space:  1em
-$pin-space:     2rem
+$color-white:       #FFF
+$color-gray-light:  #EEE
+$color-gray:        #DDD
+$color-gray-dark:   #CCC
+$color-black:       #333
 
-$margin:        4rem 
-$padding:       2rem
 
-/*
- * Border Radius *
- */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+ * Borders
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 $border-radius: 1px
 
-/*
- * Colors *
- */
-$primary-color: #1EB
-$secondary-color: #1F3
-$accent-color: #70A
-$success-color: #0cf
-$warning-color: #fd0
-$error-color: #f21
-$cancel-color: #ddd
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+ * Layout
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+$layout-space: 2rem
+$layout-grid: 2vw
 
 
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+ * Width
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+$width:         80%
+$width-max:     auto
 
-$select-color: darken(desaturate($primary-color, 30), 30)
-$select-background: lighten(desaturate($primary-color, 30), 30)
-
-$mark-color: darken(desaturate($primary-color, 20), 20)
-$mark-background: lighten($primary-color, 20)
-
-
-
-$nav-background: $primary-color
-$nav-color: #fff
-
-$nav-link-color: #fff
-$nav-link-color-hover: darken($primary-color, 10)
-$nav-link-color-active: darken($primary-color, 20)
-
-$nav-button-color: #fff
-$nav-button-color-hover: #fff
-$nav-button-color-active: darken($primary-color, 10)
-
-$nav-button-background: $primary-color
-$nav-button-background-hover: lighten($primary-color, 20)
-$nav-button-background-active: lighten($primary-color, 30)
-
-$breadcrumb-color: lighten(desaturate($primary-color, 100), 30)
-$breadcrumb-link-color: $primary-color
-$breadcrumb-link-color-hover: darken($primary-color, 10)
-$breadcrumb-link-color-active: darken($primary-color, 20)
-
-
-$hr-color: #ddd
-
-
-$samp-color: #fff
-$samp-background: #15d
-
-$code-color: #555
-$code-background: #eee
-
-$kbd-color: #eee
-$kbd-background: #222
-
-
-$cite-color: #aaa
-$quote-color: #555
-$quote-border-color: #eee
-
-$fieldset-border: #ddd
-
-// _button.sass
-$button-primary-color: #fff
-$button-primary-background: $primary-color
-$button-secondary-color: #fff
-$button-secondary-background: $secondary-color
-$button-accent-color: #fff
-$button-accent-background: $accent-color
-$button-success-color: #fff
-$button-success-background: $success-color
-$button-warning-color: #fff
-$button-warning-background: $warning-color
-$button-error-color: #fff
-$button-error-background: $error-color
-$button-cancel-color: #fff
-$button-cancel-background: $cancel-color
-
-$button-background-danger: $primary-color * #900
-
-// _link.sass
-$link-color: $primary-color
-
-// _form.sass
-$input-color: #555
-$label-color: #aaa
-$input-border-color: #ddd
-$input-hover-border-color: $primary-color
