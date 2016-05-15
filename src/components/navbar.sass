@@ -14,6 +14,7 @@
     position: fixed
     top: 0
     width: 100%
+    z-index: 99999
 
     .navbar-menu
         overflow-x: auto
@@ -35,6 +36,7 @@
 
 .link-nav
     background: transparent
+    border-bottom: 0
     color: $color-white
     line-height: 40px
     padding: $layout-space/4 $layout-space/2
@@ -54,5 +56,6 @@
     &:active,
     &:hover,
     &:focus
+        color: $color-white
         &::after
             width: 100%

@@ -790,24 +790,22 @@ label {
 /* * * Color functions * */
 /* * * Link default values * */
 a {
-  text-decoration: none;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out; }
-
-a:not(.link-nav) {
   border-bottom: 2px solid transparent;
   display: inline-block;
   color: #1EB;
   font-size: 1em;
   font-weight: 400;
+  text-decoration: none;
   border-color: transparent;
-  color: #10e0b0; }
-  a:not(.link-nav):hover, a:not(.link-nav):focus {
+  color: #10e0b0;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+  a:hover, a:focus {
     border-color: #0ebe96;
     color: #0ebe96; }
-  a:not(.link-nav):active {
+  a:active {
     border-color: #0ca783;
     color: #0ca783; }
 
@@ -2303,7 +2301,8 @@ blockquote {
   flex-direction: column;
   position: fixed;
   top: 0;
-  width: 100%; }
+  width: 100%;
+  z-index: 99999; }
   .navbar .navbar-menu {
     overflow-x: auto; }
     .navbar .navbar-menu * {
@@ -2317,6 +2316,7 @@ blockquote {
 
 .link-nav {
   background: transparent;
+  border-bottom: 0;
   color: #FFF;
   line-height: 40px;
   padding: 0.5rem 1rem;
@@ -2334,7 +2334,9 @@ blockquote {
     -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out; }
-  .link-nav.active::after, .link-nav:active::after, .link-nav:hover::after, .link-nav:focus::after {
-    width: 100%; }
+  .link-nav.active, .link-nav:active, .link-nav:hover, .link-nav:focus {
+    color: #FFF; }
+    .link-nav.active::after, .link-nav:active::after, .link-nav:hover::after, .link-nav:focus::after {
+      width: 100%; }
 
 /*# sourceMappingURL=ffcss.css.map */
