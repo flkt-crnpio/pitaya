@@ -853,7 +853,7 @@ a {
 ol,
 ul {
   font-size: 1em;
-  margin: 1rem 0;
+  margin: 1rem 0.25rem;
   padding: 0 0 0 1rem;
   list-style-position: inside; }
   ol ol,
@@ -863,6 +863,32 @@ ul {
     font-size: 0.94em;
     margin: 0;
     padding-left: 2rem; }
+    ol ol ol,
+    ol ol ul,
+    ol ul ol,
+    ol ul ul,
+    ul ol ol,
+    ul ol ul,
+    ul ul ol,
+    ul ul ul {
+      font-size: 0.94em; }
+      ol ol ol ol,
+      ol ol ol ul,
+      ol ol ul ol,
+      ol ol ul ul,
+      ol ul ol ol,
+      ol ul ol ul,
+      ol ul ul ol,
+      ol ul ul ul,
+      ul ol ol ol,
+      ul ol ol ul,
+      ul ol ul ol,
+      ul ol ul ul,
+      ul ul ol ol,
+      ul ul ol ul,
+      ul ul ul ol,
+      ul ul ul ul {
+        font-size: 1em; }
 
 ol {
   list-style: decimal; }
