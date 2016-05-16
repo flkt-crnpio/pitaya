@@ -390,41 +390,64 @@ button {
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  * Colors
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+ *
  * /* * * Background * */
 .bg-primary {
   background: #1EB; }
-  .bg-primary.opacity {
-    background: rgba(17, 238, 187, 0.5); }
+  .bg-primary.darken-1 {
+    background: #0ebe96; }
+  .bg-primary.darken-2 {
+    background: #0a8f70; }
+  .bg-primary.darken-3 {
+    background: #075f4b; }
+  .bg-primary.lighten-1 {
+    background: #41f1c9; }
+  .bg-primary.lighten-2 {
+    background: #70f5d6; }
+  .bg-primary.lighten-3 {
+    background: #a0f8e4; }
 
 .bg-accent {
   background: #70A; }
-  .bg-accent.opacity {
-    background: rgba(119, 0, 170, 0.5); }
+  .bg-accent.darken-1 {
+    background: #530077; }
+  .bg-accent.darken-2 {
+    background: #300044; }
+  .bg-accent.darken-3 {
+    background: #0c0011; }
+  .bg-accent.lighten-1 {
+    background: #9b00dd; }
+  .bg-accent.lighten-2 {
+    background: #b811ff; }
+  .bg-accent.lighten-3 {
+    background: #c744ff; }
 
 .bg-white {
   background: #FFF; }
-  .bg-white.opacity {
-    background: rgba(255, 255, 255, 0.5); }
+  .bg-white.darken-1 {
+    background: #e6e6e6; }
+  .bg-white.darken-2 {
+    background: #cccccc; }
+  .bg-white.darken-3 {
+    background: #b3b3b3; }
 
 .bg-gray-light {
   background: #EEE; }
-  .bg-gray-light.opacity {
-    background: rgba(238, 238, 238, 0.5); }
 
 .bg-gray {
   background: #DDD; }
-  .bg-gray.opacity {
-    background: rgba(221, 221, 221, 0.5); }
 
 .bg-gray-dark {
   background: #CCC; }
-  .bg-gray-dark.opacity {
-    background: rgba(204, 204, 204, 0.5); }
 
 .bg-black {
   background: #333; }
-  .bg-black.opacity {
-    background: rgba(51, 51, 51, 0.5); }
+  .bg-black.lighten-1 {
+    background: #4d4d4d; }
+  .bg-black.lighten-2 {
+    background: #666666; }
+  .bg-black.lighten-3 {
+    background: gray; }
 
 /* * * Color * */
 .color-primary {

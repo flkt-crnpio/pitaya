@@ -1,41 +1,64 @@
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
  * Colors
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+    
  /* * * Background * * */
 .bg-primary
     background: $color-primary
-    &.opacity
-        background: rgba($color-primary, .5)
+    &.darken-1
+        background: darken($color-primary, 10)
+    &.darken-2
+        background: darken($color-primary, 20)
+    &.darken-3
+        background: darken($color-primary, 30)
+    &.lighten-1
+        background: lighten($color-primary, 10)
+    &.lighten-2
+        background: lighten($color-primary, 20)
+    &.lighten-3
+        background: lighten($color-primary, 30)
 
 .bg-accent
     background: $color-accent
-    &.opacity
-        background: rgba($color-accent, .5)
+    &.darken-1
+        background: darken($color-accent, 10)
+    &.darken-2
+        background: darken($color-accent, 20)
+    &.darken-3
+        background: darken($color-accent, 30)
+    &.lighten-1
+        background: lighten($color-accent, 10)
+    &.lighten-2
+        background: lighten($color-accent, 20)
+    &.lighten-3
+        background: lighten($color-accent, 30)
 
 .bg-white
     background: $color-white
-    &.opacity
-        background: rgba($color-white, .5)
+    &.darken-1
+        background: darken($color-white, 10)
+    &.darken-2
+        background: darken($color-white, 20)
+    &.darken-3
+        background: darken($color-white, 30)
 
 .bg-gray-light
     background: $color-gray-light
-    &.opacity
-        background: rgba($color-gray-light, .5)
 
 .bg-gray
     background: $color-gray
-    &.opacity
-        background: rgba($color-gray, .5)
 
 .bg-gray-dark
     background: $color-gray-dark
-    &.opacity
-        background: rgba($color-gray-dark, .5)
 
 .bg-black
     background: $color-black
-    &.opacity
-        background: rgba($color-black, .5)
+    &.lighten-1
+        background: lighten($color-black, 10)
+    &.lighten-2
+        background: lighten($color-black, 20)
+    &.lighten-3
+        background: lighten($color-black, 30)
 
 
 
