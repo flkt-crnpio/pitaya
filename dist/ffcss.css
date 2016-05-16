@@ -2289,6 +2289,60 @@ blockquote {
     font-weight: 300; }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * Collapsable
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+.collapsable {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #DDD;
+  padding: 2rem 0; }
+  .collapsable label {
+    color: #333;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 300;
+    flex: 1; }
+  .collapsable [type="radio"],
+  .collapsable [type="checkbox"] {
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 8px solid #DDD;
+    cursor: pointer;
+    transform: rotate(0);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+    .collapsable [type="radio"]:hover, .collapsable [type="radio"]:focus,
+    .collapsable [type="checkbox"]:hover,
+    .collapsable [type="checkbox"]:focus {
+      border-top: 8px solid #1EB; }
+    .collapsable [type="radio"]:checked,
+    .collapsable [type="checkbox"]:checked {
+      border-top: 8px solid #1EB;
+      transform: rotate(-180deg); }
+    .collapsable [type="radio"]:checked + div,
+    .collapsable [type="checkbox"]:checked + div {
+      max-height: 50vh; }
+    .collapsable [type="radio"] + div,
+    .collapsable [type="checkbox"] + div {
+      flex: 0 0 100%;
+      height: auto;
+      overflow: hidden;
+      max-height: 0;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out; }
+      .collapsable [type="radio"] + div > *,
+      .collapsable [type="checkbox"] + div > * {
+        font-size: 0.9em;
+        padding: 1rem 2rem 0 0; }
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  * Divider
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 /* * * Horizontal * */

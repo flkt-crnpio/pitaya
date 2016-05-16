@@ -1,0 +1,45 @@
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+ * Collapsable
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+.collapsable
+    display: flex
+    flex-wrap: wrap
+    border-bottom: 1px solid $color-gray
+    padding: $layout-space 0
+
+    label
+        color: $color-black
+        cursor: pointer
+        font-size: 1.1em
+        font-weight: 300
+        flex: 1
+
+    [type="radio"],
+    [type="checkbox"]
+        border-left: 6px solid transparent
+        border-right: 6px solid transparent
+        border-top: 8px solid $color-gray
+        cursor: pointer
+        transform: rotate(0)
+        -webkit-appearance: none
+        -moz-appearance: none
+        appearance: none
+        +transition-ease(.3s)
+        &:hover,
+        &:focus
+            border-top: 8px solid $color-primary
+        &:checked
+            border-top: 8px solid $color-primary
+            transform: rotate(-180deg)
+        &:checked + div
+            max-height: 50vh
+        
+        + div
+            flex: 0 0 100%
+            height: auto
+            overflow: hidden
+            max-height: 0
+            +transition-ease(.3s)
+            > *
+                font-size: .9em
+                padding: $layout-space/2 $layout-space 0 0
