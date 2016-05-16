@@ -492,12 +492,12 @@ button {
 [type="week"],
 textarea {
   background: transparent;
-  border: none;
-  border-bottom: 1px solid #CCC;
+  border: 1px solid #DDD;
   display: block;
-  height: 30px;
+  height: 40px;
   width: 100%;
   margin-bottom: 0.5rem;
+  padding: 0.5rem;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
@@ -518,7 +518,7 @@ textarea {
   [type="url"]:focus,
   [type="week"]:focus,
   textarea:focus {
-    border-bottom-color: #1EB; }
+    border-color: #1EB; }
 
 textarea {
   height: 100px; }
@@ -529,21 +529,22 @@ textarea {
 select {
   margin: 0.1em; }
 
-[type="file"],
 select {
   background: transparent;
-  border: none;
-  border-bottom: 1px solid #CCC;
+  border: 1px solid #DDD;
   margin-bottom: 1rem;
-  width: 100%; }
+  width: 99%; }
 
 [type="file"] {
+  background: transparent;
+  border: none;
+  color: #333;
+  margin-bottom: 1rem;
+  width: 100%;
   display: flex;
   -webkit-align-items: center;
   -webkit-moz-items: center;
-  align-items: center;
-  padding: 0.25rem;
-  color: #333; }
+  align-items: center; }
 
 /* * * Labels * */
 label {
@@ -582,7 +583,7 @@ label {
       background: #CCC;
       content: "";
       position: absolute;
-      bottom: -32px;
+      bottom: -40px;
       right: 0;
       width: 0;
       height: 2px;
@@ -592,6 +593,8 @@ label {
       transition: all 0.5s ease-in-out; }
   .form-input-block input,
   .form-input-block textarea {
+    border: none;
+    border-bottom: 1px solid #DDD;
     color: #333;
     margin: 0;
     padding: 0;
@@ -609,7 +612,7 @@ label {
       width: 100%;
       background: #1EB; }
   .form-input-block input {
-    height: 30px; }
+    height: 40px; }
   .form-input-block textarea {
     height: 100px; }
     .form-input-block textarea + label::after {
@@ -757,6 +760,7 @@ label {
 
 /* * * File like material * */
 .form-input-file {
+  border-bottom: 1px solid #DDD;
   display: flex;
   flex-direction: column-reverse;
   margin-top: 0.5rem;
@@ -773,7 +777,7 @@ label {
       background: #1EB;
       content: "";
       position: absolute;
-      bottom: -30px;
+      bottom: -26px;
       right: 0;
       width: 0;
       height: 2px;

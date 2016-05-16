@@ -19,16 +19,16 @@
 [type="week"],
 textarea
     background: transparent
-    border: none
-    border-bottom: 1px solid $color-gray-dark
+    border: 1px solid $color-gray
     display: block
-    height: 30px
+    height: 40px
     width: 100%
     margin-bottom: $layout-space/4
+    padding: $layout-space/4
     +transition-ease(.3s)
 
     &:focus
-        border-bottom-color: $color-primary
+        border-color: $color-primary
 
 textarea
     height: 100px
@@ -41,21 +41,22 @@ textarea
 select
     margin: .1em
 
-[type="file"],
 select
     background: transparent
-    border: none
-    border-bottom: 1px solid $color-gray-dark
+    border: 1px solid $color-gray
     margin-bottom: $layout-space/2
-    width: 100%
+    width: 99%
 
 [type="file"]
+    background: transparent
+    border: none
+    color: $color-black
+    margin-bottom: $layout-space/2
+    width: 100%
     display: flex
     -webkit-align-items: center
     -webkit-moz-items: center
     align-items: center
-    padding: $layout-space/8
-    color: $color-black
 
 
 
@@ -97,7 +98,7 @@ label
             background: $color-gray-dark
             content: ""
             position: absolute
-            bottom: -32px
+            bottom: -40px
             right: 0
             width: 0
             height: 2px
@@ -105,6 +106,8 @@ label
 
     input,
     textarea
+        border: none
+        border-bottom: 1px solid $color-gray
         color: $color-black
         margin: 0
         padding: 0
@@ -118,7 +121,7 @@ label
             width: 100%
             background: $color-primary
     input
-        height: 30px
+        height: 40px
 
     textarea
         height: 100px
@@ -267,6 +270,7 @@ label
 
 /* * * File like material * * */
 .form-input-file
+    border-bottom: 1px solid $color-gray
     display: flex
     flex-direction: column-reverse
     margin-top: $layout-space/4
@@ -282,7 +286,7 @@ label
             background: $color-primary
             content: ""
             position: absolute
-            bottom: -30px
+            bottom: -26px
             right: 0
             width: 0
             height: 2px
