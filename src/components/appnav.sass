@@ -19,11 +19,7 @@
     -webkit-flex-direction: row 
     -moz-flex-direction: row 
     flex-direction: row
-    z-index: 10
-    
-    > *
-        padding: $layout-space/2
-
+    z-index: 100
     &.top
         top: 0
 
@@ -35,43 +31,45 @@
         -moz-justify-content: space-around 
         justify-content: space-around
 
-    @media screen and (min-width: $laptop)
-        &.menu
+        @media screen and (min-width: $laptop)
             -webkit-justify-content: center
             -moz-justify-content: center
             justify-content: center
-        > *
-            padding: $layout-space/2 $layout-space
 
 
 
 /* * * Title for top navigation * * */
 .nav-title
+    flex: 1
     font-size: 1.8em
-    height: 72px
-    line-height: 72px
+    margin: 0
+    padding: 0 $layout-space/2
+
+.nav-title-center
+    height: 60px
+    line-height: 60px
     margin: 0
     padding: 0
-    z-index: 11
-    &.center
-        position: absolute
-        left: 0
-        right: 0
-        text-align: center
+    position: absolute
+    left: 0
+    right: 0
+    text-align: center
+    z-index: 101
+
 
 
 
 /* * * Buttons for navigation * * */
 .button-nav
-    background: $color-primary
-    color: $color-white
-    line-height: 40px
+    border-radius: 0
+    height: 60px
+    line-height: 60px
     margin: 0
-    min-height: 40px
-    min-width: 40px
-    text-align: center
-    z-index: 12
+    z-index: 102
     +button-solid($color-primary)
 
-    &.nav-big-icon
-        font-size: 3em
+
+
+/* * * Icons for buttons on navigation * * */
+.icon-nav-big
+    font-size: 3em

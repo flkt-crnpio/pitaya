@@ -40,9 +40,6 @@
 button
     background: transparent
     border: none
-    +transition-ease(.3s)
-    
-button:not(.button-nav)
     border: $button-border solid transparent
     border-radius: $button-radius
     font-size: .9em
@@ -52,6 +49,7 @@ button:not(.button-nav)
     margin: $layout-space/8 0
     padding: 0 $layout-space
     +button-line($color-gray)
+    +transition-ease(.3s)
 
 
 
