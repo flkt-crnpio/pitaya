@@ -9,9 +9,25 @@
     &:focus
         border-color: darken($color, 10)
         color: darken($color, 10)
+    &.active,
     &:active
         border-color: darken($color, 15)
         color: darken($color, 15)
+
+=link_fancy($color)
+    color: darken($color, 3)
+    &::after
+        background: $color-primary
+    &:hover,
+    &:focus
+        color: darken($color, 10)
+        &::after
+            background: darken($color, 10)
+    &.active,
+    &:active
+        color: darken($color, 15)
+        &::after
+            background: darken($color, 15)
 
 
 
@@ -31,5 +47,29 @@ a
 /* * * Link colors * * */
 .link-accent
     +link($color-accent)
-    color: $color-accent
-    
+
+
+
+/* * * Link fancy * * */ 
+.link-fancy
+    border-bottom: 0
+    position: relative
+    +link_fancy($color-primary)
+    +transition-ease(.3s)
+    &::after
+        content: ""
+        position: absolute
+        bottom: -2px
+        right: 0
+        width: 0
+        height: 2px
+        +transition-ease(.3s)
+    &.active,
+    &:active,
+    &:hover,
+    &:focus
+        &::after
+            width: 100%
+
+    &.link-accent
+        +link_fancy($color-accent)

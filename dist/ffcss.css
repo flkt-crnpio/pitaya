@@ -830,21 +830,65 @@ a {
   a:hover, a:focus {
     border-color: #0ebe96;
     color: #0ebe96; }
-  a:active {
+  a.active, a:active {
     border-color: #0ca783;
     color: #0ca783; }
 
 /* * * Link colors * */
 .link-accent {
   border-color: transparent;
-  color: #6c009b;
-  color: #70A; }
+  color: #6c009b; }
   .link-accent:hover, .link-accent:focus {
     border-color: #530077;
     color: #530077; }
-  .link-accent:active {
+  .link-accent.active, .link-accent:active {
     border-color: #41005e;
     color: #41005e; }
+
+/* * * Link fancy * */
+.link-fancy {
+  border-bottom: 0;
+  position: relative;
+  color: #10e0b0;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+  .link-fancy::after {
+    background: #1EB; }
+  .link-fancy:hover, .link-fancy:focus {
+    color: #0ebe96; }
+    .link-fancy:hover::after, .link-fancy:focus::after {
+      background: #0ebe96; }
+  .link-fancy.active, .link-fancy:active {
+    color: #0ca783; }
+    .link-fancy.active::after, .link-fancy:active::after {
+      background: #0ca783; }
+  .link-fancy::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    right: 0;
+    width: 0;
+    height: 2px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+  .link-fancy.active::after, .link-fancy:active::after, .link-fancy:hover::after, .link-fancy:focus::after {
+    width: 100%; }
+  .link-fancy.link-accent {
+    color: #6c009b; }
+    .link-fancy.link-accent::after {
+      background: #1EB; }
+    .link-fancy.link-accent:hover, .link-fancy.link-accent:focus {
+      color: #530077; }
+      .link-fancy.link-accent:hover::after, .link-fancy.link-accent:focus::after {
+        background: #530077; }
+    .link-fancy.link-accent.active, .link-fancy.link-accent:active {
+      color: #41005e; }
+      .link-fancy.link-accent.active::after, .link-fancy.link-accent:active::after {
+        background: #41005e; }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  * List
