@@ -2260,6 +2260,7 @@ blockquote {
   height: 60px;
   line-height: 60px;
   margin: 0;
+  padding: 0 1rem;
   z-index: 102;
   background: #1EB;
   border-color: #1EB;
@@ -2270,6 +2271,15 @@ blockquote {
   .button-nav:active {
     background: #0ca783;
     border-color: #0ca783; }
+  @media screen and (min-width: 64rem) {
+    .button-nav {
+      padding: 0 2rem; } }
+
+.menu .button-nav {
+  flex: 1; }
+  @media screen and (min-width: 64rem) {
+    .menu .button-nav {
+      flex: 0; } }
 
 /* * * Icons for buttons on navigation * */
 .icon-nav-big {
