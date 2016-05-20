@@ -7,11 +7,20 @@
     background: $color-primary
     color: $color-white
     margin: 0
+    width: 100%
     z-index: 999
     @media screen and (min-width: $laptop)
         -webkit-flex-wrap: nowrap 
         -moz-flex-wrap: nowrap 
         flex-wrap: nowrap
+
+    &.fixed
+        position: fixed
+        top: 0
+
+    &.fixed + *
+        padding-top: $navbar-height
+
 
 
 
