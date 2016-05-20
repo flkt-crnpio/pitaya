@@ -29,11 +29,23 @@
         &::after
             background: darken($color, 15)
 
+=link_lighten($color)
+    border-color: transparent
+    color: rgba($color, .8)
+    &:hover,
+    &:focus
+        border-color: rgba($color, .9)
+        color: rgba($color, .9)
+    &.active,
+    &:active
+        border-color: $color
+        color: $color
+
 
 
 /* * * Link default values * * */
 a
-    border-bottom: $button-border solid transparent
+    border-bottom: $link-border solid transparent
     display: inline-block
     color: $color-primary
     font-size: 1em

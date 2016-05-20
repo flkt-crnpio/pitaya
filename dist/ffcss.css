@@ -16,10 +16,16 @@
  * Buttons
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * Links
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  * Layout
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  * Width
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * Navbar
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  * Custom normalize configurations for ffcss v0.0.1
@@ -298,11 +304,11 @@ button {
   border: 2px solid transparent;
   border-radius: 22px;
   font-size: 0.9em;
-  font-weight: 300;
-  height: 44px;
-  line-height: 44px;
+  font-weight: 400;
+  line-height: 40px;
   margin: 0.25rem 0;
   padding: 0 2rem;
+  text-transform: uppercase;
   border-color: #DDD;
   color: #d5d5d5;
   -webkit-transition: all 0.3s ease-in-out;
@@ -373,15 +379,16 @@ button {
 
 /* * * Button Sizes * */
 .button-small {
-  border-radius: calc(13.75px);
-  height: calc(27.5px);
-  line-height: calc(27.5px);
-  padding: 0 calc(1.25rem); }
+  border-radius: calc(16.92308px);
+  font-size: 0.8em;
+  height: calc(30.76923px);
+  line-height: calc(30.76923px);
+  padding: 0 calc(1.53846rem); }
 
 .button-big {
   border-radius: calc(33px);
-  height: calc(66px);
-  line-height: calc(66px);
+  height: calc(60px);
+  line-height: calc(60px);
   padding: 0 calc(3rem); }
 
 .button-block {
@@ -1200,7 +1207,7 @@ blockquote {
  * Flex
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 /* * * Flex containers and general styles * */
-.row,
+.row, .navbar,
 .col {
   display: block;
   display: -webkit-flex;
@@ -1212,143 +1219,145 @@ blockquote {
   -webkit-justify-content: space-between;
   -moz-justify-content: space-between;
   justify-content: space-between; }
-  .row.nowrap,
+  .row.nowrap, .nowrap.navbar,
   .col.nowrap {
     -webkit-flex-wrap: nowrap;
     -moz-flex-wrap: nowrap;
     flex-wrap: nowrap; }
-  .row.wrap-reverse,
+  .row.wrap-reverse, .wrap-reverse.navbar,
   .col.wrap-reverse {
     -webkit-flex-wrap: wrap-reverse;
     -moz-flex-wrap: wrap-reverse;
     flex-wrap: wrap-reverse; }
-  .row.v-start,
+  .row.v-start, .v-start.navbar,
   .col.v-start {
     -webkit-align-items: flex-start;
     -webkit-moz-items: flex-start;
     align-items: flex-start; }
-  .row.v-end,
+  .row.v-end, .v-end.navbar,
   .col.v-end {
     -webkit-align-items: flex-end;
     -webkit-moz-items: flex-end;
     align-items: flex-end; }
-  .row.v-center,
+  .row.v-center, .v-center.navbar,
   .col.v-center {
     -webkit-align-items: center;
     -webkit-moz-items: center;
     align-items: center; }
-  .row.v-baseline,
+  .row.v-baseline, .v-baseline.navbar,
   .col.v-baseline {
     -webkit-align-items: baseline;
     -webkit-moz-items: baseline;
     align-items: baseline; }
-  .row.v-stretch,
+  .row.v-stretch, .v-stretch.navbar,
   .col.v-stretch {
     -webkit-align-items: stretch;
     -webkit-moz-items: stretch;
     align-items: stretch; }
-  .row.h-start,
+  .row.h-start, .h-start.navbar,
   .col.h-start {
     -webkit-justify-content: flex-start;
     -moz-justify-content: flex-start;
     justify-content: flex-start; }
-  .row.h-end,
+  .row.h-end, .h-end.navbar,
   .col.h-end {
     -webkit-justify-content: flex-end;
     -moz-justify-content: flex-end;
     justify-content: flex-end; }
-  .row.h-center,
+  .row.h-center, .h-center.navbar,
   .col.h-center {
     -webkit-justify-content: center;
     -moz-justify-content: center;
     justify-content: center; }
-  .row.h-around,
+  .row.h-around, .h-around.navbar,
   .col.h-around {
     -webkit-justify-content: space-around;
     -moz-justify-content: space-around;
     justify-content: space-around; }
-  .row.content-start,
+  .row.content-start, .content-start.navbar,
   .col.content-start {
     -webkit-align-content: flex-start;
     -moz-align-content: flex-start;
     align-content: flex-start; }
-  .row.content-end,
+  .row.content-end, .content-end.navbar,
   .col.content-end {
     -webkit-align-content: flex-end;
     -moz-align-content: flex-end;
     align-content: flex-end; }
-  .row.content-center,
+  .row.content-center, .content-center.navbar,
   .col.content-center {
     -webkit-align-content: center;
     -moz-align-content: center;
     align-content: center; }
-  .row.content-between,
+  .row.content-between, .content-between.navbar,
   .col.content-between {
     -webkit-align-content: space-between;
     -moz-align-content: space-between;
     align-content: space-between; }
-  .row.content-around,
+  .row.content-around, .content-around.navbar,
   .col.content-around {
     -webkit-align-content: space-around;
     -moz-align-content: space-around;
     align-content: space-around; }
-  .row.content-stretch,
+  .row.content-stretch, .content-stretch.navbar,
   .col.content-stretch {
     -webkit-align-content: stretch;
     -moz-align-content: stretch;
     align-content: stretch; }
-  .row.align-auto,
+  .row.align-auto, .align-auto.navbar,
   .col.align-auto {
     -webkit-align-self: auto;
     -moz-align-self: auto;
     align-self: auto; }
-  .row.align-start,
+  .row.align-start, .align-start.navbar,
   .col.align-start {
     -webkit-align-self: flex-start;
     -moz-align-self: flex-start;
     align-self: flex-start; }
-  .row.align-end,
+  .row.align-end, .align-end.navbar,
   .col.align-end {
     -webkit-align-self: flex-end;
     -moz-align-self: flex-end;
     align-self: flex-end; }
-  .row.align-center,
+  .row.align-center, .align-center.navbar,
   .col.align-center {
     -webkit-align-self: center;
     -moz-align-self: center;
     align-self: center; }
-  .row.align-baseline,
+  .row.align-baseline, .align-baseline.navbar,
   .col.align-baseline {
     -webkit-align-self: baseline;
     -moz-align-self: baseline;
     align-self: baseline; }
-  .row.align-stretch,
+  .row.align-stretch, .align-stretch.navbar,
   .col.align-stretch {
     -webkit-align-self: stretch;
     -moz-align-self: stretch;
     align-self: stretch; }
 
-.row,
+.row, .navbar,
 .col {
   margin-left: -2vw;
   margin-right: -2vw; }
-  .row [class^="flex"],
+  .row [class^="flex"], .navbar [class^="flex"],
   .row [class*=" flex"],
+  .navbar [class*=" flex"],
   .col [class^="flex"],
   .col [class*=" flex"] {
     margin: 1vw 2vw;
     overflow: hidden; }
-  .row.flex-padding [class^="flex"],
+  .row.flex-padding [class^="flex"], .flex-padding.navbar [class^="flex"],
   .row.flex-padding [class*=" flex"],
+  .flex-padding.navbar [class*=" flex"],
   .col.flex-padding [class^="flex"],
   .col.flex-padding [class*=" flex"] {
     padding: 2vw; }
 
-.row {
+.row, .navbar {
   -webkit-flex-direction: row;
   -moz-flex-direction: row;
   flex-direction: row; }
-  .row.reverse {
+  .row.reverse, .reverse.navbar {
     -webkit-flex-direction: row-reverse;
     -moz-flex-direction: row-reverse;
     flex-direction: row-reverse; }
@@ -2450,55 +2459,57 @@ blockquote {
     width: 1px;
     flex: 1; }
 
-/* _navbar *
- */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * Navbar
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * Navbar general container * */
 .navbar {
   background: #1EB;
   color: #FFF;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: flex;
-  -webkit-flex-direction: column;
-  -moz-flex-direction: column;
-  flex-direction: column;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 99999; }
-  .navbar .navbar-menu {
-    overflow-x: auto; }
-    .navbar .navbar-menu * {
-      display: table-cell !important;
-      white-space: nowrap; }
+  margin: 0;
+  z-index: 999; }
   @media screen and (min-width: 64rem) {
     .navbar {
-      -webkit-flex-direction: row;
-      -moz-flex-direction: row;
-      flex-direction: row; } }
+      -webkit-flex-wrap: nowrap;
+      -moz-flex-wrap: nowrap;
+      flex-wrap: nowrap; } }
 
-.link-nav {
-  background: transparent;
-  border-bottom: 0;
-  color: #FFF;
-  line-height: 40px;
-  padding: 0.5rem 1rem;
-  position: relative;
-  z-index: 12; }
-  .link-nav::after {
-    background: #FFF;
-    content: "";
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 0;
-    height: 4px;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out; }
-  .link-nav.active, .link-nav:active, .link-nav:hover, .link-nav:focus {
-    color: #FFF; }
-    .link-nav.active::after, .link-nav:active::after, .link-nav:hover::after, .link-nav:focus::after {
-      width: 100%; }
+/* * * Navbar Logo * */
+.navbar-logo {
+  border-bottom: 1px solid #0fd6a8;
+  flex: 1 0;
+  font-size: 1.7em;
+  font-weight: 100;
+  line-height: 61.53846px;
+  margin: 0 1rem;
+  text-align: center; }
+  @media screen and (min-width: 64rem) {
+    .navbar-logo {
+      flex: 0;
+      border: none;
+      line-height: 80px; } }
+
+/* * * Navbar Menu * */
+.navbar-menu {
+  overflow-y: hidden;
+  overflow-x: auto; }
+  .navbar-menu > * {
+    display: table-cell;
+    line-height: 40px;
+    padding: 0 1rem;
+    white-space: nowrap; }
+    @media screen and (min-width: 64rem) {
+      .navbar-menu > * {
+        line-height: 80px; } }
+  .navbar-menu a {
+    border-width: 4px;
+    border-color: transparent;
+    color: rgba(255, 255, 255, 0.8); }
+    .navbar-menu a:hover, .navbar-menu a:focus {
+      border-color: rgba(255, 255, 255, 0.9);
+      color: rgba(255, 255, 255, 0.9); }
+    .navbar-menu a.active, .navbar-menu a:active {
+      border-color: #FFF;
+      color: #FFF; }
 
 /*# sourceMappingURL=ffcss.css.map */

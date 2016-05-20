@@ -43,11 +43,11 @@ button
     border: $button-border solid transparent
     border-radius: $button-radius
     font-size: .9em
-    font-weight: 300
-    height: $button-height
+    font-weight: 400
     line-height: $button-height
     margin: $layout-space/8 0
     padding: 0 $layout-space
+    text-transform: uppercase
     +button-line($color-gray)
     +transition-ease(.3s)
 
@@ -80,10 +80,11 @@ button
 
 /* * * Button Sizes * * */
 .button-small 
-    border-radius: calc(#{$button-radius/1.6})
-    height: calc(#{$button-height/1.6})
-    line-height: calc(#{$button-height/1.6})
-    padding: 0 calc(#{$layout-space/1.6})
+    border-radius: calc(#{$button-radius/1.3})
+    font-size: .8em
+    height: calc(#{$button-height/1.3})
+    line-height: calc(#{$button-height/1.3})
+    padding: 0 calc(#{$layout-space/1.3})
 
 .button-big 
     border-radius: calc(#{$button-radius*1.5})
