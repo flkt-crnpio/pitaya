@@ -25,6 +25,9 @@
  * Width
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * Card
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  * Navbar
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -1144,7 +1147,7 @@ code,
 kbd,
 mark,
 samp {
-  border-radius: 1px;
+  border-radius: 3px;
   padding: 0.2em 0.6em;
   margin: 0 0.4em; }
 
@@ -2341,17 +2344,17 @@ blockquote {
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  * Breadcrumb
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-.breadcrumb-container {
+.breadcrumb {
   color: #CCC;
   font-weight: 300;
   padding: 1rem 0; }
-  .breadcrumb-container *:not(:last-child)::after {
+  .breadcrumb *:not(:last-child)::after {
     content: "⟩";
     display: inline-block;
     font-weight: 300;
     padding-left: 0.5rem;
     padding-right: 0.5rem; }
-  .breadcrumb-container > a {
+  .breadcrumb > a {
     border-bottom: 0;
     font-weight: 300; }
 
@@ -2408,6 +2411,73 @@ blockquote {
       .collapsable [type="checkbox"] + div > * {
         font-size: 0.9em;
         padding: 1rem 2rem 0 0; }
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * Card
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+.card {
+  background: #FFF;
+  border: 1px solid #DDD;
+  border-radius: 3px;
+  box-shadow: 0 1.5px 3px rgba(51, 51, 51, 0.2);
+  margin: 0 3px 6px;
+  overflow: hidden; }
+  .card .card-header,
+  .card .card-content,
+  .card .card-footer {
+    clear: both;
+    padding: 1rem 2rem; }
+  .card .card-header *,
+  .card .card-content *:last-child,
+  .card .card-footer * {
+    margin-bottom: 0; }
+  .card .card-header {
+    border-bottom: 1px solid #EEE; }
+  .card .card-footer {
+    border-top: 1px solid #EEE; }
+    .card .card-footer button {
+      margin: 0; }
+  .card .card-image {
+    background: #FFF;
+    border-radius: 3px 3px 0 0;
+    width: 100%;
+    overflow: hidden; }
+    .card .card-image img {
+      float: left;
+      width: 100%;
+      object-fit: cover; }
+    .card .card-image.card-height {
+      height: 300px; }
+      .card .card-image.card-height img {
+        height: 300px; }
+    .card .card-image.card-height-small {
+      height: 200px; }
+      .card .card-image.card-height-small img {
+        height: 200px; }
+    .card .card-image.card-height-big {
+      height: 450px; }
+      .card .card-image.card-height-big img {
+        height: 450px; }
+  .card.card-empty {
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px dashed #DDD;
+    box-shadow: none;
+    padding: 2rem;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-moz-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    justify-content: center; }
+    .card.card-empty *:first-child {
+      margin-top: 0;
+      padding-top: 0; }
+    .card.card-empty *:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0; }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  * Divider

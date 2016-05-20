@@ -1,0 +1,75 @@
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+ * Card
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+.card
+    background: $color-white
+    border: $border-size solid $color-gray
+    border-radius: $border-radius
+    box-shadow: 0 $border-shadow/2 $border-shadow rgba($color-black, $border-shadow-opacity)
+    margin: 0 $border-shadow $border-shadow*2
+    overflow: hidden
+
+    .card-header,
+    .card-content,
+    .card-footer
+        clear: both
+        padding: $layout-space/2 $layout-space
+
+    .card-header *,
+    .card-content *:last-child,
+    .card-footer *
+        margin-bottom: 0
+
+    .card-header
+        border-bottom: $border-size solid $color-gray-light
+
+    .card-footer
+        border-top: $border-size solid $color-gray-light
+        button 
+            margin: 0 
+
+    .card-image
+        background: $color-white
+        border-radius: $border-radius $border-radius 0 0
+        width: 100%
+        overflow: hidden
+        img 
+            float: left
+            width: 100%
+            object-fit: cover
+
+        &.card-height
+            height: $card-height
+            img
+                height: $card-height
+
+        &.card-height-small
+            height: $card-height/1.5
+            img
+                height: $card-height/1.5
+
+        &.card-height-big
+            height: $card-height*1.5
+            img
+                height: $card-height*1.5
+
+    &.card-empty
+        background: rgba($color-white,.3)
+        border: $border-size dashed $color-gray
+        box-shadow: none
+        padding: $layout-space
+        display: -webkit-flex 
+        display: -moz-flex 
+        display: flex
+        -webkit-align-items: center
+        -webkit-moz-items: center
+        align-items: center
+        -webkit-justify-content: center 
+        -moz-justify-content: center 
+        justify-content: center
+        *:first-child
+            margin-top: 0
+            padding-top: 0
+        *:last-child
+            margin-bottom: 0
+            padding-bottom: 0
