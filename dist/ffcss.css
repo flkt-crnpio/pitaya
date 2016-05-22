@@ -398,90 +398,6 @@ button {
   width: 100%; }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
- * Colors
- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
- *
- * /* * * Background * */
-.bg-primary {
-  background: #1EB; }
-  .bg-primary.darken-1 {
-    background: #0ebe96; }
-  .bg-primary.darken-2 {
-    background: #0a8f70; }
-  .bg-primary.darken-3 {
-    background: #075f4b; }
-  .bg-primary.lighten-1 {
-    background: #41f1c9; }
-  .bg-primary.lighten-2 {
-    background: #70f5d6; }
-  .bg-primary.lighten-3 {
-    background: #a0f8e4; }
-
-.bg-accent {
-  background: #70A; }
-  .bg-accent.darken-1 {
-    background: #530077; }
-  .bg-accent.darken-2 {
-    background: #300044; }
-  .bg-accent.darken-3 {
-    background: #0c0011; }
-  .bg-accent.lighten-1 {
-    background: #9b00dd; }
-  .bg-accent.lighten-2 {
-    background: #b811ff; }
-  .bg-accent.lighten-3 {
-    background: #c744ff; }
-
-.bg-white {
-  background: #FFF; }
-  .bg-white.darken-1 {
-    background: #e6e6e6; }
-  .bg-white.darken-2 {
-    background: #cccccc; }
-  .bg-white.darken-3 {
-    background: #b3b3b3; }
-
-.bg-gray-light {
-  background: #EEE; }
-
-.bg-gray {
-  background: #DDD; }
-
-.bg-gray-dark {
-  background: #CCC; }
-
-.bg-black {
-  background: #333; }
-  .bg-black.lighten-1 {
-    background: #4d4d4d; }
-  .bg-black.lighten-2 {
-    background: #666666; }
-  .bg-black.lighten-3 {
-    background: gray; }
-
-/* * * Color * */
-.color-primary {
-  color: #1EB; }
-
-.color-accent {
-  color: #70A; }
-
-.color-white {
-  color: #FFF; }
-
-.color-gray-light {
-  color: #EEE; }
-
-.color-gray {
-  color: #DDD; }
-
-.color-gray-dark {
-  color: #CCC; }
-
-.color-black {
-  color: #333; }
-
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  * Form
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 /* * * General inputs and Textarea * */
@@ -2344,6 +2260,24 @@ blockquote {
   font-size: 3em; }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * Badge
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+.badge {
+  background: #1EB;
+  border-radius: 15px;
+  color: #FFF;
+  display: inline-block;
+  font-size: 0.8em;
+  height: 30px;
+  line-height: 30px;
+  min-width: 30px;
+  overflow: hidden;
+  padding: 0 10px;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  * Breadcrumb
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 .breadcrumb {
@@ -2683,5 +2617,124 @@ blockquote {
       margin-left: 100%; }
     .tabs .tab-4:nth-child(4) [type="radio"]:checked + div {
       margin-left: -300%; }
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * Tag
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+.tag {
+  background: #EEE;
+  border-radius: 3px;
+  display: inline-block;
+  line-height: 30px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 1rem;
+  padding-right: 1rem; }
+  .tag img {
+    display: inline-block;
+    float: left;
+    height: 30px;
+    width: 30px;
+    object-fit: cover;
+    margin-left: -1rem;
+    margin-right: 0.5rem; }
+  .tag.tag-circle {
+    border-radius: 30px; }
+    .tag.tag-circle img {
+      border-radius: 30px; }
+  .tag.tag-icon {
+    border-radius: 30px; }
+    .tag.tag-icon img {
+      border-radius: 30px;
+      height: 20px;
+      width: 20px;
+      object-fit: cover;
+      margin: 5px 5px 5px 0;
+      margin-left: -0.5rem; }
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * Colors
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+ *
+ * /* * * Background * */
+.bg-primary {
+  background: #1EB; }
+  .bg-primary.darken-1 {
+    background: #0ebe96; }
+  .bg-primary.darken-2 {
+    background: #0a8f70; }
+  .bg-primary.darken-3 {
+    background: #075f4b; }
+  .bg-primary.lighten-1 {
+    background: #41f1c9; }
+  .bg-primary.lighten-2 {
+    background: #70f5d6; }
+  .bg-primary.lighten-3 {
+    background: #a0f8e4; }
+
+.bg-accent {
+  background: #70A; }
+  .bg-accent.darken-1 {
+    background: #530077; }
+  .bg-accent.darken-2 {
+    background: #300044; }
+  .bg-accent.darken-3 {
+    background: #0c0011; }
+  .bg-accent.lighten-1 {
+    background: #9b00dd; }
+  .bg-accent.lighten-2 {
+    background: #b811ff; }
+  .bg-accent.lighten-3 {
+    background: #c744ff; }
+
+.bg-white {
+  background: #FFF; }
+  .bg-white.darken-1 {
+    background: #e6e6e6; }
+  .bg-white.darken-2 {
+    background: #cccccc; }
+  .bg-white.darken-3 {
+    background: #b3b3b3; }
+
+.bg-gray-light {
+  background: #EEE; }
+
+.bg-gray {
+  background: #DDD; }
+
+.bg-gray-dark {
+  background: #CCC; }
+
+.bg-black {
+  background: #333; }
+  .bg-black.lighten-1 {
+    background: #4d4d4d; }
+  .bg-black.lighten-2 {
+    background: #666666; }
+  .bg-black.lighten-3 {
+    background: gray; }
+
+/* * * Color * */
+.color-primary {
+  color: #1EB; }
+
+.color-accent {
+  color: #70A; }
+
+.color-white {
+  color: #FFF; }
+
+.color-gray-light {
+  color: #EEE; }
+
+.color-gray {
+  color: #DDD; }
+
+.color-gray-dark {
+  color: #CCC; }
+
+.color-black {
+  color: #333; }
 
 /*# sourceMappingURL=ffcss.css.map */

@@ -1,0 +1,37 @@
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+ * Tag
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+.tag
+    background: $color-gray-light
+    border-radius: $border-radius
+    display: inline-block
+    line-height: 30px
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+    padding-left: $layout-space/2
+    padding-right: $layout-space/2
+
+    img 
+        display: inline-block
+        float: left
+        height: 30px
+        width: 30px
+        object-fit: cover
+        margin-left: -$layout-space/2
+        margin-right: $layout-space/4
+
+    &.tag-circle
+        border-radius: 30px
+        img 
+            border-radius: 30px
+
+    &.tag-icon
+        border-radius: 30px
+        img 
+            border-radius: 30px
+            height: 20px
+            width: 20px
+            object-fit: cover
+            margin: 5px 5px 5px 0
+            margin-left: -$layout-space/4
