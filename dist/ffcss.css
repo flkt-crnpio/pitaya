@@ -2602,7 +2602,8 @@ blockquote {
     display: block;
     font-size: 1.1em;
     font-weight: 300;
-    line-height: 3em;
+    line-height: 1em;
+    padding: 2rem 0;
     text-align: center; }
   .tabs [class^="tab"] [type="radio"],
   .tabs [class*=" tab"] [type="radio"] {
