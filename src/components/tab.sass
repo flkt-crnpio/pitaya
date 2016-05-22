@@ -1,0 +1,95 @@
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+ * Tab
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+.tabs
+    @extend .row
+    overflow: hidden
+
+    [class^="tab"], 
+    [class*=" tab"]
+        label
+            color: $color-black
+            cursor: pointer
+            display: block
+            font-size: 1.1em
+            font-weight: 300
+            line-height: 3em
+            text-align: center
+
+        [type="radio"]
+            border-top: 1px solid $color-gray
+            cursor: pointer
+            -webkit-appearance: none
+            -moz-appearance: none
+            appearance: none
+            display: block
+            width: 100%
+            +transition-ease(.3s)
+            &:hover,
+            &:focus
+                border-top: 1px solid $color-primary
+            &:checked
+                border-top: 2px solid $color-primary
+            &:checked + div
+                opacity: 1
+            
+            + div
+                display: block
+                opacity: 0
+                padding: $layout-space 0
+                width: 90%
+                +transition-ease(.3s)
+
+    .tab-2
+        width: 50%
+        [type="radio"] + div 
+            width: 200%
+            margin-left: 200%
+        [type="radio"]:checked + div 
+            margin-left: 0
+        &:last-child
+            [type="radio"] + div
+                margin-left: 100%
+            [type="radio"]:checked + div
+                margin-left: -100%
+
+    .tab-3
+        width: 33.333%
+        [type="radio"] + div 
+            width: 300%
+            margin-left: 300%
+        [type="radio"]:checked + div 
+            margin-left: 0
+        &:nth-child(2)
+            [type="radio"] + div
+                margin-left: 200%
+            [type="radio"]:checked + div
+                margin-left: -100%
+        &:nth-child(3)
+            [type="radio"] + div
+                margin-left: 100%
+            [type="radio"]:checked + div
+                margin-left: -200%
+
+    .tab-4
+        width: 25%
+        [type="radio"] + div 
+            width: 400%
+            margin-left: 400%
+        [type="radio"]:checked + div 
+            margin-left: 0
+        &:nth-child(2)
+            [type="radio"] + div
+                margin-left: 300%
+            [type="radio"]:checked + div
+                margin-left: -100%
+        &:nth-child(3)
+            [type="radio"] + div
+                margin-left: 200%
+            [type="radio"]:checked + div
+                margin-left: -200%
+        &:nth-child(4)
+            [type="radio"] + div
+                margin-left: 100%
+            [type="radio"]:checked + div
+                margin-left: -300%
