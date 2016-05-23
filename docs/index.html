@@ -264,7 +264,6 @@
                         bg-white darken-1
                     </div>
                 </div>
-                
                 <div class="row flex-padding">
                     <div class="flex-1_2 flex-laptop-1_7 color-primary">
                         .color-primary
@@ -298,84 +297,101 @@
                 </div>
                 <div class="row">
                     <div class="flex-1 flex-laptop-1_2">
-                        
-                        <p>Formulario simple</p>
+                        <form>
+                            <p>
+                                Formulario simple
+                                <span class="form-error">Mensage general. Aparece cuando el formulario es invalido.</span>
+                            </p>
 
-                        <label for="name-simple">Nombre</label>
-                        <input id="name-simple" type="text" name="name">
-                        <label for="email-simple">Correo</label>
-                        <input id="email-simple" type="email" name="email">
+                            <label for="name-simple">Nombre *</label>
+                            <input id="name-simple" type="text" name="name" required>
+                            <span class="input-error">* Este campo es obligatorio.</span>
 
-                        <label for="comment-simple">Describe tu café</label>
-                        <textarea id="comment-simple" rows="4" cols="50"></textarea>
+                            <label for="email-simple">Correo</label>
+                            <input id="email-simple" type="email" name="email">
+                            <span class="input-error">* Debe tener formato de correo electrónico</span>
 
-                        <input id="coffee-simple" type="checkbox" name="vehicle" value="coffee"> 
-                        <label for="coffee-simple" class="label-inline">Quiero café</label>
+                            <label for="comment-simple">Describe tu café</label>
+                            <textarea id="comment-simple" rows="4" cols="50"></textarea>
 
-                        <br>
+                            <input id="coffee-simple" type="checkbox" name="vehicle" value="coffee"> 
+                            <label for="coffee-simple" class="label-inline">Quiero café</label>
 
-                        <input id="expresso-simple" type="radio" name="coffeetype-simple" value="expresso" checked> 
-                        <label for="expresso-simple" class="label-inline">Expreso</label>
-                        <input id="americano-simple" type="radio" name="coffeetype-simple" value="americano"> 
-                        <label for="americano-simple" class="label-inline">Americano</label>
-                        <input id="latte-simple" type="radio" name="coffeetype-simple" value="latte"> 
-                        <label for="latte-simple" class="label-inline">Late</label>
+                            <br>
 
-                        <label for="select-simple">Selecciona una opción</label>
-                        <select id="select-simple">
-                            <option value="opcion1">Opción 1</option>
-                            <option value="opcion3">Opción 2</option>
-                            <option value="opcion3">Opción 3</option>
-                        </select>
+                            <input id="expresso-simple" type="radio" name="coffeetype-simple" value="expresso" checked> 
+                            <label for="expresso-simple" class="label-inline">Expreso</label>
+                            <input id="americano-simple" type="radio" name="coffeetype-simple" value="americano"> 
+                            <label for="americano-simple" class="label-inline">Americano</label>
+                            <input id="latte-simple" type="radio" name="coffeetype-simple" value="latte"> 
+                            <label for="latte-simple" class="label-inline">Late</label>
 
-                        <label for="file-simple">Selecciona una imágen</label>
-                        <input id="file-simple" type="file" name="file" accept="image/*" multiple>   
-                    </div>
-                    <div class="flex-1 flex-laptop-1_2">
-                        
-                        <p>Formulario Fancy</p>
-                        
-                        <div class="form-input-block">
-                            <input id="name" type="text" name="name">
-                            <label for="name">Nombre</label>
-                        </div>
-                        <div class="form-input-block">
-                            <input id="email" type="email" name="email">
-                            <label for="email">Correo</label>
-                        </div>
-
-                        <div class="form-input-block">
-                            <textarea id="comment" rows="4" cols="50"></textarea>
-                            <label for="comment">Describe tu café</label>
-                        </div>
-
-                        <div class="form-input-checkbox">
-                            <input id="coffee" type="checkbox" name="vehicle" value="coffee"> 
-                            <label for="coffee">Quiero café</label>
-                        </div>
-
-                        <div class="form-input-radio">
-                            <input id="expresso" type="radio" name="coffeetype" value="expresso" checked> 
-                            <label for="expresso">Expreso</label>
-                            <input id="americano" type="radio" name="coffeetype" value="americano"> 
-                            <label for="americano">Americano</label>
-                            <input id="latte" type="radio" name="coffeetype" value="latte"> 
-                            <label for="latte">Late</label>
-                        </div>
-
-                        <div class="form-select-block">
-                            <select id="select">
+                            <label for="select-simple">Selecciona una opción</label>
+                            <select id="select-simple">
                                 <option value="opcion1">Opción 1</option>
                                 <option value="opcion3">Opción 2</option>
                                 <option value="opcion3">Opción 3</option>
                             </select>
-                            <label for="select">Selecciona una opción</label>
-                        </div>
 
-                        <div class="form-input-file">
-                            <input id="file" type="file" name="file" accept="image/*" multiple>
-                            <label for="file">Selecciona una imágen</label>
-                        </div>
+                            <label for="file-simple">Selecciona una imágen</label>
+                            <input id="file-simple" type="file" name="file" accept="image/*" multiple>
+                        </form>
+                    </div>
+                    <div class="flex-1 flex-laptop-1_2">
+                        <form>
+                            <p class="form-title">
+                                Formulario Fancy
+                                <span class="form-error">Mensage general. Aparece cuando el formulario es invalido.</span>
+                            </p>
+                            <div class="form-input-block">
+                                <input id="name" type="text" name="name">
+                                <label for="name">
+                                    Nombre
+                                </label>
+                            </div>
+                            <div class="form-input-block">
+                                <input id="email" type="email" name="email">
+                                <label for="email">
+                                    Correo
+                                    <span class="input-error">
+                                        * Debe tener formato de correo electrónico
+                                    </span>
+                                </label>
+                            </div>
+
+                            <div class="form-input-block">
+                                <textarea id="comment" rows="4" cols="50"></textarea>
+                                <label for="comment">Describe tu café</label>
+                            </div>
+
+                            <div class="form-input-checkbox">
+                                <input id="coffee" type="checkbox" name="vehicle" value="coffee"> 
+                                <label for="coffee">Quiero café</label>
+                            </div>
+
+                            <div class="form-input-radio">
+                                <input id="expresso" type="radio" name="coffeetype" value="expresso" checked> 
+                                <label for="expresso">Expreso</label>
+                                <input id="americano" type="radio" name="coffeetype" value="americano"> 
+                                <label for="americano">Americano</label>
+                                <input id="latte" type="radio" name="coffeetype" value="latte"> 
+                                <label for="latte">Late</label>
+                            </div>
+
+                            <div class="form-select-block">
+                                <select id="select">
+                                    <option value="opcion1">Opción 1</option>
+                                    <option value="opcion3">Opción 2</option>
+                                    <option value="opcion3">Opción 3</option>
+                                </select>
+                                <label for="select">Selecciona una opción</label>
+                            </div>
+
+                            <div class="form-input-file">
+                                <input id="file" type="file" name="file" accept="image/*" multiple>
+                                <label for="file">Selecciona una imágen</label>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </section>

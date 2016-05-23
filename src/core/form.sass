@@ -19,7 +19,7 @@
 [type="week"],
 textarea
     background: transparent
-    border: 1px solid $color-gray
+    border: 1px solid $color-gray-light
     display: block
     height: 40px
     width: 100%
@@ -43,7 +43,7 @@ select
 
 select
     background: transparent
-    border: 1px solid $color-gray
+    border: 1px solid $color-gray-light
     margin-bottom: $layout-space/2
     width: 99%
 
@@ -62,7 +62,7 @@ select
 
 /* * * Labels * * */
 label
-    color: $color-gray-dark
+    color: $color-gray
     font-size: .9em
     font-weight: 300
     +transition-ease(.3s)
@@ -90,12 +90,12 @@ label
 
     label
         position: relative
-        color: $color-gray-dark
+        color: $color-gray
         width: 100%
         +transition-ease(.3s)
 
         &::after
-            background: $color-gray-dark
+            background: $color-gray
             content: ""
             position: absolute
             bottom: -40px
@@ -107,7 +107,7 @@ label
     input,
     textarea
         border: none
-        border-bottom: 1px solid $color-gray
+        border-bottom: 1px solid $color-gray-light
         color: $color-black
         margin: 0
         padding: 0
@@ -172,7 +172,7 @@ label
             height: 20px
             width: 20px
             background: #fff
-            border: 1px solid $color-gray
+            border: 1px solid $color-gray-light
             border-radius: 2px
             left: 0
             +transition-ease(.3s)
@@ -181,7 +181,7 @@ label
             content: ""
             width: 12px
             height: 6px
-            border: 2px solid $color-gray
+            border: 2px solid $color-gray-light
             border-top: none
             border-right: none
             background: transparent
@@ -207,7 +207,7 @@ label
             width: 8px
             height: 8px
             border-radius: 50%
-            background: $color-gray
+            background: $color-gray-light
             position: absolute
             top: 6px
             left: 6px
@@ -216,7 +216,7 @@ label
 
 /* * * Select like material * * */
 .form-select-block
-    border-bottom: 1px solid $color-gray
+    border-bottom: 1px solid $color-gray-light
     display: flex
     flex-direction: column-reverse
     margin-top: $layout-space/4
@@ -239,7 +239,7 @@ label
         &::before
             border-left: 6px solid transparent
             border-right: 6px solid transparent
-            border-top: 8px solid $color-gray
+            border-top: 8px solid $color-gray-light
             content: ""
             position: absolute
             bottom: -15px
@@ -270,7 +270,7 @@ label
 
 /* * * File like material * * */
 .form-input-file
-    border-bottom: 1px solid $color-gray
+    border-bottom: 1px solid $color-gray-light
     display: flex
     flex-direction: column-reverse
     margin-top: $layout-space/4
@@ -295,7 +295,7 @@ label
         &::before
             border-left: 6px solid transparent
             border-right: 6px solid transparent
-            border-bottom: 8px solid $color-gray
+            border-bottom: 8px solid $color-gray-light
             content: ""
             position: absolute
             bottom: -15px
@@ -317,3 +317,47 @@ label
         &:hover + label::before,
         &:focus + label::before
             border-bottom: 8px solid $color-primary
+
+
+
+/* * * Form Errors * * */
+form
+    .form-error,
+    .input-error
+        color: $color-accent
+        display: block
+        font-size: .9em
+        height: auto
+        line-height: 1em
+        max-height: 0
+        overflow: hidden
+        +transition-ease(.3s)
+    &:invalid
+        .form-error
+            max-height: 5vh
+
+input:invalid,
+textarea:invalid,
+input:hover:invalid,
+textarea:hover:invalid,
+input:focus:invalid,
+textarea:focus:invalid
+    border-color: $color-accent
+    + .input-error
+        max-height: 5vh
+
+.form-input-block input,
+.form-input-block textarea
+    + label
+        .input-error
+            display: inline-block
+            margin: 0 1em
+
+.form-input-block input:invalid,
+.form-input-block textarea:invalid
+    border-color: $color-accent
+    + label
+        color: $color-accent
+        .input-error
+            font-weight: 300
+            max-height: 10vh
