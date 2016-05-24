@@ -2518,16 +2518,21 @@ blockquote {
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 /* * * Navbar general container * */
 .navbar {
-  background: #44FFD1;
-  color: #FFF;
+  background: #FFF;
+  color: #44FFD1;
   margin: 0;
   width: 100%;
   z-index: 999; }
+  .navbar a {
+    line-height: 40px;
+    padding: 0 1rem; }
   @media screen and (min-width: 64rem) {
     .navbar {
       -webkit-flex-wrap: nowrap;
       -moz-flex-wrap: nowrap;
-      flex-wrap: nowrap; } }
+      flex-wrap: nowrap; }
+      .navbar a {
+        line-height: 80px; } }
   .navbar.fixed {
     position: fixed;
     top: 0; }
@@ -2536,8 +2541,8 @@ blockquote {
 
 /* * * Navbar Logo * */
 .navbar-logo {
-  border-bottom: 1px solid #2bffcb;
-  flex: 1 0;
+  border-bottom: 1px solid rgba(68, 255, 209, 0.5);
+  flex: 1 0 calc(100% - 4rem);
   font-size: 1.7em;
   font-weight: 100;
   line-height: 61.53846px;
@@ -2549,28 +2554,157 @@ blockquote {
       border: none;
       line-height: 80px; } }
 
-/* * * Navbar Menu * */
-.navbar-menu {
+/* * * Navbar Scroll Menu * */
+.navbar-scroll-menu {
   overflow-y: hidden;
   overflow-x: auto; }
-  .navbar-menu > * {
+  .navbar-scroll-menu > * {
     display: table-cell;
     line-height: 40px;
     padding: 0 1rem;
     white-space: nowrap; }
     @media screen and (min-width: 64rem) {
-      .navbar-menu > * {
+      .navbar-scroll-menu > * {
         line-height: 80px; } }
-  .navbar-menu a {
-    border-width: 4px;
+  .navbar-scroll-menu a {
+    border-width: 4px; }
+
+/* * * Navbar List Menu * */
+.navbar-menu-list {
+  list-style: none;
+  margin: 0 1rem;
+  padding: 0;
+  overflow: hidden; }
+  .navbar-menu-list li {
+    line-height: 40px;
+    padding: 0 1rem;
+    white-space: nowrap;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+    .navbar-menu-list li a {
+      border-bottom-width: 0;
+      line-height: 40px;
+      margin-left: -1rem;
+      margin-right: -1rem; }
+    .navbar-menu-list li ul {
+      list-style: none;
+      margin-left: -1rem;
+      margin-right: -1rem;
+      padding: 0;
+      position: absolute;
+      height: auto;
+      overflow: hidden;
+      opacity: 0;
+      max-height: 0;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out; }
+  .navbar-menu-list > li {
+    float: left; }
+    .navbar-menu-list > li:hover > ul, .navbar-menu-list > li:focus > ul, .navbar-menu-list > li:active > ul, .navbar-menu-list > li.active > ul {
+      opacity: 1;
+      max-height: 50vh; }
+  @media screen and (min-width: 64rem) {
+    .navbar-menu-list {
+      margin: 0; }
+      .navbar-menu-list > li,
+      .navbar-menu-list > li a {
+        line-height: 80px; }
+        .navbar-menu-list > li ul li,
+        .navbar-menu-list > li ul a,
+        .navbar-menu-list > li a ul li,
+        .navbar-menu-list > li a ul a {
+          line-height: 40px; } }
+
+/* * * Navbar Colors * */
+.navbar-bg-primary {
+  background: #44FFD1; }
+  .navbar-bg-primary a {
+    background: #44FFD1; }
+  .navbar-bg-primary ul.navbar-menu-list ul a {
+    background: #00f7ba; }
+    .navbar-bg-primary ul.navbar-menu-list ul a:hover, .navbar-bg-primary ul.navbar-menu-list ul a:focus, .navbar-bg-primary ul.navbar-menu-list ul a:active, .navbar-bg-primary ul.navbar-menu-list ul a.active {
+      background: #00c493; }
+  .navbar-bg-primary ul.navbar-menu-list a:hover, .navbar-bg-primary ul.navbar-menu-list a:focus, .navbar-bg-primary ul.navbar-menu-list a:active, .navbar-bg-primary ul.navbar-menu-list a.active,
+  .navbar-bg-primary ul.navbar-menu-list li:hover,
+  .navbar-bg-primary ul.navbar-menu-list li:focus,
+  .navbar-bg-primary ul.navbar-menu-list li:active,
+  .navbar-bg-primary ul.navbar-menu-list li.active {
+    background: #00f7ba; }
+
+.navbar-bg-accent {
+  background: #6153CC; }
+  .navbar-bg-accent a {
+    background: #6153CC; }
+  .navbar-bg-accent ul.navbar-menu-list ul a {
+    background: #3d30a2; }
+    .navbar-bg-accent ul.navbar-menu-list ul a:hover, .navbar-bg-accent ul.navbar-menu-list ul a:focus, .navbar-bg-accent ul.navbar-menu-list ul a:active, .navbar-bg-accent ul.navbar-menu-list ul a.active {
+      background: #2e247b; }
+  .navbar-bg-accent ul.navbar-menu-list a:hover, .navbar-bg-accent ul.navbar-menu-list a:focus, .navbar-bg-accent ul.navbar-menu-list a:active, .navbar-bg-accent ul.navbar-menu-list a.active,
+  .navbar-bg-accent ul.navbar-menu-list li:hover,
+  .navbar-bg-accent ul.navbar-menu-list li:focus,
+  .navbar-bg-accent ul.navbar-menu-list li:active,
+  .navbar-bg-accent ul.navbar-menu-list li.active {
+    background: #3d30a2; }
+
+.navbar-color-primary {
+  color: #44FFD1; }
+  .navbar-color-primary a {
+    border-color: transparent;
+    color: rgba(68, 255, 209, 0.8); }
+    .navbar-color-primary a:hover, .navbar-color-primary a:focus {
+      border-color: rgba(68, 255, 209, 0.9);
+      color: rgba(68, 255, 209, 0.9); }
+    .navbar-color-primary a.active, .navbar-color-primary a:active {
+      border-color: #44FFD1;
+      color: #44FFD1; }
+  .navbar-color-primary .navbar-logo {
+    border-bottom: 1px solid rgba(68, 255, 209, 0.5); }
+
+.navbar-color-accent {
+  color: #6153CC; }
+  .navbar-color-accent a {
+    border-color: transparent;
+    color: rgba(97, 83, 204, 0.8); }
+    .navbar-color-accent a:hover, .navbar-color-accent a:focus {
+      border-color: rgba(97, 83, 204, 0.9);
+      color: rgba(97, 83, 204, 0.9); }
+    .navbar-color-accent a.active, .navbar-color-accent a:active {
+      border-color: #6153CC;
+      color: #6153CC; }
+  .navbar-color-accent .navbar-logo {
+    border-bottom: 1px solid rgba(97, 83, 204, 0.5); }
+
+.navbar-color-white {
+  color: #FFF; }
+  .navbar-color-white a {
     border-color: transparent;
     color: rgba(255, 255, 255, 0.8); }
-    .navbar-menu a:hover, .navbar-menu a:focus {
+    .navbar-color-white a:hover, .navbar-color-white a:focus {
       border-color: rgba(255, 255, 255, 0.9);
       color: rgba(255, 255, 255, 0.9); }
-    .navbar-menu a.active, .navbar-menu a:active {
+    .navbar-color-white a.active, .navbar-color-white a:active {
       border-color: #FFF;
       color: #FFF; }
+  .navbar-color-white .navbar-logo {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5); }
+
+.navbar-color-black {
+  color: #333; }
+  .navbar-color-black a {
+    border-color: transparent;
+    color: rgba(51, 51, 51, 0.8); }
+    .navbar-color-black a:hover, .navbar-color-black a:focus {
+      border-color: rgba(51, 51, 51, 0.9);
+      color: rgba(51, 51, 51, 0.9); }
+    .navbar-color-black a.active, .navbar-color-black a:active {
+      border-color: #333;
+      color: #333; }
+  .navbar-color-black .navbar-logo {
+    border-bottom: 1px solid rgba(51, 51, 51, 0.5); }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  * Tab
