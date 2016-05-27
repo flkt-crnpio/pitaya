@@ -2,9 +2,9 @@
  * Link
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 /* * * Color functions * * */
-=link($color)
+=link_darken($color)
     border-color: transparent
-    color: darken($color, 3)
+    color: $color
     &:hover,
     &:focus
         border-color: darken($color, 10)
@@ -13,9 +13,19 @@
     &:active
         border-color: darken($color, 15)
         color: darken($color, 15)
+=link_lighten($color)
+    border-color: transparent
+    color: $color
+    &:hover,
+    &:focus
+        border-color: lighten($color, 10)
+        color: lighten($color, 10)
+    &.active,
+    &:active
+        border-color: lighten($color, 20)
+        color: lighten($color, 20)
 
 =link_fancy($color)
-    color: darken($color, 3)
     &::after
         background: $color-primary
     &:hover,
@@ -29,18 +39,6 @@
         &::after
             background: darken($color, 15)
 
-=link_lighten($color)
-    border-color: transparent
-    color: rgba($color, .8)
-    &:hover,
-    &:focus
-        border-color: rgba($color, .9)
-        color: rgba($color, .9)
-    &.active,
-    &:active
-        border-color: $color
-        color: $color
-
 
 
 /* * * Link default values * * */
@@ -49,16 +47,16 @@ a
     display: inline-block
     color: $color-primary
     font-size: 1em
-    font-weight: 400
+    font-weight: 300
     text-decoration: none
-    +link($color-primary)
+    +link_lighten($color-primary)
     +transition-ease(.3s)
 
 
 
 /* * * Link colors * * */
 .link-accent
-    +link($color-accent)
+    +link_lighten($color-accent)
 
 
 

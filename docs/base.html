@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>ffcss</title>
+    <link rel="stylesheet" type="text/css" href="../dist/ffcss.css">
+    <link rel="stylesheet" type="text/css" href="css/pitaya.css">
+</head>
+<body>
+    <div class="main-container main-col">
+        <nav class="navbar fixed">
+            <h1 class="navbar-logo">FFCSS</h1>
+            <div class="navbar-menu">
+                <a href="index.html">FFCSS</a>
+                <a href="base.html" class="active">Base</a>
+                <a href="layout.html">Layout</a>
+                <a href="components.html">Components</a>
+                <a href="appnav.html">Appnav</a>
+            </div>
+        </nav>
+        
+        <header>
+            <div class="container padding-top">
+                <br><br>
+                FFCSS
+                <nav>
+                    <a href="index.html">Texto</a>
+                    <a href="index.html#links">Ligas</a>
+                    <a href="index.html#colors">Colores</a>
+                    <a href="index.html#form">Formularios</a>
+                    <a href="index.html#button">Botones</a>
+                    <a href="index.html#list">Listas</a>
+                    <a href="index.html#table">Tablas</a>
+                </nav>
+            </div>
+        </header>
+        
+        <main class="flex">
+            <section id="typography" class="container">
+                <div class="row">
+                    <div class="flex">
+                        <h1 class="lead">Heading H1 class lead</h1>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="flex-1">
+                        <h1>< h1 > Heading</h1>
+                        <span></span>
+                        <h2>< h2 > Heading</h2>
+                        <span></span>
+                        <h3>< h3 > Heading</h3>
+                        <span></span>
+                        <h4>< h4 > Heading</h4>
+                        <span></span>
+                        <h5>< h5 > Heading</h5>
+                        <span></span>
+                        <h6>< h6 > Heading</h6>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="flex-1 flex-laptop-1_3">
+                        <h1>Heading H1</h1>
+                        <h2>Subheading H2</h2>
+                        <span></span>
+                        <h2>Heading H2</h2>
+                        <h3>Subheading H3</h3>
+                        <span></span>
+                        <h3>Heading H3</h3>
+                        <h4>Subheading H4</h4>
+                        <span></span>
+                        <h4>Heading H4</h4>
+                        <h5>Subheading H5</h5>
+                        <span></span>
+                        <h5>Heading H5</h5>
+                        <h6>Subheading H6</h6>
+                    </div>
+                    <div class="flex-1 flex-laptop-1_3">
+                        <h1>Heading H1</h1>
+                        <h3>Subheading H3</h3>
+                        <span></span>
+                        <h2>Heading H2</h2>
+                        <h4>Subheading H4</h4>
+                        <span></span>
+                        <h3>Heading H3</h3>
+                        <h5>Subheading H5</h5>
+                        <span></span>
+                        <h4>Heading H4</h4>
+                        <h6>Subheading H6</h6>
+                    </div>
+                    <div class="flex-1 flex-laptop-1_3">
+                        <h1>
+                            Heading H1
+                            <small>< small ></small>
+                        </h1>
+                        <span></span>
+                        <h2>
+                            Heading H2
+                            <small>< small ></small>
+                        </h2>
+                        <span></span>
+                        <h3>
+                            Heading H3
+                            <small>< small ></small>
+                        </h3>
+                        <span></span>
+                        <h4>
+                            Heading H4
+                            <small>< small ></small>
+                        </h4>
+                        <span></span>
+                        <h5>
+                            Heading H5
+                            <small>< small ></small>
+                        </h5>
+                        <span></span>
+                        <h6>
+                            Heading H6
+                            <small>< small ></small>
+                        </h6>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="flex-1">
+                        <dl>
+                            <dt> < abbr > </dt>
+                            <dd>Para una abreviacón o un acrónimo. <abbr title="Abreviación">abbr</abbr></dd>
+                            <dt> < code > </dt>
+                            <dd>Define un fragmento de código de la computadora. <code>Code</code></dd>
+                            <dt> < del > </dt>
+                            <dd>Define un fragmento de texto que fué removido del documento. <del cite="URL" datetime="YYYY-MM-DDThh:mm:ssTZD">Deleted text</del></dd>
+                            <dt> < em > </dt>
+                            <dd>Se utiliza para resaltar un fragmento de texto. <em>Emphasis</em></dd>
+                            <dt> < ins > </dt>
+                            <dd>Define un fragmento de texto que se incertó en un documento ya existente. <ins cite="URL" datetime="YYYY-MM-DDThh:mm:ssTZD">Inserted text</ins></dd>
+                            <dt> < kbd > </dt>
+                            <dd>Define la entrada de teclado. <kbd>Keyboard input</kbd></dd>
+                            <dt> < mark > </dt>
+                            <dd>Se utiliza para resaltar partes del texto. <mark>Marked text</mark></dd>
+                            <dt> < small > </dt>
+                            <dd>Para hacer mas pequeño un fragmento de texto. <small>Small</small></dd>    
+                            <dt> < samp > </dt>
+                            <dd>Ejemplo de salida de un programa. <samp>Sample output</samp></dd>
+                            <dt> < strong > </dt>
+                            <dd>Para los fragmentos de texto importantes! <strong>Strong</strong></dd>
+                            <dt> < sup > </dt>
+                            <dd>Texto pequeño que se ubica sobre la mitad superior del alto del texto. Puede utilizarse por ejemplo para poner notas. <sup>Superscript text</sup></dd>
+                            <dt> < sub > </dt>
+                            <dd>Texto pequeño que se ubica sobre la mitad inferior del alto del texto. Puede utilizarse por ejemplo para escribir formulas químicas. <sub>Subscript text</sub></dd>
+                            <dt> < var > </dt>
+                            <dd>Define una variable. <var>Variable</var></dd>
+                        </dl>
+                    </div>
+                </div>
+
+                <div class="row h-center">
+                    <div class="flex-1 flex-phone-l-2_3">
+                        <blockquote>
+                            <p>
+                                < blockquote > Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non arcu nec massa iaculis varius at in purus.
+                            </p>
+                            <cite> < cite > </cite>
+                        </blockquote>
+                    </div>
+                </div>
+            </section>
+
+            <section id="links" class="container padding-top">
+                <div class="row">
+                    <div class="flex">
+                        <h1>Ligas</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="flex">
+                        <p>
+                            <a href="#">< a > link por default</a>
+                            <a href="#" class="link-accent">< a > .link-accent</a>
+                            <a href="#" class="link-fancy">< a > .link-fancy</a>
+                            <a href="#" class="link-fancy link-accent">< a > .link-fancy .link-accent</a>
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo non augue quis blandit. Sed bibendum mauris tempor suscipit vehicula. <a href="#">< a > link por default</a> Phasellus eu libero sit amet purus cursus viverra. Curabitur et aliquet dui, sodales placerat nulla. Praesent convallis condimentum libero. In posuere ligula id elit facilisis, sed efficitur ex mollis. Curabitur <a href="#" class="link-accent">< a > .link-accent</a> vehicula suscipit massa, vel viverra augue pulvinar tincidunt.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="colors" class="container">
+                <div class="row">
+                    <div class="flex">
+                        <h1>
+                            Colores
+                            <small>Un color principal, uno de acénto y una pequeña gama de grises.</small>
+                        </h1>
+                    </div>
+                </div>
+                <div class="row flex-padding">
+                    <div class="flex-1 flex-laptop-1_7 bg-primary darken-3">
+                         bg-primary darken-3
+                    </div>
+                    <div class="flex-1 flex-laptop-1_7 bg-primary darken-2">
+                         bg-primary darken-2
+                    </div>
+                    <div class="flex-1 flex-laptop-1_7 bg-primary darken-1">
+                         bg-primary darken-1
+                    </div>
+                    <div class="flex-1 flex-laptop-1_7 bg-primary">
+                         bg-primary
+                    </div>
+                    <div class="flex-1 flex-laptop-1_7 bg-primary lighten-1">
+                        bg-primary lighten-1
+                    </div>
+                    <div class="flex-1 flex-laptop-1_7 bg-primary lighten-2">
+                        bg-primary lighten-2
+                    </div>
+                    <div class="flex-1 flex-laptop-1_7 bg-primary lighten-3">
+                        bg-primary lighten-3
+                    </div>
+                </div>
+                <div class="row flex-padding">
+                    <div class="flex-1 flex-laptop-1_7 bg-accent darken-3">
+                        bg-accent darken-3
+                    </div>
+                    <div class="flex-1 flex-laptop-1_7 bg-accent darken-2">
+                        bg-accent darken-2
+                    </div>
+                    <div class="flex-1 flex-laptop-1_7 bg-accent darken-1">
+                        bg-accent darken-1
+                    </div>
+                    <div class="flex-1 flex-laptop-1_7 bg-accent">
+                        bg-accent
+                    </div>
+                    <div class="flex-1 flex-laptop-1_7 bg-accent lighten-1">
+                         bg-accent lighten-1
+                    </div>
+                    <div class="flex-1 flex-laptop-1_7 bg-accent lighten-2">
+                         bg-accent lighten-2
+                    </div>
+                    <div class="flex-1 flex-laptop-1_7 bg-accent lighten-3">
+                         bg-accent lighten-3
+                    </div>
+                </div>
+                <div class="row flex-padding">
+                    <div class="flex-1 flex-laptop-1_7 bg-black">
+                        bg-black
+                    </div>
+                    <div class="flex-1 flex-laptop-1_7 bg-black lighten-1">
+                        bg-black lighten-1
+                    </div>
+                    <div class="flex-1 flex-laptop-1_7 bg-black lighten-2">
+                        bg-black lighten-2
+                    </div>
+                    <div class="flex-1 flex-laptop-1_7 bg-black lighten-3">
+                        bg-black lighten-3
+                    </div>
+                    <div class="flex-1 flex-laptop-1_7 bg-white darken-3">
+                        bg-white darken-3
+                    </div>
+                    <div class="flex-1 flex-laptop-1_7 bg-white darken-2">
+                        bg-white darken-2
+                    </div>                    
+                    <div class="flex-1 flex-laptop-1_7 bg-white darken-1">
+                        bg-white darken-1
+                    </div>
+                </div>
+                <div class="row flex-padding">
+                    <div class="flex-1_2 flex-laptop-1_7 color-primary">
+                        .color-primary
+                    </div>
+                    <div class="flex-1_2 flex-laptop-1_7 color-accent">
+                        .color-accent
+                    </div>
+                    <div class="flex-1_2 flex-laptop-1_7 color-white">
+                        .color-white
+                    </div>
+                    <div class="flex-1_2 flex-laptop-1_7 color-gray-light">
+                        .color-gray-light
+                    </div>
+                    <div class="flex-1_2 flex-laptop-1_7 color-gray">
+                        .color-gray
+                    </div>
+                    <div class="flex-1_2 flex-laptop-1_7 color-gray-dark">
+                        .color-gray-dark
+                    </div>
+                    <div class="flex-1_2 flex-laptop-1_7 color-black">
+                        .color-black
+                    </div>
+                </div>
+            </section>
+
+            <section id="form" class="container padding-top">
+                <div class="row">
+                    <div class="flex">
+                        <h1>Formularios</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="flex-1 flex-laptop-1_2">
+                        <form>
+                            <p>
+                                Formulario simple
+                                <span class="form-error">Mensage general. Aparece cuando el formulario es invalido.</span>
+                            </p>
+
+                            <label for="name-simple">Nombre *</label>
+                            <input id="name-simple" type="text" name="name" required>
+                            <span class="input-error">* Este campo es obligatorio.</span>
+
+                            <label for="email-simple">Correo</label>
+                            <input id="email-simple" type="email" name="email">
+                            <span class="input-error">* Debe tener formato de correo electrónico</span>
+
+                            <label for="comment-simple">Describe tu café</label>
+                            <textarea id="comment-simple" rows="4" cols="50"></textarea>
+
+                            <input id="coffee-simple" type="checkbox" name="vehicle" value="coffee"> 
+                            <label for="coffee-simple" class="label-inline">Quiero café</label>
+
+                            <br>
+
+                            <input id="expresso-simple" type="radio" name="coffeetype-simple" value="expresso" checked> 
+                            <label for="expresso-simple" class="label-inline">Expreso</label>
+                            <input id="americano-simple" type="radio" name="coffeetype-simple" value="americano"> 
+                            <label for="americano-simple" class="label-inline">Americano</label>
+                            <input id="latte-simple" type="radio" name="coffeetype-simple" value="latte"> 
+                            <label for="latte-simple" class="label-inline">Late</label>
+
+                            <label for="select-simple">Selecciona una opción</label>
+                            <select id="select-simple">
+                                <option value="opcion1">Opción 1</option>
+                                <option value="opcion3">Opción 2</option>
+                                <option value="opcion3">Opción 3</option>
+                            </select>
+
+                            <label for="file-simple">Selecciona una imágen</label>
+                            <input id="file-simple" type="file" name="file" accept="image/*" multiple>
+                        </form>
+                    </div>
+                    <div class="flex-1 flex-laptop-1_2">
+                        <form>
+                            <p class="form-title">
+                                Formulario Fancy
+                                <span class="form-error">Mensage general. Aparece cuando el formulario es invalido.</span>
+                            </p>
+                            <div class="form-input-block">
+                                <input id="name" type="text" name="name">
+                                <label for="name">
+                                    Nombre
+                                </label>
+                            </div>
+                            <div class="form-input-block">
+                                <input id="email" type="email" name="email">
+                                <label for="email">
+                                    Correo
+                                    <span class="input-error">
+                                        * Debe tener formato de correo electrónico
+                                    </span>
+                                </label>
+                            </div>
+
+                            <div class="form-input-block">
+                                <textarea id="comment" rows="4" cols="50"></textarea>
+                                <label for="comment">Describe tu café</label>
+                            </div>
+
+                            <div class="form-input-checkbox">
+                                <input id="coffee" type="checkbox" name="vehicle" value="coffee"> 
+                                <label for="coffee">Quiero café</label>
+                            </div>
+
+                            <div class="form-input-radio">
+                                <input id="expresso" type="radio" name="coffeetype" value="expresso" checked> 
+                                <label for="expresso">Expreso</label>
+                                <input id="americano" type="radio" name="coffeetype" value="americano"> 
+                                <label for="americano">Americano</label>
+                                <input id="latte" type="radio" name="coffeetype" value="latte"> 
+                                <label for="latte">Late</label>
+                            </div>
+
+                            <div class="form-select-block">
+                                <select id="select">
+                                    <option value="opcion1">Opción 1</option>
+                                    <option value="opcion3">Opción 2</option>
+                                    <option value="opcion3">Opción 3</option>
+                                </select>
+                                <label for="select">Selecciona una opción</label>
+                            </div>
+
+                            <div class="form-input-file">
+                                <input id="file" type="file" name="file" accept="image/*" multiple>
+                                <label for="file">Selecciona una imágen</label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <section id="button" class="container padding-top">
+                <div class="row">
+                    <div class="flex">
+                        <h1>Botones</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="flex-1 flex-laptop-1_2">
+                        <h4>Colores</h4>
+                        <button type="button"> boton sin clase </button>
+                        <button class="button-primary" type="button">.button-primary</button>
+                        <button class="button-primary button-solid" type="button">.button-primary .button-solid</button>
+                        <button class="button-accent" type="button">.button-accent</button>
+                        <button class="button-accent button-solid" type="button">.button-accent .button-solid</button>
+                    </div>
+                    <div class="flex-1 flex-laptop-1_2">
+                        <h4>Tamaños</h4>
+                        <button class="button-primary button-small" type="button">.button-primary .button-small</button>
+                        <button class="button-primary" type="button">.button-primary</button>
+                        <button class="button-primary button-big" type="button">.button-primary .button-big</button>
+                        <button class="button-primary button-block" type="button">.button-primary .button-block</button>
+                    </div>
+                    
+                </div>   
+            </section>
+
+            <section id="list" class="container padding-top">
+                <div class="row">
+                    <div class="flex">
+                        <h1>Listas</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="flex-1 flex-laptop-1_3">
+                        <ul>
+                            <li>< ul > < li > listas sin orden</li>
+                            <li>
+                                < li > listas
+                                <ul>
+                                    <li>< ul > < li > listas</li>
+                                    <li>
+                                        < li > listas
+                                        <ul>
+                                            <li>< ul > < li > listas</li>
+                                            <li>< li > listas</li>
+                                            <li>
+                                                < li > listas
+                                                <ul>
+                                                    <li>< ul > < li > listas</li>
+                                                    <li>< li > listas</li>
+                                                    <li>
+                                                        < li > listas
+                                                        <ul>
+                                                            <li>< ul > < li > listas</li>
+                                                            <li>< li > listas</li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>< li > listas</li>
+                                </ul>
+                            </li>
+                            <li>< li > listas</li>
+                        </ul>
+                    </div>
+                    <div class="flex-1 flex-laptop-1_3">
+                        <ol>
+                            <li>
+                                < ol > < li > listas ordenadas
+                                <ol>
+                                    <li>< ol > < li > listas</li>
+                                    <li>< li > listas</li>
+                                    <li>
+                                        < li > listas
+                                        <ol>
+                                            <li>< ol > < li > listas</li>
+                                            <li>< li > listas</li>
+                                            <li>< li > listas</li>
+                                            <li>< li > listas</li>
+                                        </ol>
+                                    </li>
+                                    <li>< li > listas</li>
+                                </ol>
+                            </li>
+                            <li>< li > listas</li>
+                            <li>< li > listas</li>
+                        </ol>
+                    </div>
+                    <div class="flex-1 flex-laptop-1_3">
+                        <dl>
+                            <dt>< dl > < dt > DL</dt>
+                            <dd>< dd > Lista Descriptiva</dd>
+                            <dt>< dt > Término</dt>
+                            <dd>< dd > Descripción del término</dd>
+                            <dt>< dt > Término</dt>
+                            <dd>< dd > Descripción del término</dd>
+                        </dl>
+                    </div>
+                </div>
+            </section>
+
+            <section id="table" class="container padding-top">
+                <div class="row">
+                    <div class="flex">
+                        <h1>Tablas</h1>
+                        <p>
+                            Las tablas deben ir dentro de un <code>.table-container</code> por si el contenido exede del tamaño máximo, se pueda ver el resto del contenido haciendo scroll horizontal. Para mobile el header se oculta por completo y las filas terminan siendo un bloque de contenido, se puede utilizar la clase <code>.th-mobile</code> dentro de las celdas para poner titulos en el mobile, 
+                        </p>
+                    </div>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>< thead > < th > titulos</th>
+                                <th>< th > titulos</th>
+                                <th>< th > titulos</th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <td colspan="3">< tfoot > < td > contenido</td>
+                            </tr>
+                        </tfoot>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="th-mobile"><code>.th-mobile</code>titluos en mobile</span>
+                                    < tbody > < td > contenido
+                                </td>
+                                <td>
+                                    <span class="th-mobile">titluos en mobile</span>
+                                    < td > contenido
+                                </td>
+                                <td>
+                                    <span class="th-mobile">titluos en mobile</span>
+                                    < td > contenido
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="th-mobile">titluos en mobile</span>
+                                    < td > contenido
+                                </td>
+                                <td>
+                                    <span class="th-mobile">titluos en mobile</span>
+                                    < td > contenido
+                                </td>
+                                <td>
+                                    <span class="th-mobile">titluos en mobile</span>
+                                    < td > contenido
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="th-mobile">titluos en mobile</span>
+                                    < td > contenido
+                                </td>
+                                <td>
+                                    <span class="th-mobile">titluos en mobile</span>
+                                    < td > contenido
+                                </td>
+                                <td>
+                                    <span class="th-mobile">titluos en mobile</span>
+                                    < td > contenido
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="container">
+                FFCSS made with beer, coffe and tons of tacos by
+                <a href="http://flkt.mx/">flkt</a>
+                under
+                <a href="https://github.com/flkt-crnpio/ffcss/blob/master/LICENSE">MIT LICENSE</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

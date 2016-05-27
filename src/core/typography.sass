@@ -121,7 +121,7 @@ samp
     padding: .2em .6em
     margin: 0 .4em
 code
-    background: $color-gray-dark
+    background: $color-dark
 kbd
     background: $color-gray
     color: #00f
@@ -138,13 +138,13 @@ strong
 
 /* * * Blockquote * * */
 blockquote
+    color: $main-color
     margin: $layout-space 0
     padding: $layout-space
     position: relative
     p
         font-size: 1.6em
         font-weight: 100
-        color: $color-black
         display: block
         line-height: 1.2em
         margin: 0
@@ -152,7 +152,7 @@ blockquote
         position: relative
         z-index: 2
     cite
-        color: $color-gray-dark
+        color: rgba($main-color, .5)
         display: block
         margin: 0
         padding: 0
@@ -166,9 +166,9 @@ blockquote
     &::before
         font-family: Georgia, serif
         font-size: 10em
-        color: $color-gray-light
+        color: rgba($color-primary, .5)
         content: "\201C"        
         position: absolute
         left: $layout-space
-        top: $layout-space*2
+        top: $layout-space
         z-index: 0
