@@ -8,74 +8,75 @@ h3,
 h4,
 h5,
 h6
+    font-family: $font-titles
+    font-weight: $titles-weight
     line-height: 1.2em
     margin: 0 0 $layout-space
     padding: 0
 
 /* * * Titles responsive sizes * * */
 h1 
-    font-size: 2.2em
-    font-weight: 100
+    font-size: 2em
     &.lead
-        font-size: 2.6em
-        margin: $layout-space*2 0 $layout-space
+        font-size: 2.8em
+        margin: $layout-space*3 0 $layout-space*1.5
+h1.lead + h2,
+h1.lead + h3
+    margin-top: -$layout-space
+    margin-bottom: $layout-space*1.5
 h2
-    font-size: 1.9em
-    font-weight: 100
+    font-size: 1.8em
 h3
     font-size: 1.5em
-    font-weight: 300
 h4
     font-size: 1.2em
-    font-weight: 400
 h5
     font-size: 1em
-    font-weight: 600
 h6
-    font-size: .9em
-    font-weight: 600
+    font-size: 0.9em
 @media screen and (min-width: $phone-l)
     h1 
-        font-size: 2.6em
-        font-weight: 100
+        font-size: 2.4em
         &.lead
-            font-size: 3.2em
-            margin: $layout-space*3 0 $layout-space*1.5
+            font-size: 3.7em
+            margin: $layout-space*4 0 $layout-space*1.5
+    h1.lead + h2,
+    h1.lead + h3
+        margin-top: -$layout-space
+        margin-bottom: $layout-space*1.5
     h2
-        font-size: 2.2em
-        font-weight: 100
+        font-size: 2.1em
     h3
-        font-size: 1.8em
-        font-weight: 300
+        font-size: 1.7em
     h4
         font-size: 1.4em
-        font-weight: 400
     h5
         font-size: 1.1em
-        font-weight: 600
     h6
         font-size: 1em
-        font-weight: 600
 @media screen and (min-width: $laptop)
     h1 
-        font-size: 3em
+        font-size: 2.7em
         &.lead
             font-size: 4.4em
             margin: $layout-space*6 0 $layout-space*3
+    h1.lead + h2,
+    h1.lead + h3
+        margin-top: -$layout-space*2.5
+        margin-bottom: $layout-space*3
     h2
         font-size: 2.4em
     h3
         font-size: 2em
-        font-weight: 100
     h4
         font-size: 1.6em
-        font-weight: 300
     h5
         font-size: 1.4em
-        font-weight: 400
     h6
         font-size: 1.2em
-        font-weight: 600
+
+
+
 /* * * Title + Subtle * * */
 h1 + h2,
 h1 + h3,
@@ -88,6 +89,8 @@ h4 + h6,
 h5 + h6
     margin-top: -$layout-space
 
+
+
 /* * * Title and small * * */
 h1 small,
 h2 small,
@@ -96,12 +99,12 @@ h4 small,
 h5 small,
 h6 small
     display: block
-    font-size: .6em
+    font-size: 0.6em
     line-height: 1em
 
 h5 small,
 h6 small
-    font-size: .7em
+    font-size: 0.7em
 
 
 
@@ -113,27 +116,58 @@ p
 
 
 /* * * Inline text elements * * */
-code,
 kbd,
 mark,
-samp
+samp,
+var
     border-radius: $border-radius
-    padding: .2em .6em
-    margin: 0 .4em
-code
-    background: $color-dark
+    padding: 0.2em 0.6em
+    margin: 0 0.4em
 kbd
-    background: $color-gray
+    background: #ddd
     color: #00f
 mark
     background: lighten($color-primary, 30)
 samp
     background: #00f
-    color: $color-white
+    color: #fff
 em,
 strong
     font-weight: 600
+var 
+    font-style: normal
+    font-weight: 100
 
+
+/* * * The Code * * */
+code
+    background: #263238
+    border-radius: $border-radius
+    color: rgba(255,255,255,0.7)
+    display: block
+    padding: $layout-space/2
+    margin: 0
+
+    p
+        display: block
+        padding: 0.2em
+
+    span 
+        display: inline-block
+        padding: 0 0.2em
+    
+    .teal
+        color: #80CBC4
+    .purple
+        color: #9C27B0
+    .orange
+        color: #FF7042
+    .green
+        color: #8BC34A
+    .yellow
+        color: #FFF175
+    .pink
+        color: #E57373
 
 
 /* * * Blockquote * * */
@@ -152,7 +186,7 @@ blockquote
         position: relative
         z-index: 2
     cite
-        color: rgba($main-color, .5)
+        color: rgba($main-color,0.5)
         display: block
         margin: 0
         padding: 0
@@ -166,7 +200,7 @@ blockquote
     &::before
         font-family: Georgia, serif
         font-size: 10em
-        color: rgba($color-primary, .5)
+        color: rgba($color-primary,0.5)
         content: "\201C"        
         position: absolute
         left: $layout-space

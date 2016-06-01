@@ -24,13 +24,34 @@
 
 
 /* * * General container * * */
-.container
+.container,
+.container-md,
+.container-sm
     margin: 0 auto
     max-width: $width-max
-    width: $width
+    width: $width-phone
+
+    padding-top: $layout-space
+    padding-bottom: $layout-space
+
+@media screen and (min-width: $tablet)
+    .container,
+    .container-md,
+    .container-sm
+        width: $width-tablet
+
+@media screen and (min-width: $laptop)
+    .container
+        width: $width-laptop
+    .container-md
+        width: $width-laptop-md
+    .container-sm
+        width: $width-laptop-sm
 
 
 
 /* * * Paddings * * */
 .padding-top
     padding-top: $layout-space
+.padding-bottom
+    padding-bottom: $layout-space

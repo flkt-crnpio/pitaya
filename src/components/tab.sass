@@ -8,7 +8,7 @@
     [class^="tab"], 
     [class*=" tab"]
         label
-            color: $color-black
+            color: $main-color
             cursor: pointer
             display: block
             font-size: 1.1em
@@ -18,19 +18,20 @@
             text-align: center
 
         [type="radio"]
-            border-top: 1px solid $color-gray
+            border-bottom: 1px solid rgba($main-color,0.5)
             cursor: pointer
             -webkit-appearance: none
             -moz-appearance: none
             appearance: none
             display: block
             width: 100%
-            +transition-ease(.3s)
+            +transition-ease(0.3s)
             &:hover,
             &:focus
-                border-top: 1px solid $color-primary
+                border-bottom: 1px solid $color-primary
             &:checked
-                border-top: 2px solid $color-primary
+
+                border-bottom: 3px solid $color-primary
             &:checked + div
                 opacity: 1
             
@@ -39,7 +40,7 @@
                 opacity: 0
                 padding: $layout-space 0
                 width: 90%
-                +transition-ease(.3s)
+                +transition-ease(0.3s)
 
     .tab-2
         width: 50%

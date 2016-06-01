@@ -2,7 +2,7 @@
  * Link
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 /* * * Color functions * * */
-=link_darken($color)
+=link-darken($color)
     border-color: transparent
     color: $color
     &:hover,
@@ -13,7 +13,7 @@
     &:active
         border-color: darken($color, 15)
         color: darken($color, 15)
-=link_lighten($color)
+=link-lighten($color)
     border-color: transparent
     color: $color
     &:hover,
@@ -25,7 +25,7 @@
         border-color: lighten($color, 20)
         color: lighten($color, 20)
 
-=link_fancy($color)
+=link-fancy($color)
     &::after
         background: $color-primary
     &:hover,
@@ -49,14 +49,14 @@ a
     font-size: 1em
     font-weight: 300
     text-decoration: none
-    +link_lighten($color-primary)
-    +transition-ease(.3s)
+    +link-lighten($color-primary)
+    +transition-ease(0.3s)
 
 
 
 /* * * Link colors * * */
 .link-accent
-    +link_lighten($color-accent)
+    +link-lighten($color-accent)
 
 
 
@@ -64,8 +64,8 @@ a
 .link-fancy
     border-bottom: 0
     position: relative
-    +link_fancy($color-primary)
-    +transition-ease(.3s)
+    +link-fancy($color-primary)
+    +transition-ease(0.3s)
     &::after
         content: ""
         position: absolute
@@ -73,7 +73,7 @@ a
         right: 0
         width: 0
         height: 2px
-        +transition-ease(.3s)
+        +transition-ease(0.3s)
     &.active,
     &:active,
     &:hover,
@@ -82,4 +82,4 @@ a
             width: 100%
 
     &.link-accent
-        +link_fancy($color-accent)
+        +link-fancy($color-accent)

@@ -2,10 +2,11 @@
  * Card
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 .card
-    background: $color-white
-    border: $border-size solid $color-gray
+    background: $main-background
+    border: $border-size solid rgba($main-color,0.3)
     border-radius: $border-radius
-    box-shadow: 0 $border-shadow/2 $border-shadow rgba($color-black, $border-shadow-opacity)
+    box-shadow: 0 $border-shadow/2 $border-shadow rgba($main-color, $border-shadow-opacity)
+    color: $main-color
     margin: 0 $border-shadow $border-shadow*2
     overflow: hidden
 
@@ -21,15 +22,15 @@
         margin-bottom: 0
 
     .card-header
-        border-bottom: $border-size solid $color-gray-light
+        border-bottom: $border-size solid rgba($main-color,0.3)
 
     .card-footer
-        border-top: $border-size solid $color-gray-light
+        border-top: $border-size solid rgba($main-color,0.3)
         button 
             margin: 0 
 
     .card-image
-        background: $color-white
+        background: $main-background
         border-radius: $border-radius $border-radius 0 0
         width: 100%
         overflow: hidden
@@ -54,8 +55,8 @@
                 height: $card-height*1.5
 
     &.card-empty
-        background: rgba($color-white,.3)
-        border: $border-size dashed $color-gray
+        background: rgba($main-background,0.3)
+        border: $border-size dashed rgba($main-color,0.7)
         box-shadow: none
         padding: $layout-space
         display: -webkit-flex 

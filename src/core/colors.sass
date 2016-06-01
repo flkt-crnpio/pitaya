@@ -5,60 +5,51 @@
  /* * * Background * * */
 .bg-primary
     background: $color-primary
-    &.darken-1
-        background: darken($color-primary, 10)
-    &.darken-2
-        background: darken($color-primary, 20)
-    &.darken-3
-        background: darken($color-primary, 30)
-    &.lighten-1
-        background: lighten($color-primary, 10)
-    &.lighten-2
-        background: lighten($color-primary, 20)
-    &.lighten-3
-        background: lighten($color-primary, 30)
+    &.to-bg-step1
+        background: mix($color-primary, $main-background, 80%)
+    &.to-bg-step2
+        background: mix($color-primary, $main-background, 60%)
+    &.to-bg-step3
+        background: mix($color-primary, $main-background, 40%)
+    &.to-bg-step4
+        background: mix($color-primary, $main-background, 20%)
+    &.to-color-step1
+        background: mix($color-primary, $main-color, 90%)
+    &.to-color-step2
+        background: mix($color-primary, $main-color, 70%)
 
 .bg-accent
     background: $color-accent
-    &.darken-1
-        background: darken($color-accent, 10)
-    &.darken-2
-        background: darken($color-accent, 20)
-    &.darken-3
-        background: darken($color-accent, 30)
-    &.lighten-1
-        background: lighten($color-accent, 10)
-    &.lighten-2
-        background: lighten($color-accent, 20)
-    &.lighten-3
-        background: lighten($color-accent, 30)
+    &.to-bg-step1
+        background: mix($color-accent, $main-background, 80%)
+    &.to-bg-step2
+        background: mix($color-accent, $main-background, 60%)
+    &.to-bg-step3
+        background: mix($color-accent, $main-background, 40%)
+    &.to-bg-step4
+        background: mix($color-accent, $main-background, 20%)
+    &.to-color-step1
+        background: mix($color-accent, $main-color, 90%)
+    &.to-color-step2
+        background: mix($color-accent, $main-color, 70%)
 
-.bg-white
-    background: $color-white
-    &.darken-1
-        background: darken($color-white, 10)
-    &.darken-2
-        background: darken($color-white, 20)
-    &.darken-3
-        background: darken($color-white, 30)
+// .bg-white
+//     background: $color-white
+//     &.darken-1
+//         background: darken($color-white, 10)
+//     &.darken-2
+//         background: darken($color-white, 20)
+//     &.darken-3
+//         background: darken($color-white, 30)
 
-.bg-gray-light
-    background: $color-gray-light
-
-.bg-gray
-    background: $color-gray
-
-.bg-gray-dark
-    background: $color-gray-dark
-
-.bg-black
-    background: $color-black
-    &.lighten-1
-        background: lighten($color-black, 10)
-    &.lighten-2
-        background: lighten($color-black, 20)
-    &.lighten-3
-        background: lighten($color-black, 30)
+// .bg-black
+//     background: $color-black
+//     &.lighten-1
+//         background: lighten($color-black, 10)
+//     &.lighten-2
+//         background: lighten($color-black, 20)
+//     &.lighten-3
+//         background: lighten($color-black, 30)
 
 
 
@@ -70,20 +61,11 @@
 .color-accent
     color: $color-accent
 
-.color-white
-    color: $color-white
+.color-main-color
+    color: $main-color
 
-.color-gray-light
-    color: $color-gray-light
-
-.color-gray
-    color: $color-gray
-
-.color-gray-dark
-    color: $color-gray-dark
-
-.color-black
-    color: $color-black
+.color-main-bg
+    color: $main-background
 
 
 
@@ -94,17 +76,8 @@
 .border-accent
     border-color: $color-accent
 
-.border-white
-    border-color: $color-white
+.border-main-color
+    border-color: $main-color
 
-.border-gray-light
-    border-color: $color-gray-light
-
-.border-gray
-    border-color: $color-gray
-
-.border-gray-dark
-    border-color: $color-gray-dark
-
-.border-black
-    border-color: $color-black
+.border-main-bg
+    border-color: $main-background

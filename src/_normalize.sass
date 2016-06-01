@@ -9,11 +9,13 @@ html
     -webkit-text-size-adjust: 100%
     
 body
+    background: $main-background
+    background: linear-gradient(to left, $main-background-gradient , $main-background)
+    color: $main-color
     font-family: $font-text
     font-size: $font-size
-    font-weight: 300
-    color: $color-black
-    letter-spacing: .01em
+    font-weight: $font-weight
+    letter-spacing: 0.01em
     line-height: $font-line
     margin: 0
     padding: 0    
@@ -88,10 +90,10 @@ strong
 dfn
     font-style: italic
 small
-    font-size: .8em
+    font-size: 0.8em
 sub,
 sup
-    font-size: .7em
+    font-size: 0.7em
     line-height: 0
     position: relative
     vertical-align: baseline
@@ -102,7 +104,8 @@ sup
 code,
 kbd,
 pre,
-samp
+samp,
+var
     font-family: $font-code
     font-size: 1em
 pre
@@ -134,7 +137,7 @@ a
 
 hr
     border: none
-    border-top: 1px solid $color-gray
+    border-top: 1px solid rgba($main-color,0.2)
     box-sizing: content-box
     height: 0
     margin: $layout-space 0
@@ -215,7 +218,7 @@ button,
 [disabled]:focus,
 [disabled]:hover
     cursor: default
-    opacity: .5
+    opacity: 0.5
 
 button::-moz-focus-inner,
 input::-moz-focus-inner,
@@ -235,7 +238,7 @@ select:focus
     outline: none
 
 fieldset
-    border: 1px solid $color-gray
+    border: 1px solid rgba($main-color,0.5)
     margin: 0
     padding: 0.35em 0.7em 0.7em
 
@@ -281,16 +284,16 @@ table
 
 
 ::-webkit-selection
-    background-color: $color-primary
-    color: $color-white
+    background-color: rgba($color-primary,0.8)
+    color: $main-background
     text-shadow: none
     
 ::-moz-selection
-    background-color: $color-primary
-    color: $color-white
+    background-color: rgba($color-primary,0.8)
+    color: $main-background
     text-shadow: none
 
 ::selection
-    background-color: $color-primary
-    color: $color-white
+    background-color: rgba($color-primary,0.8)
+    color: $main-background
     text-shadow: none
