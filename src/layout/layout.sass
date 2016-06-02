@@ -1,57 +1,34 @@
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
- * Layout
- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-/* * * Main container * * */
+/* src/layout/layout.sass */
+// Main container
 .main-container
-    display: block 
-    display: -webkit-flex 
-    display: -moz-flex 
-    display: flex 
-    -webkit-flex-wrap: nowrap 
-    -moz-flex-wrap: nowrap 
-    flex-wrap: nowrap
-    &.main-col
-        -webkit-flex-direction: column 
-        -moz-flex-direction: column 
-        flex-direction: column
-        min-height: 100vh
-    &.main-row
-        -webkit-flex-direction: row 
-        -moz-flex-direction: row 
-        flex-direction: row
-        min-width: 100vw
+  display: block 
+  display: -webkit-flex 
+  display: -moz-flex 
+  display: flex 
+  -webkit-flex-wrap: nowrap 
+  -moz-flex-wrap: nowrap 
+  flex-wrap: nowrap
+  &.main-col
+    -webkit-flex-direction: column 
+    -moz-flex-direction: column 
+    flex-direction: column
+    min-height: 100vh
+  &.main-row
+    -webkit-flex-direction: row 
+    -moz-flex-direction: row 
+    flex-direction: row
+    min-width: 100vw
 
-
-
-/* * * General container * * */
-.container,
-.container-md,
-.container-sm
-    margin: 0 auto
-    max-width: $width-max
-    width: $width-phone
-
-    padding-top: $layout-space
-    padding-bottom: $layout-space
-
+// General container
+.container
+  margin: 0 auto
+  max-width: $width-max
+  width: $width-phone
+  padding-top: $layout-space
+  padding-bottom: $layout-space
 @media screen and (min-width: $tablet)
-    .container,
-    .container-md,
-    .container-sm
-        width: $width-tablet
-
+  .container
+    width: $width-tablet
 @media screen and (min-width: $laptop)
-    .container
-        width: $width-laptop
-    .container-md
-        width: $width-laptop-md
-    .container-sm
-        width: $width-laptop-sm
-
-
-
-/* * * Paddings * * */
-.padding-top
-    padding-top: $layout-space
-.padding-bottom
-    padding-bottom: $layout-space
+  .container
+    width: $width-laptop
