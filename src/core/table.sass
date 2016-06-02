@@ -1,55 +1,50 @@
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
- * Table
- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* src/core/table.sass */
+// table container
 .table-container
-    overflow-x: scroll
-    overflow-y: hidden
-    width: 100%
+  overflow-x: scroll
+  overflow-y: hidden
+  width: 100%
 
-
-
+// table
 table
-    margin: 0 0 $layout-space
-    width: 100%
+  margin: 0 0 $layout-space
+  width: 100%
+  thead
+    display: none
+  tfoot
+    tr 
+      color: rgba($main-color,0.7)
+      font-weight: 300
+  tbody
+    tr 
+      border-bottom: 1px solid rgba($main-color,0.05)
+      &:hover,
+      &:focus
+        background: rgba($main-color,0.03)
+  td 
+    display: block
+    padding: 0 $layout-space/2
+    &:first-child
+      padding-top: $layout-space/2
+    &:last-child
+      padding-bottom: $layout-space/2
+  .th-mobile
+    font-weight: bold
+    font-size: 0.7em
+    display: block
+    line-height: 1em
+    margin: 0
+    padding: $layout-space/2 0 0
+  @media only screen and (min-width: $tablet)  
     thead
-        display: none
-    tfoot
-        tr 
-            color: rgba($main-color,0.7)
-            font-weight: 300
-    tbody
-        tr 
-            border-bottom: 1px solid rgba($main-color,0.05)
-            &:hover,
-            &:focus
-                background: rgba($main-color,0.03)
-    td 
-        display: block
-        padding: 0 $layout-space/2
-        &:first-child
-            padding-top: $layout-space/2
-        &:last-child
-            padding-bottom: $layout-space/2
-        
+      display: table-header-group
+      tr 
+        border-bottom: 1px solid rgba($main-color,0.05)
+      th 
+        text-align: left
+    td,
+    th 
+      display: table-cell
+      padding: $layout-space/2
     .th-mobile
-        font-weight: bold
-        font-size: 0.7em
-        display: block
-        line-height: 1em
-        margin: 0
-        padding: $layout-space/2 0 0
-
-    @media only screen and (min-width: $tablet)  
-        thead
-            display: table-header-group
-            tr 
-                border-bottom: 1px solid rgba($main-color,0.05)
-            th 
-                text-align: left
-        td,
-        th 
-            display: table-cell
-            padding: $layout-space/2
-
-        .th-mobile
-            display: none
+      display: none
