@@ -1,725 +1,710 @@
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
- * Flex
- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-/* * * Flex containers and general styles * * */
+/* src/layout/flex.sass */
+// Flex containers and align options
 .row,
 .col
-    display: block 
-    display: -webkit-flex 
-    display: -moz-flex 
-    display: flex 
-    -webkit-flex-wrap: wrap 
-    -moz-flex-wrap: wrap 
-    flex-wrap: wrap
-    -webkit-justify-content: space-between 
-    -moz-justify-content: space-between 
-    justify-content: space-between 
-    &.nowrap
-        -webkit-flex-wrap: nowrap 
-        -moz-flex-wrap: nowrap 
-        flex-wrap: nowrap
-    &.wrap-reverse
-        -webkit-flex-wrap: wrap-reverse 
-        -moz-flex-wrap: wrap-reverse 
-        flex-wrap: wrap-reverse 
+  display: block 
+  display: -webkit-flex 
+  display: -moz-flex 
+  display: flex 
+  -webkit-flex-wrap: wrap 
+  -moz-flex-wrap: wrap 
+  flex-wrap: wrap
+  -webkit-justify-content: space-between 
+  -moz-justify-content: space-between 
+  justify-content: space-between 
+  &.nowrap
+    -webkit-flex-wrap: nowrap 
+    -moz-flex-wrap: nowrap 
+    flex-wrap: nowrap
+  &.wrap-reverse
+    -webkit-flex-wrap: wrap-reverse 
+    -moz-flex-wrap: wrap-reverse 
+    flex-wrap: wrap-reverse 
+  &.v-start
+    -webkit-align-items: flex-start 
+    -webkit-moz-items: flex-start 
+    align-items: flex-start 
+  &.v-end
+    -webkit-align-items: flex-end 
+    -webkit-moz-items: flex-end 
+    align-items: flex-end 
+  &.v-center
+    -webkit-align-items: center
+    -webkit-moz-items: center
+    align-items: center
+  &.v-baseline
+    -webkit-align-items: baseline
+    -webkit-moz-items: baseline
+    align-items: baseline
+  &.v-stretch
+    -webkit-align-items: stretch
+    -webkit-moz-items: stretch
+    align-items: stretch
+  &.h-start
+    -webkit-justify-content: flex-start 
+    -moz-justify-content: flex-start 
+    justify-content: flex-start 
+  &.h-end
+    -webkit-justify-content: flex-end 
+    -moz-justify-content: flex-end 
+    justify-content: flex-end
+  &.h-center
+    -webkit-justify-content: center 
+    -moz-justify-content: center 
+    justify-content: center
+  &.h-around
+    -webkit-justify-content: space-around 
+    -moz-justify-content: space-around 
+    justify-content: space-around
+  &.content-start
+    -webkit-align-content: flex-start 
+    -moz-align-content: flex-start 
+    align-content: flex-start 
+  &.content-end
+    -webkit-align-content: flex-end 
+    -moz-align-content: flex-end 
+    align-content: flex-end
+  &.content-center
+    -webkit-align-content: center 
+    -moz-align-content: center 
+    align-content: center 
+  &.content-between
+    -webkit-align-content: space-between 
+    -moz-align-content: space-between 
+    align-content: space-between
+  &.content-around
+    -webkit-align-content: space-around 
+    -moz-align-content: space-around 
+    align-content: space-around
+  &.content-stretch
+    -webkit-align-content: stretch 
+    -moz-align-content: stretch 
+    align-content: stretch
+  &.align-auto
+    -webkit-align-self: auto
+    -moz-align-self: auto
+    align-self: auto
+  &.align-start
+    -webkit-align-self: flex-start
+    -moz-align-self: flex-start
+    align-self: flex-start
+  &.align-end
+    -webkit-align-self: flex-end
+    -moz-align-self: flex-end
+    align-self: flex-end
+  &.align-center
+    -webkit-align-self: center
+    -moz-align-self: center
+    align-self: center
+  &.align-baseline
+    -webkit-align-self: baseline
+    -moz-align-self: baseline
+    align-self: baseline
+  &.align-stretch
+    -webkit-align-self: stretch
+    -moz-align-self: stretch
+    align-self: stretch
 
-    &.v-start
-        -webkit-align-items: flex-start 
-        -webkit-moz-items: flex-start 
-        align-items: flex-start 
-    &.v-end
-        -webkit-align-items: flex-end 
-        -webkit-moz-items: flex-end 
-        align-items: flex-end 
-    &.v-center
-        -webkit-align-items: center
-        -webkit-moz-items: center
-        align-items: center
-    &.v-baseline
-        -webkit-align-items: baseline
-        -webkit-moz-items: baseline
-        align-items: baseline
-    &.v-stretch
-        -webkit-align-items: stretch
-        -webkit-moz-items: stretch
-        align-items: stretch
-
-    &.h-start
-        -webkit-justify-content: flex-start 
-        -moz-justify-content: flex-start 
-        justify-content: flex-start 
-    &.h-end
-        -webkit-justify-content: flex-end 
-        -moz-justify-content: flex-end 
-        justify-content: flex-end
-    &.h-center
-        -webkit-justify-content: center 
-        -moz-justify-content: center 
-        justify-content: center
-    &.h-around
-        -webkit-justify-content: space-around 
-        -moz-justify-content: space-around 
-        justify-content: space-around
-
-    &.content-start
-        -webkit-align-content: flex-start 
-        -moz-align-content: flex-start 
-        align-content: flex-start 
-    &.content-end
-        -webkit-align-content: flex-end 
-        -moz-align-content: flex-end 
-        align-content: flex-end
-    &.content-center
-        -webkit-align-content: center 
-        -moz-align-content: center 
-        align-content: center 
-    &.content-between
-        -webkit-align-content: space-between 
-        -moz-align-content: space-between 
-        align-content: space-between
-    &.content-around
-        -webkit-align-content: space-around 
-        -moz-align-content: space-around 
-        align-content: space-around
-    &.content-stretch
-        -webkit-align-content: stretch 
-        -moz-align-content: stretch 
-        align-content: stretch
-
-    &.align-auto
-        -webkit-align-self: auto
-        -moz-align-self: auto
-        align-self: auto
-    &.align-start
-        -webkit-align-self: flex-start
-        -moz-align-self: flex-start
-        align-self: flex-start
-    &.align-end
-        -webkit-align-self: flex-end
-        -moz-align-self: flex-end
-        align-self: flex-end
-    &.align-center
-        -webkit-align-self: center
-        -moz-align-self: center
-        align-self: center
-    &.align-baseline
-        -webkit-align-self: baseline
-        -moz-align-self: baseline
-        align-self: baseline
-    &.align-stretch
-        -webkit-align-self: stretch
-        -moz-align-self: stretch
-        align-self: stretch
-
+// Flex containers margin
 .row,
 .col
-    margin-left: -$layout-grid
-    margin-right: -$layout-grid
+  margin-left: -$layout-grid
+  margin-right: -$layout-grid
+  [class^="flex"], 
+  [class*=" flex"]
+    margin: $layout-grid/2 $layout-grid
+    overflow: hidden
+  &.flex-padding
     [class^="flex"], 
     [class*=" flex"]
-        margin: $layout-grid/2 $layout-grid
-        overflow: hidden
-    &.flex-padding
-        [class^="flex"], 
-        [class*=" flex"]
-            padding: $layout-grid
+      padding: $layout-grid
 
+// Flex container row
 .row
-    -webkit-flex-direction: row 
-    -moz-flex-direction: row 
-    flex-direction: row
-    &.reverse
-        -webkit-flex-direction: row-reverse
-        -moz-flex-direction: row-reverse
-        flex-direction: row-reverse
+  -webkit-flex-direction: row 
+  -moz-flex-direction: row 
+  flex-direction: row
+  &.reverse
+    -webkit-flex-direction: row-reverse
+    -moz-flex-direction: row-reverse
+    flex-direction: row-reverse
 
+// Flex container col
 .col
-    -webkit-flex-direction: column 
-    -moz-flex-direction: column 
-    flex-direction: column
-    &.reverse
-        -webkit-flex-direction: column-reverse
-        -moz-flex-direction: column-reverse
-        flex-direction: column-reverse 
+  -webkit-flex-direction: column 
+  -moz-flex-direction: column 
+  flex-direction: column
+  &.reverse
+    -webkit-flex-direction: column-reverse
+    -moz-flex-direction: column-reverse
+    flex-direction: column-reverse 
 
-
-
-/* * * Flex elements * * */
+// Flex elements
 .flex 
-    flex: 1
-
+  flex: 1
 .flex-1
-    flex: 0 0 calc(100% - #{$layout-grid*2})
+  flex: 0 0 calc(100% - #{$layout-grid*2})
 .flex-1_2,
 .flex-2_4,
 .flex-3_6,
 .flex-4_8,
 .flex-5_10 
-    flex: 0 0 calc(50% - #{$layout-grid*2})
+  flex: 0 0 calc(50% - #{$layout-grid*2})
 .flex-1_3,
 .flex-2_6 
-    flex: 0 0 calc(33.33% - #{$layout-grid*2})
+  flex: 0 0 calc(33.33% - #{$layout-grid*2})
 .flex-2_3,
 .flex-4_6 
-    flex: 0 0 calc(33.33%*2 - #{$layout-grid*2})
+  flex: 0 0 calc(33.33%*2 - #{$layout-grid*2})
 .flex-1_4,
 .flex-2_8 
-    flex: 0 0 calc(25% - #{$layout-grid*2})
+  flex: 0 0 calc(25% - #{$layout-grid*2})
 .flex-3_4,
 .flex-6_8 
-    flex: 0 0 calc(25%*3 - #{$layout-grid*2})
+  flex: 0 0 calc(25%*3 - #{$layout-grid*2})
 .flex-1_5,
 .flex-2_10
-    flex: 0 0 calc(20% - #{$layout-grid*2})
+  flex: 0 0 calc(20% - #{$layout-grid*2})
 .flex-2_5,
 .flex-4_10
-    flex: 0 0 calc(20%*2 - #{$layout-grid*2})
+  flex: 0 0 calc(20%*2 - #{$layout-grid*2})
 .flex-3_5,
 .flex-6_10
-    flex: 0 0 calc(20%*3 - #{$layout-grid*2})
+  flex: 0 0 calc(20%*3 - #{$layout-grid*2})
 .flex-4_5,
 .flex-8_10
-    flex: 0 0 calc(20%*4 - #{$layout-grid*2})
+  flex: 0 0 calc(20%*4 - #{$layout-grid*2})
 .flex-1_6
-    flex: 0 0 calc(16.66% - #{$layout-grid*2})
+  flex: 0 0 calc(16.66% - #{$layout-grid*2})
 .flex-5_6
-    flex: 0 0 calc(16.66%*5 - #{$layout-grid*2})
+  flex: 0 0 calc(16.66%*5 - #{$layout-grid*2})
 .flex-1_7
-    flex: 0 0 calc(14.28% - #{$layout-grid*2})
+  flex: 0 0 calc(14.28% - #{$layout-grid*2})
 .flex-2_7
-    flex: 0 0 calc(14.28%*2 - #{$layout-grid*2})
+  flex: 0 0 calc(14.28%*2 - #{$layout-grid*2})
 .flex-3_7
-    flex: 0 0 calc(14.28%*3 - #{$layout-grid*2})
+  flex: 0 0 calc(14.28%*3 - #{$layout-grid*2})
 .flex-4_7
-    flex: 0 0 calc(14.28%*4 - #{$layout-grid*2})
+  flex: 0 0 calc(14.28%*4 - #{$layout-grid*2})
 .flex-5_7
-    flex: 0 0 calc(14.28%*5 - #{$layout-grid*2})
+  flex: 0 0 calc(14.28%*5 - #{$layout-grid*2})
 .flex-6_7
-    flex: 0 0 calc(14.28%*6 - #{$layout-grid*2})
+  flex: 0 0 calc(14.28%*6 - #{$layout-grid*2})
 .flex-1_8
-    flex: 0 0 calc(12.5% - #{$layout-grid*2})
+  flex: 0 0 calc(12.5% - #{$layout-grid*2})
 .flex-3_8
-    flex: 0 0 calc(12.5%*3 - #{$layout-grid*2})
+  flex: 0 0 calc(12.5%*3 - #{$layout-grid*2})
 .flex-5_8
-    flex: 0 0 calc(12.5%*5 - #{$layout-grid*2})
+  flex: 0 0 calc(12.5%*5 - #{$layout-grid*2})
 .flex-7_8
-    flex: 0 0 calc(12.5%*7 - #{$layout-grid*2})
+  flex: 0 0 calc(12.5%*7 - #{$layout-grid*2})
 .flex-1_9
-    flex: 0 0 calc(11.11% - #{$layout-grid*2})
+  flex: 0 0 calc(11.11% - #{$layout-grid*2})
 .flex-2_9
-    flex: 0 0 calc(11.11%*2 - #{$layout-grid*2})
+  flex: 0 0 calc(11.11%*2 - #{$layout-grid*2})
 .flex-3_9
-    flex: 0 0 calc(11.11%*3 - #{$layout-grid*2})
+  flex: 0 0 calc(11.11%*3 - #{$layout-grid*2})
 .flex-4_9
-    flex: 0 0 calc(11.11%*4 - #{$layout-grid*2})
+  flex: 0 0 calc(11.11%*4 - #{$layout-grid*2})
 .flex-5_9
-    flex: 0 0 calc(11.11%*5 - #{$layout-grid*2})
+  flex: 0 0 calc(11.11%*5 - #{$layout-grid*2})
 .flex-6_9
-    flex: 0 0 calc(11.11%*6 - #{$layout-grid*2})
+  flex: 0 0 calc(11.11%*6 - #{$layout-grid*2})
 .flex-7_9
-    flex: 0 0 calc(11.11%*7 - #{$layout-grid*2})
+  flex: 0 0 calc(11.11%*7 - #{$layout-grid*2})
 .flex-8_9
-    flex: 0 0 calc(11.11%*8 - #{$layout-grid*2})
+  flex: 0 0 calc(11.11%*8 - #{$layout-grid*2})
 .flex-1_10
-    flex: 0 0 calc(10% - #{$layout-grid*2})
+  flex: 0 0 calc(10% - #{$layout-grid*2})
 .flex-3_10
-    flex: 0 0 calc(10%*3 - #{$layout-grid*2})
+  flex: 0 0 calc(10%*3 - #{$layout-grid*2})
 .flex-7_10
-    flex: 0 0 calc(10%*7 - #{$layout-grid*2})
+  flex: 0 0 calc(10%*7 - #{$layout-grid*2})
 .flex-9_10
-    flex: 0 0 calc(10%*9 - #{$layout-grid*2})
-
-
-
-/* * * Responsive flex elements * * */
+  flex: 0 0 calc(10%*9 - #{$layout-grid*2})
 @media screen and (min-width: $phone-l)
-    .flex-phone-l-1
-        flex: 0 0 calc(100% - #{$layout-grid*2})
-    .flex-phone-l-1_2,
-    .flex-phone-l-2_4,
-    .flex-phone-l-3_6,
-    .flex-phone-l-4_8,
-    .flex-phone-l-5_10 
-        flex: 0 0 calc(50% - #{$layout-grid*2})
-    .flex-phone-l-1_3,
-    .flex-phone-l-2_6 
-        flex: 0 0 calc(33.33% - #{$layout-grid*2})
-    .flex-phone-l-2_3,
-    .flex-phone-l-4_6 
-        flex: 0 0 calc(33.33%*2 - #{$layout-grid*2})
-    .flex-phone-l-1_4,
-    .flex-phone-l-2_8 
-        flex: 0 0 calc(25% - #{$layout-grid*2})
-    .flex-phone-l-3_4,
-    .flex-phone-l-6_8 
-        flex: 0 0 calc(25%*3 - #{$layout-grid*2})
-    .flex-phone-l-1_5,
-    .flex-phone-l-2_10
-        flex: 0 0 calc(20% - #{$layout-grid*2})
-    .flex-phone-l-2_5,
-    .flex-phone-l-4_10
-        flex: 0 0 calc(20%*2 - #{$layout-grid*2})
-    .flex-phone-l-3_5,
-    .flex-phone-l-6_10
-        flex: 0 0 calc(20%*3 - #{$layout-grid*2})
-    .flex-phone-l-4_5,
-    .flex-phone-l-8_10
-        flex: 0 0 calc(20%*4 - #{$layout-grid*2})
-    .flex-phone-l-1_6
-        flex: 0 0 calc(16.66% - #{$layout-grid*2})
-    .flex-phone-l-5_6
-        flex: 0 0 calc(16.66%*5 - #{$layout-grid*2})
-    .flex-phone-l-1_7
-        flex: 0 0 calc(14.28% - #{$layout-grid*2})
-    .flex-phone-l-2_7
-        flex: 0 0 calc(14.28%*2 - #{$layout-grid*2})
-    .flex-phone-l-3_7
-        flex: 0 0 calc(14.28%*3 - #{$layout-grid*2})
-    .flex-phone-l-4_7
-        flex: 0 0 calc(14.28%*4 - #{$layout-grid*2})
-    .flex-phone-l-5_7
-        flex: 0 0 calc(14.28%*5 - #{$layout-grid*2})
-    .flex-phone-l-6_7
-        flex: 0 0 calc(14.28%*6 - #{$layout-grid*2})
-    .flex-phone-l-1_8
-        flex: 0 0 calc(12.5% - #{$layout-grid*2})
-    .flex-phone-l-3_8
-        flex: 0 0 calc(12.5%*3 - #{$layout-grid*2})
-    .flex-phone-l-5_8
-        flex: 0 0 calc(12.5%*5 - #{$layout-grid*2})
-    .flex-phone-l-7_8
-        flex: 0 0 calc(12.5%*7 - #{$layout-grid*2})
-    .flex-phone-l-1_9
-        flex: 0 0 calc(11.11% - #{$layout-grid*2})
-    .flex-phone-l-2_9
-        flex: 0 0 calc(11.11%*2 - #{$layout-grid*2})
-    .flex-phone-l-3_9
-        flex: 0 0 calc(11.11%*3 - #{$layout-grid*2})
-    .flex-phone-l-4_9
-        flex: 0 0 calc(11.11%*4 - #{$layout-grid*2})
-    .flex-phone-l-5_9
-        flex: 0 0 calc(11.11%*5 - #{$layout-grid*2})
-    .flex-phone-l-6_9
-        flex: 0 0 calc(11.11%*6 - #{$layout-grid*2})
-    .flex-phone-l-7_9
-        flex: 0 0 calc(11.11%*7 - #{$layout-grid*2})
-    .flex-phone-l-8_9
-        flex: 0 0 calc(11.11%*8 - #{$layout-grid*2})
-    .flex-phone-l-1_10
-        flex: 0 0 calc(10% - #{$layout-grid*2})
-    .flex-phone-l-3_10
-        flex: 0 0 calc(10%*3 - #{$layout-grid*2})
-    .flex-phone-l-7_10
-        flex: 0 0 calc(10%*7 - #{$layout-grid*2})
-    .flex-phone-l-9_10
-        flex: 0 0 calc(10%*9 - #{$layout-grid*2})
-
+  .flex-phone-l-1
+    flex: 0 0 calc(100% - #{$layout-grid*2})
+  .flex-phone-l-1_2,
+  .flex-phone-l-2_4,
+  .flex-phone-l-3_6,
+  .flex-phone-l-4_8,
+  .flex-phone-l-5_10 
+    flex: 0 0 calc(50% - #{$layout-grid*2})
+  .flex-phone-l-1_3,
+  .flex-phone-l-2_6 
+    flex: 0 0 calc(33.33% - #{$layout-grid*2})
+  .flex-phone-l-2_3,
+  .flex-phone-l-4_6 
+    flex: 0 0 calc(33.33%*2 - #{$layout-grid*2})
+  .flex-phone-l-1_4,
+  .flex-phone-l-2_8 
+    flex: 0 0 calc(25% - #{$layout-grid*2})
+  .flex-phone-l-3_4,
+  .flex-phone-l-6_8 
+    flex: 0 0 calc(25%*3 - #{$layout-grid*2})
+  .flex-phone-l-1_5,
+  .flex-phone-l-2_10
+    flex: 0 0 calc(20% - #{$layout-grid*2})
+  .flex-phone-l-2_5,
+  .flex-phone-l-4_10
+    flex: 0 0 calc(20%*2 - #{$layout-grid*2})
+  .flex-phone-l-3_5,
+  .flex-phone-l-6_10
+    flex: 0 0 calc(20%*3 - #{$layout-grid*2})
+  .flex-phone-l-4_5,
+  .flex-phone-l-8_10
+    flex: 0 0 calc(20%*4 - #{$layout-grid*2})
+  .flex-phone-l-1_6
+    flex: 0 0 calc(16.66% - #{$layout-grid*2})
+  .flex-phone-l-5_6
+    flex: 0 0 calc(16.66%*5 - #{$layout-grid*2})
+  .flex-phone-l-1_7
+    flex: 0 0 calc(14.28% - #{$layout-grid*2})
+  .flex-phone-l-2_7
+    flex: 0 0 calc(14.28%*2 - #{$layout-grid*2})
+  .flex-phone-l-3_7
+    flex: 0 0 calc(14.28%*3 - #{$layout-grid*2})
+  .flex-phone-l-4_7
+    flex: 0 0 calc(14.28%*4 - #{$layout-grid*2})
+  .flex-phone-l-5_7
+    flex: 0 0 calc(14.28%*5 - #{$layout-grid*2})
+  .flex-phone-l-6_7
+    flex: 0 0 calc(14.28%*6 - #{$layout-grid*2})
+  .flex-phone-l-1_8
+    flex: 0 0 calc(12.5% - #{$layout-grid*2})
+  .flex-phone-l-3_8
+    flex: 0 0 calc(12.5%*3 - #{$layout-grid*2})
+  .flex-phone-l-5_8
+    flex: 0 0 calc(12.5%*5 - #{$layout-grid*2})
+  .flex-phone-l-7_8
+    flex: 0 0 calc(12.5%*7 - #{$layout-grid*2})
+  .flex-phone-l-1_9
+    flex: 0 0 calc(11.11% - #{$layout-grid*2})
+  .flex-phone-l-2_9
+    flex: 0 0 calc(11.11%*2 - #{$layout-grid*2})
+  .flex-phone-l-3_9
+    flex: 0 0 calc(11.11%*3 - #{$layout-grid*2})
+  .flex-phone-l-4_9
+    flex: 0 0 calc(11.11%*4 - #{$layout-grid*2})
+  .flex-phone-l-5_9
+    flex: 0 0 calc(11.11%*5 - #{$layout-grid*2})
+  .flex-phone-l-6_9
+    flex: 0 0 calc(11.11%*6 - #{$layout-grid*2})
+  .flex-phone-l-7_9
+    flex: 0 0 calc(11.11%*7 - #{$layout-grid*2})
+  .flex-phone-l-8_9
+    flex: 0 0 calc(11.11%*8 - #{$layout-grid*2})
+  .flex-phone-l-1_10
+    flex: 0 0 calc(10% - #{$layout-grid*2})
+  .flex-phone-l-3_10
+    flex: 0 0 calc(10%*3 - #{$layout-grid*2})
+  .flex-phone-l-7_10
+    flex: 0 0 calc(10%*7 - #{$layout-grid*2})
+  .flex-phone-l-9_10
+    flex: 0 0 calc(10%*9 - #{$layout-grid*2})
 @media screen and (min-width: $tablet)
-    .flex-tablet-1
-        flex: 0 0 calc(100% - #{$layout-grid*2})
-    .flex-tablet-1_2,
-    .flex-tablet-2_4,
-    .flex-tablet-3_6,
-    .flex-tablet-4_8,
-    .flex-tablet-5_10 
-        flex: 0 0 calc(50% - #{$layout-grid*2})
-    .flex-tablet-1_3,
-    .flex-tablet-2_6 
-        flex: 0 0 calc(33.33% - #{$layout-grid*2})
-    .flex-tablet-2_3,
-    .flex-tablet-4_6 
-        flex: 0 0 calc(33.33%*2 - #{$layout-grid*2})
-    .flex-tablet-1_4,
-    .flex-tablet-2_8 
-        flex: 0 0 calc(25% - #{$layout-grid*2})
-    .flex-tablet-3_4,
-    .flex-tablet-6_8 
-        flex: 0 0 calc(25%*3 - #{$layout-grid*2})
-    .flex-tablet-1_5,
-    .flex-tablet-2_10
-        flex: 0 0 calc(20% - #{$layout-grid*2})
-    .flex-tablet-2_5,
-    .flex-tablet-4_10
-        flex: 0 0 calc(20%*2 - #{$layout-grid*2})
-    .flex-tablet-3_5,
-    .flex-tablet-6_10
-        flex: 0 0 calc(20%*3 - #{$layout-grid*2})
-    .flex-tablet-4_5,
-    .flex-tablet-8_10
-        flex: 0 0 calc(20%*4 - #{$layout-grid*2})
-    .flex-tablet-1_6
-        flex: 0 0 calc(16.66% - #{$layout-grid*2})
-    .flex-tablet-5_6
-        flex: 0 0 calc(16.66%*5 - #{$layout-grid*2})
-    .flex-tablet-1_7
-        flex: 0 0 calc(14.28% - #{$layout-grid*2})
-    .flex-tablet-2_7
-        flex: 0 0 calc(14.28%*2 - #{$layout-grid*2})
-    .flex-tablet-3_7
-        flex: 0 0 calc(14.28%*3 - #{$layout-grid*2})
-    .flex-tablet-4_7
-        flex: 0 0 calc(14.28%*4 - #{$layout-grid*2})
-    .flex-tablet-5_7
-        flex: 0 0 calc(14.28%*5 - #{$layout-grid*2})
-    .flex-tablet-6_7
-        flex: 0 0 calc(14.28%*6 - #{$layout-grid*2})
-    .flex-tablet-1_8
-        flex: 0 0 calc(12.5% - #{$layout-grid*2})
-    .flex-tablet-3_8
-        flex: 0 0 calc(12.5%*3 - #{$layout-grid*2})
-    .flex-tablet-5_8
-        flex: 0 0 calc(12.5%*5 - #{$layout-grid*2})
-    .flex-tablet-7_8
-        flex: 0 0 calc(12.5%*7 - #{$layout-grid*2})
-    .flex-tablet-1_9
-        flex: 0 0 calc(11.11% - #{$layout-grid*2})
-    .flex-tablet-2_9
-        flex: 0 0 calc(11.11%*2 - #{$layout-grid*2})
-    .flex-tablet-3_9
-        flex: 0 0 calc(11.11%*3 - #{$layout-grid*2})
-    .flex-tablet-4_9
-        flex: 0 0 calc(11.11%*4 - #{$layout-grid*2})
-    .flex-tablet-5_9
-        flex: 0 0 calc(11.11%*5 - #{$layout-grid*2})
-    .flex-tablet-6_9
-        flex: 0 0 calc(11.11%*6 - #{$layout-grid*2})
-    .flex-tablet-7_9
-        flex: 0 0 calc(11.11%*7 - #{$layout-grid*2})
-    .flex-tablet-8_9
-        flex: 0 0 calc(11.11%*8 - #{$layout-grid*2})
-    .flex-tablet-1_10
-        flex: 0 0 calc(10% - #{$layout-grid*2})
-    .flex-tablet-3_10
-        flex: 0 0 calc(10%*3 - #{$layout-grid*2})
-    .flex-tablet-7_10
-        flex: 0 0 calc(10%*7 - #{$layout-grid*2})
-    .flex-tablet-9_10
-        flex: 0 0 calc(10%*9 - #{$layout-grid*2})
-
+  .flex-tablet-1
+    flex: 0 0 calc(100% - #{$layout-grid*2})
+  .flex-tablet-1_2,
+  .flex-tablet-2_4,
+  .flex-tablet-3_6,
+  .flex-tablet-4_8,
+  .flex-tablet-5_10 
+    flex: 0 0 calc(50% - #{$layout-grid*2})
+  .flex-tablet-1_3,
+  .flex-tablet-2_6 
+    flex: 0 0 calc(33.33% - #{$layout-grid*2})
+  .flex-tablet-2_3,
+  .flex-tablet-4_6 
+    flex: 0 0 calc(33.33%*2 - #{$layout-grid*2})
+  .flex-tablet-1_4,
+  .flex-tablet-2_8 
+    flex: 0 0 calc(25% - #{$layout-grid*2})
+  .flex-tablet-3_4,
+  .flex-tablet-6_8 
+    flex: 0 0 calc(25%*3 - #{$layout-grid*2})
+  .flex-tablet-1_5,
+  .flex-tablet-2_10
+    flex: 0 0 calc(20% - #{$layout-grid*2})
+  .flex-tablet-2_5,
+  .flex-tablet-4_10
+    flex: 0 0 calc(20%*2 - #{$layout-grid*2})
+  .flex-tablet-3_5,
+  .flex-tablet-6_10
+    flex: 0 0 calc(20%*3 - #{$layout-grid*2})
+  .flex-tablet-4_5,
+  .flex-tablet-8_10
+    flex: 0 0 calc(20%*4 - #{$layout-grid*2})
+  .flex-tablet-1_6
+    flex: 0 0 calc(16.66% - #{$layout-grid*2})
+  .flex-tablet-5_6
+    flex: 0 0 calc(16.66%*5 - #{$layout-grid*2})
+  .flex-tablet-1_7
+    flex: 0 0 calc(14.28% - #{$layout-grid*2})
+  .flex-tablet-2_7
+    flex: 0 0 calc(14.28%*2 - #{$layout-grid*2})
+  .flex-tablet-3_7
+    flex: 0 0 calc(14.28%*3 - #{$layout-grid*2})
+  .flex-tablet-4_7
+    flex: 0 0 calc(14.28%*4 - #{$layout-grid*2})
+  .flex-tablet-5_7
+    flex: 0 0 calc(14.28%*5 - #{$layout-grid*2})
+  .flex-tablet-6_7
+    flex: 0 0 calc(14.28%*6 - #{$layout-grid*2})
+  .flex-tablet-1_8
+    flex: 0 0 calc(12.5% - #{$layout-grid*2})
+  .flex-tablet-3_8
+    flex: 0 0 calc(12.5%*3 - #{$layout-grid*2})
+  .flex-tablet-5_8
+    flex: 0 0 calc(12.5%*5 - #{$layout-grid*2})
+  .flex-tablet-7_8
+    flex: 0 0 calc(12.5%*7 - #{$layout-grid*2})
+  .flex-tablet-1_9
+    flex: 0 0 calc(11.11% - #{$layout-grid*2})
+  .flex-tablet-2_9
+    flex: 0 0 calc(11.11%*2 - #{$layout-grid*2})
+  .flex-tablet-3_9
+    flex: 0 0 calc(11.11%*3 - #{$layout-grid*2})
+  .flex-tablet-4_9
+    flex: 0 0 calc(11.11%*4 - #{$layout-grid*2})
+  .flex-tablet-5_9
+    flex: 0 0 calc(11.11%*5 - #{$layout-grid*2})
+  .flex-tablet-6_9
+    flex: 0 0 calc(11.11%*6 - #{$layout-grid*2})
+  .flex-tablet-7_9
+    flex: 0 0 calc(11.11%*7 - #{$layout-grid*2})
+  .flex-tablet-8_9
+    flex: 0 0 calc(11.11%*8 - #{$layout-grid*2})
+  .flex-tablet-1_10
+    flex: 0 0 calc(10% - #{$layout-grid*2})
+  .flex-tablet-3_10
+    flex: 0 0 calc(10%*3 - #{$layout-grid*2})
+  .flex-tablet-7_10
+    flex: 0 0 calc(10%*7 - #{$layout-grid*2})
+  .flex-tablet-9_10
+    flex: 0 0 calc(10%*9 - #{$layout-grid*2})
 @media screen and (min-width: $laptop)
-    .flex-laptop-1
-        flex: 0 0 calc(100% - #{$layout-grid*2})
-    .flex-laptop-1_2,
-    .flex-laptop-2_4,
-    .flex-laptop-3_6,
-    .flex-laptop-4_8,
-    .flex-laptop-5_10 
-        flex: 0 0 calc(50% - #{$layout-grid*2})
-    .flex-laptop-1_3,
-    .flex-laptop-2_6 
-        flex: 0 0 calc(33.33% - #{$layout-grid*2})
-    .flex-laptop-2_3,
-    .flex-laptop-4_6 
-        flex: 0 0 calc(33.33%*2 - #{$layout-grid*2})
-    .flex-laptop-1_4,
-    .flex-laptop-2_8 
-        flex: 0 0 calc(25% - #{$layout-grid*2})
-    .flex-laptop-3_4,
-    .flex-laptop-6_8 
-        flex: 0 0 calc(25%*3 - #{$layout-grid*2})
-    .flex-laptop-1_5,
-    .flex-laptop-2_10
-        flex: 0 0 calc(20% - #{$layout-grid*2})
-    .flex-laptop-2_5,
-    .flex-laptop-4_10
-        flex: 0 0 calc(20%*2 - #{$layout-grid*2})
-    .flex-laptop-3_5,
-    .flex-laptop-6_10
-        flex: 0 0 calc(20%*3 - #{$layout-grid*2})
-    .flex-laptop-4_5,
-    .flex-laptop-8_10
-        flex: 0 0 calc(20%*4 - #{$layout-grid*2})
-    .flex-laptop-1_6
-        flex: 0 0 calc(16.66% - #{$layout-grid*2})
-    .flex-laptop-5_6
-        flex: 0 0 calc(16.66%*5 - #{$layout-grid*2})
-    .flex-laptop-1_7
-        flex: 0 0 calc(14.28% - #{$layout-grid*2})
-    .flex-laptop-2_7
-        flex: 0 0 calc(14.28%*2 - #{$layout-grid*2})
-    .flex-laptop-3_7
-        flex: 0 0 calc(14.28%*3 - #{$layout-grid*2})
-    .flex-laptop-4_7
-        flex: 0 0 calc(14.28%*4 - #{$layout-grid*2})
-    .flex-laptop-5_7
-        flex: 0 0 calc(14.28%*5 - #{$layout-grid*2})
-    .flex-laptop-6_7
-        flex: 0 0 calc(14.28%*6 - #{$layout-grid*2})
-    .flex-laptop-1_8
-        flex: 0 0 calc(12.5% - #{$layout-grid*2})
-    .flex-laptop-3_8
-        flex: 0 0 calc(12.5%*3 - #{$layout-grid*2})
-    .flex-laptop-5_8
-        flex: 0 0 calc(12.5%*5 - #{$layout-grid*2})
-    .flex-laptop-7_8
-        flex: 0 0 calc(12.5%*7 - #{$layout-grid*2})
-    .flex-laptop-1_9
-        flex: 0 0 calc(11.11% - #{$layout-grid*2})
-    .flex-laptop-2_9
-        flex: 0 0 calc(11.11%*2 - #{$layout-grid*2})
-    .flex-laptop-3_9
-        flex: 0 0 calc(11.11%*3 - #{$layout-grid*2})
-    .flex-laptop-4_9
-        flex: 0 0 calc(11.11%*4 - #{$layout-grid*2})
-    .flex-laptop-5_9
-        flex: 0 0 calc(11.11%*5 - #{$layout-grid*2})
-    .flex-laptop-6_9
-        flex: 0 0 calc(11.11%*6 - #{$layout-grid*2})
-    .flex-laptop-7_9
-        flex: 0 0 calc(11.11%*7 - #{$layout-grid*2})
-    .flex-laptop-8_9
-        flex: 0 0 calc(11.11%*8 - #{$layout-grid*2})
-    .flex-laptop-1_10
-        flex: 0 0 calc(10% - #{$layout-grid*2})
-    .flex-laptop-3_10
-        flex: 0 0 calc(10%*3 - #{$layout-grid*2})
-    .flex-laptop-7_10
-        flex: 0 0 calc(10%*7 - #{$layout-grid*2})
-    .flex-laptop-9_10
-        flex: 0 0 calc(10%*9 - #{$layout-grid*2})
-
+  .flex-laptop-1
+    flex: 0 0 calc(100% - #{$layout-grid*2})
+  .flex-laptop-1_2,
+  .flex-laptop-2_4,
+  .flex-laptop-3_6,
+  .flex-laptop-4_8,
+  .flex-laptop-5_10 
+    flex: 0 0 calc(50% - #{$layout-grid*2})
+  .flex-laptop-1_3,
+  .flex-laptop-2_6 
+    flex: 0 0 calc(33.33% - #{$layout-grid*2})
+  .flex-laptop-2_3,
+  .flex-laptop-4_6 
+    flex: 0 0 calc(33.33%*2 - #{$layout-grid*2})
+  .flex-laptop-1_4,
+  .flex-laptop-2_8 
+    flex: 0 0 calc(25% - #{$layout-grid*2})
+  .flex-laptop-3_4,
+  .flex-laptop-6_8 
+    flex: 0 0 calc(25%*3 - #{$layout-grid*2})
+  .flex-laptop-1_5,
+  .flex-laptop-2_10
+    flex: 0 0 calc(20% - #{$layout-grid*2})
+  .flex-laptop-2_5,
+  .flex-laptop-4_10
+    flex: 0 0 calc(20%*2 - #{$layout-grid*2})
+  .flex-laptop-3_5,
+  .flex-laptop-6_10
+    flex: 0 0 calc(20%*3 - #{$layout-grid*2})
+  .flex-laptop-4_5,
+  .flex-laptop-8_10
+    flex: 0 0 calc(20%*4 - #{$layout-grid*2})
+  .flex-laptop-1_6
+    flex: 0 0 calc(16.66% - #{$layout-grid*2})
+  .flex-laptop-5_6
+    flex: 0 0 calc(16.66%*5 - #{$layout-grid*2})
+  .flex-laptop-1_7
+    flex: 0 0 calc(14.28% - #{$layout-grid*2})
+  .flex-laptop-2_7
+    flex: 0 0 calc(14.28%*2 - #{$layout-grid*2})
+  .flex-laptop-3_7
+    flex: 0 0 calc(14.28%*3 - #{$layout-grid*2})
+  .flex-laptop-4_7
+    flex: 0 0 calc(14.28%*4 - #{$layout-grid*2})
+  .flex-laptop-5_7
+    flex: 0 0 calc(14.28%*5 - #{$layout-grid*2})
+  .flex-laptop-6_7
+    flex: 0 0 calc(14.28%*6 - #{$layout-grid*2})
+  .flex-laptop-1_8
+    flex: 0 0 calc(12.5% - #{$layout-grid*2})
+  .flex-laptop-3_8
+    flex: 0 0 calc(12.5%*3 - #{$layout-grid*2})
+  .flex-laptop-5_8
+    flex: 0 0 calc(12.5%*5 - #{$layout-grid*2})
+  .flex-laptop-7_8
+    flex: 0 0 calc(12.5%*7 - #{$layout-grid*2})
+  .flex-laptop-1_9
+    flex: 0 0 calc(11.11% - #{$layout-grid*2})
+  .flex-laptop-2_9
+    flex: 0 0 calc(11.11%*2 - #{$layout-grid*2})
+  .flex-laptop-3_9
+    flex: 0 0 calc(11.11%*3 - #{$layout-grid*2})
+  .flex-laptop-4_9
+    flex: 0 0 calc(11.11%*4 - #{$layout-grid*2})
+  .flex-laptop-5_9
+    flex: 0 0 calc(11.11%*5 - #{$layout-grid*2})
+  .flex-laptop-6_9
+    flex: 0 0 calc(11.11%*6 - #{$layout-grid*2})
+  .flex-laptop-7_9
+    flex: 0 0 calc(11.11%*7 - #{$layout-grid*2})
+  .flex-laptop-8_9
+    flex: 0 0 calc(11.11%*8 - #{$layout-grid*2})
+  .flex-laptop-1_10
+    flex: 0 0 calc(10% - #{$layout-grid*2})
+  .flex-laptop-3_10
+    flex: 0 0 calc(10%*3 - #{$layout-grid*2})
+  .flex-laptop-7_10
+    flex: 0 0 calc(10%*7 - #{$layout-grid*2})
+  .flex-laptop-9_10
+    flex: 0 0 calc(10%*9 - #{$layout-grid*2})
 @media screen and (min-width: $MDPI)
-    .flex-MDPI-1
-        flex: 0 0 calc(100% - #{$layout-grid*2})
-    .flex-MDPI-1_2,
-    .flex-MDPI-2_4,
-    .flex-MDPI-3_6,
-    .flex-MDPI-4_8,
-    .flex-MDPI-5_10 
-        flex: 0 0 calc(50% - #{$layout-grid*2})
-    .flex-MDPI-1_3,
-    .flex-MDPI-2_6 
-        flex: 0 0 calc(33.33% - #{$layout-grid*2})
-    .flex-MDPI-2_3,
-    .flex-MDPI-4_6 
-        flex: 0 0 calc(33.33%*2 - #{$layout-grid*2})
-    .flex-MDPI-1_4,
-    .flex-MDPI-2_8 
-        flex: 0 0 calc(25% - #{$layout-grid*2})
-    .flex-MDPI-3_4,
-    .flex-MDPI-6_8 
-        flex: 0 0 calc(25%*3 - #{$layout-grid*2})
-    .flex-MDPI-1_5,
-    .flex-MDPI-2_10
-        flex: 0 0 calc(20% - #{$layout-grid*2})
-    .flex-MDPI-2_5,
-    .flex-MDPI-4_10
-        flex: 0 0 calc(20%*2 - #{$layout-grid*2})
-    .flex-MDPI-3_5,
-    .flex-MDPI-6_10
-        flex: 0 0 calc(20%*3 - #{$layout-grid*2})
-    .flex-MDPI-4_5,
-    .flex-MDPI-8_10
-        flex: 0 0 calc(20%*4 - #{$layout-grid*2})
-    .flex-MDPI-1_6
-        flex: 0 0 calc(16.66% - #{$layout-grid*2})
-    .flex-MDPI-5_6
-        flex: 0 0 calc(16.66%*5 - #{$layout-grid*2})
-    .flex-MDPI-1_7
-        flex: 0 0 calc(14.28% - #{$layout-grid*2})
-    .flex-MDPI-2_7
-        flex: 0 0 calc(14.28%*2 - #{$layout-grid*2})
-    .flex-MDPI-3_7
-        flex: 0 0 calc(14.28%*3 - #{$layout-grid*2})
-    .flex-MDPI-4_7
-        flex: 0 0 calc(14.28%*4 - #{$layout-grid*2})
-    .flex-MDPI-5_7
-        flex: 0 0 calc(14.28%*5 - #{$layout-grid*2})
-    .flex-MDPI-6_7
-        flex: 0 0 calc(14.28%*6 - #{$layout-grid*2})
-    .flex-MDPI-1_8
-        flex: 0 0 calc(12.5% - #{$layout-grid*2})
-    .flex-MDPI-3_8
-        flex: 0 0 calc(12.5%*3 - #{$layout-grid*2})
-    .flex-MDPI-5_8
-        flex: 0 0 calc(12.5%*5 - #{$layout-grid*2})
-    .flex-MDPI-7_8
-        flex: 0 0 calc(12.5%*7 - #{$layout-grid*2})
-    .flex-MDPI-1_9
-        flex: 0 0 calc(11.11% - #{$layout-grid*2})
-    .flex-MDPI-2_9
-        flex: 0 0 calc(11.11%*2 - #{$layout-grid*2})
-    .flex-MDPI-3_9
-        flex: 0 0 calc(11.11%*3 - #{$layout-grid*2})
-    .flex-MDPI-4_9
-        flex: 0 0 calc(11.11%*4 - #{$layout-grid*2})
-    .flex-MDPI-5_9
-        flex: 0 0 calc(11.11%*5 - #{$layout-grid*2})
-    .flex-MDPI-6_9
-        flex: 0 0 calc(11.11%*6 - #{$layout-grid*2})
-    .flex-MDPI-7_9
-        flex: 0 0 calc(11.11%*7 - #{$layout-grid*2})
-    .flex-MDPI-8_9
-        flex: 0 0 calc(11.11%*8 - #{$layout-grid*2})
-    .flex-MDPI-1_10
-        flex: 0 0 calc(10% - #{$layout-grid*2})
-    .flex-MDPI-3_10
-        flex: 0 0 calc(10%*3 - #{$layout-grid*2})
-    .flex-MDPI-7_10
-        flex: 0 0 calc(10%*7 - #{$layout-grid*2})
-    .flex-MDPI-9_10
-        flex: 0 0 calc(10%*9 - #{$layout-grid*2})
-
+  .flex-MDPI-1
+    flex: 0 0 calc(100% - #{$layout-grid*2})
+  .flex-MDPI-1_2,
+  .flex-MDPI-2_4,
+  .flex-MDPI-3_6,
+  .flex-MDPI-4_8,
+  .flex-MDPI-5_10 
+    flex: 0 0 calc(50% - #{$layout-grid*2})
+  .flex-MDPI-1_3,
+  .flex-MDPI-2_6 
+    flex: 0 0 calc(33.33% - #{$layout-grid*2})
+  .flex-MDPI-2_3,
+  .flex-MDPI-4_6 
+    flex: 0 0 calc(33.33%*2 - #{$layout-grid*2})
+  .flex-MDPI-1_4,
+  .flex-MDPI-2_8 
+    flex: 0 0 calc(25% - #{$layout-grid*2})
+  .flex-MDPI-3_4,
+  .flex-MDPI-6_8 
+    flex: 0 0 calc(25%*3 - #{$layout-grid*2})
+  .flex-MDPI-1_5,
+  .flex-MDPI-2_10
+    flex: 0 0 calc(20% - #{$layout-grid*2})
+  .flex-MDPI-2_5,
+  .flex-MDPI-4_10
+    flex: 0 0 calc(20%*2 - #{$layout-grid*2})
+  .flex-MDPI-3_5,
+  .flex-MDPI-6_10
+    flex: 0 0 calc(20%*3 - #{$layout-grid*2})
+  .flex-MDPI-4_5,
+  .flex-MDPI-8_10
+    flex: 0 0 calc(20%*4 - #{$layout-grid*2})
+  .flex-MDPI-1_6
+    flex: 0 0 calc(16.66% - #{$layout-grid*2})
+  .flex-MDPI-5_6
+    flex: 0 0 calc(16.66%*5 - #{$layout-grid*2})
+  .flex-MDPI-1_7
+    flex: 0 0 calc(14.28% - #{$layout-grid*2})
+  .flex-MDPI-2_7
+    flex: 0 0 calc(14.28%*2 - #{$layout-grid*2})
+  .flex-MDPI-3_7
+    flex: 0 0 calc(14.28%*3 - #{$layout-grid*2})
+  .flex-MDPI-4_7
+    flex: 0 0 calc(14.28%*4 - #{$layout-grid*2})
+  .flex-MDPI-5_7
+    flex: 0 0 calc(14.28%*5 - #{$layout-grid*2})
+  .flex-MDPI-6_7
+    flex: 0 0 calc(14.28%*6 - #{$layout-grid*2})
+  .flex-MDPI-1_8
+    flex: 0 0 calc(12.5% - #{$layout-grid*2})
+  .flex-MDPI-3_8
+    flex: 0 0 calc(12.5%*3 - #{$layout-grid*2})
+  .flex-MDPI-5_8
+    flex: 0 0 calc(12.5%*5 - #{$layout-grid*2})
+  .flex-MDPI-7_8
+    flex: 0 0 calc(12.5%*7 - #{$layout-grid*2})
+  .flex-MDPI-1_9
+    flex: 0 0 calc(11.11% - #{$layout-grid*2})
+  .flex-MDPI-2_9
+    flex: 0 0 calc(11.11%*2 - #{$layout-grid*2})
+  .flex-MDPI-3_9
+    flex: 0 0 calc(11.11%*3 - #{$layout-grid*2})
+  .flex-MDPI-4_9
+    flex: 0 0 calc(11.11%*4 - #{$layout-grid*2})
+  .flex-MDPI-5_9
+    flex: 0 0 calc(11.11%*5 - #{$layout-grid*2})
+  .flex-MDPI-6_9
+    flex: 0 0 calc(11.11%*6 - #{$layout-grid*2})
+  .flex-MDPI-7_9
+    flex: 0 0 calc(11.11%*7 - #{$layout-grid*2})
+  .flex-MDPI-8_9
+    flex: 0 0 calc(11.11%*8 - #{$layout-grid*2})
+  .flex-MDPI-1_10
+    flex: 0 0 calc(10% - #{$layout-grid*2})
+  .flex-MDPI-3_10
+    flex: 0 0 calc(10%*3 - #{$layout-grid*2})
+  .flex-MDPI-7_10
+    flex: 0 0 calc(10%*7 - #{$layout-grid*2})
+  .flex-MDPI-9_10
+    flex: 0 0 calc(10%*9 - #{$layout-grid*2})
 @media screen and (min-width: $HiDPI)
-    .flex-HiDPI-1
-        flex: 0 0 calc(100% - #{$layout-grid*2})
-    .flex-HiDPI-1_2,
-    .flex-HiDPI-2_4,
-    .flex-HiDPI-3_6,
-    .flex-HiDPI-4_8,
-    .flex-HiDPI-5_10 
-        flex: 0 0 calc(50% - #{$layout-grid*2})
-    .flex-HiDPI-1_3,
-    .flex-HiDPI-2_6 
-        flex: 0 0 calc(33.33% - #{$layout-grid*2})
-    .flex-HiDPI-2_3,
-    .flex-HiDPI-4_6 
-        flex: 0 0 calc(33.33%*2 - #{$layout-grid*2})
-    .flex-HiDPI-1_4,
-    .flex-HiDPI-2_8 
-        flex: 0 0 calc(25% - #{$layout-grid*2})
-    .flex-HiDPI-3_4,
-    .flex-HiDPI-6_8 
-        flex: 0 0 calc(25%*3 - #{$layout-grid*2})
-    .flex-HiDPI-1_5,
-    .flex-HiDPI-2_10
-        flex: 0 0 calc(20% - #{$layout-grid*2})
-    .flex-HiDPI-2_5,
-    .flex-HiDPI-4_10
-        flex: 0 0 calc(20%*2 - #{$layout-grid*2})
-    .flex-HiDPI-3_5,
-    .flex-HiDPI-6_10
-        flex: 0 0 calc(20%*3 - #{$layout-grid*2})
-    .flex-HiDPI-4_5,
-    .flex-HiDPI-8_10
-        flex: 0 0 calc(20%*4 - #{$layout-grid*2})
-    .flex-HiDPI-1_6
-        flex: 0 0 calc(16.66% - #{$layout-grid*2})
-    .flex-HiDPI-5_6
-        flex: 0 0 calc(16.66%*5 - #{$layout-grid*2})
-    .flex-HiDPI-1_7
-        flex: 0 0 calc(14.28% - #{$layout-grid*2})
-    .flex-HiDPI-2_7
-        flex: 0 0 calc(14.28%*2 - #{$layout-grid*2})
-    .flex-HiDPI-3_7
-        flex: 0 0 calc(14.28%*3 - #{$layout-grid*2})
-    .flex-HiDPI-4_7
-        flex: 0 0 calc(14.28%*4 - #{$layout-grid*2})
-    .flex-HiDPI-5_7
-        flex: 0 0 calc(14.28%*5 - #{$layout-grid*2})
-    .flex-HiDPI-6_7
-        flex: 0 0 calc(14.28%*6 - #{$layout-grid*2})
-    .flex-HiDPI-1_8
-        flex: 0 0 calc(12.5% - #{$layout-grid*2})
-    .flex-HiDPI-3_8
-        flex: 0 0 calc(12.5%*3 - #{$layout-grid*2})
-    .flex-HiDPI-5_8
-        flex: 0 0 calc(12.5%*5 - #{$layout-grid*2})
-    .flex-HiDPI-7_8
-        flex: 0 0 calc(12.5%*7 - #{$layout-grid*2})
-    .flex-HiDPI-1_9
-        flex: 0 0 calc(11.11% - #{$layout-grid*2})
-    .flex-HiDPI-2_9
-        flex: 0 0 calc(11.11%*2 - #{$layout-grid*2})
-    .flex-HiDPI-3_9
-        flex: 0 0 calc(11.11%*3 - #{$layout-grid*2})
-    .flex-HiDPI-4_9
-        flex: 0 0 calc(11.11%*4 - #{$layout-grid*2})
-    .flex-HiDPI-5_9
-        flex: 0 0 calc(11.11%*5 - #{$layout-grid*2})
-    .flex-HiDPI-6_9
-        flex: 0 0 calc(11.11%*6 - #{$layout-grid*2})
-    .flex-HiDPI-7_9
-        flex: 0 0 calc(11.11%*7 - #{$layout-grid*2})
-    .flex-HiDPI-8_9
-        flex: 0 0 calc(11.11%*8 - #{$layout-grid*2})
-    .flex-HiDPI-1_10
-        flex: 0 0 calc(10% - #{$layout-grid*2})
-    .flex-HiDPI-3_10
-        flex: 0 0 calc(10%*3 - #{$layout-grid*2})
-    .flex-HiDPI-7_10
-        flex: 0 0 calc(10%*7 - #{$layout-grid*2})
-    .flex-HiDPI-9_10
-        flex: 0 0 calc(10%*9 - #{$layout-grid*2})
-
+  .flex-HiDPI-1
+    flex: 0 0 calc(100% - #{$layout-grid*2})
+  .flex-HiDPI-1_2,
+  .flex-HiDPI-2_4,
+  .flex-HiDPI-3_6,
+  .flex-HiDPI-4_8,
+  .flex-HiDPI-5_10 
+    flex: 0 0 calc(50% - #{$layout-grid*2})
+  .flex-HiDPI-1_3,
+  .flex-HiDPI-2_6 
+    flex: 0 0 calc(33.33% - #{$layout-grid*2})
+  .flex-HiDPI-2_3,
+  .flex-HiDPI-4_6 
+    flex: 0 0 calc(33.33%*2 - #{$layout-grid*2})
+  .flex-HiDPI-1_4,
+  .flex-HiDPI-2_8 
+    flex: 0 0 calc(25% - #{$layout-grid*2})
+  .flex-HiDPI-3_4,
+  .flex-HiDPI-6_8 
+    flex: 0 0 calc(25%*3 - #{$layout-grid*2})
+  .flex-HiDPI-1_5,
+  .flex-HiDPI-2_10
+    flex: 0 0 calc(20% - #{$layout-grid*2})
+  .flex-HiDPI-2_5,
+  .flex-HiDPI-4_10
+    flex: 0 0 calc(20%*2 - #{$layout-grid*2})
+  .flex-HiDPI-3_5,
+  .flex-HiDPI-6_10
+    flex: 0 0 calc(20%*3 - #{$layout-grid*2})
+  .flex-HiDPI-4_5,
+  .flex-HiDPI-8_10
+    flex: 0 0 calc(20%*4 - #{$layout-grid*2})
+  .flex-HiDPI-1_6
+    flex: 0 0 calc(16.66% - #{$layout-grid*2})
+  .flex-HiDPI-5_6
+    flex: 0 0 calc(16.66%*5 - #{$layout-grid*2})
+  .flex-HiDPI-1_7
+    flex: 0 0 calc(14.28% - #{$layout-grid*2})
+  .flex-HiDPI-2_7
+    flex: 0 0 calc(14.28%*2 - #{$layout-grid*2})
+  .flex-HiDPI-3_7
+    flex: 0 0 calc(14.28%*3 - #{$layout-grid*2})
+  .flex-HiDPI-4_7
+    flex: 0 0 calc(14.28%*4 - #{$layout-grid*2})
+  .flex-HiDPI-5_7
+    flex: 0 0 calc(14.28%*5 - #{$layout-grid*2})
+  .flex-HiDPI-6_7
+    flex: 0 0 calc(14.28%*6 - #{$layout-grid*2})
+  .flex-HiDPI-1_8
+    flex: 0 0 calc(12.5% - #{$layout-grid*2})
+  .flex-HiDPI-3_8
+    flex: 0 0 calc(12.5%*3 - #{$layout-grid*2})
+  .flex-HiDPI-5_8
+    flex: 0 0 calc(12.5%*5 - #{$layout-grid*2})
+  .flex-HiDPI-7_8
+    flex: 0 0 calc(12.5%*7 - #{$layout-grid*2})
+  .flex-HiDPI-1_9
+    flex: 0 0 calc(11.11% - #{$layout-grid*2})
+  .flex-HiDPI-2_9
+    flex: 0 0 calc(11.11%*2 - #{$layout-grid*2})
+  .flex-HiDPI-3_9
+    flex: 0 0 calc(11.11%*3 - #{$layout-grid*2})
+  .flex-HiDPI-4_9
+    flex: 0 0 calc(11.11%*4 - #{$layout-grid*2})
+  .flex-HiDPI-5_9
+    flex: 0 0 calc(11.11%*5 - #{$layout-grid*2})
+  .flex-HiDPI-6_9
+    flex: 0 0 calc(11.11%*6 - #{$layout-grid*2})
+  .flex-HiDPI-7_9
+    flex: 0 0 calc(11.11%*7 - #{$layout-grid*2})
+  .flex-HiDPI-8_9
+    flex: 0 0 calc(11.11%*8 - #{$layout-grid*2})
+  .flex-HiDPI-1_10
+    flex: 0 0 calc(10% - #{$layout-grid*2})
+  .flex-HiDPI-3_10
+    flex: 0 0 calc(10%*3 - #{$layout-grid*2})
+  .flex-HiDPI-7_10
+    flex: 0 0 calc(10%*7 - #{$layout-grid*2})
+  .flex-HiDPI-9_10
+    flex: 0 0 calc(10%*9 - #{$layout-grid*2})
 @media screen and (min-width: $HD)
-    .flex-HD-1
-        flex: 0 0 calc(100% - #{$layout-grid*2})
-    .flex-HD-1_2,
-    .flex-HD-2_4,
-    .flex-HD-3_6,
-    .flex-HD-4_8,
-    .flex-HD-5_10 
-        flex: 0 0 calc(50% - #{$layout-grid*2})
-    .flex-HD-1_3,
-    .flex-HD-2_6 
-        flex: 0 0 calc(33.33% - #{$layout-grid*2})
-    .flex-HD-2_3,
-    .flex-HD-4_6 
-        flex: 0 0 calc(33.33%*2 - #{$layout-grid*2})
-    .flex-HD-1_4,
-    .flex-HD-2_8 
-        flex: 0 0 calc(25% - #{$layout-grid*2})
-    .flex-HD-3_4,
-    .flex-HD-6_8 
-        flex: 0 0 calc(25%*3 - #{$layout-grid*2})
-    .flex-HD-1_5,
-    .flex-HD-2_10
-        flex: 0 0 calc(20% - #{$layout-grid*2})
-    .flex-HD-2_5,
-    .flex-HD-4_10
-        flex: 0 0 calc(20%*2 - #{$layout-grid*2})
-    .flex-HD-3_5,
-    .flex-HD-6_10
-        flex: 0 0 calc(20%*3 - #{$layout-grid*2})
-    .flex-HD-4_5,
-    .flex-HD-8_10
-        flex: 0 0 calc(20%*4 - #{$layout-grid*2})
-    .flex-HD-1_6
-        flex: 0 0 calc(16.66% - #{$layout-grid*2})
-    .flex-HD-5_6
-        flex: 0 0 calc(16.66%*5 - #{$layout-grid*2})
-    .flex-HD-1_7
-        flex: 0 0 calc(14.28% - #{$layout-grid*2})
-    .flex-HD-2_7
-        flex: 0 0 calc(14.28%*2 - #{$layout-grid*2})
-    .flex-HD-3_7
-        flex: 0 0 calc(14.28%*3 - #{$layout-grid*2})
-    .flex-HD-4_7
-        flex: 0 0 calc(14.28%*4 - #{$layout-grid*2})
-    .flex-HD-5_7
-        flex: 0 0 calc(14.28%*5 - #{$layout-grid*2})
-    .flex-HD-6_7
-        flex: 0 0 calc(14.28%*6 - #{$layout-grid*2})
-    .flex-HD-1_8
-        flex: 0 0 calc(12.5% - #{$layout-grid*2})
-    .flex-HD-3_8
-        flex: 0 0 calc(12.5%*3 - #{$layout-grid*2})
-    .flex-HD-5_8
-        flex: 0 0 calc(12.5%*5 - #{$layout-grid*2})
-    .flex-HD-7_8
-        flex: 0 0 calc(12.5%*7 - #{$layout-grid*2})
-    .flex-HD-1_9
-        flex: 0 0 calc(11.11% - #{$layout-grid*2})
-    .flex-HD-2_9
-        flex: 0 0 calc(11.11%*2 - #{$layout-grid*2})
-    .flex-HD-3_9
-        flex: 0 0 calc(11.11%*3 - #{$layout-grid*2})
-    .flex-HD-4_9
-        flex: 0 0 calc(11.11%*4 - #{$layout-grid*2})
-    .flex-HD-5_9
-        flex: 0 0 calc(11.11%*5 - #{$layout-grid*2})
-    .flex-HD-6_9
-        flex: 0 0 calc(11.11%*6 - #{$layout-grid*2})
-    .flex-HD-7_9
-        flex: 0 0 calc(11.11%*7 - #{$layout-grid*2})
-    .flex-HD-8_9
-        flex: 0 0 calc(11.11%*8 - #{$layout-grid*2})
-    .flex-HD-1_10
-        flex: 0 0 calc(10% - #{$layout-grid*2})
-    .flex-HD-3_10
-        flex: 0 0 calc(10%*3 - #{$layout-grid*2})
-    .flex-HD-7_10
-        flex: 0 0 calc(10%*7 - #{$layout-grid*2})
-    .flex-HD-9_10
-        flex: 0 0 calc(10%*9 - #{$layout-grid*2})
+  .flex-HD-1
+    flex: 0 0 calc(100% - #{$layout-grid*2})
+  .flex-HD-1_2,
+  .flex-HD-2_4,
+  .flex-HD-3_6,
+  .flex-HD-4_8,
+  .flex-HD-5_10 
+    flex: 0 0 calc(50% - #{$layout-grid*2})
+  .flex-HD-1_3,
+  .flex-HD-2_6 
+    flex: 0 0 calc(33.33% - #{$layout-grid*2})
+  .flex-HD-2_3,
+  .flex-HD-4_6 
+    flex: 0 0 calc(33.33%*2 - #{$layout-grid*2})
+  .flex-HD-1_4,
+  .flex-HD-2_8 
+    flex: 0 0 calc(25% - #{$layout-grid*2})
+  .flex-HD-3_4,
+  .flex-HD-6_8 
+    flex: 0 0 calc(25%*3 - #{$layout-grid*2})
+  .flex-HD-1_5,
+  .flex-HD-2_10
+    flex: 0 0 calc(20% - #{$layout-grid*2})
+  .flex-HD-2_5,
+  .flex-HD-4_10
+    flex: 0 0 calc(20%*2 - #{$layout-grid*2})
+  .flex-HD-3_5,
+  .flex-HD-6_10
+    flex: 0 0 calc(20%*3 - #{$layout-grid*2})
+  .flex-HD-4_5,
+  .flex-HD-8_10
+    flex: 0 0 calc(20%*4 - #{$layout-grid*2})
+  .flex-HD-1_6
+    flex: 0 0 calc(16.66% - #{$layout-grid*2})
+  .flex-HD-5_6
+    flex: 0 0 calc(16.66%*5 - #{$layout-grid*2})
+  .flex-HD-1_7
+    flex: 0 0 calc(14.28% - #{$layout-grid*2})
+  .flex-HD-2_7
+    flex: 0 0 calc(14.28%*2 - #{$layout-grid*2})
+  .flex-HD-3_7
+    flex: 0 0 calc(14.28%*3 - #{$layout-grid*2})
+  .flex-HD-4_7
+    flex: 0 0 calc(14.28%*4 - #{$layout-grid*2})
+  .flex-HD-5_7
+    flex: 0 0 calc(14.28%*5 - #{$layout-grid*2})
+  .flex-HD-6_7
+    flex: 0 0 calc(14.28%*6 - #{$layout-grid*2})
+  .flex-HD-1_8
+    flex: 0 0 calc(12.5% - #{$layout-grid*2})
+  .flex-HD-3_8
+    flex: 0 0 calc(12.5%*3 - #{$layout-grid*2})
+  .flex-HD-5_8
+    flex: 0 0 calc(12.5%*5 - #{$layout-grid*2})
+  .flex-HD-7_8
+    flex: 0 0 calc(12.5%*7 - #{$layout-grid*2})
+  .flex-HD-1_9
+    flex: 0 0 calc(11.11% - #{$layout-grid*2})
+  .flex-HD-2_9
+    flex: 0 0 calc(11.11%*2 - #{$layout-grid*2})
+  .flex-HD-3_9
+    flex: 0 0 calc(11.11%*3 - #{$layout-grid*2})
+  .flex-HD-4_9
+    flex: 0 0 calc(11.11%*4 - #{$layout-grid*2})
+  .flex-HD-5_9
+    flex: 0 0 calc(11.11%*5 - #{$layout-grid*2})
+  .flex-HD-6_9
+    flex: 0 0 calc(11.11%*6 - #{$layout-grid*2})
+  .flex-HD-7_9
+    flex: 0 0 calc(11.11%*7 - #{$layout-grid*2})
+  .flex-HD-8_9
+    flex: 0 0 calc(11.11%*8 - #{$layout-grid*2})
+  .flex-HD-1_10
+    flex: 0 0 calc(10% - #{$layout-grid*2})
+  .flex-HD-3_10
+    flex: 0 0 calc(10%*3 - #{$layout-grid*2})
+  .flex-HD-7_10
+    flex: 0 0 calc(10%*7 - #{$layout-grid*2})
+  .flex-HD-9_10
+    flex: 0 0 calc(10%*9 - #{$layout-grid*2})
