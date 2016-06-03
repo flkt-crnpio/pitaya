@@ -1,76 +1,59 @@
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
- * Card
- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* src/components/card.sass */
 .card
+  background: $main-background
+  border: $border-width solid rgba($main-color,0.3)
+  border-radius: $border-radius
+  color: $main-color
+  overflow: hidden
+  .card-header,
+  .card-content,
+  .card-footer
+    clear: both
+    padding: $layout-space/2 $layout-space
+  .card-header *,
+  .card-footer *
+    margin: 0
+  .card-header
+    border-bottom: $border-width solid rgba($main-color,0.3)
+  .card-footer
+    border-top: $border-width solid rgba($main-color,0.3)
+  .card-image
     background: $main-background
-    border: $border-size solid rgba($main-color,0.3)
     border-radius: $border-radius
-    box-shadow: 0 $border-shadow/2 $border-shadow rgba($main-color, $border-shadow-opacity)
-    color: $main-color
-    margin: 0 $border-shadow $border-shadow*2
+    width: 100%
     overflow: hidden
-
-    .card-header,
-    .card-content,
-    .card-footer
-        clear: both
-        padding: $layout-space/2 $layout-space
-
-    .card-header *,
-    .card-content *:last-child,
-    .card-footer *
-        margin-bottom: 0
-
-    .card-header
-        border-bottom: $border-size solid rgba($main-color,0.3)
-
-    .card-footer
-        border-top: $border-size solid rgba($main-color,0.3)
-        button 
-            margin: 0 
-
-    .card-image
-        background: $main-background
-        border-radius: $border-radius $border-radius 0 0
-        width: 100%
-        overflow: hidden
-        img 
-            float: left
-            width: 100%
-            object-fit: cover
-
-        &.card-height
-            height: $card-height
-            img
-                height: $card-height
-
-        &.card-height-small
-            height: $card-height/1.5
-            img
-                height: $card-height/1.5
-
-        &.card-height-big
-            height: $card-height*1.5
-            img
-                height: $card-height*1.5
-
-    &.card-empty
-        background: rgba($main-background,0.3)
-        border: $border-size dashed rgba($main-color,0.7)
-        box-shadow: none
-        padding: $layout-space
-        display: -webkit-flex 
-        display: -moz-flex 
-        display: flex
-        -webkit-align-items: center
-        -webkit-moz-items: center
-        align-items: center
-        -webkit-justify-content: center 
-        -moz-justify-content: center 
-        justify-content: center
-        *:first-child
-            margin-top: 0
-            padding-top: 0
-        *:last-child
-            margin-bottom: 0
-            padding-bottom: 0
+    img 
+      float: left
+      width: 100%
+      object-fit: cover
+    &.card-height-small
+      height: 200px
+      img
+        height: 200px
+    &.card-height-med
+      height: 300px
+      img
+        height: 300px
+    &.card-height-big
+      height: 400px
+      img
+        height: 400px
+  &.card-empty
+    background: rgba($main-background,0.3)
+    border: $border-width dashed rgba($main-color,0.7)
+    padding: $layout-space
+    display: -webkit-flex 
+    display: -moz-flex 
+    display: flex
+    -webkit-align-items: center
+    -webkit-moz-items: center
+    align-items: center
+    -webkit-justify-content: center 
+    -moz-justify-content: center 
+    justify-content: center
+    *:first-child
+      margin-top: 0
+      padding-top: 0
+    *:last-child
+      margin-bottom: 0
+      padding-bottom: 0

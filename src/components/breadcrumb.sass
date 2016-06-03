@@ -1,20 +1,11 @@
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
- * Breadcrumb
- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* src/components/breadcrumb.sass */
 .breadcrumb 
-    color: rgba($main-color,0.7)
-    font-weight: 300
-    padding: $layout-space/2 0
-
-    *
-        &:not(:last-child)::after
-            content: "⟩"
-            display: inline-block
-            font-weight: 300
-            padding-left: $layout-space/4
-            padding-right: $layout-space/4
-
-    > a 
-        border-bottom: 0
-        font-weight: 300
-            
+  color: rgba($main-color,0.7)
+  font-weight: 300
+  *
+    &:not(:last-child)::after
+      content: "⟩"
+      padding-left: $layout-space/4
+      padding-right: $layout-space/4
+  > a 
+    border-bottom: 0          

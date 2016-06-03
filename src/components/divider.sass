@@ -1,51 +1,46 @@
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
- * Divider
- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-/* * * Horizontal * * */
-.divider-horizontal
-    display: block 
-    display: -webkit-flex 
-    display: -moz-flex 
-    display: flex 
-    -webkit-align-items: center
-    -webkit-moz-items: center
-    align-items: center
-    .divider-content 
-        padding: $layout-space
-    &::after 
-        background: rgba($main-color,0.2)
-        content: ""
-        height: 1px
-        flex: 1
-    &::before 
-        background: rgba($main-color,0.2)
-        content: ""
-        height: 1px
-        flex: 1
-
-
-
-/* * * Vertical * * */
+/* src/components/divider.sass */
+.divider-horizontal,
 .divider-vertical
-    display: block 
-    display: -webkit-flex 
-    display: -moz-flex 
-    display: flex 
-    -webkit-align-items: center
-    -webkit-moz-items: center
-    align-items: center
-    -webkit-flex-direction: column 
-    -moz-flex-direction: column 
-    flex-direction: column
-    .divider-content 
-        padding: $layout-space/2 $layout-space
-    &::after 
-        background: rgba($main-color,0.2)
-        content: ""
-        width: 1px
-        flex: 1
-    &::before 
-        background: rgba($main-color,0.2)
-        content: ""
-        width: 1px
-        flex: 1
+  display: block 
+  display: -webkit-flex 
+  display: -moz-flex 
+  display: flex 
+  -webkit-align-items: center
+  -webkit-moz-items: center
+  align-items: center
+  font-family: $title-font
+  font-weight: $title-weight
+  line-height: $title-line
+
+// Divider Horizontal
+.divider-horizontal
+  .divider-content 
+    padding: $layout-space
+  &::after 
+    background: rgba($main-color,0.2)
+    content: ""
+    height: 1px
+    flex: 1
+  &::before 
+    background: rgba($main-color,0.2)
+    content: ""
+    height: 1px
+    flex: 1
+
+// Divider Vertical
+.divider-vertical
+  -webkit-flex-direction: column 
+  -moz-flex-direction: column 
+  flex-direction: column
+  .divider-content 
+    padding: $layout-space/2 $layout-space
+  &::after 
+    background: rgba($main-color,0.2)
+    content: ""
+    width: 1px
+    flex: 1
+  &::before 
+    background: rgba($main-color,0.2)
+    content: ""
+    width: 1px
+    flex: 1
