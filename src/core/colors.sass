@@ -1,83 +1,72 @@
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
- * Colors
- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-    
- /* * * Background * * */
+/* src/core/colors.sass */
+// Backgrounds
 .bg-primary
-    background: $color-primary
-    &.to-bg-step1
-        background: mix($color-primary, $main-background, 80%)
-    &.to-bg-step2
-        background: mix($color-primary, $main-background, 60%)
-    &.to-bg-step3
-        background: mix($color-primary, $main-background, 40%)
-    &.to-bg-step4
-        background: mix($color-primary, $main-background, 20%)
-    &.to-color-step1
-        background: mix($color-primary, $main-color, 90%)
-    &.to-color-step2
-        background: mix($color-primary, $main-color, 70%)
-
+  background: $color-primary
+  &.to-bg-step1
+    background: mix($color-primary, $main-background, 80%)
+  &.to-bg-step2
+    background: mix($color-primary, $main-background, 60%)
+  &.to-bg-step3
+    background: mix($color-primary, $main-background, 40%)
+  &.to-bg-step4
+    background: mix($color-primary, $main-background, 20%)
+  &.to-color-step1
+    background: mix($color-primary, $main-color, 90%)
+  &.to-color-step2
+    background: mix($color-primary, $main-color, 70%)
 .bg-accent
-    background: $color-accent
-    &.to-bg-step1
-        background: mix($color-accent, $main-background, 80%)
-    &.to-bg-step2
-        background: mix($color-accent, $main-background, 60%)
-    &.to-bg-step3
-        background: mix($color-accent, $main-background, 40%)
-    &.to-bg-step4
-        background: mix($color-accent, $main-background, 20%)
-    &.to-color-step1
-        background: mix($color-accent, $main-color, 90%)
-    &.to-color-step2
-        background: mix($color-accent, $main-color, 70%)
+  background: $color-accent
+  &.to-bg-step1
+    background: mix($color-accent, $main-background, 80%)
+  &.to-bg-step2
+    background: mix($color-accent, $main-background, 60%)
+  &.to-bg-step3
+    background: mix($color-accent, $main-background, 40%)
+  &.to-bg-step4
+    background: mix($color-accent, $main-background, 20%)
+  &.to-color-step1
+    background: mix($color-accent, $main-color, 90%)
+  &.to-color-step2
+    background: mix($color-accent, $main-color, 70%)
+.bg-white
+  background: $color-white
+  &.to-bg-step1
+    background: mix($color-white, $main-background, 80%)
+  &.to-bg-step2
+    background: mix($color-white, $main-background, 60%)
+  &.to-bg-step3
+    background: mix($color-white, $main-background, 40%)
+  &.to-bg-step4
+    background: mix($color-white, $main-background, 20%)
+  &.to-color-step1
+    background: mix($color-white, $main-color, 90%)
+  &.to-color-step2
+    background: mix($color-white, $main-color, 70%)
+.bg-black
+  background: $color-black
+  &.to-bg-step1
+    background: mix($color-black, $main-background, 80%)
+  &.to-bg-step2
+    background: mix($color-black, $main-background, 60%)
+  &.to-bg-step3
+    background: mix($color-black, $main-background, 40%)
+  &.to-bg-step4
+    background: mix($color-black, $main-background, 20%)
+  &.to-color-step1
+    background: mix($color-black, $main-color, 90%)
+  &.to-color-step2
+    background: mix($color-black, $main-color, 70%)
 
-// .bg-white
-//     background: $color-white
-//     &.darken-1
-//         background: darken($color-white, 10)
-//     &.darken-2
-//         background: darken($color-white, 20)
-//     &.darken-3
-//         background: darken($color-white, 30)
-
-// .bg-black
-//     background: $color-black
-//     &.lighten-1
-//         background: lighten($color-black, 10)
-//     &.lighten-2
-//         background: lighten($color-black, 20)
-//     &.lighten-3
-//         background: lighten($color-black, 30)
-
-
-
-
-/* * * Color * * */
+// Colors
 .color-primary
-    color: $color-primary
-
+  color: $color-primary
 .color-accent
-    color: $color-accent
-
+  color: $color-accent
+.color-white
+  color: $color-white
+.color-black
+  color: $color-black
 .color-main-color
-    color: $main-color
-
+  color: $main-color
 .color-main-bg
-    color: $main-background
-
-
-
-/* * * Border * * */
-.border-primary
-    border-color: $color-primary
-
-.border-accent
-    border-color: $color-accent
-
-.border-main-color
-    border-color: $main-color
-
-.border-main-bg
-    border-color: $main-background
+  color: $main-background
