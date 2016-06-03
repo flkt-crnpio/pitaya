@@ -1,85 +1,58 @@
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
- * Link
- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-/* * * Color functions * * */
-=link-darken($color)
-    border-color: transparent
-    color: $color
-    &:hover,
-    &:focus
-        border-color: darken($color, 10)
-        color: darken($color, 10)
-    &.active,
-    &:active
-        border-color: darken($color, 15)
-        color: darken($color, 15)
-=link-lighten($color)
-    border-color: transparent
-    color: $color
-    &:hover,
-    &:focus
-        border-color: lighten($color, 10)
-        color: lighten($color, 10)
-    &.active,
-    &:active
-        border-color: lighten($color, 20)
-        color: lighten($color, 20)
+/* src/core/link.sass */
+// Link color functions
+=link($color)
+  border-color: transparent
+  color: $color
+  &:hover,
+  &:focus
+    border-color: mix($color, $main-color, 80%)
+    color: mix($color, $main-color, 80%)
+  &.active,
+  &:active
+    border-color: mix($color, $main-background, 80%)
+    color: mix($color, $main-background, 80%)
 
 =link-fancy($color)
+  &::after
+    background: $color
+    width: 0
+  &:hover,
+  &:focus
+    color: mix($color, $main-color, 80%)
     &::after
-        background: $color-primary
-    &:hover,
-    &:focus
-        color: darken($color, 10)
-        &::after
-            background: darken($color, 10)
-    &.active,
-    &:active
-        color: darken($color, 15)
-        &::after
-            background: darken($color, 15)
+      background: mix($color, $main-color, 80%)
+      width: 100%
+  &.active,
+  &:active
+    color: mix($color, $main-background, 80%)
+    &::after
+      background: mix($color, $main-background, 80%)
+      width: 100%
 
-
-
-/* * * Link default values * * */
+// Link
 a
-    border-bottom: $link-border solid transparent
-    display: inline-block
-    color: $color-primary
-    font-size: 1em
-    font-weight: 300
-    text-decoration: none
-    +link-lighten($color-primary)
-    +transition-ease(0.3s)
+  border-bottom: $border-width solid transparent
+  color: $color-primary
+  display: inline-block
+  text-decoration: none
+  +link($color-primary)
+  +transition-ease(0.3s)
+  &.link-accent
+    +link($color-accent)
 
-
-
-/* * * Link colors * * */
-.link-accent
-    +link-lighten($color-accent)
-
-
-
-/* * * Link fancy * * */ 
+// Link Fancy 
 .link-fancy
-    border-bottom: 0
-    position: relative
-    +link-fancy($color-primary)
+  border-bottom: 0
+  position: relative
+  +link-fancy($color-primary)
+  +transition-ease(0.3s)
+  &::after
+    content: ""
+    position: absolute
+    bottom: -$border-width
+    right: 0
+    width: 0
+    height: $border-width
     +transition-ease(0.3s)
-    &::after
-        content: ""
-        position: absolute
-        bottom: -2px
-        right: 0
-        width: 0
-        height: 2px
-        +transition-ease(0.3s)
-    &.active,
-    &:active,
-    &:hover,
-    &:focus
-        &::after
-            width: 100%
-
-    &.link-accent
-        +link-fancy($color-accent)
+  &.link-accent
+    +link-fancy($color-accent)
