@@ -1,7 +1,7 @@
 /* src/core/button.sass */
 // Button color functions
 =button($color)
-  background-image: linear-gradient(125deg, $color 50%, transparent 50%)
+  background-image: linear-gradient(-135deg, transparent 50%, $color 50%)
   background-position: 100% 0
   border-color: $color
   color: $color
@@ -16,7 +16,7 @@
     color: $main-background
 
 =button-solid($color)
-  background-image: linear-gradient(125deg, $color 50%, transparent 50%)
+  background-image: linear-gradient(-135deg, transparent 50%, $color 50%)
   background-position: 0 0
   border-color: $color
   color: $main-background
@@ -31,7 +31,7 @@
 // Button default values
 button
   background: transparent
-  background-size: 250% 100%
+  background-size: 300% 100%
   border: $border-width solid $color-primary
   border-radius: $border-radius
   color: $color-primary
@@ -46,6 +46,10 @@ button
     +button($color-accent)
     &.button-solid
       +button-solid($color-accent)
+  &.button-primary
+    +button($color-primary)
+    &.button-solid
+      +button-solid($color-primary)
 
 // Button Sizes
 .button-small 

@@ -1,0 +1,123 @@
+/* src/navigation/tab.sass */
+.navbar
+  display: block 
+  display: -webkit-flex 
+  display: -moz-flex 
+  display: flex 
+  -webkit-flex-wrap: nowrap 
+  -moz-flex-wrap: nowrap 
+  flex-wrap: nowrap
+  -webkit-align-items: center
+  -webkit-moz-items: center
+  align-items: center
+  background: rgba($main-color,0.05)
+  border-bottom: $border-width solid rgba($main-color,0.1)
+  color: $main-color
+  overflow-y: visible
+  overflow-x: scroll
+  height: 60px
+  width: 100vw
+  z-index: 100
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6
+    margin: 0 $layout-space/2
+    z-index: 101
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  a,
+  button
+    height: 60px
+    line-height: 60px
+    white-space: nowrap
+  a
+    height: calc(60px - #{$border-width})
+    line-height: calc(60px - #{$border-width})
+    padding: 0 $layout-space/4
+    +link($main-color)
+    z-index: 102
+  button
+    height: 30px
+    line-height: 30px
+    margin: 0 $layout-space/2
+    padding: 0 $layout-space/4
+    +button($main-color)
+    z-index: 103
+  
+  &.navbar-center-content
+    -webkit-justify-content: center 
+    -moz-justify-content: center 
+    justify-content: center
+  
+  &.navbar-fix-bottom,
+  &.navbar-fix-top
+    margin: 0
+    padding: 0
+    position: fixed
+    left: 0
+    right: 0
+  &.navbar-fix-bottom
+    border-bottom: 0
+    border-top: $border-width solid rgba($main-color,0.1)
+    bottom: 0
+  &.navbar-fix-top
+    top: 0
+
+  &.navbar-app-button
+    -webkit-justify-content: space-around 
+    -moz-justify-content: space-around 
+    justify-content: space-around
+    @media screen and (min-width: $laptop)
+      -webkit-justify-content: center
+      -moz-justify-content: center
+      justify-content: center
+    button
+      border: none
+      flex: 1
+      border-radius: 0
+      height: 60px
+      line-height: 60px
+      margin: 0
+      text-align: center
+      @media screen and (min-width: $laptop)
+        flex: 0
+        padding: 0 $layout-space
+
+  .navbar-center-element
+    margin: 0
+    padding: 0
+    position: absolute
+    left: 0
+    right: 0
+    text-align: center
+
+  // Navbar colors
+  &.background-primary,
+  &.background-accent
+    button 
+      background-image: linear-gradient(-135deg, transparent 50%, rgba(0,0,0,0.2) 50%)
+  &.background-primary
+    background: rgba($color-primary,0.8)
+    border-color: $color-primary
+  &.background-accent
+    background: rgba($color-accent,0.8)
+    border-color: $color-accent
+  &.color-primary
+    color: $color-primary
+    a 
+      +link($color-primary)
+    button 
+      +button($color-primary)
+  &.color-accent
+    color: $color-accent
+    a 
+      +link($color-accent)
+    button 
+      +button($color-accent)
