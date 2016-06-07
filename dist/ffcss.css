@@ -956,7 +956,7 @@ h1 {
     margin: 6rem 0 3rem; }
     h1.lead + h2,
     h1.lead + h3 {
-      margin-top: -3rem;
+      margin-top: -2rem;
       margin-bottom: 3rem; }
 
 h2 {
@@ -982,7 +982,7 @@ h6 {
       margin: 8rem 0 3rem; }
       h1.lead + h2,
       h1.lead + h3 {
-        margin-top: -3rem;
+        margin-top: -2rem;
         margin-bottom: 3rem; }
 
   h2 {
@@ -1007,7 +1007,7 @@ h6 {
       margin: 12rem 0 6rem; }
       h1.lead + h2,
       h1.lead + h3 {
-        margin-top: -6rem;
+        margin-top: -5rem;
         margin-bottom: 6rem; }
 
   h2 {
@@ -2632,7 +2632,14 @@ blockquote {
     background: rgba(13, 224, 132, 0.8);
     border-color: #0de084; }
   .navbar.color-primary {
-    color: #fd264f; }
+    color: #efedef; }
+    .navbar.color-primary h1,
+    .navbar.color-primary h2,
+    .navbar.color-primary h3,
+    .navbar.color-primary h4,
+    .navbar.color-primary h5,
+    .navbar.color-primary h6 {
+      color: #fd264f; }
     .navbar.color-primary a {
       border-color: transparent;
       color: #fd264f; }
@@ -2656,7 +2663,14 @@ blockquote {
         border-color: #cf2347;
         color: #191828; }
   .navbar.color-accent {
-    color: #0de084; }
+    color: #efedef; }
+    .navbar.color-accent h1,
+    .navbar.color-accent h2,
+    .navbar.color-accent h3,
+    .navbar.color-accent h4,
+    .navbar.color-accent h5,
+    .navbar.color-accent h6 {
+      color: #0de084; }
     .navbar.color-accent a {
       border-color: transparent;
       color: #0de084; }
