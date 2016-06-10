@@ -24,8 +24,6 @@
   margin: 0 auto
   max-width: $width-max
   width: $width-phone
-  padding-top: $layout-space
-  padding-bottom: $layout-space
 @media screen and (min-width: $tablet)
   .container
     width: $width-tablet
@@ -33,8 +31,23 @@
   .container
     width: $width-laptop
 
+// Padding
+.general-padding
+  padding-top: $layout-space
+  padding-bottom: $layout-space
+
 // Navbar fixed space
 .padding-navbar-fixed-top
   padding-top: 60px
 .padding-navbar-fixed-bottom
   padding-bottom: 60px
+
+// Sidenavbar with anchors 
+.sidenavbar-padding
+  padding-top: 80px
+
+.stay-close
+  margin-bottom: 0
+  + .stay-close
+    margin-top: 0
+    margin-bottom: 0
