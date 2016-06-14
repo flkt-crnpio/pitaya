@@ -104,7 +104,6 @@ p
 
 // Inline text tags
 abbr,
-code,
 del,
 em,
 ins,
@@ -117,6 +116,7 @@ sup,
 sub,
 var
   color: rgba($main-color,0.9)
+code,
 kbd,
 mark,
 samp,
@@ -141,26 +141,29 @@ pre
   margin: 0
   padding: 0
 
-// The Code tag with colors
+// The Code tag
 code
   background: #263238
-  border-radius: $border-radius
-  color: rgba(255,255,255,0.7)
-  display: block
-  padding: $layout-space/2
-  margin: 0
-  .teal
-    color: #80CBC4
-  .purple
-    color: #9C27B0
-  .orange
-    color: #FF7042
-  .green
-    color: #8BC34A
-  .yellow
-    color: #FFF175
-  .pink
-    color: #E57373
+  color: #80CBC4
+  &.code-block
+    background: #263238
+    border-radius: $border-radius
+    color: rgba(255,255,255,0.7)
+    display: block
+    padding: $layout-space/2
+    margin: 0
+    .teal
+      color: #80CBC4
+    .purple
+      color: #9C27B0
+    .orange
+      color: #FF7042
+    .green
+      color: #8BC34A
+    .yellow
+      color: #FFF175
+    .pink
+      color: #E57373
 .code-sample
   background: rgba(#263238,0.5)
   margin: $layout-space 0 0
