@@ -106,7 +106,7 @@ kbd,
 pre,
 samp,
 var {
-  font-family: monospace, monospace;
+  font-family: monospace;
   font-size: 1em; }
 
 pre {
@@ -1052,7 +1052,6 @@ p {
   padding: 0; }
 
 abbr,
-code,
 del,
 em,
 ins,
@@ -1066,6 +1065,7 @@ sub,
 var {
   color: rgba(239, 237, 239, 0.9); }
 
+code,
 kbd,
 mark,
 samp,
@@ -1085,7 +1085,6 @@ samp {
   background: #00f;
   color: #fff; }
 
-em,
 strong {
   font-weight: 700; }
 
@@ -1099,28 +1098,37 @@ pre {
 
 code {
   background: #263238;
-  border-radius: 1px;
-  color: rgba(255, 255, 255, 0.7);
-  display: block;
-  padding: 0.5rem 1rem;
-  margin: 0; }
-  code .teal {
-    color: #80CBC4; }
-  code .purple {
-    color: #9C27B0; }
-  code .orange {
-    color: #FF7042; }
-  code .green {
-    color: #8BC34A; }
-  code .yellow {
-    color: #FFF175; }
-  code .pink {
-    color: #E57373; }
+  color: #80CBC4; }
+  code.code-block {
+    background: #263238;
+    border-radius: 1px;
+    color: rgba(255, 255, 255, 0.7);
+    display: block;
+    padding: 1rem;
+    margin: 0; }
+    code.code-block .teal {
+      color: #80CBC4; }
+    code.code-block .purple {
+      color: #9C27B0; }
+    code.code-block .orange {
+      color: #FF7042; }
+    code.code-block .green {
+      color: #8BC34A; }
+    code.code-block .yellow {
+      color: #FFF175; }
+    code.code-block .pink {
+      color: #E57373; }
+
+.code-sample {
+  background: rgba(38, 50, 56, 0.5);
+  margin: 2rem 0 0;
+  padding: 1rem;
+  overflow: hidden; }
 
 blockquote {
   color: #efedef;
   margin: 4rem 0;
-  padding: 2rem;
+  padding: 2rem 0;
   position: relative; }
   blockquote p {
     font-size: 1.6em;
@@ -1149,8 +1157,32 @@ blockquote {
     color: rgba(239, 237, 239, 0.1);
     content: "“";
     position: absolute;
-    left: 2rem;
+    left: 0;
     top: 4rem;
+    z-index: 0; }
+
+q {
+  color: rgba(239, 237, 239, 0.7);
+  position: relative;
+  display: inline-block;
+  padding: 0 2rem; }
+  q::before {
+    font-family: Georgia, serif;
+    font-size: 3em;
+    color: rgba(239, 237, 239, 0.1);
+    content: "“";
+    position: absolute;
+    left: 0.5rem;
+    top: 0.5rem;
+    z-index: 0; }
+  q::after {
+    font-family: Georgia, serif;
+    font-size: 3em;
+    color: rgba(239, 237, 239, 0.1);
+    content: "”";
+    position: absolute;
+    right: 0.5rem;
+    top: 0.5rem;
     z-index: 0; }
 
 /* src/layout/flex.sass */
@@ -2142,9 +2174,7 @@ blockquote {
 .container {
   margin: 0 auto;
   max-width: auto;
-  width: 90%;
-  padding-top: 2rem;
-  padding-bottom: 2rem; }
+  width: 90%; }
 
 @media screen and (min-width: 48rem) {
   .container {
@@ -2152,11 +2182,24 @@ blockquote {
 @media screen and (min-width: 64rem) {
   .container {
     width: 80%; } }
+.general-padding {
+  padding-top: 2rem;
+  padding-bottom: 2rem; }
+
 .padding-navbar-fixed-top {
   padding-top: 60px; }
 
 .padding-navbar-fixed-bottom {
   padding-bottom: 60px; }
+
+.sidenavbar-padding {
+  padding-top: 80px; }
+
+.stay-close {
+  margin-bottom: 0; }
+  .stay-close + .stay-close {
+    margin-top: 0;
+    margin-bottom: 0; }
 
 /* src/layout/pin.sass */
 .pin-container {
@@ -2509,7 +2552,7 @@ blockquote {
       margin: 5px 5px 5px 0;
       margin-left: -0.5rem; }
 
-/* src/navigation/tab.sass */
+/* src/navigation/navbar.sass */
 .navbar {
   display: block;
   display: -webkit-flex;
@@ -2694,6 +2737,29 @@ blockquote {
         border-color: #0fb872;
         color: #191828; }
 
+/* src/navigation/sidenavbar.sass */
+.sidenavbar {
+  display: none; }
+  @media screen and (min-width: 48rem) {
+    .sidenavbar {
+      display: block;
+      padding-top: 80px;
+      position: fixed; }
+      .sidenavbar > ul {
+        border-left: 4px solid #fd264f;
+        list-style: none;
+        margin: 2rem 0;
+        padding: 0; }
+        .sidenavbar > ul > li {
+          padding: 0 2rem; }
+          .sidenavbar > ul > li ul {
+            list-style: none;
+            margin: 0;
+            padding: 0; }
+            .sidenavbar > ul > li ul li {
+              font-weight: 100;
+              padding: 0 1rem; } }
+
 /* src/helper/colors.sass */
 .bg-primary {
   background: #fd264f; }
@@ -2754,6 +2820,29 @@ blockquote {
     background: #464646; }
   .bg-black.to-color-step2 {
     background: #6b6b6b; }
+
+.bg-main-bg {
+  background: #191828; }
+  .bg-main-bg.to-color-step1 {
+    background: #2e2d3c; }
+  .bg-main-bg.to-color-step2 {
+    background: #444350; }
+  .bg-main-bg.to-color-step3 {
+    background: #595864; }
+  .bg-main-bg.to-color-step4 {
+    background: #6f6d78; }
+  .bg-main-bg.to-color-step5 {
+    background: #84838c; }
+  .bg-main-bg.to-color-step6 {
+    background: #99989f; }
+  .bg-main-bg.to-color-step7 {
+    background: #afadb3; }
+  .bg-main-bg.to-color-step8 {
+    background: #c4c2c7; }
+  .bg-main-bg.to-color-step9 {
+    background: #dad8db; }
+  .bg-main-bg.to-color-step10 {
+    background: #efedef; }
 
 .color-primary {
   color: #fd264f; }

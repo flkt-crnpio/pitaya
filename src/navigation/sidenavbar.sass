@@ -1,0 +1,22 @@
+/* src/navigation/sidenavbar.sass */
+.sidenavbar
+  display: none
+  @media screen and (min-width: $tablet)
+    display: block
+    padding-top: 80px
+    position: fixed
+
+    > ul
+      border-left: 4px solid $color-primary
+      list-style: none
+      margin: $layout-space 0
+      padding: 0
+      > li
+        padding: 0 $layout-space
+        ul
+          list-style: none
+          margin: 0
+          padding: 0
+          li
+            font-weight: 100
+            padding: 0 $layout-space/2
