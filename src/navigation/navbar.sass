@@ -34,9 +34,14 @@
   h6,
   a,
   button
+    display: inline-block
+    flex: 1 0 auto
     height: 60px
     line-height: 60px
     white-space: nowrap
+    @media screen and (min-width: $tablet)
+      flex: 0 0 auto
+
   a
     height: calc(60px - #{$border-width})
     line-height: calc(60px - #{$border-width})
@@ -51,10 +56,9 @@
     +button($main-color)
     z-index: 103
 
-  *
-    display: inline-block
-    flex: 1 0 auto
-    white-space: nowrap
+
+
+
 
   &.navbar-center-content
     -webkit-justify-content: center
