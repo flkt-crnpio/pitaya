@@ -12,7 +12,7 @@ h6
   margin: $layout-space 0
   padding: 0
 
-h1 
+h1
   font-size: 2em
   &.lead
     font-size: 3em
@@ -32,7 +32,7 @@ h5
 h6
   font-size: 0.9em
 @media screen and (min-width: $phone-l)
-  h1 
+  h1
     font-size: 2.5em
     &.lead
       font-size: 3.5em
@@ -52,7 +52,7 @@ h6
   h6
     font-size: 1em
 @media screen and (min-width: $laptop)
-  h1 
+  h1
     font-size: 2.7em
     &.lead
       font-size: 3.7em
@@ -97,7 +97,7 @@ h6 small
   margin: 0 0.6em
 
 // Paragraph
-p 
+p
   line-height: $font-line
   margin: $layout-space 0
   padding: 0
@@ -134,10 +134,10 @@ samp
   color: #fff
 strong
   font-weight: 700
-var 
+var
   font-style: normal
   font-weight: 100
-pre 
+pre
   margin: 0
   padding: 0
 
@@ -145,11 +145,14 @@ pre
 code
   background: #263238
   color: #80CBC4
+  display: inline-block
   &.code-block
     background: #263238
     border-radius: $border-radius
     color: rgba(255,255,255,0.7)
     display: block
+    overflow-y: hidden
+    overflow-x: scroll
     padding: $layout-space/2
     margin: 0
     .teal
@@ -166,6 +169,7 @@ code
       color: #E57373
 .code-sample
   background: rgba(#263238,0.5)
+  display: block
   margin: $layout-space 0 0
   padding: $layout-space/2
   overflow: hidden
@@ -174,7 +178,7 @@ code
 blockquote
   color: $main-color
   margin: $layout-space*2 0
-  padding: $layout-space 0 
+  padding: $layout-space 0
   position: relative
   p
     font-size: 1.6em
@@ -201,12 +205,12 @@ blockquote
     font-family: Georgia, serif
     font-size: 11em
     color: rgba($main-color,0.1)
-    content: "\201C"        
+    content: "\201C"
     position: absolute
     left: 0
     top: $layout-space*2
     z-index: 0
-q 
+q
   color: rgba($main-color,0.7)
   position: relative
   display: inline-block
@@ -215,7 +219,7 @@ q
     font-family: Georgia, serif
     font-size: 3em
     color: rgba($main-color,0.1)
-    content: "\201C"        
+    content: "\201C"
     position: absolute
     left: $layout-space/4
     top: $layout-space/4
@@ -224,7 +228,7 @@ q
     font-family: Georgia, serif
     font-size: 3em
     color: rgba($main-color,0.1)
-    content: "\201D"        
+    content: "\201D"
     position: absolute
     right: $layout-space/4
     top: $layout-space/4
