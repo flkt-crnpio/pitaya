@@ -22,8 +22,8 @@
     <main class="flex">
       <div class="container">
         <div class="row">
-          <aside class="flex-1 flex-tablet-1_3">
-            <nav class="sidenavbar">
+          <aside class="flex-1 flex-tablet-1_3 padding-navbar-fixed-top">
+            <nav class="sidenavbar sidenavbar-fixed">
               <ul>
                 <li><h3 class="color-primary">Contenido</h3></li>
                 <li><a href="#botones">Botones</a></li>
@@ -39,10 +39,10 @@
 
           <div class="flex-1 flex-tablet-2_3">
             <div>
-              <div id="botones" class="sidenavbar-padding flex">
+              <div id="botones" class="padding-navbar-fixed-top flex">
                 <h1 class="color-primary">Botones</h1>
-                <h4 class="stay-close">Colores</h4>
-                <p class="stay-close">Color principal y color de acénto. Estilo de línea o sólido.</p>
+                <h4 class="margin-none">Colores</h4>
+                <p class="margin-none">Color principal y color de acénto. Estilo de línea o sólido.</p>
                 <div class="code-sample">
                   <button> Botón </button>
                   <button class="button-primary"> Botón primario </button>
@@ -59,8 +59,8 @@
 <span class="pink">&lt;button class="button-accent button-solid"&gt;</span>Botón acénto sólido<span class="pink">&lt;/button&gt;</span>
 </pre>
                 </code>
-                <h4 class="stay-close">Tamaños</h4>
-                <p class="stay-close">Pequeño, normal, grande y bloque.</p>
+                <h4 class="margin-none">Tamaños</h4>
+                <p class="margin-none">Pequeño, normal, grande y bloque.</p>
                 <div class="code-sample">
                   <button class="button-small" type="button"> Botón pequeño </button>
                   <button type="button"> Botón normal </button>
@@ -79,10 +79,10 @@
             </div>
 
             <div>
-              <div id="colores" class="sidenavbar-padding flex">
+              <div id="colores" class="padding-navbar-fixed-top flex">
                 <h1 class="color-primary">Colores</h1>
-                <h4 class="stay-close">Fondos</h4>
-                <p class="stay-close">Un color principal y un color de acénto.</p>
+                <h4 class="margin-none">Fondos</h4>
+                <p class="margin-none">Un color principal y un color de acénto.</p>
                 <div class="code-sample">
                   <div class="bg-primary to-bg-step4">&nbsp;</div>
                   <div class="bg-primary to-bg-step3">&nbsp;</div>
@@ -124,8 +124,8 @@
 </pre>
                 </code>
 
-                <h4 class="stay-close">Fondos</h4>
-                <p class="stay-close">Escala de grises.</p>
+                <h4 class="margin-none">Fondos</h4>
+                <p class="margin-none">Escala de grises.</p>
                 <div class="code-sample">
                   <div class="bg-white to-bg-step4">&nbsp;</div>
                   <div class="bg-white to-bg-step3">&nbsp;</div>
@@ -167,8 +167,8 @@
 </pre>
                 </code>
 
-                <h4 class="stay-close">Fondos</h4>
-                <p class="stay-close">Del color de fondo general, al color de texto general.</p>
+                <h4 class="margin-none">Fondos</h4>
+                <p class="margin-none">Del color de fondo general, al color de texto general.</p>
                 <div class="code-sample">
                   <div class="bg-main-bg"> Fondo general </div>
                   <div class="bg-main-bg to-color-step1">&nbsp;</div>
@@ -197,8 +197,8 @@
 <span class="pink">&lt;div class="bg-main-bg to-color-step10"&gt;</span><span class="pink">&lt;/div&gt;</span>
 </pre>
                 </code>
-                <h4 class="stay-close">Fondos</h4>
-                <p class="stay-close">Color primario, de acénto, 'blanco', 'negro', color del texto en general y color del fondo general. Todos éstos estilos están basados en las variables de color de la librería, editables en el archivo de <code>_vars.sass</code>.</p>
+                <h4 class="margin-none">Fondos</h4>
+                <p class="margin-none">Color primario, de acénto, 'blanco', 'negro', color del texto en general y color del fondo general. Todos éstos estilos están basados en las variables de color de la librería, editables en el archivo de <code>_vars.sass</code>.</p>
                 <div class="code-sample">
                   <div class="color-primary">
                     Texto de color primario
@@ -233,11 +233,11 @@
             </div>
 
             <div>
-              <div id="formularios" class="sidenavbar-padding flex">
+              <div id="formularios" class="padding-navbar-fixed-top flex">
                 <h1 class="color-primary">Formularios</h1>
 
-                <h4 class="stay-close">Formulario sencillo</h4>
-                <p class="stay-close">El estilo del formulario se basa en el color del texto en general y la variable para bordes que también utilizan los hipervínculos y los botones. Cuando se selecciona un elemento toma el color de acénto.</p>
+                <h4 class="margin-none">Formulario sencillo</h4>
+                <p class="margin-none">El estilo del formulario se basa en el color del texto en general y la variable para bordes que también utilizan los hipervínculos y los botones. Cuando se selecciona un elemento toma el color de acénto.</p>
                 <div class="code-sample">
                   <form>
                     <label for="f1">Label</label>
@@ -261,8 +261,8 @@
 </pre>
                 </code>
 
-                <h4 class="stay-close">Errores</h4>
-                <p class="stay-close">Los errores se toman con el selector <code>:invalid</code> de CSS y toman el color de la variable del color de acénto. Se pueden poner errores generales, que aparecen si cualquier elemento del formulario es invalido con la clase <code>.form-error</code>, o errores particulares de cada input con la clase <code>.input-error</code>.</p>
+                <h4 class="margin-none">Errores</h4>
+                <p class="margin-none">Los errores se toman con el selector <code>:invalid</code> de CSS y toman el color de la variable del color de acénto. Se pueden poner errores generales, que aparecen si cualquier elemento del formulario es invalido con la clase <code>.form-error</code>, o errores particulares de cada input con la clase <code>.input-error</code>.</p>
                 <div class="code-sample">
                   <form>
                     <span class="form-error">Mensage general. Aparece cuando el formulario es invalido.</span><br>
@@ -283,8 +283,8 @@
                 </code>
 
                 <h3>Formularios fancy</h3>
-                <h4 class="stay-close">Input &amp; Textarea</h4>
-                <p class="stay-close">Para animar los iputs parecido al material.</p>
+                <h4 class="margin-none">Input &amp; Textarea</h4>
+                <p class="margin-none">Para animar los iputs parecido al material.</p>
                 <div class="code-sample">
                   <form>
                     <div class="form-input-block">
@@ -411,7 +411,7 @@
             </div>
 
             <div>
-              <div id="hipervinculos" class="sidenavbar-padding flex">
+              <div id="hipervinculos" class="padding-navbar-fixed-top flex">
                 <h1 class="color-primary">Hipervínculos</h1>
                 <p>
                   (Hyperlink) Un hipervínculo es un elemento de un documento electrónico que hace referencia a otro recurso. Se escriben con la etiqueta <code>&lt;a&gt;</code> y puede crear un vínculo entre elementos en el mismo documento o hacia documentos externos.
@@ -446,10 +446,10 @@
             </div>
 
             <div>
-              <div id="listas" class="sidenavbar-padding flex">
+              <div id="listas" class="padding-navbar-fixed-top flex">
                 <h1 class="color-primary">Listas</h1>
-                <h4 class="stay-close">Listas desordenadas</h4>
-                <p class="stay-close">Se utiliza para listas en donde no importa el órden en el que se escriban. El primer nivel de las listas desordenadas se marcan con círculos sólidos, todos los niveles consecutivos tienen círculos de línea.</p>
+                <h4 class="margin-none">Listas desordenadas</h4>
+                <p class="margin-none">Se utiliza para listas en donde no importa el órden en el que se escriban. El primer nivel de las listas desordenadas se marcan con círculos sólidos, todos los niveles consecutivos tienen círculos de línea.</p>
                 <div class="code-sample">
                   <ul>
                       <li>UL listas desordenadas</li>
@@ -477,8 +477,8 @@
 <span class="pink">&lt;/ul&gt;</span>
 </pre>
                 </code>
-                <h4 class="stay-close">Listas ordenadas</h4>
-                <p class="stay-close">El primer nivel de las listas ordenadas se marcan con números enteros, después se agregan ceros al inicio.</p>
+                <h4 class="margin-none">Listas ordenadas</h4>
+                <p class="margin-none">El primer nivel de las listas ordenadas se marcan con números enteros, después se agregan ceros al inicio.</p>
                 <div class="code-sample">
                   <ol>
                       <li>UL listas ordenadas</li>
@@ -515,8 +515,8 @@
 <span class="pink">&lt;/ol&gt;</span>
 </pre>
                 </code>
-                <h4 class="stay-close">Listas descriptivas</h4>
-                <p class="stay-close">Listas descriptivas con términos y descropciones.</p>
+                <h4 class="margin-none">Listas descriptivas</h4>
+                <p class="margin-none">Listas descriptivas con términos y descropciones.</p>
                 <div class="code-sample">
                   <dl>
                       <dt>Término</dt>
@@ -539,7 +539,7 @@
             </div>
 
             <div>
-              <div id="tablas" class="sidenavbar-padding flex">
+              <div id="tablas" class="padding-navbar-fixed-top flex">
                 <h1 class="color-primary">Tablas</h1>
                 <p>Las tablas deben ir dentro de un <code>.table-container</code> por si el contenido exede del tamaño máximo, se pueda ver el resto del contenido haciendo scroll horizontal. Para mobile el header se oculta por completo y las filas terminan siendo un bloque de contenido separado por líneas, se puede utilizar la clase <code>.th-mobile</code> dentro de las celdas para poner títulos que sólo se vean en mobile.</p>
                 <div class="code-sample">
@@ -616,13 +616,13 @@
             </div>
 
             <div>
-              <div id="texto" class="sidenavbar-padding flex">
+              <div id="texto" class="padding-navbar-fixed-top flex">
                 <h1 class="color-primary">Texto</h1>
                 <p>
                   La tipografía general del sitio utiliza <a href="https://www.google.com/fonts/specimen/Roboto" target="_blank">Roboto</a> de Google Fonts. Para los títulos usa <a href="https://www.google.com/fonts/specimen/Arvo">Arvo</a>, también de Google Fonts. Ambas fuentes están definidas a través de una variable en el archivo de <code>_vars.sass</code>, para poder editarlas fácilmente.
                 </p>
               </div>
-              <div id="titulos" class="sidenavbar-padding flex">
+              <div id="titulos" class="padding-navbar-fixed-top flex">
                 <h3 class="color-primary">Títulos</h3>
                 <p>
                   Acá se pueden ver los ejemplos de los margenes y tamaños de los títulos como normalmente se utilizan. Además existe la clase <code>.lead</code> que se puede agregar al título principal para hacerla aún más grande y con mucho más margen.
@@ -728,10 +728,10 @@
 </pre>
                 </code>
               </div>
-              <div id="texto-en-linea" class="sidenavbar-padding flex">
+              <div id="texto-en-linea" class="padding-navbar-fixed-top flex">
                 <h3 class="color-primary">Texto en linea</h3>&nbsp;
-                <h4 class="stay-close">Abreviaciones</h4>
-                <p class="stay-close">Etiqueta utilizada para una abreviacón o un acrónimo.</p>
+                <h4 class="margin-none">Abreviaciones</h4>
+                <p class="margin-none">Etiqueta utilizada para una abreviacón o un acrónimo.</p>
                 <div class="code-sample">
                   <abbr title="Abreviación">abbr</abbr>
                 </div>
@@ -740,8 +740,8 @@
 <span class="pink">&lt;abbr title="Abreviación"&gt;</span> abbr <span class="pink">&lt;/abbr&gt;</span>
 </pre>
                 </code>
-                <h4 class="stay-close">Texto eliminado</h4>
-                <p class="stay-close">Define un fragmento de texto que fué removido del documento.</p>
+                <h4 class="margin-none">Texto eliminado</h4>
+                <p class="margin-none">Define un fragmento de texto que fué removido del documento.</p>
                 <div class="code-sample">
                   <del cite="URL" datetime="YYYY-MM-DDThh:mm:ssTZD"> Deleted text </del>
                 </div>
@@ -750,8 +750,8 @@
 <span class="pink">&lt;del cite="URL" datetime="YYYY-MM-DDThh:mm:ssTZD"&gt;</span> Deleted text <span class="pink">&lt;/del&gt;</span>
 </pre>
                 </code>
-                <h4 class="stay-close">Enfasis</h4>
-                <p class="stay-close">Se utiliza para resaltar un fragmento de texto.</p>
+                <h4 class="margin-none">Enfasis</h4>
+                <p class="margin-none">Se utiliza para resaltar un fragmento de texto.</p>
                 <div class="code-sample">
                   <em>Emphasis</em>
                 </div>
@@ -760,8 +760,8 @@
 <span class="pink">&lt;em&gt;</span> Emphasis <span class="pink">&lt;/em&gt;</span>
 </pre>
                 </code>
-                <h4 class="stay-close">Nuevo texto</h4>
-                <p class="stay-close">Define un fragmento de texto que se incertó en un documento ya existente.</p>
+                <h4 class="margin-none">Nuevo texto</h4>
+                <p class="margin-none">Define un fragmento de texto que se incertó en un documento ya existente.</p>
                 <div class="code-sample">
                   <ins cite="URL" datetime="YYYY-MM-DDThh:mm:ssTZD">Inserted text</ins>
                 </div>
@@ -770,8 +770,8 @@
 <span class="pink">&lt;ins cite="URL" datetime="YYYY-MM-DDThh:mm:ssTZD"&gt;</span> Inserted text <span class="pink">&lt;/ins&gt;</span>
 </pre>
                 </code>
-                <h4 class="stay-close">Entrada de teclado</h4>
-                <p class="stay-close">Define la entrada de teclado. </p>
+                <h4 class="margin-none">Entrada de teclado</h4>
+                <p class="margin-none">Define la entrada de teclado. </p>
                 <div class="code-sample">
                   <kbd>Keyboard input</kbd>
                 </div>
@@ -780,8 +780,8 @@
 <span class="pink">&lt;kbd&gt;</span> Keyboard input <span class="pink">&lt;/kbd&gt;</span>
 </pre>
                 </code>
-                <h4 class="stay-close">Texto marcado</h4>
-                <p class="stay-close">Se utiliza para resaltar partes del texto.</p>
+                <h4 class="margin-none">Texto marcado</h4>
+                <p class="margin-none">Se utiliza para resaltar partes del texto.</p>
                 <div class="code-sample">
                   <mark>Marked text</mark>
                 </div>
@@ -790,8 +790,8 @@
 <span class="pink">&lt;mark&gt;</span> Marked text <span class="pink">&lt;/mark&gt;</span>
 </pre>
                 </code>
-                <h4 class="stay-close">Texto pequeño</h4>
-                <p class="stay-close">Para hacer mas pequeño un fragmento de texto.</p>
+                <h4 class="margin-none">Texto pequeño</h4>
+                <p class="margin-none">Para hacer mas pequeño un fragmento de texto.</p>
                 <div class="code-sample">
                   <small>Small</small>
                 </div>
@@ -800,8 +800,8 @@
 <span class="pink">&lt;small&gt;</span> Small <span class="pink">&lt;/small&gt;</span>
 </pre>
                 </code>
-                <h4 class="stay-close">Salida de un programa</h4>
-                <p class="stay-close">Ejemplo de salida de un programa.</p>
+                <h4 class="margin-none">Salida de un programa</h4>
+                <p class="margin-none">Ejemplo de salida de un programa.</p>
                 <div class="code-sample">
                   <samp>Sample output</samp>
                 </div>
@@ -810,8 +810,8 @@
 <span class="pink">&lt;samp&gt;</span> Sample output <span class="pink">&lt;/samp&gt;</span>
 </pre>
                 </code>
-                <h4 class="stay-close">Texto resaltado</h4>
-                <p class="stay-close">Para los fragmentos de texto importantes!</p>
+                <h4 class="margin-none">Texto resaltado</h4>
+                <p class="margin-none">Para los fragmentos de texto importantes!</p>
                 <div class="code-sample">
                   <strong>Strong</strong>
                 </div>
@@ -820,8 +820,8 @@
 <span class="pink">&lt;strong&gt;</span> Strong <span class="pink">&lt;/strong&gt;</span>
 </pre>
                 </code>
-                <h4 class="stay-close">Superíndice</h4>
-                <p class="stay-close">Texto pequeño que se ubica sobre la mitad superior del alto del texto.</p>
+                <h4 class="margin-none">Superíndice</h4>
+                <p class="margin-none">Texto pequeño que se ubica sobre la mitad superior del alto del texto.</p>
                 <div class="code-sample">
                   <sup>Superscript text</sup>
                 </div>
@@ -830,8 +830,8 @@
 <span class="pink">&lt;sup&gt;</span> Superscript text <span class="pink">&lt;/sup&gt;</span>
 </pre>
                 </code>
-                <h4 class="stay-close">Subíndice</h4>
-                <p class="stay-close">Texto pequeño que se ubica sobre la mitad inferior del alto del texto.</p>
+                <h4 class="margin-none">Subíndice</h4>
+                <p class="margin-none">Texto pequeño que se ubica sobre la mitad inferior del alto del texto.</p>
                 <div class="code-sample">
                   <sub>Subscript text</sub>
                 </div>
@@ -840,8 +840,8 @@
 <span class="pink">&lt;sub&gt;</span> Subscript text <span class="pink">&lt;/sub&gt;</span>
 </pre>
                 </code>
-                <h4 class="stay-close">Variable</h4>
-                <p class="stay-close">Define una variable.</p>
+                <h4 class="margin-none">Variable</h4>
+                <p class="margin-none">Define una variable.</p>
                 <div class="code-sample">
                   <var>Variable</var>
                 </div>
@@ -850,8 +850,8 @@
 <span class="pink">&lt;var&gt;</span> Variable <span class="pink">&lt;/var&gt;</span>
 </pre>
                 </code>
-                <h4 class="stay-close">Código</h4>
-                <p class="stay-close">Define fragmento de código.</p>
+                <h4 class="margin-none">Código</h4>
+                <p class="margin-none">Define fragmento de código.</p>
                 <div class="code-sample">
                   <code>Code</code>
                 </div>
@@ -861,7 +861,7 @@
 </pre>
                 </code>
               </div>
-              <div id="citas" class="sidenavbar-padding flex">
+              <div id="citas" class="padding-navbar-fixed-top flex">
                 <h3 class="color-primary">Citas</h3>
                 <p>
                   Para citas pequeñas se utiliza la etiqueta <code>&lt;q&gt;</code> que se mantiene dentro de la línea de texto. Dentro del atributo <code>cite</code> se escribe la dirección de donde se tomó la cita.
