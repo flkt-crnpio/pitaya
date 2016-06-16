@@ -2,32 +2,32 @@
 // Flex containers and align options
 .row,
 .col
-  display: block 
-  display: -webkit-flex 
-  display: -moz-flex 
-  display: flex 
-  -webkit-flex-wrap: wrap 
-  -moz-flex-wrap: wrap 
+  display: block
+  display: -webkit-flex
+  display: -moz-flex
+  display: flex
+  -webkit-flex-wrap: wrap
+  -moz-flex-wrap: wrap
   flex-wrap: wrap
-  -webkit-justify-content: space-between 
-  -moz-justify-content: space-between 
-  justify-content: space-between 
+  -webkit-justify-content: space-between
+  -moz-justify-content: space-between
+  justify-content: space-between
   &.nowrap
-    -webkit-flex-wrap: nowrap 
-    -moz-flex-wrap: nowrap 
+    -webkit-flex-wrap: nowrap
+    -moz-flex-wrap: nowrap
     flex-wrap: nowrap
   &.wrap-reverse
-    -webkit-flex-wrap: wrap-reverse 
-    -moz-flex-wrap: wrap-reverse 
-    flex-wrap: wrap-reverse 
+    -webkit-flex-wrap: wrap-reverse
+    -moz-flex-wrap: wrap-reverse
+    flex-wrap: wrap-reverse
   &.v-start
-    -webkit-align-items: flex-start 
-    -webkit-moz-items: flex-start 
-    align-items: flex-start 
+    -webkit-align-items: flex-start
+    -webkit-moz-items: flex-start
+    align-items: flex-start
   &.v-end
-    -webkit-align-items: flex-end 
-    -webkit-moz-items: flex-end 
-    align-items: flex-end 
+    -webkit-align-items: flex-end
+    -webkit-moz-items: flex-end
+    align-items: flex-end
   &.v-center
     -webkit-align-items: center
     -webkit-moz-items: center
@@ -41,44 +41,44 @@
     -webkit-moz-items: stretch
     align-items: stretch
   &.h-start
-    -webkit-justify-content: flex-start 
-    -moz-justify-content: flex-start 
-    justify-content: flex-start 
+    -webkit-justify-content: flex-start
+    -moz-justify-content: flex-start
+    justify-content: flex-start
   &.h-end
-    -webkit-justify-content: flex-end 
-    -moz-justify-content: flex-end 
+    -webkit-justify-content: flex-end
+    -moz-justify-content: flex-end
     justify-content: flex-end
   &.h-center
-    -webkit-justify-content: center 
-    -moz-justify-content: center 
+    -webkit-justify-content: center
+    -moz-justify-content: center
     justify-content: center
   &.h-around
-    -webkit-justify-content: space-around 
-    -moz-justify-content: space-around 
+    -webkit-justify-content: space-around
+    -moz-justify-content: space-around
     justify-content: space-around
   &.content-start
-    -webkit-align-content: flex-start 
-    -moz-align-content: flex-start 
-    align-content: flex-start 
+    -webkit-align-content: flex-start
+    -moz-align-content: flex-start
+    align-content: flex-start
   &.content-end
-    -webkit-align-content: flex-end 
-    -moz-align-content: flex-end 
+    -webkit-align-content: flex-end
+    -moz-align-content: flex-end
     align-content: flex-end
   &.content-center
-    -webkit-align-content: center 
-    -moz-align-content: center 
-    align-content: center 
+    -webkit-align-content: center
+    -moz-align-content: center
+    align-content: center
   &.content-between
-    -webkit-align-content: space-between 
-    -moz-align-content: space-between 
+    -webkit-align-content: space-between
+    -moz-align-content: space-between
     align-content: space-between
   &.content-around
-    -webkit-align-content: space-around 
-    -moz-align-content: space-around 
+    -webkit-align-content: space-around
+    -moz-align-content: space-around
     align-content: space-around
   &.content-stretch
-    -webkit-align-content: stretch 
-    -moz-align-content: stretch 
+    -webkit-align-content: stretch
+    -moz-align-content: stretch
     align-content: stretch
   &.align-auto
     -webkit-align-self: auto
@@ -110,19 +110,19 @@
 .col
   margin-left: -$layout-grid
   margin-right: -$layout-grid
-  [class^="flex"], 
+  [class^="flex"],
   [class*=" flex"]
-    margin: $layout-grid/2 $layout-grid
+    margin: 0 $layout-grid
     overflow: hidden
   &.flex-padding
-    [class^="flex"], 
+    [class^="flex"],
     [class*=" flex"]
       padding: $layout-grid
 
 // Flex container row
 .row
-  -webkit-flex-direction: row 
-  -moz-flex-direction: row 
+  -webkit-flex-direction: row
+  -moz-flex-direction: row
   flex-direction: row
   &.reverse
     -webkit-flex-direction: row-reverse
@@ -131,16 +131,16 @@
 
 // Flex container col
 .col
-  -webkit-flex-direction: column 
-  -moz-flex-direction: column 
+  -webkit-flex-direction: column
+  -moz-flex-direction: column
   flex-direction: column
   &.reverse
     -webkit-flex-direction: column-reverse
     -moz-flex-direction: column-reverse
-    flex-direction: column-reverse 
+    flex-direction: column-reverse
 
 // Flex elements
-.flex 
+.flex
   flex: 1
 .flex-1
   flex: 0 0 calc(100% - #{$layout-grid*2})
@@ -148,19 +148,19 @@
 .flex-2_4,
 .flex-3_6,
 .flex-4_8,
-.flex-5_10 
+.flex-5_10
   flex: 0 0 calc(50% - #{$layout-grid*2})
 .flex-1_3,
-.flex-2_6 
+.flex-2_6
   flex: 0 0 calc(33.33% - #{$layout-grid*2})
 .flex-2_3,
-.flex-4_6 
+.flex-4_6
   flex: 0 0 calc(33.33%*2 - #{$layout-grid*2})
 .flex-1_4,
-.flex-2_8 
+.flex-2_8
   flex: 0 0 calc(25% - #{$layout-grid*2})
 .flex-3_4,
-.flex-6_8 
+.flex-6_8
   flex: 0 0 calc(25%*3 - #{$layout-grid*2})
 .flex-1_5,
 .flex-2_10
@@ -229,19 +229,19 @@
   .flex-phone-l-2_4,
   .flex-phone-l-3_6,
   .flex-phone-l-4_8,
-  .flex-phone-l-5_10 
+  .flex-phone-l-5_10
     flex: 0 0 calc(50% - #{$layout-grid*2})
   .flex-phone-l-1_3,
-  .flex-phone-l-2_6 
+  .flex-phone-l-2_6
     flex: 0 0 calc(33.33% - #{$layout-grid*2})
   .flex-phone-l-2_3,
-  .flex-phone-l-4_6 
+  .flex-phone-l-4_6
     flex: 0 0 calc(33.33%*2 - #{$layout-grid*2})
   .flex-phone-l-1_4,
-  .flex-phone-l-2_8 
+  .flex-phone-l-2_8
     flex: 0 0 calc(25% - #{$layout-grid*2})
   .flex-phone-l-3_4,
-  .flex-phone-l-6_8 
+  .flex-phone-l-6_8
     flex: 0 0 calc(25%*3 - #{$layout-grid*2})
   .flex-phone-l-1_5,
   .flex-phone-l-2_10
@@ -310,19 +310,19 @@
   .flex-tablet-2_4,
   .flex-tablet-3_6,
   .flex-tablet-4_8,
-  .flex-tablet-5_10 
+  .flex-tablet-5_10
     flex: 0 0 calc(50% - #{$layout-grid*2})
   .flex-tablet-1_3,
-  .flex-tablet-2_6 
+  .flex-tablet-2_6
     flex: 0 0 calc(33.33% - #{$layout-grid*2})
   .flex-tablet-2_3,
-  .flex-tablet-4_6 
+  .flex-tablet-4_6
     flex: 0 0 calc(33.33%*2 - #{$layout-grid*2})
   .flex-tablet-1_4,
-  .flex-tablet-2_8 
+  .flex-tablet-2_8
     flex: 0 0 calc(25% - #{$layout-grid*2})
   .flex-tablet-3_4,
-  .flex-tablet-6_8 
+  .flex-tablet-6_8
     flex: 0 0 calc(25%*3 - #{$layout-grid*2})
   .flex-tablet-1_5,
   .flex-tablet-2_10
@@ -391,19 +391,19 @@
   .flex-laptop-2_4,
   .flex-laptop-3_6,
   .flex-laptop-4_8,
-  .flex-laptop-5_10 
+  .flex-laptop-5_10
     flex: 0 0 calc(50% - #{$layout-grid*2})
   .flex-laptop-1_3,
-  .flex-laptop-2_6 
+  .flex-laptop-2_6
     flex: 0 0 calc(33.33% - #{$layout-grid*2})
   .flex-laptop-2_3,
-  .flex-laptop-4_6 
+  .flex-laptop-4_6
     flex: 0 0 calc(33.33%*2 - #{$layout-grid*2})
   .flex-laptop-1_4,
-  .flex-laptop-2_8 
+  .flex-laptop-2_8
     flex: 0 0 calc(25% - #{$layout-grid*2})
   .flex-laptop-3_4,
-  .flex-laptop-6_8 
+  .flex-laptop-6_8
     flex: 0 0 calc(25%*3 - #{$layout-grid*2})
   .flex-laptop-1_5,
   .flex-laptop-2_10
@@ -472,19 +472,19 @@
   .flex-MDPI-2_4,
   .flex-MDPI-3_6,
   .flex-MDPI-4_8,
-  .flex-MDPI-5_10 
+  .flex-MDPI-5_10
     flex: 0 0 calc(50% - #{$layout-grid*2})
   .flex-MDPI-1_3,
-  .flex-MDPI-2_6 
+  .flex-MDPI-2_6
     flex: 0 0 calc(33.33% - #{$layout-grid*2})
   .flex-MDPI-2_3,
-  .flex-MDPI-4_6 
+  .flex-MDPI-4_6
     flex: 0 0 calc(33.33%*2 - #{$layout-grid*2})
   .flex-MDPI-1_4,
-  .flex-MDPI-2_8 
+  .flex-MDPI-2_8
     flex: 0 0 calc(25% - #{$layout-grid*2})
   .flex-MDPI-3_4,
-  .flex-MDPI-6_8 
+  .flex-MDPI-6_8
     flex: 0 0 calc(25%*3 - #{$layout-grid*2})
   .flex-MDPI-1_5,
   .flex-MDPI-2_10
@@ -553,19 +553,19 @@
   .flex-HiDPI-2_4,
   .flex-HiDPI-3_6,
   .flex-HiDPI-4_8,
-  .flex-HiDPI-5_10 
+  .flex-HiDPI-5_10
     flex: 0 0 calc(50% - #{$layout-grid*2})
   .flex-HiDPI-1_3,
-  .flex-HiDPI-2_6 
+  .flex-HiDPI-2_6
     flex: 0 0 calc(33.33% - #{$layout-grid*2})
   .flex-HiDPI-2_3,
-  .flex-HiDPI-4_6 
+  .flex-HiDPI-4_6
     flex: 0 0 calc(33.33%*2 - #{$layout-grid*2})
   .flex-HiDPI-1_4,
-  .flex-HiDPI-2_8 
+  .flex-HiDPI-2_8
     flex: 0 0 calc(25% - #{$layout-grid*2})
   .flex-HiDPI-3_4,
-  .flex-HiDPI-6_8 
+  .flex-HiDPI-6_8
     flex: 0 0 calc(25%*3 - #{$layout-grid*2})
   .flex-HiDPI-1_5,
   .flex-HiDPI-2_10
@@ -634,19 +634,19 @@
   .flex-HD-2_4,
   .flex-HD-3_6,
   .flex-HD-4_8,
-  .flex-HD-5_10 
+  .flex-HD-5_10
     flex: 0 0 calc(50% - #{$layout-grid*2})
   .flex-HD-1_3,
-  .flex-HD-2_6 
+  .flex-HD-2_6
     flex: 0 0 calc(33.33% - #{$layout-grid*2})
   .flex-HD-2_3,
-  .flex-HD-4_6 
+  .flex-HD-4_6
     flex: 0 0 calc(33.33%*2 - #{$layout-grid*2})
   .flex-HD-1_4,
-  .flex-HD-2_8 
+  .flex-HD-2_8
     flex: 0 0 calc(25% - #{$layout-grid*2})
   .flex-HD-3_4,
-  .flex-HD-6_8 
+  .flex-HD-6_8
     flex: 0 0 calc(25%*3 - #{$layout-grid*2})
   .flex-HD-1_5,
   .flex-HD-2_10

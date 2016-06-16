@@ -3,8 +3,10 @@
   display: none
   @media screen and (min-width: $tablet)
     display: block
-    padding-top: 80px
-    position: fixed
+    margin: $layout-space/4 0
+    overflow: hidden
+    &.sidenavbar-fixed
+      position: fixed
 
     > ul
       border-left: 4px solid $color-primary
