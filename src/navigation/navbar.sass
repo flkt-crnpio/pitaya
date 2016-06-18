@@ -15,7 +15,7 @@
   color: $main-color
   overflow-y: visible
   overflow-x: scroll
-  height: 60px
+  height: $navbar-height
   width: 100vw
   z-index: 100
   h1,
@@ -36,21 +36,21 @@
   button
     display: inline-block
     flex: 1 0 auto
-    height: 60px
-    line-height: 60px
+    height: $navbar-height
+    line-height: $navbar-height
     white-space: nowrap
     @media screen and (min-width: $tablet)
       flex: 0 0 auto
 
   a
-    height: calc(60px - #{$border-width})
-    line-height: calc(60px - #{$border-width})
+    height: calc(#{$navbar-height} - #{$border-width})
+    line-height: calc(#{$navbar-height} - #{$border-width})
     padding: 0 $layout-space/4
     +link($main-color)
     z-index: 102
   button
-    height: 30px
-    line-height: 30px
+    height: calc(#{$navbar-height}/2)
+    line-height: calc(#{$navbar-height}/2)
     margin: 0 $layout-space/2
     padding: 0 $layout-space/4
     +button($main-color)
@@ -91,8 +91,8 @@
       border: none
       flex: 1
       border-radius: 0
-      height: 60px
-      line-height: 60px
+      height: $navbar-height
+      line-height: $navbar-height
       margin: 0
       text-align: center
       @media screen and (min-width: $laptop)
