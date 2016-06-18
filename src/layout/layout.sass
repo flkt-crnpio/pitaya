@@ -1,53 +1,90 @@
 /* src/layout/layout.sass */
 // Main container
 .main-container
-  display: block 
-  display: -webkit-flex 
-  display: -moz-flex 
-  display: flex 
-  -webkit-flex-wrap: nowrap 
-  -moz-flex-wrap: nowrap 
+  display: block
+  display: -webkit-flex
+  display: -moz-flex
+  display: flex
+  -webkit-flex-wrap: nowrap
+  -moz-flex-wrap: nowrap
   flex-wrap: nowrap
-  &.main-col
-    -webkit-flex-direction: column 
-    -moz-flex-direction: column 
-    flex-direction: column
-    min-height: 100vh
-  &.main-row
-    -webkit-flex-direction: row 
-    -moz-flex-direction: row 
-    flex-direction: row
-    min-width: 100vw
+  -webkit-flex-direction: column
+  -moz-flex-direction: column
+  flex-direction: column
+  min-height: 100vh
 
 // General container
 .container
   margin: 0 auto
   max-width: $width-max
   width: $width-phone
-@media screen and (min-width: $tablet)
-  .container
+  @media screen and (min-width: $tablet)
     width: $width-tablet
-@media screen and (min-width: $laptop)
-  .container
+  @media screen and (min-width: $laptop)
     width: $width-laptop
+  @media screen and (min-width: $HD)
+    width: $width-HD
+
+// Contain Block
+.contain-block
+  overflow: hidden
+
+// Margin
+.margin-around
+  margin: $layout-space
+  &.margin-small
+    margin: $layout-space/2
+.margin-top
+  margin-top: $layout-space
+  &.margin-small
+    margin-top: $layout-space/2
+.margin-bottom
+  margin-bottom: $layout-space
+  &.margin-small
+    margin-bottom: $layout-space/2
+.margin-vsides
+  margin-top: $layout-space
+  margin-bottom: $layout-space
+  &.margin-small
+    margin-top: $layout-space/2
+    margin-bottom: $layout-space/2
 
 // Padding
-.general-padding
+.padding-around
+  padding: $layout-space
+  &.padding-small
+    padding: $layout-space/2
+.padding-top
+  padding-top: $layout-space
+  &.padding-small
+    padding-top: $layout-space/2
+.padding-bottom
+  padding-bottom: $layout-space
+  &.padding-small
+    padding-bottom: $layout-space/2
+.padding-left
+  padding-left: $layout-space
+  &.padding-small
+    padding-left: $layout-space/2
+.padding-right
+  padding-right: $layout-space
+  &.padding-small
+    padding-right: $layout-space/2
+.padding-hsides
+  padding-left: $layout-space
+  padding-right: $layout-space
+  &.padding-small
+    padding-left: $layout-space/2
+    padding-right: $layout-space/2
+.padding-vsides
   padding-top: $layout-space
   padding-bottom: $layout-space
+  &.padding-small
+    padding-top: $layout-space/2
+    padding-bottom: $layout-space/2
 
 // Navbar fixed space
-.padding-navbar-fixed-top
-  padding-top: 60px
-.padding-navbar-fixed-bottom
-  padding-bottom: 60px
-
-// Sidenavbar with anchors 
-.sidenavbar-padding
-  padding-top: 80px
-
-.stay-close
-  margin-bottom: 0
-  + .stay-close
-    margin-top: 0
-    margin-bottom: 0
+.navbar-fixed-top
+  padding-top: calc(#{$navbar-height} + #{$layout-space})
+.navbar-fixed-bottom
+  padding-bottom: calc(#{$navbar-height} + #{$layout-space})

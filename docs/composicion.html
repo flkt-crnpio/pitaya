@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Pitaya</title>
+  <link rel="stylesheet" type="text/css" href="../dist/ffcss.css">
+  <link rel="stylesheet" type="text/css" href="css/pitaya.css">
+</head>
+<body>
+  <div class="main-container">
+
+    <nav class="navbar navbar-fix-top color-primary">
+      <h1><a href="index.html">Pitaya</a></h1>
+      <span class="flex"></span>
+      <a href="nucleo.html">Núcleo</a>
+      <a href="composicion.html" class="active">Composición</a>
+      <a href="navegacion.html">Navegación</a>
+      <a href="componentes.html">Componentes</a>
+    </nav>
+
+    <main class="flex">
+      <div class="container">
+        <div class="row">
+          <aside class="flex-1 flex-tablet-1_3 navbar-fixed-top">
+            <nav class="sidenavbar sidenavbar-fixed">
+              <ul>
+                <li><h3 class="color-primary">Contenido</h3></li>
+                <li><a href="#contenedores">Contenedores</a></li>
+                <li><a href="#margenes">Margenes</a></li>
+                <li><a href="#margenes-especiales">Margenes especiales</a></li>
+                <li><a href="#espaciado">Espaciado</a></li>
+              </ul>
+            </nav>
+          </aside>
+
+          <div class="flex-1 flex-tablet-2_3">
+            <div id="contenedores" class="navbar-fixed-top flex">
+              <h1 class="color-primary">Contenedores</h1>
+              <h4>Contenedor principal</h4>
+              <p class="stay-close">Para cuando no se tiene suficiente contenido y se quiere poner el footer abajo de la pantalla, pero que si el contenido crece se quede hasta el final. Se utiliza la clase <code>.main-container</code> para el contenedor principal y <code>.flex</code> para el contenedor del contenido que puede variar de altura.</p>
+              <p>El <code>.main-container</code> tiene altura mínima del alto de la pantalla y el <code>.flex</code> hace que tome el alto variable de lo que sea que sobre de alto.</p>
+              <div class="code-sample">
+                <div class="main-container">
+                    <div class="bg-primary to-bg-step2">a</div>
+                    <div class="flex bg-primary to-bg-step3">b</div>
+                    <div class="bg-primary to-bg-step4">c</div>
+                </div>
+              </div>
+              <code class="code-block">
+<pre>
+<span class="pink">&lt;div class="main-container"&gt;</span>
+  <span class="pink">&lt;div class="bg-primary to-bg-step2"&gt;</span>a<span class="pink">&lt;/div&gt;</span>
+  <span class="pink">&lt;div class="flex bg-primary to-bg-step3"&gt;</span>b<span class="pink">&lt;/div&gt;</span>
+  <span class="pink">&lt;div class="bg-primary to-bg-step4"&gt;</span>c<span class="pink">&lt;/div&gt;</span>
+<span class="pink">&lt;/div&gt;</span>
+</pre>
+              </code>
+
+              <h4>Contenedor</h4>
+              <p class="stay-close">Este es el contenedor que se utiliza en todos lados para centrar la página. Se utiliza con la clase <code>.container</code> y funciona en base a 5 variables que se pueden editar en el archivo de <code>_vars.sass</code>, definen el ancho máximo que puede tomar y el ancho que tendrá en mobile, tablets, laptops y pantallas.</p>
+              <div class="code-sample">
+                <div class="container bg-primary"> Contenido </div>
+              </div>
+              <code class="code-block">
+<pre>
+<span class="pink">&lt;div class="container bg-primary"&gt;</span> Contenido <span class="pink">&lt;/div&gt;</span>
+</pre>
+              </code>
+            </div>
+
+            <div id="margenes" class="navbar-fixed-top flex">
+              <h1 class="color-primary">Margenes</h1>
+              <p class="stay-close">El margen es el espacio que queda entre un elemento y el siguiente ó un elemento y su padre.  <br>Se utiliza con la clase <code>.margin-top</code> para agregar margen arriba y si se agrega la clase <code>.margin-small</code> se reduce el margen a la mitad.</p>
+              <div class="code-sample">
+                <div class="border-around contain-block">
+                  <div class="margin-top bg-primary">
+                    Margen arriba
+                  </div>
+                </div>
+              </div>
+              <code class="code-block">
+<pre>
+<span class="pink">&lt;div class="margin-top bg-primary"></span>
+  Margen arriba
+<span class="pink">&lt;/div></span>
+</pre>
+              </code>
+
+              <div class="code-sample">
+                <div class="border-around contain-block">
+                  <div class="margin-bottom bg-primary">
+                    Margen abajo
+                  </div>
+                </div>
+              </div>
+              <code class="code-block">
+<pre>
+<span class="pink">&lt;div class="margin-bottom bg-primary"></span>
+  Margen abajo
+<span class="pink">&lt;/div></span>
+</pre>
+              </code>
+
+              <div class="code-sample">
+                <div class="border-around contain-block">
+                  <div class="margin-vsides bg-primary">
+                    Margen arriba y abajo
+                  </div>
+                </div>
+              </div>
+              <code class="code-block">
+<pre>
+<span class="pink">&lt;div class="margin-vsides bg-primary"></span>
+  Margen arriba y abajo
+<span class="pink">&lt;/div></span>
+</pre>
+              </code>
+            </div>
+
+            <div id="margenes-especiales" class="navbar-fixed-top flex">
+              <h1 class="color-primary">Margenes especiales</h1>
+              <h4>Navegación fija</h4>
+              <p class="stay-close">Para cuando se utiliza el navbar fijo arriba, se utiliza la clase <code>.navbar-fixed-top</code> al menos en el primer elemento, para tener el margen de espacio que ocupa la navegación al inicio de la página.</p>
+              <div class="code-sample">
+                <div class="navbar-fixed-top bg-primary">
+                    Navegación fija arriba
+                </div>
+              </div>
+              <code class="code-block">
+<pre>
+<span class="pink">&lt;div class="navbar-fixed-top bg-primary"></span>
+  Navegación fija arriba
+<span class="pink">&lt;/div></span>
+</pre>
+              </code>
+
+              <p>Para cuando la navegación esta fija abajo, se utiliza la clase <code>.navbar-fixed-bottom</code> en el último elemento.</p>
+              <div class="code-sample">
+                <div class="navbar-fixed-bottom bg-primary">
+                    Navegación fija abajo
+                </div>
+              </div>
+              <code class="code-block">
+<pre>
+<span class="pink">&lt;div class="navbar-fixed-bottom bg-primary"></span>
+  Navegación fija abajo
+<span class="pink">&lt;/div></span>
+</pre>
+              </code>
+            </div>
+
+            <div id="espaciado" class="navbar-fixed-top flex">
+              <h1 class="color-primary">Espaciado</h1>
+              <p class="stay-close">Es el espacio que existe entre un elemento y su contenido. <br>Se utiliza con la clase <code>.padding-around</code> para agregar el espaciado alrededor y si se agrega la clase <code>.padding-small</code> se reduce el espacio a la mitad.</p>
+              <div class="code-sample">
+                <div class="padding-around bg-primary">
+                    Espacio alrededor
+                </div>
+              </div>
+              <code class="code-block">
+<pre>
+<span class="pink">&lt;div class="padding-around bg-primary"></span>
+  Espacio alrededor
+<span class="pink">&lt;/div></span>
+</pre>
+              </code>
+              <div class="code-sample">
+                <div class="padding-top bg-primary">
+                    Espacio arriba
+                </div>
+              </div>
+              <code class="code-block">
+<pre>
+<span class="pink">&lt;div class="padding-top bg-primary"></span>
+  Espacio arriba
+<span class="pink">&lt;/div></span>
+</pre>
+              </code>
+              <div class="code-sample">
+                <div class="padding-bottom bg-primary">
+                    Espacio abajo
+                </div>
+              </div>
+              <code class="code-block">
+<pre>
+<span class="pink">&lt;div class="padding-bottom bg-primary"></span>
+  Espacio abajo
+<span class="pink">&lt;/div></span>
+</pre>
+              </code>
+              <div class="code-sample">
+                <div class="padding-left bg-primary">
+                    Espacio izquierdo
+                </div>
+              </div>
+              <code class="code-block">
+<pre>
+<span class="pink">&lt;div class="padding-left bg-primary"></span>
+  Espacio izquierdo
+<span class="pink">&lt;/div></span>
+</pre>
+              </code>
+              <div class="code-sample">
+                <div class="padding-right bg-primary">
+                    Espacio derecho
+                </div>
+              </div>
+              <code class="code-block">
+<pre>
+<span class="pink">&lt;div class="padding-right bg-primary"></span>
+  Espacio derecho
+<span class="pink">&lt;/div></span>
+</pre>
+              </code>
+              <div class="code-sample">
+                <div class="padding-vsides bg-primary">
+                    Espacio arriba y abajo
+                </div>
+              </div>
+              <code class="code-block">
+<pre>
+<span class="pink">&lt;div class="padding-vsides bg-primary"></span>
+  Espacio arriba y abajo
+<span class="pink">&lt;/div></span>
+</pre>
+              </code>
+              <div class="code-sample">
+                <div class="padding-hsides bg-primary">
+                    Espacio izquierdo y derecho
+                </div>
+              </div>
+              <code class="code-block">
+<pre>
+<span class="pink">&lt;div class="padding-hsides bg-primary"></span>
+  Espacio izquierdo y derecho
+<span class="pink">&lt;/div></span>
+</pre>
+              </code>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="flex">
+            Pitaya. Hecha
+            por <a href="http://flkt.mx/">flkt</a>
+            bajo licencia <a href="https://github.com/flkt-crnpio/ffcss/blob/master/LICENSE">MIT</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+</body>
+</html>
