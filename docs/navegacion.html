@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Pitaya</title>
+  <link rel="stylesheet" type="text/css" href="../dist/ffcss.css">
+  <link rel="stylesheet" type="text/css" href="css/pitaya.css">
+</head>
+<body>
+  <div class="main-container">
+
+    <nav class="navbar navbar-fix-top color-primary">
+      <h1><a href="index.html">Pitaya</a></h1>
+      <span class="flex"></span>
+      <a href="nucleo.html">Núcleo</a>
+      <a href="composicion.html">Composición</a>
+      <a href="navegacion.html" class="active">Navegación</a>
+      <a href="componentes.html">Componentes</a>
+    </nav>
+
+    <main class="flex">
+      <div class="container">
+        <div class="row">
+          <aside class="flex-1 flex-tablet-1_3 navbar-fixed-top">
+            <nav class="sidenavbar sidenavbar-fixed">
+              <ul>
+                <li><h3 class="color-primary">Contenido</h3></li>
+                <li><a href="#navegacion">Navegación</a></li>
+                <li><a href="#posicionamiento">Posicionamiento</a></li>
+                <li><a href="#colores">Colores</a></li>
+                <li><a href="#composicion">Composición</a></li>
+              </ul>
+            </nav>
+          </aside>
+
+          <div class="flex-1 flex-tablet-2_3">
+            <div>
+              <div id="navegacion" class="navbar-fixed-top flex">
+                <h1 class="color-primary">Navegacion</h1>
+
+                <h4>Navecaión</h4>
+                <p class="stay-close">Se inicia con la clase <code>.navbar</code> dentro de un nav tag y tiene definidos los estilos para títulos, hipervinculos y botones.</p>
+                <div class="code-sample">
+                  <nav class="navbar">
+                      <h1>Título</h1>
+                      <span class="flex"></span>
+                      <a href="#">Hipervínculo</a>
+                      <button>Botón</button>
+                  </nav>
+                </div>
+                <code class="code-block">
+<pre>
+<span class="pink">&lt;nav class="navbar"&gt;</span>
+  <span class="pink">&lt;h1&gt;</span>Título<span class="pink">&lt;/h1&gt;</span>
+  <span class="pink">&lt;span class="flex"&gt;</span><span class="pink">&lt;/span&gt;</span>
+  <span class="pink">&lt;a href="#"&gt;</span>Hipervínculo<span class="pink">&lt;/a&gt;</span>
+  <span class="pink">&lt;button&gt;</span>Botón<span class="pink">&lt;/button&gt;</span>
+<span class="pink">&lt;/nav></span>
+</pre>
+                </code>
+              </div>
+
+              <div id="posicionamiento" class="navbar-fixed-top flex">
+                <h1 class="color-primary">Posicionamiento</h1>
+
+                <h4>Navecaión fija arriba</h4>
+                <p class="stay-close">Se agrega la clase <code>.navbar-fix-top</code> a la etiqueta de la navegación para dejarla fija arriba ó <code>.navbar-fix-bottom</code> para dejarla fija abajo.</p>
+                <p>Para agregar el margen al primer elemento cuando la navegación está fija, hay que agregar la clase <code>navbar-fixed-top</code> ó <code>navbar-fixed-bootom</code> al contenedor, según sea el caso.</p>
+                <p>... pero no se puede poner el ejemplo porque rompería la navegación y el footer que tiene ésta página. Así que tengan un poco de imaginación :}</p>
+                <code class="code-block">
+<pre>
+<span class="pink">&lt;nav class="navbar navbar-fix-top"&gt;</span>
+  <span class="pink">&lt;h1&gt;</span>Título<span class="pink">&lt;/h1&gt;</span>
+  <span class="pink">&lt;span class="flex"&gt;</span><span class="pink">&lt;/span&gt;</span>
+  <span class="pink">&lt;a href="#"&gt;</span>Hipervínculo<span class="pink">&lt;/a&gt;</span>
+  <span class="pink">&lt;a href="#"&gt;</span>Hipervínculo<span class="pink">&lt;/a&gt;</span>
+  <span class="pink">&lt;a href="#"&gt;</span>Hipervínculo<span class="pink">&lt;/a&gt;</span>
+<span class="pink">&lt;/nav></span>
+
+<span class="pink">&lt;div class="navbar-fixed-top"&gt;</span>
+  ...
+<span class="pink">&lt;/div></span>
+</pre>
+                </code>
+              </div>
+
+              <div id="colores" class="navbar-fixed-top flex">
+                <h1 class="color-primary">Colores</h1>
+                <p class="stay-close">Se puede cambiar y combinar el color de contenido y de fondo de la barra de navegación.</p>
+                <p> Para cambiar el color de texto, hipervínculos y botones se utilizan las clases <code>.color-primary</code> y <code>.color-accent</code>, para cambiar el color de fondo se utilizan <code>.bg-primary</code> y <code>.bg-accent</code>.</p>
+                <div class="code-sample">
+                  <nav class="navbar color-primary">
+                      <h1>Título</h1>
+                      <span class="flex"></span>
+                      <a href="#">Hipervínculo</a>
+                      <button>Botón</button>
+                  </nav>
+                </div>
+                <code class="code-block">
+<pre>
+<span class="pink">&lt;nav class="navbar color-primary"&gt;</span>
+  <span class="pink">&lt;h1&gt;</span>Título<span class="pink">&lt;/h1&gt;</span>
+  <span class="pink">&lt;span class="flex"&gt;</span><span class="pink">&lt;/span&gt;</span>
+  <span class="pink">&lt;a href="#"&gt;</span>Hipervínculo<span class="pink">&lt;/a&gt;</span>
+  <span class="pink">&lt;button&gt;</span>Botón<span class="pink">&lt;/button&gt;</span>
+<span class="pink">&lt;/nav></span>
+</pre>
+                </code>
+                <div class="code-sample">
+                  <nav class="navbar color-accent">
+                      <h1>Título</h1>
+                      <span class="flex"></span>
+                      <a href="#">Hipervínculo</a>
+                      <button>Botón</button>
+                  </nav>
+                </div>
+                <code class="code-block">
+                <pre>
+                <span class="pink">&lt;nav class="navbar color-accent"&gt;</span>
+                <span class="pink">&lt;h1&gt;</span>Título<span class="pink">&lt;/h1&gt;</span>
+                <span class="pink">&lt;span class="flex"&gt;</span><span class="pink">&lt;/span&gt;</span>
+                <span class="pink">&lt;a href="#"&gt;</span>Hipervínculo<span class="pink">&lt;/a&gt;</span>
+                <span class="pink">&lt;button&gt;</span>Botón<span class="pink">&lt;/button&gt;</span>
+                <span class="pink">&lt;/nav></span>
+                </pre>
+                </code>
+
+                <div class="code-sample">
+                  <nav class="navbar bg-primary">
+                      <h1>Título</h1>
+                      <span class="flex"></span>
+                      <a href="#">Hipervínculo</a>
+                      <button>Botón</button>
+                  </nav>
+                </div>
+                <code class="code-block">
+<pre>
+<span class="pink">&lt;nav class="navbar bg-primary"&gt;</span>
+  <span class="pink">&lt;h1&gt;</span>Título<span class="pink">&lt;/h1&gt;</span>
+  <span class="pink">&lt;span class="flex"&gt;</span><span class="pink">&lt;/span&gt;</span>
+  <span class="pink">&lt;a href="#"&gt;</span>Hipervínculo<span class="pink">&lt;/a&gt;</span>
+  <span class="pink">&lt;button&gt;</span>Botón<span class="pink">&lt;/button&gt;</span>
+<span class="pink">&lt;/nav></span>
+</pre>
+                </code>
+
+                <div class="code-sample">
+                  <nav class="navbar bg-accent">
+                      <h1>Título</h1>
+                      <span class="flex"></span>
+                      <a href="#">Hipervínculo</a>
+                      <button>Botón</button>
+                  </nav>
+                </div>
+                <code class="code-block">
+<pre>
+<span class="pink">&lt;nav class="navbar bg-accent"&gt;</span>
+  <span class="pink">&lt;h1&gt;</span>Título<span class="pink">&lt;/h1&gt;</span>
+  <span class="pink">&lt;span class="flex"&gt;</span><span class="pink">&lt;/span&gt;</span>
+  <span class="pink">&lt;a href="#"&gt;</span>Hipervínculo<span class="pink">&lt;/a&gt;</span>
+  <span class="pink">&lt;button&gt;</span>Botón<span class="pink">&lt;/button&gt;</span>
+<span class="pink">&lt;/nav></span>
+</pre>
+                </code>
+              </div>
+              <div id="composicion" class="navbar-fixed-top flex">
+                <h1 class="color-primary">Composicion</h1>
+
+                <h5>Al lado</h5>
+                <p class="stay-close">Para dejar el título de un lado y el menú del otro, se puede agregar un <code>.flex</code> para agregar los espacios.</p>
+                <div class="code-sample">
+                  <nav class="navbar bg-accent">
+                    <a href="#">Menú</a>
+                    <a href="#">Menú</a>
+                    <a href="#">Menú</a>
+                    <span class="flex"></span>
+                    <h1>Título</h1>
+                  </nav>
+                </div>
+                <code class="code-block">
+<pre>
+<span class="pink">&lt;nav class="navbar bg-accent"&gt;</span>
+  <span class="pink">&lt;a href="#"&gt;</span>Menú<span class="pink">&lt;/a&gt;</span>
+  <span class="pink">&lt;a href="#"&gt;</span>Menú<span class="pink">&lt;/a&gt;</span>
+  <span class="pink">&lt;a href="#"&gt;</span>Menú<span class="pink">&lt;/a&gt;</span>
+  <span class="pink">&lt;span class="flex"&gt;</span><span class="pink">&lt;/span&gt;</span>
+  <span class="pink">&lt;h1&gt;</span>Título<span class="pink">&lt;/h1&gt;</span>
+<span class="pink">&lt;/nav></span>
+</pre>
+                </code>
+
+                <h5>Contenido centrado</h5>
+                <p class="stay-close">Para centrar el contenido se agrega la clase <code>.navbar-center-content</code> a la etiqueta de la navegación.</p>
+                <div class="code-sample">
+                  <nav class="navbar navbar-center-content">
+                    <a href="#">Menú</a>
+                    <a href="#">Menú</a>
+                    <h3>Título</h3>
+                    <a href="#">Menú</a>
+                    <a href="#">Menú</a>
+                  </nav>
+                </div>
+                <code class="code-block">
+<pre>
+<span class="pink">&lt;nav class="navbar navbar-center-content"&gt;</span>
+  <span class="pink">&lt;a href="#"&gt;</span>Menú<span class="pink">&lt;/a&gt;</span>
+  <span class="pink">&lt;a href="#"&gt;</span>Menú<span class="pink">&lt;/a&gt;</span>
+  <span class="pink">&lt;h3&gt;</span>Título<span class="pink">&lt;/h3&gt;</span>
+  <span class="pink">&lt;a href="#"&gt;</span>Menú<span class="pink">&lt;/a&gt;</span>
+  <span class="pink">&lt;a href="#"&gt;</span>Menú<span class="pink">&lt;/a&gt;</span>
+<span class="pink">&lt;/nav></span>
+</pre>
+                </code>
+
+                <h5>Elemento centrado</h5>
+                <p class="stay-close">Para centrar específicamente algo, se agrega la clase <code>.navbar-center-element</code> al elemento y <code>.navbar-block-elements</code> a la etiqueta de la navegación..</p>
+                <div class="code-sample">
+                  <nav class="navbar navbar-block-elements">
+                    <h1 class="navbar-center-element">Centro</h1>
+                    <a href="#">Menú</a>
+                    <span class="flex"></span>
+                    <button>Botón</button>
+                  </nav>
+                </div>
+                <code class="code-block">
+<pre>
+<span class="pink">&lt;nav class="navbar navbar-block-elements"&gt;</span>
+  <span class="pink">&lt;h1 class="navbar-center-element"&gt;</span>Centro<span class="pink">&lt;/h1&gt;</span>
+  <span class="pink">&lt;a href="#"&gt;</span>Menú<span class="pink">&lt;/a&gt;</span>
+  <span class="pink">&lt;span class="flex"&gt;</span><span class="pink">&lt;/span&gt;</span>
+  <span class="pink">&lt;button&gt;</span>Botón<span class="pink">&lt;/button&gt;</span>
+<span class="pink">&lt;/nav></span>
+</pre>
+                </code>
+
+                <h5>Botón de menú</h5>
+                <p class="stay-close">Con la clase <code>.navbar-button-menu</code> el botón toma el alto de la navegación y quita sus border y margenes.</p>
+                <div class="code-sample">
+                  <nav class="navbar navbar-block-elements">
+                    <h1 class="navbar-center-element">Centro</h1>
+                    <button class="navbar-button-menu">Botón</button>
+                  </nav>
+                </div>
+                <code class="code-block">
+<pre>
+<span class="pink">&lt;nav class="navbar navbar-block-elements"&gt;</span>
+  <span class="pink">&lt;h1 class="navbar-center-element"&gt;</span>Centro<span class="pink">&lt;/h1&gt;</span>
+  <span class="pink">&lt;button class="navbar-button-menu"&gt;</span>Botón<span class="pink">&lt;/button&gt;</span>
+<span class="pink">&lt;/nav></span>
+</pre>
+                </code>
+
+                <h5>Menú de aplicación</h5>
+                <p class="stay-close">Con la clase <code>.navbar-button-menu</code> el botón toma el alto de la navegación y quita sus border y margenes.</p>
+                <div class="code-sample">
+                  <nav class="navbar navbar-app-button">
+                    <button>Botón</button>
+                    <button>Botón</button>
+                    <button>Botón</button>
+                    <button>Botón</button>
+                  </nav>
+                </div>
+                <code class="code-block">
+<pre>
+<span class="pink">&lt;nav class="navbar navbar-app-button"&gt;</span>
+  <span class="pink">&lt;button&gt;</span>Botón<span class="pink">&lt;/button&gt;</span>
+  <span class="pink">&lt;button&gt;</span>Botón<span class="pink">&lt;/button&gt;</span>
+  <span class="pink">&lt;button&gt;</span>Botón<span class="pink">&lt;/button&gt;</span>
+  <span class="pink">&lt;button&gt;</span>Botón<span class="pink">&lt;/button&gt;</span>
+<span class="pink">&lt;/nav></span>
+</pre>
+                </code>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="padding-vsides padding-small margin-top">
+      <div class="container">
+        <div class="row">
+          <div class="flex">
+            Pitaya. Hecha
+            por <a href="http://flkt.mx/">flkt</a>
+            bajo licencia <a href="https://github.com/flkt-crnpio/ffcss/blob/master/LICENSE">MIT</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+</body>
+</html>
