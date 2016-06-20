@@ -280,7 +280,7 @@ button {
   margin: 0.2rem 0;
   padding: 1rem 2rem;
   background-image: linear-gradient(-135deg, transparent 50%, #fd264f 50%);
-  background-position: 100% 0;
+  background-position: 99% 0;
   border-color: #fd264f;
   color: #fd264f;
   -webkit-transition: all 0.3s ease-in-out;
@@ -301,14 +301,14 @@ button {
     border-color: #fd264f;
     color: #191828; }
     button.button-solid:hover, button.button-solid:focus {
-      background-position: 100% 0;
+      background-position: 99% 0;
       color: #fd264f; }
     button.button-solid:active {
-      background-position: 100% 0;
+      background-position: 99% 0;
       color: #fd264f; }
   button.button-accent {
     background-image: linear-gradient(-135deg, transparent 50%, #0de084 50%);
-    background-position: 100% 0;
+    background-position: 99% 0;
     border-color: #0de084;
     color: #0de084; }
     button.button-accent:hover, button.button-accent:focus {
@@ -325,14 +325,14 @@ button {
       border-color: #0de084;
       color: #191828; }
       button.button-accent.button-solid:hover, button.button-accent.button-solid:focus {
-        background-position: 100% 0;
+        background-position: 99% 0;
         color: #0de084; }
       button.button-accent.button-solid:active {
-        background-position: 100% 0;
+        background-position: 99% 0;
         color: #0de084; }
   button.button-primary {
     background-image: linear-gradient(-135deg, transparent 50%, #fd264f 50%);
-    background-position: 100% 0;
+    background-position: 99% 0;
     border-color: #fd264f;
     color: #fd264f; }
     button.button-primary:hover, button.button-primary:focus {
@@ -349,10 +349,10 @@ button {
       border-color: #fd264f;
       color: #191828; }
       button.button-primary.button-solid:hover, button.button-primary.button-solid:focus {
-        background-position: 100% 0;
+        background-position: 99% 0;
         color: #fd264f; }
       button.button-primary.button-solid:active {
-        background-position: 100% 0;
+        background-position: 99% 0;
         color: #fd264f; }
 
 .button-small {
@@ -2495,21 +2495,15 @@ q {
   -webkit-moz-items: center;
   align-items: center;
   background: rgba(239, 237, 239, 0.05);
-  border-bottom: 1px solid rgba(239, 237, 239, 0.1);
+  box-shadow: inset 0px -1px rgba(239, 237, 239, 0.1);
   color: #efedef;
+  height: 60px;
+  line-height: 60px;
   overflow-y: visible;
   overflow-x: scroll;
-  height: 60px;
-  width: 100vw;
+  position: relative;
+  width: 100%;
   z-index: 100; }
-  .navbar h1,
-  .navbar h2,
-  .navbar h3,
-  .navbar h4,
-  .navbar h5,
-  .navbar h6 {
-    margin: 0 1rem;
-    z-index: 101; }
   .navbar h1,
   .navbar h2,
   .navbar h3,
@@ -2519,10 +2513,14 @@ q {
   .navbar a,
   .navbar button {
     display: inline-block;
-    flex: 1 0 auto;
+    margin: 0;
+    overflow: hidden;
+    min-width: 40px;
+    width: auto;
+    white-space: nowrap;
     height: 60px;
     line-height: 60px;
-    white-space: nowrap; }
+    flex: 1 0 auto; }
     @media screen and (min-width: 48rem) {
       .navbar h1,
       .navbar h2,
@@ -2533,9 +2531,15 @@ q {
       .navbar a,
       .navbar button {
         flex: 0 0 auto; } }
+  .navbar h1,
+  .navbar h2,
+  .navbar h3,
+  .navbar h4,
+  .navbar h5,
+  .navbar h6 {
+    padding: 0 1rem;
+    z-index: 101; }
   .navbar a {
-    height: calc(60px - 1px);
-    line-height: calc(60px - 1px);
     padding: 0 0.5rem;
     border-color: transparent;
     color: #efedef;
@@ -2547,12 +2551,14 @@ q {
       border-color: #c4c2c7;
       color: #c4c2c7; }
   .navbar button {
-    height: calc(60px/2);
-    line-height: calc(60px/2);
-    margin: 0 1rem;
+    height: 30px;
+    line-height: 30px;
     padding: 0 0.5rem;
+    margin: 0 0.5rem;
+    min-width: 60px;
+    text-align: center;
     background-image: linear-gradient(-135deg, transparent 50%, #efedef 50%);
-    background-position: 100% 0;
+    background-position: 99% 0;
     border-color: #efedef;
     color: #efedef;
     z-index: 103; }
@@ -2564,6 +2570,30 @@ q {
       background-position: 0 0;
       border-color: #c4c2c7;
       color: #191828; }
+    .navbar button.navbar-button-menu {
+      flex: 0 0 auto;
+      border: none;
+      border-radius: 0;
+      height: 60px;
+      line-height: 60px;
+      margin: 0;
+      padding: 0 1rem; }
+  .navbar .navbar-center-element {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center; }
+  .navbar.navbar-block-elements h1,
+  .navbar.navbar-block-elements h2,
+  .navbar.navbar-block-elements h3,
+  .navbar.navbar-block-elements h4,
+  .navbar.navbar-block-elements h5,
+  .navbar.navbar-block-elements h6,
+  .navbar.navbar-block-elements a,
+  .navbar.navbar-block-elements button {
+    flex: 0 0 auto; }
   .navbar.navbar-center-content {
     -webkit-justify-content: center;
     -moz-justify-content: center;
@@ -2576,7 +2606,7 @@ q {
     right: 0; }
   .navbar.navbar-fix-bottom {
     border-bottom: 0;
-    border-top: 1px solid rgba(239, 237, 239, 0.1);
+    box-shadow: inset 0px 1px rgba(239, 237, 239, 0.1);
     bottom: 0; }
   .navbar.navbar-fix-top {
     top: 0; }
@@ -2584,38 +2614,34 @@ q {
     -webkit-justify-content: space-around;
     -moz-justify-content: space-around;
     justify-content: space-around; }
-    @media screen and (min-width: 64rem) {
-      .navbar.navbar-app-button {
-        -webkit-justify-content: center;
-        -moz-justify-content: center;
-        justify-content: center; } }
     .navbar.navbar-app-button button {
-      border: none;
-      flex: 1;
+      flex: 1 0 auto;
+      border: 0;
       border-radius: 0;
       height: 60px;
       line-height: 60px;
       margin: 0;
+      min-width: 60px;
+      width: auto;
       text-align: center; }
-      @media screen and (min-width: 64rem) {
+    @media screen and (min-width: 64rem) {
+      .navbar.navbar-app-button {
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        justify-content: center; }
         .navbar.navbar-app-button button {
-          flex: 0;
+          flex: 0 0 auto;
           padding: 0 2rem; } }
-  .navbar .navbar-center-element {
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    left: 0;
-    right: 0;
-    text-align: center; }
-  .navbar.background-primary button, .navbar.background-accent button {
-    background-image: linear-gradient(-135deg, transparent 50%, rgba(0, 0, 0, 0.2) 50%); }
-  .navbar.background-primary {
+  .navbar.bg-primary {
     background: rgba(253, 38, 79, 0.8);
     border-color: #fd264f; }
-  .navbar.background-accent {
+    .navbar.bg-primary button:hover, .navbar.bg-primary button:focus, .navbar.bg-primary button:active {
+      color: #fd264f; }
+  .navbar.bg-accent {
     background: rgba(13, 224, 132, 0.8);
     border-color: #0de084; }
+    .navbar.bg-accent button:hover, .navbar.bg-accent button:focus, .navbar.bg-accent button:active {
+      color: #0de084; }
   .navbar.color-primary {
     color: #efedef; }
     .navbar.color-primary h1,
@@ -2636,7 +2662,7 @@ q {
         color: #cf2347; }
     .navbar.color-primary button {
       background-image: linear-gradient(-135deg, transparent 50%, #fd264f 50%);
-      background-position: 100% 0;
+      background-position: 99% 0;
       border-color: #fd264f;
       color: #fd264f; }
       .navbar.color-primary button:hover, .navbar.color-primary button:focus {
@@ -2667,7 +2693,7 @@ q {
         color: #0fb872; }
     .navbar.color-accent button {
       background-image: linear-gradient(-135deg, transparent 50%, #0de084 50%);
-      background-position: 100% 0;
+      background-position: 99% 0;
       border-color: #0de084;
       color: #0de084; }
       .navbar.color-accent button:hover, .navbar.color-accent button:focus {

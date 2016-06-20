@@ -11,21 +11,16 @@
   -webkit-moz-items: center
   align-items: center
   background: rgba($main-color,0.05)
-  border-bottom: $border-width solid rgba($main-color,0.1)
+  box-shadow: inset 0px -1px rgba($main-color,0.1)
   color: $main-color
+  height: $navbar-height
+  line-height: $navbar-height
   overflow-y: visible
   overflow-x: scroll
-  height: $navbar-height
-  width: 100vw
+  position: relative
+  width: 100%
   z-index: 100
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6
-    margin: 0 $layout-space/2
-    z-index: 101
+
   h1,
   h2,
   h3,
@@ -35,30 +30,68 @@
   a,
   button
     display: inline-block
-    flex: 1 0 auto
+    margin: 0
+    overflow: hidden
+    min-width: 40px
+    width: auto
+    white-space: nowrap
     height: $navbar-height
     line-height: $navbar-height
-    white-space: nowrap
+    flex: 1 0 auto
     @media screen and (min-width: $tablet)
       flex: 0 0 auto
 
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6
+    padding: 0 $layout-space/2
+    z-index: 101
+
   a
-    height: calc(#{$navbar-height} - #{$border-width})
-    line-height: calc(#{$navbar-height} - #{$border-width})
     padding: 0 $layout-space/4
     +link($main-color)
     z-index: 102
+
   button
-    height: calc(#{$navbar-height}/2)
-    line-height: calc(#{$navbar-height}/2)
-    margin: 0 $layout-space/2
+    height: $navbar-height/2
+    line-height: $navbar-height/2
     padding: 0 $layout-space/4
+    margin: 0 $layout-space/4
+    min-width: $navbar-height
+    text-align: center
     +button($main-color)
     z-index: 103
+    &.navbar-button-menu
+      flex: 0 0 auto
+      border: none
+      border-radius: 0
+      height: $navbar-height
+      line-height: $navbar-height
+      margin: 0
+      padding: 0 $layout-space/2
 
+  //Navbar layout
+  .navbar-center-element
+    margin: 0
+    padding: 0
+    position: absolute
+    left: 0
+    right: 0
+    text-align: center
 
-
-
+  &.navbar-block-elements
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    a,
+    button
+      flex: 0 0 auto
 
   &.navbar-center-content
     -webkit-justify-content: center
@@ -74,50 +107,54 @@
     right: 0
   &.navbar-fix-bottom
     border-bottom: 0
-    border-top: $border-width solid rgba($main-color,0.1)
+    box-shadow: inset 0px 1px rgba($main-color,0.1)
     bottom: 0
   &.navbar-fix-top
     top: 0
 
+  //Navbar like app menu
   &.navbar-app-button
     -webkit-justify-content: space-around
     -moz-justify-content: space-around
     justify-content: space-around
-    @media screen and (min-width: $laptop)
-      -webkit-justify-content: center
-      -moz-justify-content: center
-      justify-content: center
+
     button
-      border: none
-      flex: 1
+      flex: 1 0 auto
+      border: 0
       border-radius: 0
       height: $navbar-height
       line-height: $navbar-height
       margin: 0
+      min-width: $navbar-height
+      width: auto
       text-align: center
-      @media screen and (min-width: $laptop)
-        flex: 0
+
+    @media screen and (min-width: $laptop)
+      -webkit-justify-content: center
+      -moz-justify-content: center
+      justify-content: center
+
+      button
+        flex: 0 0 auto
         padding: 0 $layout-space
 
-  .navbar-center-element
-    margin: 0
-    padding: 0
-    position: absolute
-    left: 0
-    right: 0
-    text-align: center
-
   // Navbar colors
-  &.background-primary,
-  &.background-accent
-    button
-      background-image: linear-gradient(-135deg, transparent 50%, rgba(0,0,0,0.2) 50%)
-  &.background-primary
+  &.bg-primary
     background: rgba($color-primary,0.8)
     border-color: $color-primary
-  &.background-accent
+    button
+      &:hover,
+      &:focus,
+      &:active
+        color: $color-primary
+  &.bg-accent
     background: rgba($color-accent,0.8)
     border-color: $color-accent
+    button
+      &:hover,
+      &:focus,
+      &:active
+        color: $color-accent
   &.color-primary
     color: $main-color
     h1,

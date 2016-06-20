@@ -2,7 +2,7 @@
 // Button color functions
 =button($color)
   background-image: linear-gradient(-135deg, transparent 50%, $color 50%)
-  background-position: 100% 0
+  background-position: 99% 0
   border-color: $color
   color: $color
   &:hover,
@@ -22,10 +22,10 @@
   color: $main-background
   &:hover,
   &:focus
-    background-position: 100% 0
+    background-position: 99% 0
     color: $color
   &:active
-    background-position: 100% 0
+    background-position: 99% 0
     color: $color
 
 // Button default values
@@ -52,10 +52,10 @@ button
       +button-solid($color-primary)
 
 // Button Sizes
-.button-small 
+.button-small
   font-size: 0.8em
   padding: $layout-space/4 $layout-space/2
-.button-big 
+.button-big
   font-size: 1.1em
   padding: $layout-space/1.5 $layout-space*1.5
 .button-block
