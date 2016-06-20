@@ -1332,12 +1332,8 @@ q {
   .row [class^="flex"], .tabs [class^="flex"],
   .row [class*=" flex"],
   .tabs [class*=" flex"] {
-    margin: 0 2vw;
+    margin: 0.5vw 2vw !important;
     overflow: hidden; }
-  .row.flex-padding [class^="flex"], .flex-padding.tabs [class^="flex"],
-  .row.flex-padding [class*=" flex"],
-  .flex-padding.tabs [class*=" flex"] {
-    padding: 2vw; }
 
 .col,
 .main-container {
@@ -1372,11 +1368,17 @@ q {
     -moz-flex-direction: column-reverse;
     flex-direction: column-reverse; }
 
+.flex-padding [class^="flex"],
+.flex-padding [class*=" flex"] {
+  padding: 2vw; }
+
+.flex-padding-small [class^="flex"],
+.flex-padding-small [class*=" flex"] {
+  padding: 1vw; }
+
 .flex {
   flex: 1; }
 
-.row .flex, .tabs .flex {
-  flex: 1; }
 .row .flex-1, .tabs .flex-1 {
   flex: 0 0 calc(100% - 4vw); }
 .row .flex-1_2, .tabs .flex-1_2,
@@ -1470,97 +1472,97 @@ q {
 .row .flex-9_10, .tabs .flex-9_10 {
   flex: 0 0 calc(10%*9 - 4vw); }
 @media screen and (min-width: 30rem) {
-  .row .flex-phone-l-1, .tabs .flex-phone-l-1 {
+  .row .flex-phonel-1, .tabs .flex-phonel-1 {
     flex: 0 0 calc(100% - 4vw); }
-  .row .flex-phone-l-1_2, .tabs .flex-phone-l-1_2,
-  .row .flex-phone-l-2_4,
-  .tabs .flex-phone-l-2_4,
-  .row .flex-phone-l-3_6,
-  .tabs .flex-phone-l-3_6,
-  .row .flex-phone-l-4_8,
-  .tabs .flex-phone-l-4_8,
-  .row .flex-phone-l-5_10,
-  .tabs .flex-phone-l-5_10 {
+  .row .flex-phonel-1_2, .tabs .flex-phonel-1_2,
+  .row .flex-phonel-2_4,
+  .tabs .flex-phonel-2_4,
+  .row .flex-phonel-3_6,
+  .tabs .flex-phonel-3_6,
+  .row .flex-phonel-4_8,
+  .tabs .flex-phonel-4_8,
+  .row .flex-phonel-5_10,
+  .tabs .flex-phonel-5_10 {
     flex: 0 0 calc(50% - 4vw); }
-  .row .flex-phone-l-1_3, .tabs .flex-phone-l-1_3,
-  .row .flex-phone-l-2_6,
-  .tabs .flex-phone-l-2_6 {
+  .row .flex-phonel-1_3, .tabs .flex-phonel-1_3,
+  .row .flex-phonel-2_6,
+  .tabs .flex-phonel-2_6 {
     flex: 0 0 calc(33.33% - 4vw); }
-  .row .flex-phone-l-2_3, .tabs .flex-phone-l-2_3,
-  .row .flex-phone-l-4_6,
-  .tabs .flex-phone-l-4_6 {
+  .row .flex-phonel-2_3, .tabs .flex-phonel-2_3,
+  .row .flex-phonel-4_6,
+  .tabs .flex-phonel-4_6 {
     flex: 0 0 calc(33.33%*2 - 4vw); }
-  .row .flex-phone-l-1_4, .tabs .flex-phone-l-1_4,
-  .row .flex-phone-l-2_8,
-  .tabs .flex-phone-l-2_8 {
+  .row .flex-phonel-1_4, .tabs .flex-phonel-1_4,
+  .row .flex-phonel-2_8,
+  .tabs .flex-phonel-2_8 {
     flex: 0 0 calc(25% - 4vw); }
-  .row .flex-phone-l-3_4, .tabs .flex-phone-l-3_4,
-  .row .flex-phone-l-6_8,
-  .tabs .flex-phone-l-6_8 {
+  .row .flex-phonel-3_4, .tabs .flex-phonel-3_4,
+  .row .flex-phonel-6_8,
+  .tabs .flex-phonel-6_8 {
     flex: 0 0 calc(25%*3 - 4vw); }
-  .row .flex-phone-l-1_5, .tabs .flex-phone-l-1_5,
-  .row .flex-phone-l-2_10,
-  .tabs .flex-phone-l-2_10 {
+  .row .flex-phonel-1_5, .tabs .flex-phonel-1_5,
+  .row .flex-phonel-2_10,
+  .tabs .flex-phonel-2_10 {
     flex: 0 0 calc(20% - 4vw); }
-  .row .flex-phone-l-2_5, .tabs .flex-phone-l-2_5,
-  .row .flex-phone-l-4_10,
-  .tabs .flex-phone-l-4_10 {
+  .row .flex-phonel-2_5, .tabs .flex-phonel-2_5,
+  .row .flex-phonel-4_10,
+  .tabs .flex-phonel-4_10 {
     flex: 0 0 calc(20%*2 - 4vw); }
-  .row .flex-phone-l-3_5, .tabs .flex-phone-l-3_5,
-  .row .flex-phone-l-6_10,
-  .tabs .flex-phone-l-6_10 {
+  .row .flex-phonel-3_5, .tabs .flex-phonel-3_5,
+  .row .flex-phonel-6_10,
+  .tabs .flex-phonel-6_10 {
     flex: 0 0 calc(20%*3 - 4vw); }
-  .row .flex-phone-l-4_5, .tabs .flex-phone-l-4_5,
-  .row .flex-phone-l-8_10,
-  .tabs .flex-phone-l-8_10 {
+  .row .flex-phonel-4_5, .tabs .flex-phonel-4_5,
+  .row .flex-phonel-8_10,
+  .tabs .flex-phonel-8_10 {
     flex: 0 0 calc(20%*4 - 4vw); }
-  .row .flex-phone-l-1_6, .tabs .flex-phone-l-1_6 {
+  .row .flex-phonel-1_6, .tabs .flex-phonel-1_6 {
     flex: 0 0 calc(16.66% - 4vw); }
-  .row .flex-phone-l-5_6, .tabs .flex-phone-l-5_6 {
+  .row .flex-phonel-5_6, .tabs .flex-phonel-5_6 {
     flex: 0 0 calc(16.66%*5 - 4vw); }
-  .row .flex-phone-l-1_7, .tabs .flex-phone-l-1_7 {
+  .row .flex-phonel-1_7, .tabs .flex-phonel-1_7 {
     flex: 0 0 calc(14.28% - 4vw); }
-  .row .flex-phone-l-2_7, .tabs .flex-phone-l-2_7 {
+  .row .flex-phonel-2_7, .tabs .flex-phonel-2_7 {
     flex: 0 0 calc(14.28%*2 - 4vw); }
-  .row .flex-phone-l-3_7, .tabs .flex-phone-l-3_7 {
+  .row .flex-phonel-3_7, .tabs .flex-phonel-3_7 {
     flex: 0 0 calc(14.28%*3 - 4vw); }
-  .row .flex-phone-l-4_7, .tabs .flex-phone-l-4_7 {
+  .row .flex-phonel-4_7, .tabs .flex-phonel-4_7 {
     flex: 0 0 calc(14.28%*4 - 4vw); }
-  .row .flex-phone-l-5_7, .tabs .flex-phone-l-5_7 {
+  .row .flex-phonel-5_7, .tabs .flex-phonel-5_7 {
     flex: 0 0 calc(14.28%*5 - 4vw); }
-  .row .flex-phone-l-6_7, .tabs .flex-phone-l-6_7 {
+  .row .flex-phonel-6_7, .tabs .flex-phonel-6_7 {
     flex: 0 0 calc(14.28%*6 - 4vw); }
-  .row .flex-phone-l-1_8, .tabs .flex-phone-l-1_8 {
+  .row .flex-phonel-1_8, .tabs .flex-phonel-1_8 {
     flex: 0 0 calc(12.5% - 4vw); }
-  .row .flex-phone-l-3_8, .tabs .flex-phone-l-3_8 {
+  .row .flex-phonel-3_8, .tabs .flex-phonel-3_8 {
     flex: 0 0 calc(12.5%*3 - 4vw); }
-  .row .flex-phone-l-5_8, .tabs .flex-phone-l-5_8 {
+  .row .flex-phonel-5_8, .tabs .flex-phonel-5_8 {
     flex: 0 0 calc(12.5%*5 - 4vw); }
-  .row .flex-phone-l-7_8, .tabs .flex-phone-l-7_8 {
+  .row .flex-phonel-7_8, .tabs .flex-phonel-7_8 {
     flex: 0 0 calc(12.5%*7 - 4vw); }
-  .row .flex-phone-l-1_9, .tabs .flex-phone-l-1_9 {
+  .row .flex-phonel-1_9, .tabs .flex-phonel-1_9 {
     flex: 0 0 calc(11.11% - 4vw); }
-  .row .flex-phone-l-2_9, .tabs .flex-phone-l-2_9 {
+  .row .flex-phonel-2_9, .tabs .flex-phonel-2_9 {
     flex: 0 0 calc(11.11%*2 - 4vw); }
-  .row .flex-phone-l-3_9, .tabs .flex-phone-l-3_9 {
+  .row .flex-phonel-3_9, .tabs .flex-phonel-3_9 {
     flex: 0 0 calc(11.11%*3 - 4vw); }
-  .row .flex-phone-l-4_9, .tabs .flex-phone-l-4_9 {
+  .row .flex-phonel-4_9, .tabs .flex-phonel-4_9 {
     flex: 0 0 calc(11.11%*4 - 4vw); }
-  .row .flex-phone-l-5_9, .tabs .flex-phone-l-5_9 {
+  .row .flex-phonel-5_9, .tabs .flex-phonel-5_9 {
     flex: 0 0 calc(11.11%*5 - 4vw); }
-  .row .flex-phone-l-6_9, .tabs .flex-phone-l-6_9 {
+  .row .flex-phonel-6_9, .tabs .flex-phonel-6_9 {
     flex: 0 0 calc(11.11%*6 - 4vw); }
-  .row .flex-phone-l-7_9, .tabs .flex-phone-l-7_9 {
+  .row .flex-phonel-7_9, .tabs .flex-phonel-7_9 {
     flex: 0 0 calc(11.11%*7 - 4vw); }
-  .row .flex-phone-l-8_9, .tabs .flex-phone-l-8_9 {
+  .row .flex-phonel-8_9, .tabs .flex-phonel-8_9 {
     flex: 0 0 calc(11.11%*8 - 4vw); }
-  .row .flex-phone-l-1_10, .tabs .flex-phone-l-1_10 {
+  .row .flex-phonel-1_10, .tabs .flex-phonel-1_10 {
     flex: 0 0 calc(10% - 4vw); }
-  .row .flex-phone-l-3_10, .tabs .flex-phone-l-3_10 {
+  .row .flex-phonel-3_10, .tabs .flex-phonel-3_10 {
     flex: 0 0 calc(10%*3 - 4vw); }
-  .row .flex-phone-l-7_10, .tabs .flex-phone-l-7_10 {
+  .row .flex-phonel-7_10, .tabs .flex-phonel-7_10 {
     flex: 0 0 calc(10%*7 - 4vw); }
-  .row .flex-phone-l-9_10, .tabs .flex-phone-l-9_10 {
+  .row .flex-phonel-9_10, .tabs .flex-phonel-9_10 {
     flex: 0 0 calc(10%*9 - 4vw); } }
 @media screen and (min-width: 48rem) {
   .row .flex-tablet-1, .tabs .flex-tablet-1 {
@@ -2041,6 +2043,9 @@ q {
   -moz-flex-direction: column;
   flex-direction: column;
   min-height: 100vh; }
+  .main-container > [class^="flex"],
+  .main-container > [class*=" flex"] {
+    margin: 0 !important; }
 
 .container {
   margin: 0 auto;
