@@ -892,7 +892,7 @@ dl {
 
 /* src/core/table.sass */
 .table-container {
-  overflow-x: scroll;
+  overflow-x: auto;
   overflow-y: hidden;
   width: 100%; }
 
@@ -1114,7 +1114,7 @@ code {
     color: rgba(255, 255, 255, 0.7);
     display: block;
     overflow-y: hidden;
-    overflow-x: scroll;
+    overflow-x: auto;
     padding: 1rem;
     margin: 0; }
     code.code-block .teal {
@@ -2497,10 +2497,8 @@ q {
   background: rgba(239, 237, 239, 0.05);
   box-shadow: inset 0px -1px rgba(239, 237, 239, 0.1);
   color: #efedef;
-  height: 60px;
   line-height: 60px;
-  overflow-y: visible;
-  overflow-x: scroll;
+  overflow-x: auto;
   position: relative;
   width: 100%;
   z-index: 100; }
