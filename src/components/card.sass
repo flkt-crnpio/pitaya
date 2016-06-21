@@ -9,7 +9,7 @@
   .card-content,
   .card-footer
     clear: both
-    padding: $layout-space/2 $layout-space
+    padding: $layout-space/2
   .card-header *,
   .card-footer *
     margin: 0
@@ -17,12 +17,17 @@
     border-bottom: $border-width solid rgba($main-color,0.3)
   .card-footer
     border-top: $border-width solid rgba($main-color,0.3)
+  .card-content
+    *:first-child
+      margin-top: 0
+    *:last-child
+      margin-bottom: 0
   .card-image
     background: $main-background
     border-radius: $border-radius
     width: 100%
     overflow: hidden
-    img 
+    img
       float: left
       width: 100%
       object-fit: cover
@@ -42,18 +47,13 @@
     background: rgba($main-background,0.3)
     border: $border-width dashed rgba($main-color,0.7)
     padding: $layout-space
-    display: -webkit-flex 
-    display: -moz-flex 
+    display: -webkit-flex
+    display: -moz-flex
     display: flex
     -webkit-align-items: center
     -webkit-moz-items: center
     align-items: center
-    -webkit-justify-content: center 
-    -moz-justify-content: center 
+    -webkit-justify-content: center
+    -moz-justify-content: center
     justify-content: center
-    *:first-child
-      margin-top: 0
-      padding-top: 0
-    *:last-child
-      margin-bottom: 0
-      padding-bottom: 0
+    text-align: center
