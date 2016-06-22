@@ -29,10 +29,11 @@
                       <ul>
                         <li><h3 class="color-primary">Contenido</h3></li>
                         <li><a href="#cartas">Cartas</a></li>
-                        <li><a href="#colapsable">Colapsable*</a></li>
+                        <li><a href="#colapsable">Colapsable *</a></li>
                         <li><a href="#etiquetas">Etiquetas</a></li>
                         <li><a href="#insignias">Insignias</a></li>
                         <li><a href="#migas">Migas de pan</a></li>
+                        <li><a href="#pestanias">Pestañas *</a></li>
                         <li><a href="#separador">Separador</a></li>
                       </ul>
                     </nav>
@@ -167,10 +168,10 @@
                     </div>
 
                     <div id="colapsable" class="navbar-fixed-top flex">
-                      <h1 class="color-primary">Colapsable*</h1>
+                      <h1 class="color-primary">Colapsable *</h1>
                       <p>Las secciones colapsables son elementos que muestran el contenido cuando se le da click a su título, se utilizan comúnmente en las páginas de preguntas frecuentes.</p>
                       <p>Normalmente la funcionalidad se hace con javaScript, éste es un componente de prueba, tiene el alto máximo fijo para poder animarlo, por lo que si se tiene un contenido más grande que éste, no mostrará el contenido completo. <br>Se puede solucionar quitando la animación y el alto máximo fijo de la clase, o haciendo más grande el alto máximo, pero si se hay secciones con contenido muy pequeño, igual parecerá que no se anima la transición de cerrado a abierto.</p>
-                      <p>En fin, está bueno si son preguntas frecuentes de tamaños similares porque te ahorra la librería de la animación, pero no es óptimo si no se sabe que carajos va a tener de contenido. <span class="color-primary">Úsese con precaución*</span></p>
+                      <p>En fin, está bueno si son preguntas frecuentes de tamaños similares porque te ahorra la librería de la animación, pero no es óptimo si no se sabe que carajos va a tener de contenido. <sup>Úsese con precaución*</sup></p>
 
                       <h4>Con checkbox</h4>
                       <p class="stay-close">Puedes abrir todas las secciones al mismo tiempo</p>
@@ -339,6 +340,228 @@
   <span class="pink">&lt;a href="#" class="link-breadcrumb"&gt;</span>Origen<span class="pink">&lt;/a&gt;</span>
   <span class="pink">&lt;a href="#" class="link-breadcrumb"&gt;</span>Antes<span class="pink">&lt;/a&gt;</span>
   <span class="pink">&lt;span&gt;</span>Ahora<span class="pink">&lt;/span&gt;</span>
+<span class="pink">&lt;/div&gt;</span>
+</pre>
+                      </code>
+                    </div>
+
+                    <div id="pestanias" class="navbar-fixed-top flex">
+                      <h1 class="color-primary">Pestañas *</h1>
+                      <p>Estos componentes normalmente utilizan JavaScript para su funcionamiento. Los que están en ésta libredía están armados con input radio, para tener un elemento con dos estados.</p>
+                      <p>Debe seguirse cuidadosamente la estructura del html, hasta el div consecutivo al input radio, para que funcione correctamente y especificar con las clases <code>.tab-2</code>, <code>.tab-3</code> o <code>.tab-4</code>, la cantidad de tabuladores que tendrá el componente <code>.tags</code>. El contenido dentro del ultimo div puede ser cualquier cosa y tener cualquier alto. <sup>Úsese con precaución*</sup></p>
+
+                      <h4>Dos pestañas</h4>
+                      <div class="code-sample">
+                        <div class="tabs">
+                          <div class="tab-2">
+                            <label for="tab2-1">Uno</label>
+                            <input id="tab2-1" name="tabs-two" type="radio" checked="checked">
+                            <div>
+                              <h4>Pestaña uno</h4>
+                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in mauris <a href="#">maecenas faucibus</a> felis.</p>
+                            </div>
+                          </div>
+                          <div class="tab-2">
+                            <label for="tab2-2">Dos</label>
+                            <input id="tab2-2" name="tabs-two" type="radio">
+                            <div>
+                              <h4>Pestaña dos</h4>
+                              <p>Quisque vehicula risus ac sem rhoncus faucibus.</p>
+                              <button>Botón</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <code class="code-block">
+<pre>
+<span class="pink">&lt;div class="tabs"&gt;</span>
+
+  <span class="pink">&lt;div class="tab-2"&gt;</span>
+    <span class="pink">&lt;label for="tab2-1"&gt;</span>Uno<span class="pink">&lt;/label&gt;</span>
+    <span class="pink">&lt;input id="tab2-1" name="tabs-two" type="radio" checked="checked"&gt;</span>
+    <span class="pink">&lt;div&gt;</span>
+      <span class="pink">&lt;h4&gt;</span>Pestaña uno<span class="pink">&lt;/h4&gt;</span>
+      <span class="pink">&lt;p&gt;</span>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in mauris <span class="pink">&lt;a href="#"&gt;</span>maecenas faucibus<span class="pink">&lt;/a&gt;</span> felis.
+      <span class="pink">&lt;/p&gt;</span>
+    <span class="pink">&lt;/div&gt;</span>
+  <span class="pink">&lt;/div&gt;</span>
+
+  <span class="pink">&lt;div class="tab-2"&gt;</span>
+    <span class="pink">&lt;label for="tab2-2"&gt;</span>Dos<span class="pink">&lt;/label&gt;</span>
+    <span class="pink">&lt;input id="tab2-2" name="tabs-two" type="radio" checked="checked"&gt;</span>
+    <span class="pink">&lt;div&gt;</span>
+      <span class="pink">&lt;h4&gt;</span>Pestaña dos<span class="pink">&lt;/h4&gt;</span>
+      <span class="pink">&lt;p&gt;</span>
+        Quisque vehicula risus ac sem rhoncus faucibus.
+      <span class="pink">&lt;/p&gt;</span>
+      <span class="pink">&lt;button&gt;</span>Botón<span class="pink">&lt;/button&gt;</span>
+    <span class="pink">&lt;/div&gt;</span>
+  <span class="pink">&lt;/div&gt;</span>
+
+<span class="pink">&lt;/div&gt;</span>
+</pre>
+                      </code>
+
+                      <h4>Tres pestañas</h4>
+                      <div class="code-sample">
+                        <div class="tabs">
+                          <div class="tab-3">
+                            <label for="tab3-1">Uno</label>
+                            <input id="tab3-1" name="tabs-three" type="radio" checked="checked">
+                            <div>
+                              <h4>Pestaña uno</h4>
+                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in mauris <a href="#">maecenas faucibus</a> felis.</p>
+                            </div>
+                          </div>
+                          <div class="tab-3">
+                            <label for="tab3-2">Dos</label>
+                            <input id="tab3-2" name="tabs-three" type="radio">
+                            <div>
+                              <h4>Pestaña dos</h4>
+                              <p>Quisque vehicula risus ac sem rhoncus faucibus.</p>
+                              <button>Botón</button>
+                            </div>
+                          </div>
+                          <div class="tab-3">
+                            <label for="tab3-3">Tres</label>
+                            <input id="tab3-3" name="tabs-three" type="radio">
+                            <div>
+                              <h4>Pestaña tres</h4>
+                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vehicula risus ac sem rhoncus faucibus.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <code class="code-block">
+<pre>
+<span class="pink">&lt;div class="tabs"&gt;</span>
+
+  <span class="pink">&lt;div class="tab-3"&gt;</span>
+    <span class="pink">&lt;label for="tab3-1"&gt;</span>Uno<span class="pink">&lt;/label&gt;</span>
+    <span class="pink">&lt;input id="tab3-1" name="tabs-three" type="radio" checked="checked"&gt;</span>
+    <span class="pink">&lt;div&gt;</span>
+      <span class="pink">&lt;h4&gt;</span>Pestaña uno<span class="pink">&lt;/h4&gt;</span>
+      <span class="pink">&lt;p&gt;</span>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in mauris <span class="pink">&lt;a href="#"&gt;</span>maecenas faucibus<span class="pink">&lt;/a&gt;</span> felis.
+      <span class="pink">&lt;/p&gt;</span>
+    <span class="pink">&lt;/div&gt;</span>
+  <span class="pink">&lt;/div&gt;</span>
+
+  <span class="pink">&lt;div class="tab-3"&gt;</span>
+    <span class="pink">&lt;label for="tab3-2"&gt;</span>Dos<span class="pink">&lt;/label&gt;</span>
+    <span class="pink">&lt;input id="tab3-2" name="tabs-three" type="radio" checked="checked"&gt;</span>
+    <span class="pink">&lt;div&gt;</span>
+      <span class="pink">&lt;h4&gt;</span>Pestaña dos<span class="pink">&lt;/h4&gt;</span>
+      <span class="pink">&lt;p&gt;</span>
+        Quisque vehicula risus ac sem rhoncus faucibus.
+      <span class="pink">&lt;/p&gt;</span>
+      <span class="pink">&lt;button&gt;</span>Botón<span class="pink">&lt;/button&gt;</span>
+    <span class="pink">&lt;/div&gt;</span>
+  <span class="pink">&lt;/div&gt;</span>
+
+  <span class="pink">&lt;div class="tab-3"&gt;</span>
+    <span class="pink">&lt;label for="tab3-3"&gt;</span>Tres<span class="pink">&lt;/label&gt;</span>
+    <span class="pink">&lt;input id="tab3-3" name="tabs-three" type="radio" checked="checked"&gt;</span>
+    <span class="pink">&lt;div&gt;</span>
+      <span class="pink">&lt;h4&gt;</span>Pestaña tres<span class="pink">&lt;/h4&gt;</span>
+      <span class="pink">&lt;p&gt;</span>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vehicula risus ac sem rhoncus faucibus.
+      <span class="pink">&lt;/p&gt;</span>
+    <span class="pink">&lt;/div&gt;</span>
+  <span class="pink">&lt;/div&gt;</span>
+
+<span class="pink">&lt;/div&gt;</span>
+</pre>
+                      </code>
+
+                      <h4>Cuatro pestañas</h4>
+                      <div class="code-sample">
+                        <div class="tabs">
+                          <div class="tab-4">
+                            <label for="tab4-1">Uno</label>
+                            <input id="tab4-1" name="tabs-four" type="radio" checked="checked">
+                            <div>
+                              <h4>Pestaña uno</h4>
+                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in mauris <a href="#">maecenas faucibus</a> felis.</p>
+                            </div>
+                          </div>
+                          <div class="tab-4">
+                            <label for="tab4-2">Dos</label>
+                            <input id="tab4-2" name="tabs-four" type="radio">
+                            <div>
+                              <h4>Pestaña dos</h4>
+                              <p>Quisque vehicula risus ac sem rhoncus faucibus.</p>
+                              <button>Botón</button>
+                            </div>
+                          </div>
+                          <div class="tab-4">
+                            <label for="tab4-3">Tres</label>
+                            <input id="tab4-3" name="tabs-four" type="radio">
+                            <div>
+                              <h4>Pestaña tres</h4>
+                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vehicula risus ac sem rhoncus faucibus.</p>
+                            </div>
+                          </div>
+                          <div class="tab-4">
+                            <label for="tab4-4">Cuatro</label>
+                            <input id="tab4-4" name="tabs-four" type="radio">
+                            <div>
+                              <h4>Pestaña cuatro</h4>
+                              <p>Consectetur adipiscing elit. Quisque vehicula risus ac sem rhoncus faucibus.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <code class="code-block">
+<pre>
+<span class="pink">&lt;div class="tabs"&gt;</span>
+
+  <span class="pink">&lt;div class="tab-4"&gt;</span>
+    <span class="pink">&lt;label for="tab4-1"&gt;</span>Uno<span class="pink">&lt;/label&gt;</span>
+    <span class="pink">&lt;input id="tab4-1" name="tabs-four" type="radio" checked="checked"&gt;</span>
+    <span class="pink">&lt;div&gt;</span>
+      <span class="pink">&lt;h4&gt;</span>Pestaña uno<span class="pink">&lt;/h4&gt;</span>
+      <span class="pink">&lt;p&gt;</span>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in mauris <span class="pink">&lt;a href="#"&gt;</span>maecenas faucibus<span class="pink">&lt;/a&gt;</span> felis.
+      <span class="pink">&lt;/p&gt;</span>
+    <span class="pink">&lt;/div&gt;</span>
+  <span class="pink">&lt;/div&gt;</span>
+
+  <span class="pink">&lt;div class="tab-4"&gt;</span>
+    <span class="pink">&lt;label for="tab4-2"&gt;</span>Dos<span class="pink">&lt;/label&gt;</span>
+    <span class="pink">&lt;input id="tab4-2" name="tabs-four" type="radio" checked="checked"&gt;</span>
+    <span class="pink">&lt;div&gt;</span>
+      <span class="pink">&lt;h4&gt;</span>Pestaña dos<span class="pink">&lt;/h4&gt;</span>
+      <span class="pink">&lt;p&gt;</span>
+        Quisque vehicula risus ac sem rhoncus faucibus.
+      <span class="pink">&lt;/p&gt;</span>
+      <span class="pink">&lt;button&gt;</span>Botón<span class="pink">&lt;/button&gt;</span>
+    <span class="pink">&lt;/div&gt;</span>
+  <span class="pink">&lt;/div&gt;</span>
+
+  <span class="pink">&lt;div class="tab-4"&gt;</span>
+    <span class="pink">&lt;label for="tab4-3"&gt;</span>Tres<span class="pink">&lt;/label&gt;</span>
+    <span class="pink">&lt;input id="tab4-3" name="tabs-four" type="radio" checked="checked"&gt;</span>
+    <span class="pink">&lt;div&gt;</span>
+      <span class="pink">&lt;h4&gt;</span>Pestaña tres<span class="pink">&lt;/h4&gt;</span>
+      <span class="pink">&lt;p&gt;</span>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vehicula risus ac sem rhoncus faucibus.
+      <span class="pink">&lt;/p&gt;</span>
+    <span class="pink">&lt;/div&gt;</span>
+  <span class="pink">&lt;/div&gt;</span>
+
+  <span class="pink">&lt;div class="tab-4"&gt;</span>
+    <span class="pink">&lt;label for="tab4-4"&gt;</span>Cuatro<span class="pink">&lt;/label&gt;</span>
+    <span class="pink">&lt;input id="tab4-4" name="tabs-four" type="radio" checked="checked"&gt;</span>
+    <span class="pink">&lt;div&gt;</span>
+      <span class="pink">&lt;h4&gt;</span>Pestaña cuatro<span class="pink">&lt;/h4&gt;</span>
+      <span class="pink">&lt;p&gt;</span>
+        Consectetur adipiscing elit. Quisque vehicula risus ac sem rhoncus faucibus.
+      <span class="pink">&lt;/p&gt;</span>
+    <span class="pink">&lt;/div&gt;</span>
+  <span class="pink">&lt;/div&gt;</span>
+
 <span class="pink">&lt;/div&gt;</span>
 </pre>
                       </code>
