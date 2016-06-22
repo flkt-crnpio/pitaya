@@ -1079,8 +1079,8 @@ mark,
 samp,
 var {
   border-radius: 1px;
-  padding: 0.2em 0.6em;
-  margin: 0 0.4em; }
+  padding: 0.01em 0.4em;
+  margin: 0.01em 0.1em; }
 
 kbd {
   background: #ddd;
@@ -2454,14 +2454,15 @@ q {
   border-radius: 1px;
   display: inline-block;
   line-height: 30px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  height: 30px;
+  margin: 0.25rem;
   padding-left: 1rem;
-  padding-right: 1rem; }
+  padding-right: 1rem;
+  white-space: nowrap; }
+  .tag * {
+    display: inline;
+    vertical-align: middle; }
   .tag img {
-    display: inline-block;
-    float: left;
     height: 30px;
     width: 30px;
     object-fit: cover;
@@ -2726,6 +2727,19 @@ q {
             .sidenavbar > ul > li ul li {
               font-weight: 100;
               padding: 0 1rem; } }
+
+/* src/helper/align.sass */
+.text-center {
+  text-align: center; }
+
+.text-left {
+  text-align: left; }
+
+.text-right {
+  text-align: right; }
+
+.text-justify {
+  text-align: justify; }
 
 /* src/helper/colors.sass */
 .bg-primary {
