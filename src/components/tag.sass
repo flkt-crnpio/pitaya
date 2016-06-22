@@ -4,14 +4,15 @@
   border-radius: $border-radius
   display: inline-block
   line-height: 30px
-  white-space: nowrap
-  overflow: hidden
-  text-overflow: ellipsis
+  height: 30px
+  margin: $layout-space/8
   padding-left: $layout-space/2
   padding-right: $layout-space/2
-  img 
-    display: inline-block
-    float: left
+  white-space: nowrap
+  *
+    display: inline
+    vertical-align: middle
+  img
     height: 30px
     width: 30px
     object-fit: cover
@@ -19,11 +20,11 @@
     margin-right: $layout-space/4
   &.tag-circle
     border-radius: 30px
-    img 
+    img
       border-radius: 30px
   &.tag-icon
     border-radius: 30px
-    img 
+    img
       border-radius: 30px
       height: 20px
       width: 20px
