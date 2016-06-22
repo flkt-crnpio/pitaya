@@ -2358,6 +2358,7 @@ q {
 
 /* src/components/tab.sass */
 .tabs {
+  margin: 0;
   overflow: hidden; }
   .tabs [class^="tab"] label,
   .tabs [class*=" tab"] label {

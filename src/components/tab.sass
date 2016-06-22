@@ -1,8 +1,9 @@
 /* src/components/tab.sass */
 .tabs
   @extend .row
+  margin: 0
   overflow: hidden
-  [class^="tab"], 
+  [class^="tab"],
   [class*=" tab"]
     label
       color: $main-color
@@ -39,10 +40,10 @@
   // Dos tabs
   .tab-2
     width: 50%
-    [type="radio"] + div 
+    [type="radio"] + div
       width: 200%
       margin-left: 200%
-    [type="radio"]:checked + div 
+    [type="radio"]:checked + div
       margin-left: 0
     &:last-child
       [type="radio"] + div
@@ -53,10 +54,10 @@
   // Tres tabs
   .tab-3
     width: 33.333%
-    [type="radio"] + div 
+    [type="radio"] + div
       width: 300%
       margin-left: 300%
-    [type="radio"]:checked + div 
+    [type="radio"]:checked + div
       margin-left: 0
     &:nth-child(2)
       [type="radio"] + div
@@ -72,10 +73,10 @@
   // Cuatro tabs
   .tab-4
     width: 25%
-    [type="radio"] + div 
+    [type="radio"] + div
       width: 400%
       margin-left: 400%
-    [type="radio"]:checked + div 
+    [type="radio"]:checked + div
       margin-left: 0
     &:nth-child(2)
       [type="radio"] + div
