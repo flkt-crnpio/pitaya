@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>ffcss</title>
+    <link rel="stylesheet" type="text/css" href="../dist/ffcss.css">
+    <link rel="stylesheet" type="text/css" href="css/pitaya.css">
+</head>
+<body>
+    <div class="main-container">
+
+        <nav class="navbar navbar-fix-top color-primary">
+            <h1><a href="index.html">Pitaya</a></h1>
+            <span class="flex"></span>
+            <a href="nucleo.html">Núcleo</a>
+            <a href="composicion.html">Composición</a>
+            <a href="navegacion.html">Navegación</a>
+            <a href="componentes.html" class="active">Componentes</a>
+            <a href="auxiliares.html">Auxiliares</a>
+        </nav>
+
+        <main class="flex">
+            <div class="container">
+                <div class="row">
+
+                  <aside class="flex-1 flex-tablet-1_3 navbar-fixed-top">
+                    <nav class="sidenavbar sidenavbar-fixed">
+                      <ul>
+                        <li><h3 class="color-primary">Contenido</h3></li>
+                        <li><a href="#cartas">Cartas</a></li>
+                        <li><a href="#colapsable">Colapsable*</a></li>
+                        <li><a href="#etiquetas">Etiquetas</a></li>
+                        <li><a href="#insignias">Insignias</a></li>
+                        <li><a href="#migas">Migas de pan</a></li>
+                        <li><a href="#separador">Separador</a></li>
+                      </ul>
+                    </nav>
+                  </aside>
+
+                  <div class="flex-1 flex-tablet-2_3">
+                    <div id="cartas" class="navbar-fixed-top flex">
+                      <h1 class="color-primary">Cartas</h1>
+                      <h4>Partes</h4>
+                      <p class="stay-close">Las cartas se contienen dentro de un <code>.card</code> que toma el ancho de lo que lo contenga y el alto de su contenido. Pueden tener cabecera, imagen, contenido y pie, no le afecta si no tiene alguno de sus elementos.</p>
+                      <div class="code-sample">
+                        <div class="row">
+                          <div class="flex-1_2">
+                            <div class="card">
+                              <div class="card-header">
+                                <h3>Título</h3>
+                              </div>
+                              <div class="card-image">
+                                <img src="img/gallery/callejon.jpeg" />
+                              </div>
+                              <div class="card-content">
+                                <p>Contenido</p>
+                              </div>
+                              <div class="card-footer">
+                                Pie <a href="#">hipervínculo</a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="flex-1_2">
+                            <div class="card">
+                              <div class="card-image">
+                                <img src="img/gallery/callejon.jpeg">
+                              </div>
+                              <div class="card-footer">
+                                <button class="button-small">Botón</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <code class="code-block">
+<pre>
+<span class="pink">&lt;div class="card"&gt;</span>
+  <span class="pink">&lt;div class="card-header"&gt;</span>
+    <span class="pink">&lt;h3&gt;</span>Título<span class="pink">&lt;/h3&gt;</span>
+  <span class="pink">&lt;/div&gt;</span>
+  <span class="pink">&lt;div class="card-image"&gt;</span>
+    <span class="pink">&lt;img src="img/gallery/callejon.jpeg" /&gt;</span>
+  <span class="pink">&lt;/div&gt;</span>
+  <span class="pink">&lt;div class="card-content"&gt;</span>
+    <span class="pink">&lt;p&gt;</span>Contenido<span class="pink">&lt;/p&gt;</span>
+  <span class="pink">&lt;/div&gt;</span>
+  <span class="pink">&lt;div class="card-footer"&gt;</span>
+    Pie <span class="pink">&lt;a href="#"&gt;</span>Hipervínculo<span class="pink">&lt;/a&gt;</span>
+  <span class="pink">&lt;/div&gt;</span>
+<span class="pink">&lt;/div&gt;</span>
+
+<span class="pink">&lt;div class="card"&gt;</span>
+  <span class="pink">&lt;div class="card-image"&gt;</span>
+    <span class="pink">&lt;img src="img/gallery/callejon.jpeg" /&gt;</span>
+  <span class="pink">&lt;/div&gt;</span>
+  <span class="pink">&lt;div class="card-footer"&gt;</span>
+    <span class="pink">&lt;button class="button-small"&gt;</span>Botón<span class="pink">&lt;/button&gt;</span>
+  <span class="pink">&lt;/div&gt;</span>
+<span class="pink">&lt;/div&gt;</span>
+</pre>
+                      </code>
+
+                      <h4>Cartas vacías</h4>
+                      <div class="code-sample">
+                        <div class="card card-empty">
+                          <p>Carta vacía</p>
+                        </div>
+                      </div>
+                      <code class="code-block">
+<pre>
+<span class="pink">&lt;div class="card card-empty"&gt;</span>
+  <span class="pink">&lt;p&gt;</span>Carta vacía<span class="pink">&lt;/p&gt;</span>
+<span class="pink">&lt;/div&gt;</span>
+</pre>
+                      </code>
+
+                      <h4>Tamaños</h4>
+                      <p class="stay-close">Para dejar el alto de las imagenes de las cartas del mismo tamaño, se agregan justo después de <code>.card-image</code>, las clases <code>.card-height-small</code>, <code>.card-height-med</code> ó <code>.card-height-big</code>.</p>
+                      <p>Con ésto no importará de que tamaño sea la imagen, todas las imagenes que tengan la misma clase, se verán del mismo tamaño.</p>
+                      <div class="code-sample">
+                        <div class="row">
+                          <div class="flex-1_3">
+                            <div class="card">
+                              <div class="card-image card-height-small">
+                                <img src="img/gallery/callejon.jpeg">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="flex-1_3">
+                            <div class="card">
+                              <div class="card-image card-height-med">
+                                <img src="img/gallery/callejon.jpeg">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="flex-1_3">
+                            <div class="card">
+                              <div class="card-image card-height-big">
+                                <img src="img/gallery/callejon.jpeg">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <code class="code-block">
+<pre>
+<span class="pink">&lt;div class="card"&gt;</span>
+  <span class="pink">&lt;div class="card-image card-height-small"&gt;</span>
+    <span class="pink">&lt;img src="img/gallery/callejon.jpeg" /&gt;</span>
+  <span class="pink">&lt;/div&gt;</span>
+<span class="pink">&lt;/div&gt;</span>
+
+<span class="pink">&lt;div class="card"&gt;</span>
+  <span class="pink">&lt;div class="card-image card-height-med"&gt;</span>
+    <span class="pink">&lt;img src="img/gallery/callejon.jpeg" /&gt;</span>
+  <span class="pink">&lt;/div&gt;</span>
+<span class="pink">&lt;/div&gt;</span>
+
+<span class="pink">&lt;div class="card"&gt;</span>
+  <span class="pink">&lt;div class="card-image card-height-big"&gt;</span>
+    <span class="pink">&lt;img src="img/gallery/callejon.jpeg" /&gt;</span>
+  <span class="pink">&lt;/div&gt;</span>
+<span class="pink">&lt;/div&gt;</span>
+</pre>
+                      </code>
+                    </div>
+
+                    <div id="colapsable" class="navbar-fixed-top flex">
+                      <h1 class="color-primary">Colapsable*</h1>
+                      <p>Las secciones colapsables son elementos que muestran el contenido cuando se le da click a su título, se utilizan comúnmente en las páginas de preguntas frecuentes.</p>
+                      <p>Normalmente la funcionalidad se hace con javaScript, éste es un componente de prueba, tiene el alto máximo fijo para poder animarlo, por lo que si se tiene un contenido más grande que éste, no mostrará el contenido completo. <br>Se puede solucionar quitando la animación y el alto máximo fijo de la clase, o haciendo más grande el alto máximo, pero si se hay secciones con contenido muy pequeño, igual parecerá que no se anima la transición de cerrado a abierto.</p>
+                      <p>En fin, está bueno si son preguntas frecuentes de tamaños similares porque te ahorra la librería de la animación, pero no es óptimo si no se sabe que carajos va a tener de contenido. <span class="color-primary">Úsese con precaución*</span></p>
+
+                      <h4>Con checkbox</h4>
+                      <p class="stay-close">Puedes abrir todas las secciones al mismo tiempo</p>
+                      <div class="code-sample">
+                        <div class="collapsable">
+                            <label for="cc-1">Título</label>
+                            <input id="cc-1" type="checkbox">
+                            <div class="collapsable-content">
+                                <p>Contenido. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam leo diam, ultrices malesuada sapien at, tincidunt malesuada eros. Vivamus varius, neque quis congue euismo.</p>
+                            </div>
+                        </div>
+                        <div class="collapsable">
+                            <label for="cc-2">Otro título</label>
+                            <input id="cc-2" type="checkbox">
+                            <div class="collapsable-content">
+                                <p>Contenido. Nullam a elementum dui, quis euismod nisl. Cras tempor metus ac auctor condimentum. Nunc mattis lobortis neque in blandit. Nam id nibh ante. Cras porta, sapien eget porttitor varius, urna est tempor odio, id porta erat orci a tellus. Morbi ornare nunc quis lorem tincidunt tincidunt. Morbi eget aliquet augue, vitae volutpat eros. Sed quis ligula nulla. Proin turpis tellus, egestas et orci malesuada, egestas lacinia leo. Proin sollicitudin lacus iaculis, lobortis erat in, auctor ligula.</p>
+                            </div>
+                        </div>
+                      </div>
+                      <code class="code-block">
+<pre>
+<span class="pink">&lt;div class="collapsable"&gt;</span>
+  <span class="pink">&lt;label for="cc-1"&gt;</span>Título<span class="pink">&lt;/label&gt;</span>
+  <span class="pink">&lt;input id="cc-1" type="checkbox" /&gt;</span>
+  <span class="pink">&lt;div class="collapsable-content"&gt;</span>
+    <span class="pink">&lt;p&gt;</span>Contenido... <span class="pink">&lt;/p&gt;</span>
+  <span class="pink">&lt;/div&gt;</span>
+<span class="pink">&lt;/div&gt;</span>
+
+<span class="pink">&lt;div class="collapsable"&gt;</span>
+  <span class="pink">&lt;label for="cc-2"&gt;</span>Otro título<span class="pink">&lt;/label&gt;</span>
+  <span class="pink">&lt;input id="cc-2" type="checkbox" /&gt;</span>
+  <span class="pink">&lt;div class="collapsable-content"&gt;</span>
+    <span class="pink">&lt;p&gt;</span>Contenido... <span class="pink">&lt;/p&gt;</span>
+  <span class="pink">&lt;/div&gt;</span>
+<span class="pink">&lt;/div&gt;</span>
+</pre>
+                      </code>
+
+                      <h4>Con radio button</h4>
+                      <p class="stay-close">Solo puedes abrir uno a la vez y siempre se mantiene abierto uno</p>
+                      <div class="code-sample">
+                        <div class="collapsable">
+                            <label for="cr-1">Título</label>
+                            <input id="cr-1" type="radio" name="cr" checked="checked">
+                            <div class="collapsable-content">
+                              <p>Contenido. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam leo diam, ultrices malesuada sapien at, tincidunt malesuada eros. Vivamus varius, neque quis congue euismo.</p>
+                            </div>
+                        </div>
+                        <div class="collapsable">
+                            <label for="cr-2">Título</label>
+                            <input id="cr-2" type="radio" name="cr">
+                            <div class="collapsable-content">
+                              <p>Contenido. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam leo diam, ultrices malesuada sapien at, tincidunt malesuada eros. Vivamus varius, neque quis congue euismo.</p>
+                            </div>
+                        </div>
+                        <div class="collapsable">
+                            <label for="cr-3">Título</label>
+                            <input id="cr-3" type="radio" name="cr">
+                            <div class="collapsable-content">
+                              <p>Contenido. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam leo diam, ultrices malesuada sapien at, tincidunt malesuada eros. Vivamus varius, neque quis congue euismo.</p>
+                            </div>
+                        </div>
+                      </div>
+                      <code class="code-block">
+<pre>
+<span class="pink">&lt;div class="collapsable"&gt;</span>
+  <span class="pink">&lt;label for="cr-1"&gt;</span>Título<span class="pink">&lt;/label&gt;</span>
+  <span class="pink">&lt;input id="cr-1" type="radio" name="cr" checked="checked" /&gt;</span>
+  <span class="pink">&lt;div class="collapsable-content"&gt;</span>
+    <span class="pink">&lt;p&gt;</span>Contenido... <span class="pink">&lt;/p&gt;</span>
+  <span class="pink">&lt;/div&gt;</span>
+<span class="pink">&lt;/div&gt;</span>
+
+<span class="pink">&lt;div class="collapsable"&gt;</span>
+  <span class="pink">&lt;label for="cr-2"&gt;</span>Título<span class="pink">&lt;/label&gt;</span>
+  <span class="pink">&lt;input id="cr-2" type="radio" name="cr" /&gt;</span>
+  <span class="pink">&lt;div class="collapsable-content"&gt;</span>
+    <span class="pink">&lt;p&gt;</span>Contenido... <span class="pink">&lt;/p&gt;</span>
+  <span class="pink">&lt;/div&gt;</span>
+<span class="pink">&lt;/div&gt;</span>
+
+<span class="pink">&lt;div class="collapsable"&gt;</span>
+  <span class="pink">&lt;label for="cr-3"&gt;</span>Título<span class="pink">&lt;/label&gt;</span>
+  <span class="pink">&lt;input id="cr-3" type="radio" name="cr" /&gt;</span>
+  <span class="pink">&lt;div class="collapsable-content"&gt;</span>
+    <span class="pink">&lt;p&gt;</span>Contenido... <span class="pink">&lt;/p&gt;</span>
+  <span class="pink">&lt;/div&gt;</span>
+<span class="pink">&lt;/div&gt;</span>
+</pre>
+                      </code>
+                    </div>
+
+                    <div id="etiquetas" class="navbar-fixed-top flex">
+                      <h1 class="color-primary">Etiquetas</h1>
+                      <p>Las etiquetas son elementos en línea de texto que se utilizan para representar pequeños fragmentos de información. Para crear una etiqueta utiliza la clase <code>.tag</code> y listo. Si necesitas estilo para imágenes redondeadas utiliza <code>.tag-circle</code> y para iconos <code>.tag-icon</code> después de la clase de tag.</p>
+                      <div class="code-sample">
+                        <span class="tag">Etiqueta</span>
+                        <span class="tag">
+                          <img src="img/profile/gris.jpg">
+                          Etiqueta con imagen
+                        </span>
+                        <span class="tag tag-circle">
+                          <img src="img/profile/gris.jpg">
+                          Etiqueta imagen circular
+                        </span>
+                        <span class="tag tag-icon">
+                          <img src="img/profile/gris.jpg">
+                          Etiqueta con icono
+                        </span>
+                      </div>
+                      <code class="code-block">
+<pre>
+<span class="pink">&lt;span class="tag"&gt;</span>
+  Etiqueta
+<span class="pink">&lt;/span&gt;</span>
+
+<span class="pink">&lt;span class="tag"&gt;</span>
+  <span class="pink">&lt;img src="img/profile/gris.jpg"&gt;</span>
+  Etiqueta con imagen
+<span class="pink">&lt;/span&gt;</span>
+
+<span class="pink">&lt;span class="tag tag-circle"&gt;</span>
+  <span class="pink">&lt;img src="img/profile/gris.jpg"&gt;</span>
+  Etiqueta imagen circular
+<span class="pink">&lt;/span&gt;</span>
+
+<span class="pink">&lt;span class="tag tag-icon"&gt;</span>
+  <span class="pink">&lt;img src="img/profile/gris.jpg"&gt;</span>
+  Etiqueta con icono
+<span class="pink">&lt;/span&gt;</span>
+</pre>
+                      </code>
+                    </div>
+
+                    <div id="insignias" class="navbar-fixed-top flex">
+                      <h1 class="color-primary">Insignias</h1>
+                      <p>Las insignias tienen fondo de color principal y color de texto del color del fondo general, pero se puede agregar cualquiera de las variables que aparecen en la sección de <a href="auxiliares.html#colores">color</a> para editarlo.</p>
+                      <div class="code-sample">
+                        <span class="badge">1</span>
+                        <span class="badge bg-accent">2</span>
+                        <span class="badge bg-white color-primary">123</span>
+                      </div>
+                      <code class="code-block">
+<pre>
+<span class="pink">&lt;span class="badge"&gt;</span>1<span class="pink">&lt;/span&gt;</span>
+<span class="pink">&lt;span class="badge bg-accent"&gt;</span>2<span class="pink">&lt;/span&gt;</span>
+<span class="pink">&lt;span class="badge bg-white color-primary"&gt;</span>123<span class="pink">&lt;/span&gt;</span>
+</pre>
+                      </code>
+                    </div>
+
+                    <div id="migas" class="navbar-fixed-top flex">
+                      <h1 class="color-primary">Migas de pan</h1>
+                      <p>Las migas de pan son esa sección en la cabecera de las páginas que nos dice en donde estamos y que nos permiten volver sobre nuestros pasos al origen de la página en que nos encontramos.</p>
+                      <div class="code-sample">
+                        <div class="breadcrumb">
+                          <a href="#" class="link-breadcrumb">Origen</a>
+                          <a href="#" class="link-breadcrumb">Antes</a>
+                          <span>Ahora</span>
+                        </div>
+                      </div>
+                      <code class="code-block">
+<pre>
+<span class="pink">&lt;div class="breadcrumb"&gt;</span>
+  <span class="pink">&lt;a href="#" class="link-breadcrumb"&gt;</span>Origen<span class="pink">&lt;/a&gt;</span>
+  <span class="pink">&lt;a href="#" class="link-breadcrumb"&gt;</span>Antes<span class="pink">&lt;/a&gt;</span>
+  <span class="pink">&lt;span&gt;</span>Ahora<span class="pink">&lt;/span&gt;</span>
+<span class="pink">&lt;/div&gt;</span>
+</pre>
+                      </code>
+                    </div>
+
+                    <div id="separador" class="navbar-fixed-top flex">
+                      <h1 class="color-primary">Separador</h1>
+                      <p>Para separar el contenido se puede utilizar simplemente la etiqueta <code><span class="pink">&lt;hr&gt;</span></code></p>
+                      <div class="code-sample">
+                        Línea uno
+                        <hr>
+                        Línea dos
+                      </div>
+                      <code class="code-block">
+<pre>
+Línea uno
+<span class="pink">&lt;hr&gt;</span>
+Línea dos
+</pre>
+                      </code>
+
+                      <h4>Separador horizontal</h4>
+                      <p class="stay-close">El ancho del separador es el mismo al contenedor en donde se encuentre y el texto de separación puede ser el que sea.</p>
+                      <div class="code-sample">
+                        <p class="text-center">Lorem ipsum dolor sit amet.</p>
+                        <div class="divider-horizontal">
+                            <div class="divider-content">lo que sea</div>
+                        </div>
+                        <p class="text-center">Consectetur adipiscing elit.</p>
+                      </div>
+                      <code class="code-block">
+<pre>
+<span class="pink">&lt;p class="text-center"&gt;</span>Lorem ipsum dolor sit amet.<span class="pink">&lt;/p&gt;</span>
+<span class="pink">&lt;div class="divider-horizontal"&gt;</span>
+  <span class="pink">&lt;div class="divider-content"&gt;</span>lo que sea<span class="pink">&lt;/div&gt;</span>
+<span class="pink">&lt;/div&gt;</span>
+<span class="pink">&lt;p class="text-center"&gt;</span>Consectetur adipiscing elit.<span class="pink">&lt;/p&gt;</span>
+</pre>
+                      </code>
+
+                      <h4>Separador vertical</h4>
+                      <p class="stay-close">Toma el alto de los elementos a los que separe, por lo mismo necesita que el contenido sea lo suficientemente alto para que puedan aparecer las líneas arriba y abajo del texto de separación.</p>
+                      <div class="code-sample">
+                        <div class="row">
+                          <div class="flex-1_3">
+                            <p class="text-center">Lorem ipsum dolor sit amet.</p>
+                          </div>
+                          <div class="divider-vertical">
+                            <div class="divider-content">ALGO</div>
+                          </div>
+                          <div class="flex-1_3">
+                            <p class="text-center">Consectetur adipiscing elit.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <code class="code-block">
+<pre>
+<span class="pink">&lt;div class="row"&gt;</span>
+  <span class="pink">&lt;div class="flex-1_3"&gt;</span>
+    <span class="pink">&lt;p class="text-center"&gt;</span>Lorem ipsum dolor sit amet.<span class="pink">&lt;/p&gt;</span>
+  <span class="pink">&lt;/div&gt;</span>
+  <span class="pink">&lt;div class="divider-horizontal"&gt;</span>
+    <span class="pink">&lt;div class="divider-content"&gt;</span>lo que sea<span class="pink">&lt;/div&gt;</span>
+  <span class="pink">&lt;/div&gt;</span>
+  <span class="pink">&lt;div class="flex-1_3"&gt;</span>
+    <span class="pink">&lt;p class="text-center"&gt;</span>Consectetur adipiscing elit.<span class="pink">&lt;/p&gt;</span>
+  <span class="pink">&lt;/div&gt;</span>
+<span class="pink">&lt;/div&gt;</span>
+</pre>
+                      </code>
+                    </div>
+
+                  </div>
+
+                </div>
+            </div>
+        </main>
+        <footer class="padding-vsides padding-small margin-top">
+            <div class="container">
+                <div class="row">
+                    <div class="flex">
+                        Pitaya. Hecha
+                        por <a href="http://flkt.mx/">flkt</a>
+                        bajo licencia <a href="https://github.com/flkt-crnpio/ffcss/blob/master/LICENSE">MIT</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
