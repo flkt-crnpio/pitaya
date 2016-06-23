@@ -2136,9 +2136,9 @@ q {
   -webkit-column-width: 100%;
   -moz-column-width: 100%;
   column-width: 100%;
-  -webkit-column-gap: 4vw;
-  -moz-column-gap: 4vw;
-  column-gap: 4vw;
+  -webkit-column-gap: 2vw;
+  -moz-column-gap: 2vw;
+  column-gap: 2vw;
   -webkit-column-count: 1;
   -moz-column-count: 1;
   column-count: 1;
@@ -2169,7 +2169,7 @@ q {
 
 .pin {
   display: inline-block;
-  margin: 0 0 4vw;
+  margin: 0 0 1.33333vw;
   padding: 0;
   -webkit-column-break-inside: avoid;
   -moz-column-break-inside: avoid;
