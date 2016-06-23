@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Pitaya</title>
+  <link rel="stylesheet" type="text/css" href="../dist/ffcss.css">
+  <link rel="stylesheet" type="text/css" href="css/pitaya.css">
+</head>
+<body>
+  <div class="main-container">
+
+    <nav class="navbar navbar-fix-top color-primary">
+      <h1><a href="index.html">Pitaya</a></h1>
+      <span class="flex"></span>
+      <a href="nucleo.html">Núcleo</a>
+      <a href="composicion.html" class="active">Composición</a>
+      <a href="navegacion.html">Navegación</a>
+      <a href="componentes.html">Componentes</a>
+      <a href="auxiliares.html">Auxiliares</a>
+    </nav>
+
+    <main class="flex">
+      <div class="container">
+        <div class="row">
+          <aside class="flex-1 flex-tablet-1_3 navbar-fixed-top">
+            <nav class="sidenavbar sidenavbar-fixed">
+              <ul>
+                <li><h3 class="color-primary">Cuadrícula</h3></li>
+                <li><a href="#filas">Filas</a></li>
+                <li><a href="#columnas">Columnas</a></li>
+                <li><a href="#pinter">PinterGrid</a></li>
+              </ul>
+            </nav>
+          </aside>
+
+          <div class="flex-1 flex-tablet-2_3">
+
+            <div id="filas" class="navbar-fixed-top flex">
+              <h1 class="color-primary">Cuadrícula</h1>
+              <h4>Filas</h4>
+              <p class="stay-close">Se basa en fracciones, de un entero, un medio hasta un decimo. Una fila puede contener solo un entero en cualquier combinación.</p>
+              <div class="code-sample">
+                <div class="row">
+                  <div class="flex-1 bg-primary">1</div>
+                </div>
+                <div class="row">
+                  <div class="flex-1_2 bg-primary">1/2</div>
+                  <div class="flex-1_2 bg-primary">1/2</div>
+                </div>
+                <div class="row">
+                  <div class="flex-1_3 bg-primary">1/3</div>
+                  <div class="flex-1_3 bg-primary">1/3</div>
+                  <div class="flex-1_3 bg-primary">1/3</div>
+                </div>
+                <div class="row">
+                  <div class="flex-1_4 bg-primary">1/4</div>
+                  <div class="flex-1_4 bg-primary">1/4</div>
+                  <div class="flex-1_4 bg-primary">1/4</div>
+                  <div class="flex-1_4 bg-primary">1/4</div>
+                </div>
+                <div class="row">
+                  <div class="flex-1_5 bg-primary">1/5</div>
+                  <div class="flex-1_5 bg-primary">1/5</div>
+                  <div class="flex-1_5 bg-primary">1/5</div>
+                  <div class="flex-1_5 bg-primary">1/5</div>
+                  <div class="flex-1_5 bg-primary">1/5</div>
+                </div>
+                <div class="row">
+                  <div class="flex-1_6 bg-primary">1/6</div>
+                  <div class="flex-1_6 bg-primary">1/6</div>
+                  <div class="flex-1_6 bg-primary">1/6</div>
+                  <div class="flex-1_6 bg-primary">1/6</div>
+                  <div class="flex-1_6 bg-primary">1/6</div>
+                  <div class="flex-1_6 bg-primary">1/6</div>
+                </div>
+                <div class="row">
+                  <div class="flex-1_7 bg-primary">1/7</div>
+                  <div class="flex-1_7 bg-primary">1/7</div>
+                  <div class="flex-1_7 bg-primary">1/7</div>
+                  <div class="flex-1_7 bg-primary">1/7</div>
+                  <div class="flex-1_7 bg-primary">1/7</div>
+                  <div class="flex-1_7 bg-primary">1/7</div>
+                  <div class="flex-1_7 bg-primary">1/7</div>
+                </div>
+                <div class="row">
+                  <div class="flex-1_8 bg-primary">1/8</div>
+                  <div class="flex-1_8 bg-primary">1/8</div>
+                  <div class="flex-1_8 bg-primary">1/8</div>
+                  <div class="flex-1_8 bg-primary">1/8</div>
+                  <div class="flex-1_8 bg-primary">1/8</div>
+                  <div class="flex-1_8 bg-primary">1/8</div>
+                  <div class="flex-1_8 bg-primary">1/8</div>
+                  <div class="flex-1_8 bg-primary">1/8</div>
+                </div>
+                <div class="row">
+                  <div class="flex-1_9 bg-primary">1/9</div>
+                  <div class="flex-1_9 bg-primary">1/9</div>
+                  <div class="flex-1_9 bg-primary">1/9</div>
+                  <div class="flex-1_9 bg-primary">1/9</div>
+                  <div class="flex-1_9 bg-primary">1/9</div>
+                  <div class="flex-1_9 bg-primary">1/9</div>
+                  <div class="flex-1_9 bg-primary">1/9</div>
+                  <div class="flex-1_9 bg-primary">1/9</div>
+                  <div class="flex-1_9 bg-primary">1/9</div>
+                </div>
+                <div class="row">
+                  <div class="flex-1_10 bg-primary">1/10</div>
+                  <div class="flex-1_10 bg-primary">1/10</div>
+                  <div class="flex-1_10 bg-primary">1/10</div>
+                  <div class="flex-1_10 bg-primary">1/10</div>
+                  <div class="flex-1_10 bg-primary">1/10</div>
+                  <div class="flex-1_10 bg-primary">1/10</div>
+                  <div class="flex-1_10 bg-primary">1/10</div>
+                  <div class="flex-1_10 bg-primary">1/10</div>
+                  <div class="flex-1_10 bg-primary">1/10</div>
+                  <div class="flex-1_10 bg-primary">1/10</div>
+                </div>
+              </div>
+              <code class="code-block">
+<pre>
+<span class="pink">&lt;div class="row"&gt;</span>
+  <span class="pink">&lt;div class="flex-1 bg-primary"&gt;</span>1<span class="pink">&lt;/div&gt;</span>
+<span class="pink">&lt;/div&gt;</span>
+
+<span class="pink">&lt;div class="row"&gt;</span>
+  <span class="pink">&lt;div class="flex-1_2 bg-primary"&gt;</span>1/2<span class="pink">&lt;/div&gt;</span>
+  <span class="pink">&lt;div class="flex-1_2 bg-primary"&gt;</span>1/2<span class="pink">&lt;/div&gt;</span>
+<span class="pink">&lt;/div&gt;</span>
+
+<span class="pink">&lt;div class="row"&gt;</span>
+  <span class="pink">&lt;div class="flex-1_3 bg-primary"&gt;</span>1/3<span class="pink">&lt;/div&gt;</span>
+  <span class="pink">&lt;div class="flex-1_3 bg-primary"&gt;</span>1/3<span class="pink">&lt;/div&gt;</span>
+  <span class="pink">&lt;div class="flex-1_3 bg-primary"&gt;</span>1/3 ...
+
+</pre>
+              </code>
+
+              <p>Otro ejemplo</p>
+              <div class="code-sample">
+                <div class="row">
+                  <div class="flex-1_10 bg-primary">1/10</div>
+                  <div class="flex-9_10 bg-primary">9/10</div>
+                </div>
+                <div class="row">
+                  <div class="flex-1_9 bg-primary">1/9</div>
+                  <div class="flex-8_9 bg-primary">8/9</div>
+                </div>
+                <div class="row">
+                  <div class="flex-1_8 bg-primary">1/8</div>
+                  <div class="flex-7_8 bg-primary">7/8</div>
+                </div>
+                <div class="row">
+                  <div class="flex-1_7 bg-primary">1/7</div>
+                  <div class="flex-6_7 bg-primary">6/7</div>
+                </div>
+                <div class="row">
+                  <div class="flex-1_6 bg-primary">1/6</div>
+                  <div class="flex-5_6 bg-primary">5/6</div>
+                </div>
+                <div class="row">
+                  <div class="flex-1_5 bg-primary">1/5</div>
+                  <div class="flex-4_5 bg-primary">4/5</div>
+                </div>
+                <div class="row">
+                  <div class="flex-1_4 bg-primary">1/4</div>
+                  <div class="flex-3_4 bg-primary">3/4</div>
+                </div>
+                <div class="row">
+                  <div class="flex-1_3 bg-primary">1/3</div>
+                  <div class="flex-2_3 bg-primary">2/3</div>
+                </div>
+                <div class="row">
+                  <div class="flex-1_2 bg-primary">1/2</div>
+                  <div class="flex-1_2 bg-primary">1/2</div>
+                </div>
+                <div class="row">
+                  <div class="flex-1 bg-primary">1</div>
+                </div>
+              </div>
+              <code class="code-block">
+<pre>
+<span class="pink">&lt;div class="row"&gt;</span>
+  <span class="pink">&lt;div class="flex-1_10 bg-primary"&gt;</span>1/10<span class="pink">&lt;/div&gt;</span>
+  <span class="pink">&lt;div class="flex-9_10 bg-primary"&gt;</span>9/10<span class="pink">&lt;/div&gt;</span>
+<span class="pink">&lt;/div&gt;</span>
+
+<span class="pink">&lt;div class="row"&gt;</span>
+  <span class="pink">&lt;div class="flex-1_9 bg-primary"&gt;</span>1/9<span class="pink">&lt;/div&gt;</span>
+  <span class="pink">&lt;div class="flex-8_9 bg-primary"&gt;</span>8/9<span class="pink">&lt;/div&gt;</span>
+<span class="pink">&lt;/div&gt;</span>
+
+<span class="pink">&lt;div class="row"&gt;</span>
+  <span class="pink">&lt;div class="flex-1_8 bg-primary"&gt;</span>1/8<span class="pink">&lt;/div&gt;</span>
+  <span class="pink">&lt;div class="flex-7_8 bg-primary"&gt;</span>7/8<span class="pink">&lt;/div&gt;</span>
+<span class="pink">&lt;/div&gt;</span>
+
+<span class="pink">&lt;div class="row"&gt;</span>
+  <span class="pink">&lt;div class="flex-1_7 bg-primary"&gt;</span>1/7<span class="pink">&lt;/div&gt;</span>
+  <span class="pink">&lt;div class="flex-6_7 bg-primary"&gt;</span>6/7...
+
+</pre>
+              </code>
+
+              <p>Un ejemplo más con todos los septimos.</p>
+              <div class="code-sample">
+                <div class="row">
+                  <div class="flex-1_7 bg-primary">1/7</div>
+                  <div class="flex-6_7 bg-primary">6/7</div>
+                  <div class="flex-2_7 bg-primary">2/7</div>
+                  <div class="flex-5_7 bg-primary">5/7</div>
+                  <div class="flex-3_7 bg-primary">3/7</div>
+                  <div class="flex-4_7 bg-primary">4/7</div>
+                </div>
+              </div>
+              <code class="code-block">
+<pre>
+<span class="pink">&lt;div class="row"&gt;</span>
+
+  <span class="pink">&lt;div class="flex-1_7 bg-primary"&gt;</span>1/7<span class="pink">&lt;/div&gt;</span>
+  <span class="pink">&lt;div class="flex-6_7 bg-primary"&gt;</span>6/7<span class="pink">&lt;/div&gt;</span>
+
+  <span class="pink">&lt;div class="flex-2_7 bg-primary"&gt;</span>2/7<span class="pink">&lt;/div&gt;</span>
+  <span class="pink">&lt;div class="flex-5_7 bg-primary"&gt;</span>5/7<span class="pink">&lt;/div&gt;</span>
+
+  <span class="pink">&lt;div class="flex-3_7 bg-primary"&gt;</span>3/7<span class="pink">&lt;/div&gt;</span>
+  <span class="pink">&lt;div class="flex-4_7 bg-primary"&gt;</span>4/7<span class="pink">&lt;/div&gt;</span>
+
+<span class="pink">&lt;/div&gt;</span>
+</pre>
+              </code>
+
+
+            </div>
+
+            <div id="pinter" class="navbar-fixed-top flex">
+              <h1 class="color-primary">PinterGrid</h1>
+              <h4>Un grid como el de Pinterest</h4>
+              <p class="stay-close">Éste grid se formatea automáticamente, una columna en mobiles, dos en mobiles en landscape, tres en tablets, cuatro en laptops y 5 columnas en monitores.</p>
+              <p>Para usarlo únicamente se necesita poner el contenedor <code>.pin-container</code>.</p>
+              <div class="code-sample">
+                <div class="pin-container">
+                 <p>Pin Container. Éste contenido es el mismo parrafo, pero el estilo del contenedor hace que solo se separe en bloques, es interesante como para secciones de noticias como periodicos digitales, pero es un poco complicado porque no se sabe el orden en que se acomodaran cuando son bloques, por ejemplo los grids de las imagenes, no se puede escribir en qué orden deban aparecer, se acomodan dependiendo del tamaño que tengan para acomodarse.</p>
+                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacinia velit non orci ultricies venenatis. Sed euismod id tortor quis semper. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur dignissim nibh vel sagittis bibendum. Duis a eros et nulla ultrices aliquet a dignissim mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nibh nulla, congue sed urna eu, blandit aliquet orci. Maecenas varius sapien eget imperdiet ornare. Mauris lectus odio, rutrum a mollis eget, blandit vel nunc. Vivamus ut urna arcu. Pellentesque eleifend felis ac purus tincidunt rutrum. Suspendisse in nisi dui.</p>
+                </div>
+              </div>
+              <code class="code-block">
+<pre>
+<span class="pink">&lt;div class="pin-container"&gt;</span>
+  <span class="pink">&lt;p&gt;</span>
+    Pin Container. Éste contenido es el mismo parrafo, pero el estilo del contenedor hace que solo se separe en bloques, es interesante como para secciones de noticias como periodicos digitales, pero es un poco complicado porque no se sabe el orden en que se acomodaran cuando son bloques, por ejemplo los grids de las imagenes, no se puede escribir en qué orden deban aparecer, se acomodan dependiendo del tamaño que tengan para acomodarse.
+  <span class="pink">&lt;/p&gt;</span>
+  <span class="pink">&lt;p&gt;</span>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacinia velit non orci ultricies venenatis. Sed euismod id tortor quis semper. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur dignissim nibh vel sagittis bibendum. Duis a eros et nulla ultrices aliquet a dignissim mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nibh nulla, congue sed urna eu, blandit aliquet orci. Maecenas varius sapien eget imperdiet ornare. Mauris lectus odio, rutrum a mollis eget, blandit vel nunc. Vivamus ut urna arcu. Pellentesque eleifend felis ac purus tincidunt rutrum. Suspendisse in nisi dui.
+  <span class="pink">&lt;/p&gt;</span>
+<span class="pink">&lt;/div&gt;</span>
+</pre>
+              </code>
+
+              <h4>PinterBlock</h4>
+              <p class="stay-close">Si el contenido del PinterGrid son pequeños bloques, como por ejemplo una galería de imágenes, se puede utilizar la clase <code>.pin</code> para agregarle margen a cada elemento.</p>
+              <div class="code-sample">
+                <div class="pin-container">
+                  <div class="pin">
+                    <img src="img/gallery/1.jpeg" alt="1">
+                    <div class="pin-info">1</div>
+                  </div>
+                  <div class="pin">
+                    <img src="img/gallery/2.jpeg" alt="2">
+                    <div class="pin-info">2</div>
+                  </div>
+                  <div class="pin">
+                    <img src="img/gallery/3.jpeg" alt="3">
+                    <div class="pin-info">3</div>
+                  </div>
+                  <div class="pin">
+                    <img src="img/gallery/4.jpeg" alt="4">
+                    <div class="pin-info">4</div>
+                  </div>
+                  <div class="pin">
+                    <img src="img/gallery/5.jpeg" alt="5">
+                    <div class="pin-info">5</div>
+                  </div>
+                  <div class="pin">
+                    <img src="img/gallery/6.jpeg" alt="6">
+                    <div class="pin-info">6</div>
+                  </div>
+                  <div class="pin">
+                    <img src="img/gallery/7.jpeg" alt="7">
+                    <div class="pin-info">7</div>
+                  </div>
+                  <div class="pin">
+                    <img src="img/gallery/8.jpeg" alt="8">
+                    <div class="pin-info">8</div>
+                  </div>
+                  <div class="pin">
+                    <img src="img/gallery/9.jpeg" alt="9">
+                    <div class="pin-info">9</div>
+                  </div>
+                </div>
+              </div>
+              <code class="code-block">
+<pre>
+</pre>
+              </code>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <footer class="padding-vsides padding-small margin-top">
+      <div class="container">
+        <div class="row">
+          <div class="flex">
+            Pitaya. Hecha
+            por <a href="http://flkt.mx/">flkt</a>
+            bajo licencia <a href="https://github.com/flkt-crnpio/ffcss/blob/master/LICENSE">MIT</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+</body>
+</html>
