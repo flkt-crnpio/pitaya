@@ -2170,10 +2170,20 @@ q {
 .pin {
   display: inline-block;
   margin: 0 0 1.33333vw;
+  overflow: hidden;
   padding: 0;
+  position: relative;
   -webkit-column-break-inside: avoid;
   -moz-column-break-inside: avoid;
   column-break-inside: avoid; }
+  .pin .pin-info {
+    background: linear-gradient(rgba(25, 24, 40, 0), rgba(25, 24, 40, 0.5));
+    color: #efedef;
+    padding: 0.66667vw;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0; }
 
 /* src/components/badge.sass */
 .badge {
