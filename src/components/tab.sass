@@ -1,6 +1,12 @@
 /* src/components/tab.sass */
 .tabs
-  @extend .row
+  display: block
+  display: -webkit-flex
+  display: -moz-flex
+  display: flex
+  -webkit-flex-wrap: wrap
+  -moz-flex-wrap: wrap
+  flex-wrap: wrap
   margin: 0
   overflow: hidden
   [class^="tab"],
