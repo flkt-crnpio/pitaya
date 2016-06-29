@@ -9,7 +9,6 @@
 </head>
 <body>
   <div class="main-container">
-
     <nav class="navbar navbar-fix-top color-primary">
       <h1><a href="index.html">Pitaya</a></h1>
       <span class="flex"></span>
@@ -20,27 +19,32 @@
       <a href="componentes.html">Componentes</a>
       <a href="auxiliares.html">Auxiliares</a>
     </nav>
-
     <main class="flex">
       <div class="container">
         <div class="row">
           <aside class="flex-1 flex-tablet-1_3 navbar-fixed-top">
             <nav class="sidenavbar sidenavbar-fixed">
               <ul>
-                <li><h3 class="color-primary">Cuadrícula</h3></li>
+                <li><h3 class="color-primary">Contenido</h3></li>
+                <li><a href="#cuadricula">Cuadrícula</a></li>
                 <li><a href="#filas">Filas</a></li>
-                <li><a href="#columnas">Columnas</a></li>
+                <li><a href="#adaptable">Adaptable</a></li>
+                <li><a href="#horizontal">Alineación horizontal</a></li>
+                <li><a href="#vertical">Alineación vertical</a></li>
                 <li><a href="#pinter">PinterGrid</a></li>
               </ul>
             </nav>
           </aside>
-
           <div class="flex-1 flex-tablet-2_3">
-
-            <div id="filas" class="navbar-fixed-top flex">
+            <div id="cuadricula" class="navbar-fixed-top flex">
               <h1 class="color-primary">Cuadrícula</h1>
-              <h4>Filas</h4>
-              <p class="stay-close">Se basa en fracciones, de un entero, un medio hasta un decimo. Una fila puede contener solo un entero en cualquier combinación.</p>
+              <h4>Cajas flexibles</h4>
+              <p class="stay-close">Está armado con cajas flexibles, pero tiene clases para utilizarlo parecido a la estructura basada en bloques de filas y celdas.</p>
+            </div>
+            <div id="filas" class="navbar-fixed-top flex">
+              <h1 class="color-primary">Filas</h1>
+              <p>Se basa en fracciones, de un entero, un medio hasta un decimo, es la parte del grid que se parece más a estar armando el sitio en bloques.</p>
+              <p>Una fila puede contener solo un entero en cualquier combinación, si sobrepasas el entero, el contenido salta a la siguiente fila.</p>
               <div class="code-sample">
                 <div class="row">
                   <div class="flex-1 bg-primary">1</div>
@@ -136,7 +140,6 @@
 
 </pre>
               </code>
-
               <p>Otro ejemplo</p>
               <div class="code-sample">
                 <div class="row">
@@ -202,7 +205,6 @@
 
 </pre>
               </code>
-
               <p>Un ejemplo más con todos los septimos.</p>
               <div class="code-sample">
                 <div class="row">
@@ -230,10 +232,219 @@
 <span class="pink">&lt;/div&gt;</span>
 </pre>
               </code>
-
-
             </div>
+            <div id="adaptable" class="navbar-fixed-top flex">
+              <h1 class="color-primary">Adaptable a dispositivos</h1>
+              <h4>Tamaños de pantalla</h4>
+              <p class="stay-close">Las clases de las cuadrículas se pueden especificar para cada tamaño de pantalla.</p>
+              <p>Los puntos de ruptura del ancho de pantalla están definidos dentro del archivo <code>_vars.sass</code> para editarse fácilmente, los valores por defecto se especifícan en la tabla debajo.</p>
+              <p>El margen entre los elementos también varía dependiendo de la pantalla en la que se encuentre, por defecto es <code>2vw</code> pero se puede editar desde el mismo archivo de variables, <code>_vars.sass</code>.</p>
+              <p>Si sólo se especifica un tamaño para los bloques debe utilizarse la clase 'Natural' con el prefijo <code>.flex-</code> y el bloque tomará el mismo tamaño para todos los dispositivos.
+              <table>
+                <tbody>
+                  <tr>
+                    <td>Natural / Celular</td>
+                    <td>20rem</td>
+                    <td>.flex-</td>
+                  </tr>
+                  <tr>
+                    <td>Celular acostado</td>
+                    <td>30rem</td>
+                    <td>.flex-phonel-</td>
+                  </tr>
+                  <tr>
+                    <td>Tableta</td>
+                    <td>48rem</td>
+                    <td>.flex-tablet-</td>
+                  </tr>
+                  <tr>
+                    <td>Portátil</td>
+                    <td>64rem</td>
+                    <td>.flex-laptop-</td>
+                  </tr>
+                  <tr>
+                    <td>Monitor</td>
+                    <td>75rem</td>
+                    <td>.flex-MDPI-</td>
+                  </tr>
+                  <tr>
+                    <td>Monitorsote</td>
+                    <td>90rem</td>
+                    <td>.flex-HiDPI-</td>
+                  </tr>
+                  <tr>
+                    <td>Televisión / Monitorsototote XD</td>
+                    <td>120rem</td>
+                    <td>.flex-HD-</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div id="horizontal" class="navbar-fixed-top flex">
+              <h1 class="color-primary">Alineación horizontal</h1>
+              <h4>Al inicio</h4>
+              <p class="stay-close">Se agrega la clase <code>.h-start</code> para alinear los elementos al inicio de la fila.</p>
+              <div class="code-sample">
+                <div class="row h-start">
+                  <div class="flex-1_3 bg-primary">1/3</div>
+                  <div class="flex-1_3 bg-primary">1/3</div>
+                </div>
+                <div class="row h-start">
+                  <div class="flex-1_7 bg-primary">1/7</div>
+                  <div class="flex-1_7 bg-primary">1/7</div>
+                  <div class="flex-1_7 bg-primary">1/7</div>
+                </div>
+              </div>
+              <code class="code-block">
+<pre>
+<span class="pink">&lt;div class="row h-start"&gt;</span>
+  <span class="pink">&lt;div class="flex-1_3 bg-primary"&gt;</span>1/3<span class="pink">&lt;/div&gt;</span>
+  <span class="pink">&lt;div class="flex-1_3 bg-primary"&gt;</span>1/3<span class="pink">&lt;/div&gt;</span>
+<span class="pink">&lt;/div&gt;</span>
 
+<span class="pink">&lt;div class="row h-start"&gt;</span>
+  <span class="pink">&lt;div class="flex-1_7 bg-primary"&gt;</span>1/7<span class="pink">&lt;/div&gt;</span>
+  <span class="pink">&lt;div class="flex-1_7 bg-primary"&gt;</span>1/7<span class="pink">&lt;/div&gt;</span>
+  <span class="pink">&lt;div class="flex-1_7 bg-primary"&gt;</span>1/7<span class="pink">&lt;/div&gt;</span>
+<span class="pink">&lt;/div&gt;</span>
+</pre>
+              </code>
+              <h4>Al final</h4>
+              <p class="stay-close">Se agrega la clase <code>.h-end</code> para alinear los elementos al final de la fila.</p>
+              <div class="code-sample">
+                <div class="row h-end">
+                  <div class="flex-1_3 bg-primary">1/3</div>
+                  <div class="flex-1_3 bg-primary">1/3</div>
+                </div>
+                <div class="row h-end">
+                  <div class="flex-1_7 bg-primary">1/7</div>
+                  <div class="flex-1_7 bg-primary">1/7</div>
+                  <div class="flex-1_7 bg-primary">1/7</div>
+                </div>
+              </div>
+              <code class="code-block">
+<pre>
+<span class="pink">&lt;div class="row h-end"&gt;</span>
+  <span class="pink">&lt;div class="flex-1_3 bg-primary"&gt;</span>1/3<span class="pink">&lt;/div&gt;</span>
+  <span class="pink">&lt;div class="flex-1_3 bg-primary"&gt;</span>1/3<span class="pink">&lt;/div&gt;</span>
+<span class="pink">&lt;/div&gt;</span>
+
+<span class="pink">&lt;div class="row h-end"&gt;</span>
+  <span class="pink">&lt;div class="flex-1_7 bg-primary"&gt;</span>1/7<span class="pink">&lt;/div&gt;</span>
+  <span class="pink">&lt;div class="flex-1_7 bg-primary"&gt;</span>1/7<span class="pink">&lt;/div&gt;</span>
+  <span class="pink">&lt;div class="flex-1_7 bg-primary"&gt;</span>1/7<span class="pink">&lt;/div&gt;</span>
+<span class="pink">&lt;/div&gt;</span>
+</pre>
+              </code>
+              <h4>Al centro</h4>
+              <p class="stay-close">Se agrega la clase <code>.h-center</code> para alinear los elementos al centro de la fila.</p>
+              <div class="code-sample">
+                <div class="row h-center">
+                  <div class="flex-1_3 bg-primary">1/3</div>
+                  <div class="flex-1_3 bg-primary">1/3</div>
+                </div>
+                <div class="row h-center">
+                  <div class="flex-1_7 bg-primary">1/7</div>
+                  <div class="flex-1_7 bg-primary">1/7</div>
+                  <div class="flex-1_7 bg-primary">1/7</div>
+                </div>
+              </div>
+              <code class="code-block">
+<pre>
+<span class="pink">&lt;div class="row h-center"&gt;</span>
+  <span class="pink">&lt;div class="flex-1_3 bg-primary"&gt;</span>1/3<span class="pink">&lt;/div&gt;</span>
+  <span class="pink">&lt;div class="flex-1_3 bg-primary"&gt;</span>1/3<span class="pink">&lt;/div&gt;</span>
+<span class="pink">&lt;/div&gt;</span>
+
+<span class="pink">&lt;div class="row h-center"&gt;</span>
+  <span class="pink">&lt;div class="flex-1_7 bg-primary"&gt;</span>1/7<span class="pink">&lt;/div&gt;</span>
+  <span class="pink">&lt;div class="flex-1_7 bg-primary"&gt;</span>1/7<span class="pink">&lt;/div&gt;</span>
+  <span class="pink">&lt;div class="flex-1_7 bg-primary"&gt;</span>1/7<span class="pink">&lt;/div&gt;</span>
+<span class="pink">&lt;/div&gt;</span>
+</pre>
+              </code>
+              <h4>Espacio alrededor</h4>
+              <p class="stay-close">Se agrega la clase <code>.h-around</code> para que se distribuya el espacio restante alrededor de los elementos de la fila.</p>
+              <div class="code-sample">
+                <div class="row h-around">
+                  <div class="flex-1_3 bg-primary">1/3</div>
+                  <div class="flex-1_3 bg-primary">1/3</div>
+                </div>
+                <div class="row h-around">
+                  <div class="flex-1_7 bg-primary">1/7</div>
+                  <div class="flex-1_7 bg-primary">1/7</div>
+                  <div class="flex-1_7 bg-primary">1/7</div>
+                </div>
+              </div>
+              <code class="code-block">
+<pre>
+<span class="pink">&lt;div class="row h-around"&gt;</span>
+  <span class="pink">&lt;div class="flex-1_3 bg-primary"&gt;</span>1/3<span class="pink">&lt;/div&gt;</span>
+  <span class="pink">&lt;div class="flex-1_3 bg-primary"&gt;</span>1/3<span class="pink">&lt;/div&gt;</span>
+<span class="pink">&lt;/div&gt;</span>
+
+<span class="pink">&lt;div class="row h-around"&gt;</span>
+  <span class="pink">&lt;div class="flex-1_7 bg-primary"&gt;</span>1/7<span class="pink">&lt;/div&gt;</span>
+  <span class="pink">&lt;div class="flex-1_7 bg-primary"&gt;</span>1/7<span class="pink">&lt;/div&gt;</span>
+  <span class="pink">&lt;div class="flex-1_7 bg-primary"&gt;</span>1/7<span class="pink">&lt;/div&gt;</span>
+<span class="pink">&lt;/div&gt;</span>
+</pre>
+              </code>
+              <h4>Espacio entre elementos</h4>
+              <p class="stay-close">Se agrega la clase <code>.h-between</code> para que se distribuya el espacio restante entre los elementos de la fila.</p>
+              <div class="code-sample">
+                <div class="row h-between">
+                  <div class="flex-1_3 bg-primary">1/3</div>
+                  <div class="flex-1_3 bg-primary">1/3</div>
+                </div>
+                <div class="row h-between">
+                  <div class="flex-1_7 bg-primary">1/7</div>
+                  <div class="flex-1_7 bg-primary">1/7</div>
+                  <div class="flex-1_7 bg-primary">1/7</div>
+                </div>
+              </div>
+              <code class="code-block">
+<pre>
+<span class="pink">&lt;div class="row h-between"&gt;</span>
+  <span class="pink">&lt;div class="flex-1_3 bg-primary"&gt;</span>1/3<span class="pink">&lt;/div&gt;</span>
+  <span class="pink">&lt;div class="flex-1_3 bg-primary"&gt;</span>1/3<span class="pink">&lt;/div&gt;</span>
+<span class="pink">&lt;/div&gt;</span>
+
+<span class="pink">&lt;div class="row h-between"&gt;</span>
+  <span class="pink">&lt;div class="flex-1_7 bg-primary"&gt;</span>1/7<span class="pink">&lt;/div&gt;</span>
+  <span class="pink">&lt;div class="flex-1_7 bg-primary"&gt;</span>1/7<span class="pink">&lt;/div&gt;</span>
+  <span class="pink">&lt;div class="flex-1_7 bg-primary"&gt;</span>1/7<span class="pink">&lt;/div&gt;</span>
+<span class="pink">&lt;/div&gt;</span>
+</pre>
+              </code>
+              <h4>No se ni me importa</h4>
+              <p class="stay-close">Se agrega la clase <code>.h-stretch</code> a la fila y los elementos que contengan se repartirán equitativamente el espacio. Los elementos dentro no necesitan una clase para definir el ancho, lo malo es que se comportarán exactamente igual en cualquier resolucion, mobile, laptopb, tablets, en todos tendrá la misma disposición.</p>
+              <div class="code-sample">
+                <div class="row h-stretch">
+                  <div class="bg-primary">&nbsp;</div>
+                  <div class="bg-primary">&nbsp;</div>
+                </div>
+                <div class="row h-stretch">
+                  <div class="bg-primary">&nbsp;</div>
+                  <div class="bg-primary">&nbsp;</div>
+                  <div class="bg-primary">&nbsp;</div>
+                </div>
+              </div>
+              <code class="code-block">
+<pre>
+<span class="pink">&lt;div class="row h-stretch"&gt;</span>
+  <span class="pink">&lt;div class="bg-primary"&gt;</span> <span class="pink">&lt;/div&gt;</span>
+  <span class="pink">&lt;div class="bg-primary"&gt;</span> <span class="pink">&lt;/div&gt;</span>
+<span class="pink">&lt;/div&gt;</span>
+
+<span class="pink">&lt;div class="row h-stretch"&gt;</span>
+  <span class="pink">&lt;div class="bg-primary"&gt;</span> <span class="pink">&lt;/div&gt;</span>
+  <span class="pink">&lt;div class="bg-primary"&gt;</span> <span class="pink">&lt;/div&gt;</span>
+  <span class="pink">&lt;div class="bg-primary"&gt;</span> <span class="pink">&lt;/div&gt;</span>
+<span class="pink">&lt;/div&gt;</span>
+</pre>
+              </code>
+            </div>
             <div id="pinter" class="navbar-fixed-top flex">
               <h1 class="color-primary">PinterGrid</h1>
               <h4>Un grid como el de Pinterest</h4>
@@ -257,7 +468,6 @@
 <span class="pink">&lt;/div&gt;</span>
 </pre>
               </code>
-
               <h4>PinterBlock</h4>
               <p class="stay-close">Si el contenido del PinterGrid son pequeños bloques, como por ejemplo una galería de imágenes, se puede utilizar la clase <code>.pin</code> para agregarle margen a cada elemento y <code>.pin-info</code> para agregar texto sobre el bloque del pin.</p>
               <div class="code-sample">
@@ -321,13 +531,10 @@
 </pre>
               </code>
             </div>
-
           </div>
         </div>
-
       </div>
     </main>
-
     <footer class="padding-vsides padding-small margin-top">
       <div class="container">
         <div class="row">
@@ -339,8 +546,14 @@
         </div>
       </div>
     </footer>
-
   </div>
-
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-75845366-2', 'auto');
+    ga('send', 'pageview');
+  </script>
 </body>
 </html>
