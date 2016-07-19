@@ -2083,10 +2083,12 @@ q {
   -webkit-column-break-inside: avoid;
   -moz-column-break-inside: avoid;
   column-break-inside: avoid; }
+  .pin img {
+    float: left; }
   .pin .pin-info {
-    background: linear-gradient(rgba(25, 24, 40, 0), rgba(25, 24, 40, 0.5));
+    background: linear-gradient(rgba(25, 24, 40, 0), rgba(25, 24, 40, 0.7), #191828);
     color: #efedef;
-    padding: 0.66667vw;
+    padding: 0.25vw 0.5vw;
     position: absolute;
     bottom: 0;
     left: 0;

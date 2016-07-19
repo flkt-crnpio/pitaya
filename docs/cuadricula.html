@@ -445,6 +445,104 @@
 </pre>
               </code>
             </div>
+
+            <div id="vertical" class="navbar-fixed-top flex">
+              <h1 class="color-primary">Alineación vertical</h1>
+              <p>Las clases de alineación vertical únicamente funcionan, o se ve su uso, cuando están dentro de un elemento con un alto mayor que su contenido, ó cuando se tienen bloques de distinto alto.</p>
+
+              <h4>Alineado arriba</h4>
+              <p class="stay-close">Por defecto todas las cosas siempre se alinean arriba, al comenzar un elemento, pero aún así, hay extrañas veces en que se necesita especificar que así sea. Para alinear un elemento al inicio se debe agregar la clase <code>v-start</code>.</p>
+              <div class="code-sample">
+                <div class="row v-start">
+                  <div class="bg-primary flex" style="height: 100px;">&nbsp;</div>
+                  <div class="bg-primary flex" style="height: 200px;">&nbsp;</div>
+                </div>
+              </div>
+              <code class="code-block">
+<pre>
+<span class="pink">&lt;div class="row v-start"&gt;</span>
+  <span class="pink">&lt;div class="bg-primary flex" style="height: 100px;"&gt;</span> <span class="pink">&lt;/div&gt;</span>
+  <span class="pink">&lt;div class="bg-primary flex" style="height: 200px;"&gt;</span> <span class="pink">&lt;/div&gt;</span>
+<span class="pink">&lt;/div&gt;</span>
+</pre>
+              </code>
+
+              <h4>Alinado abajo</h4>
+              <p class="stay-close">Se agrega la clase <code>.v-end</code> para alinear un elemnto hasta abajo de su contenedor.</p>
+              <div class="code-sample">
+                <div class="row v-end">
+                  <div class="bg-primary flex" style="height: 100px;">&nbsp;</div>
+                  <div class="bg-primary flex" style="height: 200px;">&nbsp;</div>
+                </div>
+              </div>
+              <code class="code-block">
+<pre>
+<span class="pink">&lt;div class="row v-end"&gt;</span>
+  <span class="pink">&lt;div class="bg-primary flex" style="height: 100px;"&gt;</span> <span class="pink">&lt;/div&gt;</span>
+  <span class="pink">&lt;div class="bg-primary flex" style="height: 200px;"&gt;</span> <span class="pink">&lt;/div&gt;</span>
+<span class="pink">&lt;/div&gt;</span>
+</pre>
+              </code>
+
+              <h4>Alineado al centro vertical</h4>
+              <p class="stay-close">La clase más utilizada para alineación vertial. Se agrega <code>.v-center</code>, para alinear un elemento a la mitad de su contenedor.</p>
+              <div class="code-sample">
+                <div class="row v-center">
+                  <div class="bg-primary flex" style="height: 100px;">&nbsp;</div>
+                  <div class="bg-primary flex" style="height: 200px;">&nbsp;</div>
+                </div>
+              </div>
+              <code class="code-block">
+<pre>
+<span class="pink">&lt;div class="row v-center"&gt;</span>
+  <span class="pink">&lt;div class="bg-primary flex" style="height: 100px;"&gt;</span> <span class="pink">&lt;/div&gt;</span>
+  <span class="pink">&lt;div class="bg-primary flex" style="height: 200px;"&gt;</span> <span class="pink">&lt;/div&gt;</span>
+<span class="pink">&lt;/div&gt;</span>
+</pre>
+              </code>
+
+              <h4>Alinea el texto</h4>
+              <p class="stay-close">Con la clase <code>.v-baseline</code> se alinea todo el texto de distintos contenedores para que se lean de corrido.</p>
+              <div class="code-sample">
+                <div class="row v-baseline">
+                  <div class="bg-primary flex" style="height: 100px;"><h3>baseline</h3></div>
+                  <div class="bg-primary flex" style="height: 200px;"><p>baseline</p></div>
+                  <div class="bg-primary flex" style="height: 50px;"><small>baseline</small></div>
+                </div>
+              </div>
+              <code class="code-block">
+<pre>
+<span class="pink">&lt;div class="row v-baseline"&gt;</span>
+  <span class="pink">&lt;div class="bg-primary flex" style="height: 100px;"&gt;</span>
+    <span class="pink">&lt;h3&gt;</span> baseline <span class="pink">&lt;h3&gt;</span>
+  <span class="pink">&lt;/div&gt;</span>
+  <span class="pink">&lt;div class="bg-primary flex" style="height: 200px;"&gt;</span>
+    <span class="pink">&lt;p&gt;</span> baseline <span class="pink">&lt;p&gt;</span>
+  <span class="pink">&lt;/div&gt;</span>
+  <span class="pink">&lt;div class="bg-primary flex" style="height: 50px;"&gt;</span>
+    <span class="pink">&lt;small&gt;</span> baseline <span class="pink">&lt;small&gt;</span>
+  <span class="pink">&lt;/div&gt;</span>
+<span class="pink">&lt;/div&gt;</span>
+</pre>
+              </code>
+
+              <h4>Todo el alto!</h4>
+              <p class="stay-close">Agregando la clase <code>v-stretch</code>, el contenido toma todo el alto de su contenedor.</p>
+              <div class="code-sample">
+                <div class="row v-stretch" style="height: 100px;">
+                  <div class="bg-primary flex">&nbsp;</div>
+                </div>
+              </div>
+              <code class="code-block">
+<pre>
+<span class="pink">&lt;div class="row v-stretch" style="height: 100px;"&gt;</span>
+  <span class="pink">&lt;div class="bg-primary flex"&gt;</span> <span class="pink">&lt;/div&gt;</span>
+<span class="pink">&lt;/div&gt;</span>
+</pre>
+              </code>
+
+            </div>
+
             <div id="pinter" class="navbar-fixed-top flex">
               <h1 class="color-primary">PinterGrid</h1>
               <h4>Un grid como el de Pinterest</h4>
