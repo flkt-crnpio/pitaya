@@ -2630,6 +2630,84 @@ q {
         border-color: #0fb872;
         color: #191828; }
 
+/* src/navigation/navmenu.sass */
+.navmenu {
+  position: absolute;
+  z-index: 10; }
+  .navmenu .navmenu-trigger {
+    display: none; }
+  .navmenu .navmenu-trigger:checked ~ .navmenu-icon span {
+    transform: rotate(45deg); }
+    .navmenu .navmenu-trigger:checked ~ .navmenu-icon span::after {
+      margin-top: 0;
+      margin-left: 0;
+      transform: rotate(-90deg);
+      width: 20px; }
+    .navmenu .navmenu-trigger:checked ~ .navmenu-icon span::before {
+      margin-top: 0;
+      margin-left: 0;
+      transform: rotate(90deg);
+      width: 20px; }
+  .navmenu .navmenu-trigger:checked ~ .navmenu-icon:hover, .navmenu .navmenu-trigger:checked ~ .navmenu-icon:focus {
+    transform: rotate(-45deg); }
+    .navmenu .navmenu-trigger:checked ~ .navmenu-icon:hover span::after, .navmenu .navmenu-trigger:checked ~ .navmenu-icon:focus span::after {
+      margin-top: 5px;
+      margin-left: 0px;
+      transform: rotate(35deg);
+      width: 15px; }
+    .navmenu .navmenu-trigger:checked ~ .navmenu-icon:hover span::before, .navmenu .navmenu-trigger:checked ~ .navmenu-icon:focus span::before {
+      margin-top: -5px;
+      margin-left: 0px;
+      transform: rotate(-35deg);
+      width: 15px; }
+  .navmenu .navmenu-trigger:checked ~ .navmenu-nav {
+    left: 0; }
+  .navmenu .navmenu-icon {
+    cursor: pointer;
+    display: inline-block;
+    padding: 2rem 1.33333rem;
+    position: absolute;
+    z-index: 12; }
+    .navmenu .navmenu-icon span,
+    .navmenu .navmenu-icon span::after,
+    .navmenu .navmenu-icon span::before {
+      background: #efedef;
+      display: block;
+      height: 1px;
+      width: 20px;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out; }
+    .navmenu .navmenu-icon span::after, .navmenu .navmenu-icon span::before {
+      content: "";
+      position: absolute; }
+    .navmenu .navmenu-icon span::after {
+      margin-top: 5px; }
+    .navmenu .navmenu-icon span::before {
+      margin-top: -5px; }
+    .navmenu .navmenu-icon:hover span::after, .navmenu .navmenu-icon:focus span::after {
+      margin-left: 5px;
+      transform: rotate(-35deg);
+      width: 15px; }
+    .navmenu .navmenu-icon:hover span::before, .navmenu .navmenu-icon:focus span::before {
+      margin-left: 5px;
+      transform: rotate(35deg);
+      width: 15px; }
+  .navmenu .navmenu-nav {
+    background: rgba(25, 24, 40, 0.8);
+    height: 100vh;
+    left: -100vw;
+    overflow: hidden;
+    padding: 4rem;
+    position: absolute;
+    width: 100vw;
+    z-index: 11;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+
 /* src/navigation/sidenavbar.sass */
 .sidenavbar {
   display: none; }
