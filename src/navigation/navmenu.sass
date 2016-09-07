@@ -7,7 +7,7 @@
     display: none
 
   .navmenu-trigger:checked ~ .navmenu-icon
-    span
+    .icon
       transform: rotate(45deg)
       &::after
         margin-top: 0
@@ -23,7 +23,7 @@
     &:hover,
     &:focus
       transform: rotate(-45deg)
-      span
+      .icon
         &::after
           margin-top: 5px
           margin-left: 0px
@@ -37,6 +37,7 @@
 
   .navmenu-trigger:checked ~ .navmenu-nav
     left: 0
+    opacity: 1
 
   .navmenu-icon
     cursor: pointer
@@ -45,16 +46,16 @@
     position: absolute
     z-index: 12
 
-    span,
-    span::after,
-    span::before
+    .icon,
+    .icon::after,
+    .icon::before
       background: $main-color
       display: block
       height: 1px
       width: 20px
       +transition-ease(.3s)
 
-    span
+    .icon
       &::after,
       &::before
         content: ""
@@ -66,7 +67,7 @@
 
     &:hover,
     &:focus
-      span
+      .icon
         &::after
           margin-left: 5px
           transform: rotate(-35deg)
@@ -77,14 +78,22 @@
           width: 15px
 
   .navmenu-nav
-    background: rgba($main-background, 0.8)
+    background: rgba($main-background, 0.3)
     height: 100vh
     left: -100vw
+    opacity: 0
     overflow: hidden
-    padding: $layout-space*2
     position: absolute
     width: 100vw
     z-index: 11
     +transition-ease(.3s)
 
-    
+    .nav
+      background: rgba($main-background, 0.9)
+      display: inline-block
+      height: 100vh
+      padding: $layout-space*2
+
+      a
+        display: block
+        padding: $layout-space/4

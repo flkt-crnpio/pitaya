@@ -2636,41 +2636,42 @@ q {
   z-index: 10; }
   .navmenu .navmenu-trigger {
     display: none; }
-  .navmenu .navmenu-trigger:checked ~ .navmenu-icon span {
+  .navmenu .navmenu-trigger:checked ~ .navmenu-icon .icon {
     transform: rotate(45deg); }
-    .navmenu .navmenu-trigger:checked ~ .navmenu-icon span::after {
+    .navmenu .navmenu-trigger:checked ~ .navmenu-icon .icon::after {
       margin-top: 0;
       margin-left: 0;
       transform: rotate(-90deg);
       width: 20px; }
-    .navmenu .navmenu-trigger:checked ~ .navmenu-icon span::before {
+    .navmenu .navmenu-trigger:checked ~ .navmenu-icon .icon::before {
       margin-top: 0;
       margin-left: 0;
       transform: rotate(90deg);
       width: 20px; }
   .navmenu .navmenu-trigger:checked ~ .navmenu-icon:hover, .navmenu .navmenu-trigger:checked ~ .navmenu-icon:focus {
     transform: rotate(-45deg); }
-    .navmenu .navmenu-trigger:checked ~ .navmenu-icon:hover span::after, .navmenu .navmenu-trigger:checked ~ .navmenu-icon:focus span::after {
+    .navmenu .navmenu-trigger:checked ~ .navmenu-icon:hover .icon::after, .navmenu .navmenu-trigger:checked ~ .navmenu-icon:focus .icon::after {
       margin-top: 5px;
       margin-left: 0px;
       transform: rotate(35deg);
       width: 15px; }
-    .navmenu .navmenu-trigger:checked ~ .navmenu-icon:hover span::before, .navmenu .navmenu-trigger:checked ~ .navmenu-icon:focus span::before {
+    .navmenu .navmenu-trigger:checked ~ .navmenu-icon:hover .icon::before, .navmenu .navmenu-trigger:checked ~ .navmenu-icon:focus .icon::before {
       margin-top: -5px;
       margin-left: 0px;
       transform: rotate(-35deg);
       width: 15px; }
   .navmenu .navmenu-trigger:checked ~ .navmenu-nav {
-    left: 0; }
+    left: 0;
+    opacity: 1; }
   .navmenu .navmenu-icon {
     cursor: pointer;
     display: inline-block;
     padding: 2rem 1.33333rem;
     position: absolute;
     z-index: 12; }
-    .navmenu .navmenu-icon span,
-    .navmenu .navmenu-icon span::after,
-    .navmenu .navmenu-icon span::before {
+    .navmenu .navmenu-icon .icon,
+    .navmenu .navmenu-icon .icon::after,
+    .navmenu .navmenu-icon .icon::before {
       background: #efedef;
       display: block;
       height: 1px;
@@ -2679,27 +2680,27 @@ q {
       -moz-transition: all 0.3s ease-in-out;
       -o-transition: all 0.3s ease-in-out;
       transition: all 0.3s ease-in-out; }
-    .navmenu .navmenu-icon span::after, .navmenu .navmenu-icon span::before {
+    .navmenu .navmenu-icon .icon::after, .navmenu .navmenu-icon .icon::before {
       content: "";
       position: absolute; }
-    .navmenu .navmenu-icon span::after {
+    .navmenu .navmenu-icon .icon::after {
       margin-top: 5px; }
-    .navmenu .navmenu-icon span::before {
+    .navmenu .navmenu-icon .icon::before {
       margin-top: -5px; }
-    .navmenu .navmenu-icon:hover span::after, .navmenu .navmenu-icon:focus span::after {
+    .navmenu .navmenu-icon:hover .icon::after, .navmenu .navmenu-icon:focus .icon::after {
       margin-left: 5px;
       transform: rotate(-35deg);
       width: 15px; }
-    .navmenu .navmenu-icon:hover span::before, .navmenu .navmenu-icon:focus span::before {
+    .navmenu .navmenu-icon:hover .icon::before, .navmenu .navmenu-icon:focus .icon::before {
       margin-left: 5px;
       transform: rotate(35deg);
       width: 15px; }
   .navmenu .navmenu-nav {
-    background: rgba(25, 24, 40, 0.8);
+    background: rgba(25, 24, 40, 0.3);
     height: 100vh;
     left: -100vw;
+    opacity: 0;
     overflow: hidden;
-    padding: 4rem;
     position: absolute;
     width: 100vw;
     z-index: 11;
@@ -2707,6 +2708,14 @@ q {
     -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out; }
+    .navmenu .navmenu-nav .nav {
+      background: rgba(25, 24, 40, 0.9);
+      display: inline-block;
+      height: 100vh;
+      padding: 4rem; }
+      .navmenu .navmenu-nav .nav a {
+        display: block;
+        padding: 0.5rem; }
 
 /* src/navigation/sidenavbar.sass */
 .sidenavbar {
