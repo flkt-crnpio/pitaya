@@ -4,12 +4,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Pitaya</title>
-    <link rel="stylesheet" type="text/css" href="../dist/pitaya.css">
     <link rel="stylesheet" type="text/css" href="css/pitaya.css">
+    <style media="screen">
+        body {
+          background: -webkit-linear-gradient(-90deg, #301834, #191828);
+          background: -moz-linear-gradient(-90deg, #301834, #191828);
+          background: -o-linear-gradient(-90deg, #301834, #191828);
+          background: linear-gradient(-90deg, #301834, #191828);
+        }
+    </style>
 </head>
 <body>
   <div class="main-container">
-
     <div class="navmenu">
       <input class="navmenu-trigger" id="mainmenu" name="mainmenu" type="checkbox">
       <label class="navmenu-icon" for="mainmenu"><span class="icon"></span></label>
@@ -25,7 +31,6 @@
         </nav>
     </div>
     </div>
-
     <main class="flex">
       <div class="container">
         <div class="row">
@@ -38,23 +43,16 @@
     </main>
     <footer class="padding-vsides padding-small margin-top">
       <div class="container">
-        <div class="row">
+        <div class="row h-between">
           <div class="flex">
-            Pitaya. Hecha
-            por <a href="http://flkt.mx/">flkt</a>
-            bajo licencia <a href="https://github.com/flkt-crnpio/ffcss/blob/master/LICENSE">MIT</a>
+            Pitaya. Hecha por <a href="https://github.com/flkt-crnpio">flkt</a>
+          </div>
+          <div class="">
+            <a href="https://github.com/flkt-crnpio/pitaya"><img src="img/GitHub-Mark-Light-32px.png" alt="GitHub"></a>
           </div>
         </div>
       </div>
     </footer>
   </div>
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-75845366-2', 'auto');
-    ga('send', 'pageview');
-  </script>
 </body>
 </html>
