@@ -9,55 +9,55 @@ Puedes utilizar directamente los archivos de distrubución para usar tal cual la
 ```text
 mol.colors/
 ├── dist/
-│   ├── pitaya.min.css
-│   └── pitaya.min.css.map
+    ├── pitaya.min.css
+    └── pitaya.min.css.map
 ├── docs/
-│   ├── css/
-│   │		├── pitaya.css
-│		│		└── pitaya.css.map
-│   ├── dist/
-│		│   ├── pitaya.min.css
-│		│   └── pitaya.min.css.map
-│   ├── img/
-│		│   ├── gallery/
-│		│   ├── profile/
-│		│		└── GitHub-Mark-Light-32px.png
-│   ├── auxiliares.html
-│   ├── componentes.html
-│   ├── composicion.html
-│   ├── cuadricula.html
-│   ├── index.html
-│   ├── navegacion.html
-│   └── nucleo.html
+    ├── css/
+        ├── pitaya.css
+        └── pitaya.css.map
+    ├── dist/
+        ├── pitaya.min.css
+        └── pitaya.min.css.map
+    ├── img/
+        ├── gallery/
+        ├── profile/
+     	└── GitHub-Mark-Light-32px.png
+    ├── auxiliares.html
+    ├── componentes.html
+    ├── composicion.html
+    ├── cuadricula.html
+    ├── index.html
+    ├── navegacion.html
+    └── nucleo.html
 └── scss/
     ├── components/
-		│   ├── badge.sass
-		│   ├── breadcrumb.sass
-		│   ├── card.sass
-		│   ├── collapsable.sass
-		│   ├── divider.sass
-		│   ├── tab.sass
-		│		└── tag.sass
-		├── core/
-		│   ├── button.sass
-		│   ├── form.sass
-		│   ├── link.sass
-		│   ├── list.sass
-		│   ├── table.sass
-		│		└── typography.sass
-		├── helper/
-		│   ├── align.sass
-		│		└── colors.sass
-		├── layout/
-		│   ├── col.sass
-		│   ├── flex.sass
-		│   ├── layout.sass
-		│   ├── pin.sass
-		│		└── row.sass
-		├── navigation/
-		│   ├── navbar.sass
-		│   ├── navmenu.sass
-		│		└── sidenavbar.sass
+    	├── badge.sass
+	├── breadcrumb.sass
+	├── card.sass
+	├── collapsable.sass
+	├── divider.sass
+	├── tab.sass
+	└── tag.sass
+    ├── core/
+	├── button.sass
+	├── form.sass
+	├── link.sass
+	├── list.sass
+	├── table.sass
+	└── typography.sass
+    ├── helper/
+    	├── align.sass
+	└── colors.sass
+    ├── layout/
+    	├── col.sass
+    	├── flex.sass
+    	├── layout.sass
+    	├── pin.sass
+	└── row.sass
+    ├── navigation/
+    	├── navbar.sass
+	├── navmenu.sass
+	└── sidenavbar.sass
     ├── _mixings.sass
     ├── _normalize.sass
     ├── _vars.sass
