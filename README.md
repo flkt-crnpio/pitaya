@@ -129,7 +129,7 @@ $navbar-height:     60px
 #### Visualizacion ####
 Para poder ver los cambios que hiciste, corre en la terminar el comando de abajo y abre los archivos de html dentro de la carpeta `docs/`
 ```sh
-sass --watch src/pitaya.sass:dosc/css/pitaya.css --style expanded
+sass --watch src/pitaya.sass:docs/css/pitaya.css --style expanded
 ```
 
 
