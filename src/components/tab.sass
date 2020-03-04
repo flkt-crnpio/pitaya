@@ -1,5 +1,6 @@
 /* src/components/tab.sass */
 .tabs
+  box-sizing: content-box
   display: block
   display: -webkit-flex
   display: -moz-flex
@@ -8,7 +9,6 @@
   -moz-flex-wrap: wrap
   flex-wrap: wrap
   margin: 0
-  overflow: hidden
   [class^="tab"],
   [class*=" tab"]
     label
@@ -37,10 +37,10 @@
       &:checked + div
         opacity: 1
       + div
-        display: block
         opacity: 0
         padding: $layout-space 0
-        width: 90%
+        position: relative
+        top: 0
         +transition-ease(0.3s)
 
   // Dos tabs
@@ -48,54 +48,54 @@
     width: 50%
     [type="radio"] + div
       width: 200%
-      margin-left: 200%
+      left: 200%
     [type="radio"]:checked + div
-      margin-left: 0
+      left: 0
     &:last-child
       [type="radio"] + div
-        margin-left: 100%
+        left: 100%
       [type="radio"]:checked + div
-        margin-left: -100%
+        left: -100%
 
   // Tres tabs
   .tab-3
     width: 33.333%
     [type="radio"] + div
       width: 300%
-      margin-left: 300%
+      left: 300%
     [type="radio"]:checked + div
-      margin-left: 0
+      left: 0
     &:nth-child(2)
       [type="radio"] + div
-        margin-left: 200%
+        left: 200%
       [type="radio"]:checked + div
-        margin-left: -100%
+        left: -100%
     &:nth-child(3)
       [type="radio"] + div
-        margin-left: 100%
+        left: 100%
       [type="radio"]:checked + div
-        margin-left: -200%
+        left: -200%
 
   // Cuatro tabs
   .tab-4
     width: 25%
     [type="radio"] + div
       width: 400%
-      margin-left: 400%
+      left: 400%
     [type="radio"]:checked + div
-      margin-left: 0
+      left: 0
     &:nth-child(2)
       [type="radio"] + div
-        margin-left: 300%
+        left: 300%
       [type="radio"]:checked + div
-        margin-left: -100%
+        left: -100%
     &:nth-child(3)
       [type="radio"] + div
-        margin-left: 200%
+        left: 200%
       [type="radio"]:checked + div
-        margin-left: -200%
+        left: -200%
     &:nth-child(4)
       [type="radio"] + div
-        margin-left: 100%
+        left: 100%
       [type="radio"]:checked + div
-        margin-left: -300%
+        left: -300%
